@@ -19,10 +19,10 @@ module Ladb
       PLUGIN_DIR = File.join(File.dirname(_file_), PLUGIN_ID)
 
       # Create extension
-      ex = SketchupExtension.new('OpenCutList', File.join(PLUGIN_DIR, 'ruby', 'main'))
-      ex.version     = "7.0.1"  ## /!\ Auto-generated line, do not edit ##
+      ex = SketchupExtension.new('LexaCut', File.join(PLUGIN_DIR, 'ruby', 'main'))
+      ex.version     = "7.1.0-lexacut"  ## LexaCut Modern UI Edition
       ex.copyright   = "2016-#{Date.today.year} - GNU GPLv3"  ## /!\ Auto-generated line, do not edit ##
-      ex.creator     = 'L\'Air du Bois - www.lairdubois.fr'
+      ex.creator     = 'LexaPlus (based on OpenCutList by L\'Air du Bois)'
 
       # Localize description
       case Sketchup.get_locale.split('-')[0].downcase
@@ -61,7 +61,7 @@ module Ladb
       when 'zh'
         ex.description = '木工的切割清单和切割图生成器。 开源，众筹且易于使用 ;)'
       else
-        ex.description = 'Cutlist and Cutting Diagram Generator for Woodworkers. Open Source, crowdfunded and easy to use ;)'
+        ex.description = 'LexaCut - Modern UI Cutting List Generator for Woodworkers. Elegant, minimal & classy design ;)'
       ## DESCRIPTION_END ##
       end
 
