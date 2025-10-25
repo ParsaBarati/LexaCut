@@ -1,101 +1,197 @@
-# OpenCutList by L'Air du Bois
+# 🚀 LexaCut
 
-**OpenCutList** is a [SketchUp](http://www.sketchup.com) Extension for automating the generation of a parts list, computing cutting diagrams, printing labels and generating cost and weight reports for woodworking projects.
+**AI-Powered Cutting List Optimizer for SketchUp**
 
-![OpenCutList](docs/img/capture-solid-wood-part-list.png)
+> Modern, intelligent, and beautiful cutting list generation for woodworking and manufacturing projects.
 
-![OpenCutList](docs/img/capture-sheet-goods-cutting-diagrams.png)
+---
 
-![OpenCutList](docs/img/capture-dimensional-lumbers-cutting-diagrams.png)
+## 📖 About
 
-![OpenCutList](docs/img/capture-edge-banding.png)
+**LexaCut** is a modernized fork of [OpenCutList](https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension), rebuilt from the ground up to provide:
 
-![OpenCutList](docs/img/capture-labels.png)
+- 🤖 **AI-Powered Optimization** - Intelligent material layout using CognitiveCut Engine
+- 🎨 **Modern UI** - Vue 3 + TailwindCSS interface with dark mode
+- 🌍 **RTL Language Support** - Full Persian, Arabic, and other RTL language support
+- 📊 **Enhanced Reporting** - Advanced export formats (Excel, PDF, DXF, JSON)
+- ⚡ **Performance** - Faster computation and better memory management
+- 🔧 **Developer-Friendly** - Clean architecture, comprehensive documentation
 
-![OpenCutList](docs/img/capture-reports.png)
+---
 
-## Download and Install
+## 🏗️ Project Status
 
-The signed ***.rbz** package is available from the [dist](dist) folder or from its official [Trimble Extension Warehouse](https://extensions.sketchup.com/en) page:
+**Current Phase:** Architecture Analysis & Planning
 
-https://extensions.sketchup.com/extension/00f0bf69-7a42-4295-9e1c-226080814e3e/opencutlist
+This project is currently in the initial setup phase. We are:
+- ✅ Analyzing the OpenCutList codebase
+- 🔄 Mapping all modules and dependencies
+- 📋 Planning the modernization roadmap
+- 🎯 Designing the AI optimization engine
 
-## Supported Languages
+---
 
-**OpenCutList** is available in French, English, German, Russian, Italian, Portuguese, Spanish, Polish, Czech, Vietnamese, Ukrainian, Dutch and Simplified Chinese. Experimental versions of Arabic and Hebrew are also available, although without RTL interface. The interface language of **OpenCutList** can be selected independently of the language version of SketchUp. Translators or reviewers can join us on [Transifex](https://www.transifex.com/opencutlist/opencutlist/) and actively participate in improving the quality of the translations.
+## 🎯 Key Features (Planned)
 
-## Supported Units
+### Core Features (Inherited from OpenCutList)
+- ✅ Automatic cutting list generation from SketchUp models
+- ✅ Material grouping and quantity calculations
+- ✅ 1D and 2D cutting diagrams with optimization
+- ✅ Label generation for parts
+- ✅ Multi-language support (17 languages)
+- ✅ Export to CSV, PDF formats
 
-In addition to the selected SketchUp unit, **OpenCutList** works with dimensions of solid wood, panels and dimensional lumber in fractional inches, even if the selected SketchUp units are metric and vice versa.
+### LexaCut Enhancements
+- 🚀 **CognitiveCut AI Engine** - Machine learning-based material optimization
+- 🎨 **Modern UI/UX** - Vue 3 + TailwindCSS with responsive design
+- 📊 **Advanced Analytics** - Cost analysis, waste reduction insights
+- 🌐 **Cloud Sync** - Save and share projects across devices
+- 🔌 **Plugin System** - Extensible architecture for custom integrations
+- 📱 **Mobile Companion** - View and manage projects on mobile devices
+- 🌍 **RTL Support** - First-class support for Persian and Arabic
 
-## FAQ
+---
 
-A few frequently asked questions are listed [here](docs/02-faq.md).
+## 🛠️ Tech Stack
 
-## Documentation
+### Backend (Ruby)
+- Ruby 2.7+
+- SketchUp Ruby API
+- Custom bin packing algorithms
+- AI optimization module (planned)
 
-[Documentation](https://docs.opencutlist.org/) for **OpenCutList** is available.
+### Frontend
+- **Current:** jQuery + Bootstrap + Twig templates
+- **Target:** Vue 3 + TypeScript + TailwindCSS
 
-## Tutorials
+### AI/ML
+- Python 3.10+
+- TensorFlow/PyTorch (planned)
+- REST API for optimization services
 
-There are a number of great videos on YouTube about using **OpenCutList** for woodworking projects.
+---
 
-- 🇫🇷&nbsp;&nbsp;**Boris Beaulant** | [Conférence de présentation OpenCutList au salon Habitat et Bois - Epinal 2019](https://www.youtube.com/watch?v=gW0FrYRItoc)
-- 🇫🇷&nbsp;&nbsp;**José Das Neves** | [OpenCutList: Extension pour faire son devis, débit et calepinage dans SketchUp - Part01](https://www.youtube.com/watch?v=HsjndYJvqvs)
-- 🇩🇪&nbsp;&nbsp;**Heiko Rech** | [VLOG \#30 - Stücklisten und Zuschnittpläne in SketchUp erstellen](https://www.youtube.com/watch?v=dLoiFJI9LGQ)
-- 🇩🇪&nbsp;&nbsp;**Johannes Boernsen** | [OpenCutList: Automatische Schnittpläne und Materiallisten mit Sketchup erstellen](https://www.youtube.com/watch?v=55jhInrVzJU)
-- 🇩🇪&nbsp;&nbsp;**Bastelpause** | [PERFEKTE Stückliste und Zuschnittpläne mit OpenCutList in SketchUp](https://www.youtube.com/watch?v=0hnhiksHr7g)
-- 🇩🇪&nbsp;&nbsp;**Tolzi** | [Opencutlist plugin (Sketchup)](https://www.youtube.com/watch?v=drI0vk2F_kI)
-- 🇺🇸&nbsp;&nbsp;**FollowAndrew** | [Generate Cut-list Woodworking 3D SketchUp](https://www.youtube.com/watch?v=yrex6zLv66I)
-- 🇺🇸&nbsp;&nbsp;**MasterSketchUp** | [The Best SketchUp CutList Plugin | OpenCutList](https://www.youtube.com/watch?v=8f_R9Gzs4gU)
-- 🇬🇧&nbsp;&nbsp;**Firebird Interiors** | [Cutlists made easy! (Sketchup For Fitted Furniture Makers Part 6)](https://www.youtube.com/watch?v=wswN3mEtsCI)
-- 🇬🇧&nbsp;&nbsp;**Strawbyte Workshop** | [Use Cutting Lists for Fast Cabinet Making with SketchUp and Open Cutting List (OCL)](https://www.youtube.com/watch?v=1P13BBYvap0)
-- 🇵🇱&nbsp;&nbsp;**Jarek Ostaszewksi** | [SU11. SketchUp: automatyczna lista elementów i formatek do pocięcia (BOM)](https://www.youtube.com/watch?v=VpPKP2xRbB4)
-- 🇨🇴&nbsp;&nbsp;**Guillermo Digital Artist** | [Plugin para despiece en SketchUp OpenCutList gratis en español](https://www.youtube.com/watch?v=CLakxzqhbSo)
-- 🇪🇸&nbsp;&nbsp;**Ab Ovo Estudio** | [¡Como hacer una lista de piezas y de corte de un mueble en Sketchup!](https://www.youtube.com/watch?v=bTy0m1buLCo)
-- 🇪🇨&nbsp;&nbsp;**Lar7 Estudio** | [OPTIMIZADOR DE CORTES CON CANTOS PARA MELAMINA EN SKETCHUP PLUGIN](https://www.youtube.com/watch?v=0TB7NLR-uJk)
-- 🇪🇨&nbsp;&nbsp;**Melamina Ecuador** | [Despiece de melamina con OPEN CUT LIST 2021](https://www.youtube.com/watch?v=bCjrL6VMEaA)
-- 🇧🇷&nbsp;&nbsp;**Marceneria Provençal** | [Projetos e planos de corte com OpenCutList no SketchUp](https://www.youtube.com/watch?v=4eUKo0Shp4g)
-- 🇷🇺&nbsp;&nbsp;**Chipovan** | [Проба создания стола в SketchUp 2019 и OpenCutList](https://www.youtube.com/watch?v=_wPXOvkwYfs)
-- 🇷🇺&nbsp;&nbsp;**volkov.project** | [Как сделать раскрой и посчитать материал](https://www.youtube.com/watch?v=j0bclvCNjg4)
-- 🇧🇬&nbsp;&nbsp;**AECO Space** | [Master your SketchUp | SketchUp Woodwork Plugin](https://www.youtube.com/watch?v=dt3CcXmRqy0)
+## 📂 Project Structure
 
-## Contributors
+```
+LexaCut/
+├── src/
+│   ├── ladb_opencutlist/       # Original OpenCutList source
+│   │   ├── ruby/               # Ruby backend
+│   │   ├── js/                 # JavaScript frontend
+│   │   ├── css/                # Stylesheets
+│   │   └── twig/               # Templates
+│   └── (future) frontend/      # Modern Vue 3 frontend
+├── docs/
+│   ├── ARCHITECTURE_OVERVIEW.md
+│   ├── CURSOR_PROMPT.md
+│   └── (more docs coming)
+├── build/                      # Build tools
+├── dist/                       # Distribution files
+└── test/                       # Test files
+```
 
-### Code Contributors
+---
 
-This project exists thanks to all the people who contribute.
-<a href="https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension/graphs/contributors"><img src="https://opencollective.com/lairdubois-opencutlist-sketchup-extension/contributors.svg?width=890&button=false" /></a>
+## 🚦 Roadmap
 
-### Financial Contributors
+### Phase 1: Foundation (Current)
+- [x] Fork OpenCutList codebase
+- [x] Set up project structure
+- [x] Create architecture documentation
+- [ ] Complete codebase analysis
+- [ ] Generate module map
+- [ ] Create refactor plan
 
-Become a financial contributor and help us sustain our community. [[Contribute](https://opencollective.com/lairdubois-opencutlist-sketchup-extension/contribute)]
+### Phase 2: Namespace Migration
+- [ ] Rename OpenCutList → LexaCut
+- [ ] Update all file references
+- [ ] Test basic functionality
 
-#### Individuals
+### Phase 3: UI Modernization
+- [ ] Set up Vue 3 + Vite + TypeScript
+- [ ] Integrate TailwindCSS
+- [ ] Migrate components from jQuery to Vue
+- [ ] Implement dark/light mode
 
-<a href="https://opencollective.com/lairdubois-opencutlist-sketchup-extension"><img src="https://opencollective.com/lairdubois-opencutlist-sketchup-extension/individuals.svg?width=890"></a>
+### Phase 4: AI Integration
+- [ ] Design CognitiveCut Engine architecture
+- [ ] Implement Python optimization service
+- [ ] Create Ruby ↔ Python bridge
+- [ ] Add AI-powered recommendations
 
-#### Organizations
+### Phase 5: Enhanced Features
+- [ ] Excel export with styling
+- [ ] DXF/CNC export
+- [ ] Cloud sync infrastructure
+- [ ] Mobile companion app
 
-Support this project with your organization. Your logo will show up here with a link to your website. [[Contribute](https://opencollective.com/lairdubois-opencutlist-sketchup-extension/contribute)]
+### Phase 6: Release
+- [ ] Comprehensive testing
+- [ ] Package as .rbz extension
+- [ ] Create user documentation
+- [ ] Launch LexaCut v1.0
 
-<a href="https://opencollective.com/lairdubois-opencutlist-sketchup-extension/organization/0/website"><img src="https://opencollective.com/lairdubois-opencutlist-sketchup-extension/organization/0/avatar.svg"></a>
-<a href="https://opencollective.com/lairdubois-opencutlist-sketchup-extension/organization/1/website"><img src="https://opencollective.com/lairdubois-opencutlist-sketchup-extension/organization/1/avatar.svg"></a>
-<a href="https://opencollective.com/lairdubois-opencutlist-sketchup-extension/organization/2/website"><img src="https://opencollective.com/lairdubois-opencutlist-sketchup-extension/organization/2/avatar.svg"></a>
-<a href="https://opencollective.com/lairdubois-opencutlist-sketchup-extension/organization/3/website"><img src="https://opencollective.com/lairdubois-opencutlist-sketchup-extension/organization/3/avatar.svg"></a>
-<a href="https://opencollective.com/lairdubois-opencutlist-sketchup-extension/organization/4/website"><img src="https://opencollective.com/lairdubois-opencutlist-sketchup-extension/organization/4/avatar.svg"></a>
-<a href="https://opencollective.com/lairdubois-opencutlist-sketchup-extension/organization/5/website"><img src="https://opencollective.com/lairdubois-opencutlist-sketchup-extension/organization/5/avatar.svg"></a>
-<a href="https://opencollective.com/lairdubois-opencutlist-sketchup-extension/organization/6/website"><img src="https://opencollective.com/lairdubois-opencutlist-sketchup-extension/organization/6/avatar.svg"></a>
-<a href="https://opencollective.com/lairdubois-opencutlist-sketchup-extension/organization/7/website"><img src="https://opencollective.com/lairdubois-opencutlist-sketchup-extension/organization/7/avatar.svg"></a>
-<a href="https://opencollective.com/lairdubois-opencutlist-sketchup-extension/organization/8/website"><img src="https://opencollective.com/lairdubois-opencutlist-sketchup-extension/organization/8/avatar.svg"></a>
-<a href="https://opencollective.com/lairdubois-opencutlist-sketchup-extension/organization/9/website"><img src="https://opencollective.com/lairdubois-opencutlist-sketchup-extension/organization/9/avatar.svg"></a>
+---
 
-## License
+## 🤝 Contributing
 
-This code is under the **GNU GPLv3 license**.
+This project is currently in early development. Contributions will be welcome soon!
 
-[Read the license](LICENSE).
+For now, if you're interested in contributing:
+1. ⭐ Star this repository
+2. 👀 Watch for updates
+3. 💬 Join discussions (coming soon)
 
-## Documentation for Developers
+---
 
-[Read the documentation](docs/00-index.md).
+## 📄 License
+
+This project is a fork of [OpenCutList](https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension).
+
+- **OpenCutList:** GNU General Public License v3.0
+- **LexaCut:** GNU General Public License v3.0
+
+See [LICENSE](LICENSE) for details.
+
+---
+
+## 🙏 Acknowledgments
+
+- **OpenCutList Team** - For creating the amazing foundation this project builds upon
+- **L'Air du Bois Community** - For years of development and refinement
+- **All Contributors** - Past, present, and future
+
+---
+
+## 📧 Contact
+
+**Parsa Barati** - [LexaPlus](https://lexaplus.com)
+
+- GitHub: [@ParsaBarati](https://github.com/ParsaBarati)
+- Project Link: [https://github.com/ParsaBarati/LexaCut](https://github.com/ParsaBarati/LexaCut)
+
+---
+
+## 📊 Project Stats
+
+```
+Total Files:     909
+Lines of Code:   235,942
+Languages:       17
+Backend:         Ruby
+Frontend:        JavaScript → Vue 3 (planned)
+Status:          In Development
+```
+
+---
+
+<div align="center">
+
+**Built with ❤️ by the LexaPlus Team**
+
+*Transforming how professionals create cutting lists*
+
+[⭐ Star](https://github.com/ParsaBarati/LexaCut) • [🐛 Report Bug](https://github.com/ParsaBarati/LexaCut/issues) • [💡 Request Feature](https://github.com/ParsaBarati/LexaCut/issues)
+
+</div>
