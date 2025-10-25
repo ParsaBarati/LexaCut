@@ -1,0 +1,34 @@
+{
+  "_storages": {
+    "hidden_group_ids": 2 /* PRESETS_STORAGE_MODEL_ONLY */
+  },
+  "_cleaners": {
+    "part_order_strategy": 1, /* PRESETS_CLEANER_ORDER_STRATEGY */
+    "group_order_strategy": 1, /* PRESETS_CLEANER_ORDER_STRATEGY */
+    "dimension_column_order_strategy": 1 /* PRESETS_CLEANER_ORDER_STRATEGY */
+  },
+  "0": {
+    "auto_orient": true,
+    "flipped_detection": true,
+    "smart_material": true,
+    "dynamic_attributes_name": false,
+    "part_number_with_letters": true,
+    "part_number_sequence_by_group": true,
+    "part_folding": false,
+    "hide_entity_names": false,
+    "hide_descriptions": false,
+    "hide_tags": false,
+    "hide_cutting_dimensions": false,
+    "hide_bbox_dimensions": false,
+    "hide_final_areas": true,
+    "hide_edges": true,
+    "hide_faces": true,
+    "hide_material_colors": false,
+    "minimize_on_highlight": true,
+    "group_order_strategy": "material_type>material_name>-std_width>-std_thickness",
+    "part_order_strategy": "-thickness>-length>-width>-count>name>-edge_pattern>tags>thickness_layer_count",
+    "dimension_column_order_strategy": "length>width>thickness",
+    "tags": [],
+    "hidden_group_ids": []
+  }
+}

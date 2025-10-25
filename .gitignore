@@ -1,0 +1,60 @@
+# SketchUp Files
+*.skb
+*.rbs
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Build outputs
+dist/*.rbz
+build/node_modules/
+
+# Dependencies
+vendor/
+.bundle/
+Gemfile.lock
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Node (for future frontend build)
+node_modules/
+package-lock.json
+yarn.lock
+.pnpm-debug.log
+
+# Ruby
+*.gem
+*.rbc
+.config
+coverage/
+InstalledFiles
+lib/bundler/man
+pkg/
+rdoc/
+spec/reports/
+test/tmp/
+test/version_tmp/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# AI & LexaCut specific (future)
+.env
+.env.local
+ai_cache/
+optimization_results/

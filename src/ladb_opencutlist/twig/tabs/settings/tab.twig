@@ -1,0 +1,199 @@
+{% extends 'tabs/base-tab.twig' %}
+
+{% block headerHeadingInner %}<i class="ladb-opencutlist-icon-settings"></i> {{ parent() }}{% endblock %}
+
+{% block headerToolsInner %}
+    {{ parent() }}
+    <div class="btn-group">
+        <button id="ladb_btn_menu" class="no-print btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ladb-opencutlist-icon-preset"></i> {{ 'core.preset.manage'|i18next }} <span class="caret"></span></button>
+        <ul class="dropdown-menu dropdown-menu-right">
+            <li><a id="ladb_item_export_global_presets" href="#">{{ 'tab.settings.presets.export_global_presets'|i18next }}...</a></li>
+            <li><a id="ladb_item_import_global_presets" href="#">{{ 'tab.settings.presets.import_global_presets'|i18next }}...</a></li>
+            <li class="divider"></li>
+            <li class="dropdown-item-danger"><a id="ladb_item_reset_global_presets" href="#">{{ 'tab.settings.presets.reset_global_presets'|i18next }}...</a></li>
+            <li class="dropdown-item-danger"><a id="ladb_item_reset_model_presets" href="#">{{ 'tab.settings.presets.reset_model_presets'|i18next }}...</a></li>
+            {% if capabilities.is_dev %}
+                <li class="dropdown-header dropdown-header-middle">Debug</li>
+                <li><a id="ladb_item_dump_global_presets" href="#">{{ 'tab.settings.presets.dump_global_presets'|i18next }}</a></li>
+                <li><a id="ladb_item_dump_model_presets" href="#">{{ 'tab.settings.presets.dump_model_presets'|i18next }}</a></li>
+            {% endif %}
+        </ul>
+    </div>
+    &nbsp;
+    <button class="btn btn-default" data-help-page="settings"><i class="ladb-opencutlist-icon-help"></i></button>
+{% endblock %}
+
+{% block containerInner %}
+    <div class="row">
+        <div class="col-xs-6">
+            <div id="ladb_settings_panel_global" class="panel panel-default">
+                <div class="panel-heading">
+                    <strong>{{ 'tab.settings.global_settings'|i18next }}</strong>
+                </div>
+                <div class="panel-body">
+                    <div id="ladb_reload_alert" class="alert alert-warning" style="display: none;">
+                        <div class="media">
+                            <div class="media-left"><i class="ladb-opencutlist-icon-warning" style="font-size: 150%;"></i></div>
+                            <div class="media-body">
+                                {% for language, enabled in capabilities.languages if enabled %}
+                                    <div class="ladb-reaload-msg ladb-reaload-msg-{{ language }}">{{ ('language_reload_msg.'~language)|i18next }}</div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button id="ladb_btn_reset" class="btn btn-default btn-xs pull-right"><i class="ladb-opencutlist-icon-reset"></i> {{ 'default.reset_to_app_defaults'|i18next }}</button>
+                        <label>{{ 'tab.settings.language'|i18next }}</label>
+                        <select id="ladb_select_language" class="form-control">
+                            <option value="auto" data-content="<span style='color: #ccc; font-style: italic;'>{{ 'tab.settings.language_auto'|i18next }}</span>"></option>
+                            <option data-divider="true"></option>
+                            {% for language, enabled in capabilities.languages %}
+                                <option value="{{ language }}" data-content="<i class='ladb-opencutlist-icon-{% if language starts with 'zz' %}bug ladb-color-success{% else %}circle{% if enabled %}-checked ladb-color-success{% else %} ladb-color-danger{% endif %}{% endif %}'></i> <span class='ladb-language-prefix'>{{ language|upper }}</span>{{ ('language.'~language)|i18next }}"></option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>{{ 'tab.settings.zoom'|i18next }}</label>
+                        <select id="ladb_select_font_size" class="form-control">
+                            <option value="0">{{ 'tab.settings.zoom_normal'|i18next }}</option>
+                            <option value="1">{{ 'tab.settings.zoom_small'|i18next }}</option>
+                            <option value="2">{{ 'tab.settings.zoom_tiny'|i18next }}</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>{{ 'tab.settings.table_row_size'|i18next }}</label>
+                        <select id="ladb_select_table_row_size" class="form-control">
+                            <option value="0">{{ 'tab.settings.table_row_size_normal'|i18next }}</option>
+                            <option value="1">{{ 'tab.settings.table_row_size_compact'|i18next }}</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>{{ 'tab.settings.print_margin'|i18next }}</label>
+                        <select id="ladb_select_print_margin" class="form-control">
+                            <option value="0">{{ 'tab.settings.print_margin_normal'|i18next }}</option>
+                            <option value="1">{{ 'tab.settings.print_margin_small'|i18next }}</option>
+                        </select>
+                    </div>
+                    <hr />
+                    <div class="form-group">
+                        <label>{{ 'tab.settings.size_and_position'|i18next }}</label>
+                        <div class="ladb-fake-dialog">
+                            <div class="ladb-fake-dialog-titlebar">OpenCutList</div>
+                            <div class="ladb-fake-dialog-leftbar"></div>
+                            <button id="ladb_btn_top_up" class="btn btn-sm btn-default"><i class="ladb-opencutlist-icon-arrow-down"></i></button>
+                            <button id="ladb_btn_top_down" class="btn btn-sm btn-default"><i class="ladb-opencutlist-icon-arrow-up"></i></button>
+                            <button id="ladb_btn_left_up" class="btn btn-sm btn-default"><i class="ladb-opencutlist-icon-arrow-right"></i></button>
+                            <button id="ladb_btn_left_down" class="btn btn-sm btn-default"><i class="ladb-opencutlist-icon-arrow-left"></i></button>
+                            <button id="ladb_btn_left_top_reset" class="btn btn-sm btn-default"><i class="ladb-opencutlist-icon-reset"></i></button>
+                            <button id="ladb_btn_width_up" class="btn btn-sm btn-default"><i class="ladb-opencutlist-icon-plus"></i></button>
+                            <button id="ladb_btn_width_down" class="btn btn-sm btn-default"><i class="ladb-opencutlist-icon-minus"></i></button>
+                            <button id="ladb_btn_height_up" class="btn btn-sm btn-default"><i class="ladb-opencutlist-icon-plus"></i></button>
+                            <button id="ladb_btn_height_down" class="btn btn-sm btn-default"><i class="ladb-opencutlist-icon-minus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <div id="ladb_settings_panel_modal" class="panel panel-default">
+                <div class="panel-heading">
+                    <strong>{{ 'tab.settings.model_settings'|i18next }}</strong>
+                </div>
+                <div class="panel-body">
+                    <section class="row">
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <label>{{ 'tab.settings.length_unit'|i18next }}</label>
+                                <select id="ladb_model_select_length_unit" class="form-control">
+                                    <optgroup>
+                                        <option data-content="{{ 'default.unit_2'|i18next }}">2</option>
+                                        <option data-content="{{ 'default.unit_3'|i18next }}">3</option>
+                                        <option data-content="{{ 'default.unit_4'|i18next }}">4</option>
+                                    </optgroup>
+                                    <optgroup>
+                                        <option data-content="{{ 'default.unit_0'|i18next }}">0</option>
+                                        <option data-content="{{ 'default.unit_1'|i18next }}">1</option>
+                                        <option data-content="{{ 'default.unit_5'|i18next }}"{% if capabilities.sketchup_version_number < 2000000000 %} disabled{% endif %}>5</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <label>{{ 'tab.settings.length_format'|i18next }}</label>
+                                <select id="ladb_model_select_length_format" class="form-control">
+                                    <option data-content="{{ 'tab.settings.length_format_0'|i18next }}">0</option>
+                                    <option data-content="{{ 'tab.settings.length_format_1'|i18next }}">1</option>
+                                    <option data-content="{{ 'tab.settings.length_format_2'|i18next }}">2</option>
+                                    <option data-content="{{ 'tab.settings.length_format_3'|i18next }}">3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <label>{{ 'tab.settings.length_precision'|i18next }}</label>
+                                <select id="ladb_model_select_length_precision" class="form-control">
+                                    <option data-content="<span class='length-unit-decimal'>0</span><span class='length-unit-fractional'>0</span>">0</option>
+                                    <option data-content="<span class='length-unit-decimal'>0{{ capabilities.decimal_separator }}0</span><span class='length-unit-fractional'>1/2</span>">1</option>
+                                    <option data-content="<span class='length-unit-decimal'>0{{ capabilities.decimal_separator }}00</span><span class='length-unit-fractional'>1/4</span>">2</option>
+                                    <option data-content="<span class='length-unit-decimal'>0{{ capabilities.decimal_separator }}000</span><span class='length-unit-fractional'>1/8</span>">3</option>
+                                    <option data-content="<span class='length-unit-decimal'>0{{ capabilities.decimal_separator }}0000</span><span class='length-unit-fractional'>1/16</span>">4</option>
+                                    <option data-content="<span class='length-unit-decimal'>0{{ capabilities.decimal_separator }}00000</span><span class='length-unit-fractional'>1/32</span>">5</option>
+                                    <option data-content="<span class='length-unit-decimal'>0{{ capabilities.decimal_separator }}000000</span><span class='length-unit-fractional'>1/64</span>">6</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="ladb_model_input_suppress_units_display">{{ 'tab.settings.suppress_units_display'|i18next }}
+                                </label>
+                            </div>
+                        </div>
+                    </section>
+                    <hr>
+                    <section class="row">
+                        <div class="col-xs-12 text-right">
+                            {% include 'components/_widget-preset.twig' %}
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <label>{{ 'tab.settings.mass_unit'|i18next }}</label>
+                                <select id="ladb_model_select_mass_unit" class="form-control">
+                                    <option data-content="{{ 'default.unit_mass_0'|i18next }}">0</option>
+                                    <option data-content="{{ 'default.unit_mass_1'|i18next }}">1</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <label>{{ 'tab.settings.mass_precision'|i18next }}</label>
+                                <select id="ladb_model_select_mass_precision" class="form-control">
+                                    <option data-content="0">0</option>
+                                    <option data-content="0{{ capabilities.decimal_separator }}0">1</option>
+                                    <option data-content="0{{ capabilities.decimal_separator }}00">2</option>
+                                    <option data-content="0{{ capabilities.decimal_separator }}000">3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <label>{{ 'tab.settings.currency_symbol'|i18next }}</label>
+                                <input id="ladb_model_input_currency_symbol" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <label>{{ 'tab.settings.currency_precision'|i18next }}</label>
+                                <select id="ladb_model_select_currency_precision" class="form-control">
+                                    <option data-content="0">0</option>
+                                    <option data-content="0{{ capabilities.decimal_separator }}00">2</option>
+                                </select>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

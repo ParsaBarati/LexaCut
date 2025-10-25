@@ -1,0 +1,24 @@
+{# set centerX #}
+{# set centerY #}
+
+{% set arrowLength = 120 %}
+{% set arrowHeight = 12 %}
+{% set arrowMarkerWidth = 8 %}
+{% set arrowMarkerHeight = 8 %}
+{% set periodOffset = 10 %}
+{% set periodCount = 3 %}
+{% set dx = (arrowLength - periodOffset * 2) / periodCount %}
+{% set defId = 'ladb_grain_direction_arrow'~random() %}
+
+<defs>
+    <pattern id="{{ defId }}_pattern" width="40" height="{{ arrowHeight }}" patternTransform="translate(0,-2.5)" patternUnits="userSpaceOnUse">
+        <path d="M0,{{ arrowHeight * 0.5 }} C20,{{ arrowHeight * 0.2 }} 20,{{ arrowHeight * 0.8 }} 40,{{ arrowHeight * 0.5 }}" style="fill:none;stroke:#555;stroke-width:1px;" />
+    </pattern>
+    <marker id="{{ defId }}_marker" markerWidth="{{ arrowMarkerWidth }}" markerHeight="{{ arrowMarkerHeight }}" refX="{{ arrowMarkerWidth * 0.1 }}" refY="{{ arrowMarkerHeight / 2 }}" orient="auto-start-reverse" markerUnits="userSpaceOnUse">
+        <path d="M0,0 L{{ arrowMarkerWidth }},{{ arrowMarkerHeight / 2 }} L0,{{ arrowMarkerHeight }}" style="fill:none;stroke:#555;stroke-width:1px;" />
+    </marker>
+</defs>
+<g data-toggle="tooltip" title="{{ 'tab.materials.tooltip.grain_direction'|i18next }}" transform="translate({{ centerX - arrowLength / 2 }},{{ centerY - arrowHeight / 2 }})">
+    <rect x="0" y="0" width="{{ arrowLength }}" height="{{ arrowHeight }}" style="fill:rgba(0, 0, 0, 0.01);" />
+    <path d="M0,{{ arrowHeight * 0.5 }} L{{ periodOffset }},{{ arrowHeight * 0.5 }} C{% for i in 0..(periodCount - 1) %} {{ periodOffset + dx * i + dx / 2 }},{{ arrowHeight * 0.2 }} {{ periodOffset + dx * i + dx / 2 }},{{ arrowHeight * 0.8 }} {{ periodOffset + dx * (i + 1) }},{{ arrowHeight * 0.5 }}{% endfor %} L{{ arrowLength }},{{ arrowHeight * 0.5 }}" marker-start="url(#{{ defId }}_marker)" marker-end="url(#{{ defId }}_marker)" style="fill:none;stroke:#555;stroke-width:1px;" />
+</g>

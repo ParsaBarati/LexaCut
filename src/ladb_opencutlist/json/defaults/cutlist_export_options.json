@@ -1,0 +1,256 @@
+{
+  "0": {
+    "source": 1, /* EXPORT_OPTION_SOURCE_CUTLIST */
+    "format": "csv", /* EXPORT_OPTION_FORMAT_CSV */
+    "csv_col_sep": 2, /* EXPORT_OPTION_CSV_COL_SEP_SEMICOLON */
+    "csv_encoding": 0, /* EXPORT_OPTION_CSV_ENCODING_UTF8 */
+    "source_col_defs": {
+      "0": [ /* EXPORT_OPTION_SOURCE_SUMMARY */
+        {
+          "name": "material_type",
+          "align": "left"
+        },
+        {
+          "name": "material_name",
+          "align": "left"
+        },
+        {
+          "name": "material_std_dimension",
+          "align": "left"
+        },
+        {
+          "name": "material_description",
+          "align": "left"
+        },
+        {
+          "name": "material_url",
+          "align": "left"
+        },
+        {
+          "name": "part_count",
+          "align": "center"
+        },
+        {
+          "name": "total_cutting_length",
+          "align": "right"
+        },
+        {
+          "name": "total_cutting_area",
+          "align": "right"
+        },
+        {
+          "name": "total_cutting_volume",
+          "align": "right"
+        },
+        {
+          "name": "total_final_area",
+          "align": "right"
+        }
+      ],
+      "1": [ /* EXPORT_OPTION_SOURCE_CUTLIST */
+        {
+          "name": "number",
+          "align": "center"
+        },
+        {
+          "name": "name",
+          "align": "left"
+        },
+        {
+          "name": "count",
+          "align": "center"
+        },
+        {
+          "name": "cutting_length",
+          "align": "right"
+        },
+        {
+          "name": "cutting_width",
+          "align": "right"
+        },
+        {
+          "name": "cutting_thickness",
+          "align": "right"
+        },
+        {
+          "name": "bbox_length",
+          "align": "right"
+        },
+        {
+          "name": "bbox_width",
+          "align": "right"
+        },
+        {
+          "name": "bbox_thickness",
+          "align": "right"
+        },
+        {
+          "name": "final_area",
+          "align": "right"
+        },
+        {
+          "name": "material_type",
+          "align": "left"
+        },
+        {
+          "name": "material_name",
+          "align": "left"
+        },
+        {
+          "name": "material_description",
+          "align": "left"
+        },
+        {
+          "name": "material_url",
+          "align": "left"
+        },
+        {
+          "name": "entity_names",
+          "align": "left"
+        },
+        {
+          "name": "description",
+          "align": "left"
+        },
+        {
+          "name": "url",
+          "align": "left"
+        },
+        {
+          "name": "tags",
+          "align": "left"
+        },
+        {
+          "name": "edge_ymin",
+          "align": "center"
+        },
+        {
+          "name": "edge_ymax",
+          "align": "center"
+        },
+        {
+          "name": "edge_xmin",
+          "align": "center"
+        },
+        {
+          "name": "edge_xmax",
+          "align": "center"
+        },
+        {
+          "name": "face_zmax",
+          "align": "center"
+        },
+        {
+          "name": "face_zmin",
+          "align": "center"
+        },
+        {
+          "name": "layers",
+          "align": "left"
+        }
+      ],
+      "2": [ /* EXPORT_OPTION_SOURCE_INSTANCES_LIST */
+        {
+          "name": "number",
+          "align": "center"
+        },
+        {
+          "name": "path",
+          "align": "left"
+        },
+        {
+          "name": "instance_name",
+          "align": "left"
+        },
+        {
+          "name": "name",
+          "align": "left"
+        },
+        {
+          "name": "cutting_length",
+          "align": "right"
+        },
+        {
+          "name": "cutting_width",
+          "align": "right"
+        },
+        {
+          "name": "cutting_thickness",
+          "align": "right"
+        },
+        {
+          "name": "bbox_length",
+          "align": "right"
+        },
+        {
+          "name": "bbox_width",
+          "align": "right"
+        },
+        {
+          "name": "bbox_thickness",
+          "align": "right"
+        },
+        {
+          "name": "final_area",
+          "align": "right"
+        },
+        {
+          "name": "material_type",
+          "align": "left"
+        },
+        {
+          "name": "material_name",
+          "align": "left"
+        },
+        {
+          "name": "material_description",
+          "align": "left"
+        },
+        {
+          "name": "material_url",
+          "align": "left"
+        },
+        {
+          "name": "description",
+          "align": "left"
+        },
+        {
+          "name": "url",
+          "align": "left"
+        },
+        {
+          "name": "tags",
+          "align": "left"
+        },
+        {
+          "name": "edge_ymin",
+          "align": "center"
+        },
+        {
+          "name": "edge_ymax",
+          "align": "center"
+        },
+        {
+          "name": "edge_xmin",
+          "align": "center"
+        },
+        {
+          "name": "edge_xmax",
+          "align": "center"
+        },
+        {
+          "name": "face_zmax",
+          "align": "center"
+        },
+        {
+          "name": "face_zmin",
+          "align": "center"
+        },
+        {
+          "name": "layer",
+          "align": "left"
+        }
+      ]
+    }
+  }
+}

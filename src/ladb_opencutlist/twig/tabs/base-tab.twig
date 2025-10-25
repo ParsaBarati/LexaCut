@@ -1,0 +1,11 @@
+{% extends 'tabs/base-slide.twig' %}
+
+{# set tabName #}
+
+{% block slide %}
+<div id="ladb_tab_{{ tabName }}" class="ladb-tab">
+    {{ parent() }}
+</div>
+{% endblock %}
+
+{% block headerHeadingInner %}<span class="ladb-obsolete no-print hidden" data-toggle="tooltip" data-placement="bottom" title="{{ ('tab.'~tabName~'.obsolete_base')|i18next }}"><i class="ladb-opencutlist-icon-obsolete"></i></span>{{ ('tab.'~tabName~'.title')|i18next }}{% endblock %}
