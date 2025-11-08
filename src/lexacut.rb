@@ -1,5 +1,5 @@
 module Ladb
-  module LexaCut
+  module OpenCutList
 
     require 'sketchup.rb'
     require 'extensions.rb'

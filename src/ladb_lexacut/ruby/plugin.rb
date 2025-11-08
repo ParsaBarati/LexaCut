@@ -36,7 +36,7 @@ module Ladb::OpenCutList
 
     require 'pp' if IS_DEV
 
-    DEFAULT_SECTION = ATTRIBUTE_DICTIONARY = 'ladb_opencutlist'.freeze
+    DEFAULT_SECTION = ATTRIBUTE_DICTIONARY = 'ladb_lexacut'.freeze
     SU_ATTRIBUTE_DICTIONARY = 'SU_DefinitionSet'.freeze
 
     PRESETS_KEY = 'core.presets'.freeze
