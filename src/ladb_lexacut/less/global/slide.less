@@ -1,0 +1,153 @@
+//
+// Screen
+//
+
+.ladb-slide {
+  position: absolute;
+  top: 0;
+  bottom: @ladb-bottombar-height;
+  right: 0;
+  background: #fff;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  &.in {
+    left: @ladb-leftbar-width;
+  }
+
+  &.out {
+    left: 100%;
+    right: calc(-100% + @ladb-leftbar-width);
+  }
+
+  &.animated {
+    z-index: 2;
+  }
+
+  &.ladb-slide-fullpage {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    .ladb-header {
+      flex-grow: 0;
+
+      .ladb-header-extra .ladb-file-infos {
+        margin-bottom: 0;
+      }
+
+    }
+
+    .ladb-container {
+      flex-grow: 1;
+      position: relative;
+    }
+
+  }
+
+  .ladb-header {
+    background-color: #ededed;
+    padding: 0 10px;
+    border-bottom: 1px solid #ddd;
+    z-index: 2;
+
+    &.stuck {
+      position: fixed;
+      top: 0;
+      left: @ladb-leftbar-width;
+    }
+
+    .ladb-heading {
+      margin: 15px 0 15px 0;
+      color: #333;
+      line-height: 34px;
+      font-size: 200%;
+    }
+
+    .ladb-header-tools {
+      margin: 15px 0 15px 20px;
+      float: right;
+    }
+
+    .nav-tabs {
+      border-bottom: none;
+    }
+
+    .ladb-file-tabs {
+
+      .ladb-extra {
+        font-size: 80%;
+        font-weight: normal !important;
+        white-space: nowrap;
+      }
+
+    }
+
+  }
+
+  .ladb-container {
+    padding: 20px 10px;
+  }
+
+}
+
+/* Print */
+
+@media print {
+
+  .ladb-slide.in {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: 0;
+    right: 0;
+    height: auto;
+    overflow: hidden;
+
+    &.ladb-slide-fullpage {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+    }
+
+    .ladb-container {
+      padding: 0;
+
+      > .container-fluid {
+        padding: 0;
+      }
+
+    }
+
+    &.print-no-header {
+      .ladb-header-wrapper {
+        display: none !important;
+      }
+    }
+
+    .ladb-header-wrapper {
+      height: auto !important;
+    }
+
+    .ladb-header {
+      border-bottom: none;
+      background: none;
+
+      &.stuck {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: auto !important;
+      }
+
+      .ladb-heading {
+        margin: 0;
+        line-height: 1.1em;
+        font-size: 1.8em;
+      }
+
+    }
+
+  }
+
+}

@@ -1,0 +1,665 @@
+//
+// Cutlist
+//
+
+.ladb-cutlist-group {
+  background-color: #fff;
+
+  &.no-print {
+    opacity: 0.5;
+
+    .ladb-btn-hiddable {
+      display: none;
+    }
+
+    thead tr.table-column-heading, tbody {
+      display: none;
+    }
+
+  }
+
+  &.ladb-group-type-1 {
+    border-left: 3px solid @ladb-group-type-1;
+  }
+
+  &.ladb-group-type-2 {
+    border-left: 3px solid @ladb-group-type-2;
+  }
+
+  &.ladb-group-type-3 {
+    border-left: 3px solid @ladb-group-type-3;
+  }
+
+  &.ladb-group-type-4 {
+    border-left: 3px solid @ladb-group-type-4;
+  }
+
+  &.ladb-group-type-5 {
+    border-left: 3px solid @ladb-group-type-5;
+  }
+
+  &.ladb-group-type-6 {
+    border-left: 3px solid @ladb-group-type-6;
+  }
+
+  &.ladb-group-type--1 {
+    border-left: 3px solid @ladb-group-type--1;
+  }
+
+  &.table-danger {
+
+    thead tr.table-heading {
+      background-color: #f2dede;
+    }
+
+  }
+
+  &.ladb-cutlist-group-dark {
+
+    thead tr.table-heading {
+      background-color: #555;
+      color: #fff;
+    }
+
+  }
+
+  &.ladb-cutlist-group-summary {
+
+    ul {
+      margin-bottom: 0;
+    }
+
+    .ladb-heading-tool > span {
+      margin-right: 10px;
+      font-style: italic;
+      line-height: 30px;
+    }
+
+  }
+
+  thead tr {
+
+    &.table-heading {
+      background-color: #eee;
+
+      .ladb-group-type-icon {
+        margin: 2px 8px 2px 0;
+      }
+
+      .ladb-heading {
+        line-height: 30px;
+        font-size: 16px;
+      }
+
+      .ladb-heading-count {
+        line-height: 30px;
+        font-size: 16px;
+        margin-right: 10px;
+        padding: 0 7px 0 7px;
+        border-radius: 5px;
+        background: #555;
+        color: #fff;
+      }
+
+      .ladb-heading-info {
+        font-size: 75%;
+        color: #555;
+      }
+
+    }
+
+    td {
+      border-bottom: 0;
+    }
+
+  }
+
+  tr.table-column-heading {
+
+    td {
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .ladb-minitools a {
+      font-size: 16px;
+    }
+
+  }
+
+  tbody tr.ladb-cutlist-row {
+    font-size: 114%;
+    cursor: pointer;
+
+    &.ladb-cutlist-row-separator {
+
+      > td {
+        border-top-width: 3px;
+      }
+
+    }
+
+    &.ladb-cutlist-row-total {
+      cursor: initial;
+      font-weight: bold;
+
+      &:hover {
+        background-color: initial;
+      }
+
+    }
+
+    &.ladb-cutlist-row-folder {
+
+      > td {
+        border-bottom: 1px dashed @ladb-global-border;
+      }
+
+    }
+
+    &.ladb-cutlist-row-child {
+      font-size: 100%;
+
+      > td {
+        border-top: none;
+        border-bottom: none;
+      }
+
+      .ladb-cutlist-part-name {
+        padding-left: 10px;
+      }
+
+    }
+
+    &.ladb-cutlist-row-error {
+      color: #a94442;
+
+      > td {
+        border-top: 1px solid darken(spin(#f2dede, -10), 5%);
+        border-bottom: 1px solid darken(spin(#f2dede, -10), 5%);
+        background-color: #f2dede;
+      }
+
+    }
+
+    &:hover, &.ladb-hover {
+      background-color: #f9f9f9;
+    }
+
+    &.ladb-hidden {
+
+      td {
+        color: #ccc;
+      }
+      .ladb-group-type-icon,
+      .ladb-material-color-drop,
+      .ladb-color-warning,
+      .ladb-color-danger,
+      .label {
+        opacity: 0.6;
+      }
+
+    }
+
+    td.ladb-cutlist-value {
+      white-space: nowrap;
+      text-align: center;
+
+      &.ladb-disabled {
+        .hatched();
+      }
+
+      &.ladb-cutlist-value-highlighted {
+        color: red;
+      }
+
+      &.ladb-cutlist-value-right {
+        text-align: right;
+      }
+
+      span.ladb-opencutlist-icon {
+        color: #999;
+      }
+
+      i.ladb-opencutlist-icon-asterisk {
+        color: @ladb-brand-info;
+      }
+
+      hr {
+
+        &:first-child {
+          display: none;
+        }
+
+        margin-top: 3px;
+        margin-bottom: 3px;
+        border-color: @ladb-global-border;
+      }
+
+    }
+
+    td.ladb-cutlist-edge {
+
+      &.ladb-active {
+        font-weight: bold;
+        background-color: #fafafa;
+      }
+
+      &.ladb-disabled {
+        .hatched();
+      }
+
+      .ladb-cutlist-edge-material-name {
+        display: block;
+        font-size: 70%;
+        text-align: center;
+      }
+
+      .ladb-cutlist-edge-std-dimension {
+        display: block;
+        font-size: 55%;
+        text-align: center;
+      }
+
+    }
+
+    td.ladb-cutlist-face {
+
+      &.ladb-active {
+        font-weight: bold;
+        background-color: #fafafa;
+      }
+
+      &.ladb-disabled {
+        .hatched();
+      }
+
+      .ladb-cutlist-face-material-name {
+        display: block;
+        font-size: 70%;
+        text-align: center;
+      }
+
+      .ladb-cutlist-face-std-dimension {
+        display: block;
+        font-size: 55%;
+        text-align: center;
+      }
+
+    }
+
+    .ladb-cutlist-part-entity-names {
+      font-size: 70%;
+    }
+
+    .ladb-cutlist-part-tags {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      > li {
+        display: inline-block;
+
+        > a {
+          color: #000;
+          padding: 0 3px 1px 3px;
+          margin-right: 4px;
+          border-radius: 3px;
+          font-size: 78%;
+          border: 1px solid #000;
+
+          &:hover {
+            text-decoration: none;
+            background-color: #ccc;
+          }
+
+          &.no-hover:hover {
+            text-decoration: none;
+            background-color: inherit;
+          }
+
+          &.ladb-active {
+            border-width: 2px;
+          }
+
+        }
+
+      }
+
+    }
+
+    .ladb-part-description, .ladb-material-description {
+      font-size: 70%;
+      margin-top: 5px;
+    }
+
+  }
+
+  .ladb-btn-toggle-no-print {
+    margin-right: 10px;
+  }
+
+  .ladb-cutlist-tags-filters-printable {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    > li {
+      display: inline-block;
+      color: #000;
+      padding: 0 3px 1px 3px;
+      margin-right: 4px;
+      margin-top: 4px;
+      border-radius: 3px;
+      font-size: 120%;
+      border: 1px solid #000;
+    }
+
+  }
+
+}
+
+.ladb-part-thumbnail {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-bottom: @ladb-gutter / 2;
+  min-height: 200px;
+
+  .ladb-part-thumbnail-loading {
+    color: #999;
+  }
+
+  .ladb-three-viewer.ladb-three-viewer-modal-part {
+    flex-grow: 1;
+  }
+
+  img {
+    width: 200px;
+    height: 200px;
+  }
+
+  @media screen and (max-height: 850px) {
+    .ladb-three-viewer.ladb-three-viewer-modal-part iframe {
+      height: 200px;
+    }
+  }
+
+}
+
+// SVG
+
+#ladb_cutlist_modal_help svg {
+
+  text {
+    font-size: 24px;
+    font-weight: bold;
+    text-anchor: middle;
+  }
+
+  g.part {
+
+    path {
+      fill-rule: nonzero;
+    }
+
+    path.edge1 {
+      fill: none;
+      stroke: #000;
+      stroke-width: 1px;
+    }
+
+    path.edge2 {
+      fill: none;
+      stroke: #000;
+      stroke-width: 2px;
+    }
+
+  }
+
+  g.bbox .box path {
+    fill: none;
+    stroke: #0432ff;
+    stroke-width: 2px;
+  }
+
+  g.cutting .box path {
+    fill: none;
+    stroke: #ff2500;
+    stroke-width: 2px;
+  }
+
+  path.final {
+    fill: #ffff00;
+    fill-rule: nonzero;
+  }
+
+  g.dim path {
+    fill: none;
+    stroke: #505050;
+    stroke-width: 1px;
+
+    &.arrow {
+      stroke: none;
+      fill: #505050;
+      fill-rule: nonzero;
+    }
+
+  }
+
+}
+
+#ladb_cutlist_modal_part svg {
+
+  text {
+    pointer-events: none;
+  }
+
+  .part {
+
+    .part-outer {
+      fill: #ccc;
+    }
+
+    .part-inner {
+      fill: #fafafa;
+    }
+
+  }
+
+  .arrow {
+    fill: #fff;
+    stroke: #eee;
+    stroke-width: 2px;
+  }
+
+  .axis {
+
+    &.axis-bg {
+      fill: rgba(0, 0, 0, 0.01);
+    }
+
+    &.axis-origin {
+      fill: #aaaaaa;
+    }
+
+    &.axis-x {
+      fill: #FF2A1A;
+    }
+
+    &.axis-y {
+      fill: #00F72C;
+    }
+
+    &.axis-z {
+      fill: #103FFB;
+    }
+
+  }
+
+  .edge {
+    cursor: pointer;
+
+    &:hover {
+      .edge-inner {
+        fill: @ladb-brand-primary !important;
+      }
+    }
+
+    &.ladb-active {
+      .edge-inner {
+        fill: @ladb-material-type-4;
+      }
+    }
+
+    &.ladb-disabled {
+      .edge-inner {
+        fill: #efefef !important;
+      }
+    }
+
+    .edge-outer, .edge-inner {
+      fill: rgba(0, 0, 0, 0.01);
+    }
+
+  }
+
+  .face {
+    cursor: pointer;
+
+    &:hover {
+      .face-inner {
+        fill: @ladb-brand-primary !important;
+        fill-opacity: 0.2;
+        stroke: @ladb-brand-primary !important;
+        stroke-width: 2px;
+      }
+    }
+
+    &.ladb-active {
+      .face-inner {
+        fill: @ladb-material-type-6;
+        fill-opacity: 0.2;
+        stroke: @ladb-material-type-6;
+        stroke-width: 2px;
+      }
+    }
+
+    &.ladb-disabled {
+      .face-inner {
+        fill: #efefef !important;
+        fill-opacity: 0.8;
+      }
+    }
+
+    .face-inner {
+      fill: rgba(0, 0, 0, 0.01);
+    }
+
+  }
+
+  .increase {
+    cursor: pointer;
+
+    .increase-area {
+      fill: url(#diagonalHatch);
+    }
+
+    &:hover {
+      .increase-area {
+        fill: url(#diagonalHatchOver) !important;
+      }
+      .edge-inner {
+        fill: @ladb-brand-primary !important;
+      }
+    }
+
+    &.ladb-active {
+      .increase-area {
+        fill: url(#diagonalHatchActive);
+      }
+      .edge-inner {
+        fill: #5bc0de;
+      }
+    }
+
+    fill: rgba(0, 0, 0, 0.01);
+
+  }
+
+}
+
+// Print /////
+
+@media print {
+
+  .ladb-header-extra {
+
+    .ladb-file-infos {
+      border: 1px solid #000;
+      padding: 10px;
+      text-align: center;
+      margin-bottom: @ladb-gutter;
+
+      .ladb-file-infos-name {
+        font-size: 1.4em;
+      }
+
+      .ladb-file-infos-description {
+        font-size: 0.8em;
+      }
+
+    }
+
+    .ladb-time-and-unit {
+      position: absolute;
+      top: 0;
+      right: 0;
+      line-height: 34px;
+    }
+
+  }
+
+  .ladb-cutlist-group {
+
+    thead tr {
+
+      &.table-heading {
+        background: none !important;
+        color: #000 !important;
+
+        .ladb-heading-count {
+          line-height: 20px !important;
+          background-color: #000;
+          padding: 1px 6px;
+          .printable-background();
+        }
+
+      }
+
+      .ladb-heading {
+        line-height: 22px !important;
+
+        .ladb-heading-info {
+          color: #000;
+        }
+
+      }
+
+    }
+
+    tbody tr.ladb-cutlist-row td.ladb-cutlist-value {
+
+      i, span.ladb-opencutlist-icon {
+        color: #000 !important;
+      }
+
+      hr {
+        border-color: #000 !important;
+      }
+
+    }
+
+  }
+
+}

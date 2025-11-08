@@ -1,0 +1,248 @@
+//
+// Outliner
+//
+
+.ladb-outliner-group {
+
+  &.ladb-outliner-group-dark {
+
+    thead tr.table-heading {
+      background-color: #555;
+      color: #fff;
+    }
+
+  }
+
+  thead tr {
+
+    &.table-heading {
+      background-color: #eee;
+
+      .ladb-heading {
+        line-height: 30px;
+        font-size: 16px;
+      }
+
+    }
+
+    td {
+      border-bottom: 0;
+    }
+
+  }
+
+  tr.table-column-heading {
+
+    td {
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .ladb-minitools a {
+      font-size: 16px;
+    }
+
+  }
+
+  tbody tr.ladb-outliner-row {
+    font-size: 114%;
+    cursor: pointer;
+
+    &.ladb-hover {
+      background-color: #f9f9f9;
+
+      td.table-cell-fluid {
+        background-color: darken(#f7f7f7, 5%);
+
+        > .table-cell-fluid-inner {
+          background-color: #f9f9f9;
+        }
+
+      }
+
+    }
+
+    &.ladb-hidden {
+      .ladb-outliner-node-type,
+      .ladb-outliner-node-name,
+      .ladb-outliner-node-definition-name,
+      .ladb-outliner-node-description {
+        color: #ccc;
+      }
+    }
+
+    &.ladb-active {
+      .ladb-outliner-node-type,
+      .ladb-outliner-node-name,
+      .ladb-outliner-node-definition-name,
+      .ladb-outliner-node-description {
+        color: #17b4f8;
+      }
+    }
+
+    &.ladb-selected {
+      .ladb-outliner-node-type,
+      .ladb-outliner-node-name,
+      .ladb-outliner-node-definition-name,
+      .ladb-outliner-node-description,
+      .ladb-btn-node-toggle-select{
+        color: #084AD9;
+      }
+    }
+
+    td.table-cell-fluid {
+      background-color: #f7f7f7;
+      padding: 0;
+
+      > .table-cell-fluid-inner {
+        background-color: #fff;
+        padding: 0 0.5em;
+        line-height: 2.5em;
+
+        &.table-cell-fluid-inner-padded-left {
+          border-left: 1px solid @ladb-global-border;
+        }
+
+      }
+
+    }
+
+    td.ladb-cutlist-value {
+      white-space: nowrap;
+      text-align: center;
+
+      &.ladb-disabled {
+        .hatched();
+      }
+
+      &.ladb-cutlist-value-right {
+        text-align: right;
+      }
+
+      span.ladb-opencutlist-icon {
+        color: #999;
+      }
+
+    }
+
+    .ladb-outliner-node-type {
+      display: inline-block;
+      width: 20px;
+      margin: 0 5px;
+      text-align: center;
+    }
+
+    .ladb-outliner-node-material {
+      margin-right: 5px;
+    }
+
+    .ladb-outliner-node-name {
+      font-weight: bold;
+      margin-right: 5px;
+    }
+
+    .ladb-outliner-node-definition-name {
+      color: #777;
+    }
+
+    .ladb-outliner-node-layers {
+      display: flex;
+      flex-direction: row;
+      float: right;
+      border-radius: 5px;
+      color: #ffffff;
+      border-width: 2px;
+      border-style: solid;
+      margin: 0.5em 0;
+
+      &.ladb-hidden {
+        border-style: dashed;
+        background-color: #fff !important;
+      }
+
+      > span {
+        display: inline-block;
+        width: 1.2em;
+        height: 1.2em;
+        line-height: 1.2em;
+        text-align: center;
+      }
+
+      > div {
+        display: none;
+        border-radius: 3px;
+        background-color: #ffffff;
+        padding: 0 5px;
+        margin-right: 2px;
+        height: 1.2em;
+        line-height: 1.2em;
+
+        &:hover {
+          background-color: #eeeeee;
+        }
+
+        > a {
+          color: #000000;
+          font-size: 0.8em;
+
+          &:hover {
+            text-decoration: none;
+          }
+
+        }
+
+      }
+
+      &:hover > div {
+        display: inline-block;
+      }
+
+    }
+
+    .ladb-outliner-node-description {
+      font-size: 70%;
+      margin: -0.5em 0 0 0;
+      padding: 0 0 0.5em 50px;
+      line-height: 1.5em;
+    }
+
+    .ladb-outliner-node-tags {
+      list-style: none;
+      margin: -0.5em 0 0 0;
+      padding: 0 0 0.5em 50px;
+      line-height: 1.5em;
+
+      > li {
+        display: inline-block;
+
+        > a {
+          color: #000;
+          padding: 0 3px 1px 3px;
+          margin-right: 4px;
+          border-radius: 3px;
+          font-size: 78%;
+          border: 1px solid #000;
+
+          &:hover {
+            text-decoration: none;
+            background-color: #ccc;
+          }
+
+          &.no-hover:hover {
+            text-decoration: none;
+            background-color: inherit;
+          }
+
+          &.ladb-active {
+            border-width: 2px;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

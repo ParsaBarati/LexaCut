@@ -1,0 +1,49 @@
+{% extends 'core/_modal.twig' %}
+
+{% set id = 'ladb_core_modal_upgrade' %}
+{% set title = 'core.leftbar.more_update'|i18next %}
+
+{% block bodyInner %}
+    <div id="ladb_panel_infos">
+        {% if capabilities.manifest.version is empty %}
+            <p>{{ 'core.upgrade.unavailable'|i18next }}</p>
+        {% elseif capabilities.update_available %}
+            <p class="text-center">{{ 'core.upgrade.available'|i18next }}</p>
+            <div class="row" style="margin: 20px 0;">
+                <div class="col-xs-5 text-right"><span style="font-size: 130%; font-weight: bold;">{{ capabilities.version }}</span>{% if capabilities.is_dev %}<br><small>( build: {{ capabilities.build }} )</small>{% endif %}</div>
+                <div class="col-xs-2 text-center"><i class="ladb-opencutlist-icon-arrow-right"></i></div>
+                <div class="col-xs-5 text-left"><span style="font-size: 130%; font-weight: bold;">{{ capabilities.manifest.version }}</span>{% if capabilities.is_dev %}<br><small>( build: {{ capabilities.manifest.build }} )</small>{% endif %}</div>
+            </div>
+            <p class="text-center">
+                <a id="ladb_link_changelog" href="#">{{ 'core.upgrade.changelog'|i18next }}</a>
+            </p>
+        {% else %}
+            <p style="margin:20px;">{{ 'core.upgrade.up_to_date'|i18next }}</p>
+        {% endif %}
+    </div>
+    <div id="ladb_panel_progress" style="display: none;">
+        <p class="text-center">{{ 'core.upgrade.downloading'|i18next }}...</p>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 0;"></div>
+        </div>
+        <p class="text-center help-block"><small>{{ 'core.upgrade.download_rescue'|i18next }} <a href="#" class="ladb-btn-download">{{ 'core.upgrade.manual_download'|i18next }}</a>.</small></p>
+    </div>
+{% endblock %}
+
+{% block footerLeftInner %}
+    <button class="btn btn-default" data-help-page="core.upgrade"><i class="ladb-opencutlist-icon-help"></i> {{ 'default.help'|i18next }}</button>
+{% endblock %}
+
+{% block footerRightInner %}
+    <button class="btn btn-default" data-dismiss="modal">{{ 'default.close'|i18next }}</button>
+    {% if capabilities.manifest.version is empty %}
+        <button id="ladb_btn_download" class="btn btn-primary ladb-btn-download">{{ 'default.download'|i18next }}</button>
+    {% elseif capabilities.update_available %}
+        {% if not capabilities.update_muted %}
+            <button id="ladb_btn_ignore_update" class="btn btn-default">{{ 'core.upgrade.ignore_update'|i18next }}</button>
+        {% endif %}
+        <button id="ladb_btn_upgrade" class="btn btn-primary">{{ 'default.upgrade'|i18next }}</button>
+    {% else %}
+        <button id="ladb_btn_sponsor" class="btn btn-sponsor"><i class="ladb-opencutlist-icon-sponsor"></i> {{ 'tab.sponsor.label'|i18next }}</button>
+    {% endif %}
+{% endblock %}

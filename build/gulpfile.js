@@ -235,6 +235,143 @@ gulp.task('default', gulp.series('build'));
 
 // -----
 
+// LEXACUT BUILD TASKS
+// ===================
+
+gulp.task('lexacut_less_compile', function () {
+    return gulp.src('../src/ladb_lexacut/less/ladb-opencutlist.less')
+        .pipe(less())
+        .pipe(gulp.dest('../src/ladb_lexacut/css'));
+});
+
+gulp.task('lexacut_css_minify', function () {
+    return gulp.src('../src/ladb_lexacut/css/**/!(*.min).css')
+        .pipe(cleanCSS())
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(pxtorem({ minPixelValue: 1, propList: [
+            'font', 'font-size',
+                'line-height',
+                'letter-spacing',
+                'width', 'min-width',
+                'height', 'min-height',
+                'padding',
+                'margin',
+                'top', 'right', 'bottom', 'left',
+                'border-width',
+                'gap'
+            ] }))
+        .pipe(gulp.dest('../src/ladb_lexacut/css'));
+});
+
+gulp.task('lexacut_js_minify', function () {
+    return gulp.src('../src/ladb_lexacut/js/lib/**/!(*.min).js')
+        .pipe(uglify())
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(gulp.dest('../src/ladb_lexacut/js/lib'));
+});
+
+gulp.task('lexacut_twig_compile', function () {
+    'use strict';
+
+    del('../src/ladb_lexacut/js/templates/*twig-templates.js', {
+        force: true
+    });
+
+    gulp.src('../src/ladb_lexacut/twig/components/**')
+        .pipe(ladb_twig_compile('components/'))
+        .pipe(concat('components-twig-templates.js'))
+        .pipe(gulp.dest('../src/ladb_lexacut/js/templates'));
+
+    gulp.src('../src/ladb_lexacut/twig/core/**')
+        .pipe(ladb_twig_compile('core/'))
+        .pipe(concat('core-twig-templates.js'))
+        .pipe(gulp.dest('../src/ladb_lexacut/js/templates'));
+
+    gulp.src('../src/ladb_lexacut/twig/modals/**')
+        .pipe(ladb_twig_compile('modals/'))
+        .pipe(concat('modals-twig-templates.js'))
+        .pipe(gulp.dest('../src/ladb_lexacut/js/templates'));
+
+    return gulp.src('../src/ladb_lexacut/twig/tabs/**')
+        .pipe(ladb_twig_compile('tabs/'))
+        .pipe(concat('tabs-twig-templates.js'))
+        .pipe(gulp.dest('../src/ladb_lexacut/js/templates'));
+});
+
+gulp.task('lexacut_i18n_compile', function () {
+
+    var languageLabels = {};
+    var languageDisabledMsgs = {};
+    var languageReloadMsgs = {};
+
+    var files = glob.sync('../src/ladb_lexacut/yaml/i18n/*.yml');
+    for (var i = 0; i < files.length; i++) {
+        var file = files[i];
+        var language = path.basename(file, '.yml');
+        var data = yaml.load(fs.readFileSync(file, 'utf8'));
+
+        var label = data['_label'];
+        var disabledMsg = data['_disabled_msg'];
+        var reloadMsg = data['_reload_msg'];
+
+        delete data['_label'];
+        delete data['_disabled_msg'];
+        delete data['_reload_msg'];
+        delete data['_description'];
+
+        languageLabels[language] = label;
+        languageDisabledMsgs[language] = disabledMsg;
+        languageReloadMsgs[language] = reloadMsg;
+
+        return gulp.src(file)
+            .pipe(ladb_i18n_compile('../src/ladb_lexacut/yaml/i18n', '../src/ladb_lexacut/js/i18n'))
+            .pipe(gulp.dest('../src/ladb_lexacut/js/i18n'));
+    }
+
+});
+
+gulp.task('lexacut_i18n_dialogs_compile', function () {
+
+    del('../src/ladb_lexacut/html/dialog-*', {
+        force: true
+    });
+
+    gulp.src('../src/ladb_lexacut/yaml/i18n/' + (isProd ? '!(zz*)' : '*') + '.yml')
+        .pipe(ladb_i18n_dialog_compile('../src/ladb_lexacut/twig/dialog-modal.twig', 'modal'))
+        .pipe(gulp.dest('../src/ladb_lexacut/html'));
+
+    return gulp.src('../src/ladb_lexacut/yaml/i18n/' + (isProd ? '!(zz*)' : '*') + '.yml')
+        .pipe(ladb_i18n_dialog_compile('../src/ladb_lexacut/twig/dialog-tabs.twig', 'tabs'))
+        .pipe(gulp.dest('../src/ladb_lexacut/html'));
+});
+
+gulp.task('lexacut_rbz_create', function () {
+    var blob = [
+        'src/lexacut.rb',
+        'src/ladb_lexacut/**/*',
+        '!src/ladb_lexacut/**/.DS_Store',
+        '!src/ladb_lexacut/less/**',
+        '!src/ladb_lexacut/twig/**',
+        '!src/ladb_lexacut/cpp/**',
+        '!src/ladb_lexacut/**/*.less',
+        '!src/ladb_lexacut/**/*.twig',
+        '!src/ladb_lexacut/**/!(*.min).css',
+        '!src/ladb_lexacut/bin/**/!(*.dylib|*.dll)',
+        '!src/ladb_lexacut/js/lib/**/!(*.min).js',
+    ];
+    if (isProd) {
+        blob.push('!src/ladb_lexacut/yaml/i18n/zz*.yml');
+    }
+    return gulp.src(blob, { cwd: '../', base: '../src'})
+        .pipe(zip('lexacut-v7.1.0.rbz'))
+        .pipe(gulp.dest('../dist'));
+});
+
+gulp.task('lexacut_compile', gulp.series('lexacut_less_compile', 'lexacut_css_minify', 'lexacut_js_minify', 'lexacut_twig_compile', 'lexacut_i18n_compile', 'lexacut_i18n_dialogs_compile'));
+gulp.task('lexacut_build', gulp.series('lexacut_compile', 'lexacut_rbz_create'));
+
+// -----
+
 // C/C++ libs
 // ----------
 // Warning: These scripts build libraries only on the current operating system architecture.

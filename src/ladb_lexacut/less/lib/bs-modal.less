@@ -1,0 +1,98 @@
+//
+// Bootstrap Modal
+//
+
+.modal {
+
+  &.modal-full {
+    display: block;
+
+    > .modal-dialog {
+      margin: 0;
+      height: 100%;
+      width: 100%;
+
+      > .modal-content {
+        border: none;
+        height: 100%;
+        box-shadow: none;
+        display: flex;
+        flex-direction: column;
+
+        > .modal-body {
+          max-height: none;
+          flex-grow: 1;
+          overflow-y: auto;
+        }
+
+      }
+
+    }
+
+  }
+
+  .modal-header {
+    background-color: #f9f9f9;
+
+    .close {
+      margin-left: 10px;
+    }
+
+    .modal-header-tools {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+
+    h3 {
+      font-size: 20px;
+    }
+
+    .nav.nav-tabs {
+      margin-top: 10px;
+      margin-bottom: -16px;
+    }
+
+  }
+
+  .modal-footer {
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .modal-footer-left {
+    flex-grow: 0;
+    text-align: left;
+  }
+
+  .modal-footer-center {
+    flex-grow: 1;
+  }
+
+  .modal-footer-right {
+    flex-grow: 0;
+    text-align: right;
+  }
+
+  .modal-footer-collapse-handle {
+    position: absolute;
+    left: 50%;
+    bottom: -14px;
+
+    > button {
+      border: 1px solid #e5e5e5;
+      border-radius: 50%;
+      padding: 5px 9px;
+      color: #aaa;
+    }
+
+  }
+
+}
+
+@media screen and (min-width: 850px) {
+  .modal-dialog {
+    width: 700px;
+  }
+}

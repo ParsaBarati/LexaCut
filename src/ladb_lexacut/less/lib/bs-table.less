@@ -1,0 +1,54 @@
+//
+// Bootstrap Table
+//
+
+table.table-bordered {
+
+  &.table-danger {
+    border-color: darken(spin(#f2dede, -10), 5%);
+
+    & > thead > tr > th,
+    & > tbody > tr > th,
+    & > tfoot > tr > th,
+    & > thead > tr > td,
+    & > tbody > tr > td,
+    & > tfoot > tr > td {
+      border: 1px solid darken(spin(#f2dede, -10), 5%);
+    }
+
+  }
+
+  & > thead > tr.text-middle > th,
+  & > tbody > tr.text-middle > th,
+  & > tfoot > tr.text-middle > th,
+  & > thead > tr.text-middle > td,
+  & > tbody > tr.text-middle > td,
+  & > tfoot > tr.text-middle > td {
+    vertical-align: middle;
+  }
+
+  & > tbody > tr.table-row-section {
+    padding: 5px 10px 5px 10px;
+    font-size: 80%;
+    background-color: #fcfcfc;
+  }
+
+}
+
+.ladb-table-compact {
+
+  .table {
+    font-size: 12px;
+
+    & > thead > tr > th,
+    & > tbody > tr > th,
+    & > tfoot > tr > th,
+    & > thead > tr > td,
+    & > tbody > tr > td,
+    & > tfoot > tr > td {
+      padding: 6px;
+    }
+
+  }
+
+}

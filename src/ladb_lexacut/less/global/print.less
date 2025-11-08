@@ -1,0 +1,101 @@
+//
+// Print
+//
+
+@media print {
+
+  .no-print, .no-print * {
+    display: none !important;
+  }
+
+  html {
+    font-size: 1em !important;
+  }
+
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .ladb-header {
+    padding: 0 !important;
+
+    .container-fluid {
+      margin: 0 !important;
+      padding: 0 !important;
+
+      .ladb-heading {
+        margin: 0 0 10px 0 !important;
+      }
+
+    }
+
+  }
+
+  .ladb-container {
+    padding: 0 !important;
+
+    .container-fluid, .container {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+  }
+
+  .table-bordered {
+    border: 1px solid #000 !important;
+    font-size: 12px;
+    //break-inside: avoid;
+
+    & > tbody > tr.table-row-section {
+      background: none !important;
+    }
+
+    & > thead > tr > th,
+    & > tbody > tr > th,
+    & > tfoot > tr > th,
+    & > thead > tr > td,
+    & > tbody > tr > td,
+    & > tfoot > tr > td {
+      border-color: #000 !important;
+    }
+
+  }
+
+  .ladb-table-compact {
+
+    .table {
+      font-size: 10px;
+
+      & > thead > tr > th,
+      & > tbody > tr > th,
+      & > tfoot > tr > th,
+      & > thead > tr > td,
+      & > tbody > tr > td,
+      & > tfoot > tr > td {
+        padding: 6px;
+      }
+
+    }
+
+  }
+
+  .is_stuck {
+    position: static !important;
+    width: auto !important;
+
+    + div {
+      display: none !important;
+    }
+
+  }
+
+  .ladb-horizontal-left-separator {
+    border-color: #000 !important;
+  }
+
+  .ladb-mute {
+    opacity: 1.0 !important;
+  }
+
+}

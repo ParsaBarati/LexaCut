@@ -1,0 +1,34 @@
+//
+// Tab
+//
+
+.ladb-tab {
+
+  .modal.modal-inside, .modal-backdrop {
+    margin: 0 0 @ladb-bottombar-height @ladb-leftbar-width;
+  }
+
+  .modal.modal-inside {
+    z-index: 1010;
+  }
+
+  .modal-backdrop {
+    background: @ladb-global-bg;
+    z-index: 1000;
+  }
+
+  .modal-open {
+    overflow: hidden;
+  }
+
+  .ladb-obsolete {
+    padding: 4px 7px;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-size: 80%;
+    background-color: #888;
+    color: #eee;
+    .blink(2s);
+  }
+
+}

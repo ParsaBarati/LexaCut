@@ -1,0 +1,151 @@
+//
+// Materials
+//
+
+@material-texture-preview-size: 250px;
+
+.ladb-material-type-separator {
+  margin-bottom: @ladb-gutter;
+  font-size: 1.4em;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+
+  > div {
+    flex-grow: 0;
+  }
+
+  > hr {
+    margin: 15px 0 0 0;
+    border-color: #ddd;
+    flex-grow: 1;
+  }
+
+}
+
+.ladb-material-item {
+  float: left;
+  width: 200px;
+  padding: 0 10px;
+}
+
+.ladb-material-box {
+  .list-box();
+  .list-box-hover();
+  .list-box-active();
+  width: 100%;
+  margin: 0 0 @ladb-gutter 0;
+
+  &.ladb-active {
+    a.ladb-btn-set-current {
+      color: #555;
+    }
+  }
+
+  .ladb-content {
+
+    .ladb-image {
+      position: relative;
+      background-color: #fff;
+
+      svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+    }
+  }
+
+  .ladb-overlay-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 15px 10px 8px 10px;
+    color: #fff;
+    #gradient > .vertical(rgba(0, 0, 0, 0), rgba(0, 0, 0, .3), 0%, 100%);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, .8);
+    overflow: hidden;
+
+    .ladb-tiny {
+      font-size: 70%;
+    }
+
+  }
+
+  .ladb-overlay-drop {
+    position: absolute;
+    left: 6px;
+    top: 0;
+    font-size: 150%;
+  }
+
+  .ladb-overlay-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    .ladb-group-type-icon {
+      border-radius: 0 0 0 4px;
+
+      &.ladb-material-type-0 {
+        color: #fff;
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+        margin-top: 3px;
+
+        i.ladb-opencutlist-icon-unknow:before {
+          opacity: 0.5;
+        }
+
+      }
+
+    }
+
+  }
+
+  .ladb-footer {
+    padding-top: 5px;
+    font-size: 120%;
+  }
+
+}
+
+.ladb-material-texture-preview-wrapper {
+  display: table;
+  width: 100%;
+
+  .ladb-material-texture-preview {
+    display: table-cell;
+    height: 270px;
+    text-align: center;
+    vertical-align: middle;
+
+    .thumbnail {
+      position: relative;
+      display: inline-block;
+      margin: 0;
+
+      img {
+        max-width: @material-texture-preview-size;
+        max-height: @material-texture-preview-size;
+      }
+
+    }
+
+  }
+}
+
+.ladb-material-color-drop {
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 1px;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
+  box-sizing: content-box;
+  .printable-background();
+}

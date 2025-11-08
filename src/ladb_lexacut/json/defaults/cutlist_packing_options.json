@@ -1,0 +1,48 @@
+{
+  "_storages": {
+    "std_bin_1d_sizes": 2, /* PRESETS_STORAGE_MODEL_ONLY */
+    "std_bin_2d_sizes": 2, /* PRESETS_STORAGE_MODEL_ONLY */
+    "scrap_bin_1d_sizes": 2, /* PRESETS_STORAGE_MODEL_ONLY */
+    "scrap_bin_2d_sizes": 2, /* PRESETS_STORAGE_MODEL_ONLY */
+    "hidden_group_ids": 2 /* PRESETS_STORAGE_MODEL_ONLY */
+  },
+  "_preprocessors": {
+    "std_bin_1d_sizes": 1, /* PRESETS_PREPROCESSOR_D */
+    "std_bin_2d_sizes": 4, /* PRESETS_PREPROCESSOR_DXDXQ */
+    "scrap_bin_1d_sizes": 2, /* PRESETS_PREPROCESSOR_DXQ */
+    "scrap_bin_2d_sizes": 4, /* PRESETS_PREPROCESSOR_DXDXQ */
+    "rectangleguillotine_keep_size": 3, /* PRESETS_PREPROCESSOR_DXD */
+    "spacing": 1, /* PRESETS_PREPROCESSOR_D */
+    "trimming": 1 /* PRESETS_PREPROCESSOR_D */
+  },
+  "0": {
+    "std_bin_1d_sizes": "",
+    "std_bin_2d_sizes": "",
+    "scrap_bin_1d_sizes": "",
+    "scrap_bin_2d_sizes": "",
+    "problem_type": "rectangleguillotine",
+    "rectangleguillotine_cut_type": "non-exact",
+    "rectangleguillotine_number_of_stages": 3,
+    "rectangleguillotine_first_stage_orientation": "any",
+    "rectangleguillotine_keep_size": "",
+    "irregular_allowed_rotations": "0",
+    "irregular_allow_mirroring": false,
+    "spacing": { "metric": "3mm", "imperial": "1/8\"" },
+    "trimming": { "metric": "10mm", "imperial": "1/2\"" },
+    "items_formula": "",
+    "origin_corner": 0, /* ORIGIN_CORNER_TOP_LEFT */
+    "bin_folding": true,
+    "hide_part_list": false,
+    "part_drawing_type": 1, /* PART_DRAWING_TYPE_2D_TOP */
+    "colorization": 1, /* COLORIZATION_SCREEN */
+    "highlight_primary_cuts": false,
+    "hide_edges_preview": true,
+    "objective": "auto",
+    "optimization_mode": "auto",
+    "time_limit": 0,
+    "not_anytime_tree_search_queue_size": 16,
+    "verbosity_level": 0,
+    "input_to_json_bin_dir": "",
+    "hidden_group_ids": []
+  }
+}

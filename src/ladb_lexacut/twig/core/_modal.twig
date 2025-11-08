@@ -1,0 +1,46 @@
+
+{# set title #}
+{# set bodyClasses (facultative) #}
+{# set noDefaultClose (facultative) #}
+
+{% set noDefaultClose = noDefaultClose|default(false) %}
+{% set noHeader = noHeader|default(false) %}
+
+{% block modal %}
+    <div id="{{ id }}" class="modal{% if classes is defined %} {{ classes }}{% endif %}" data-keyboard="false"{% if noDefaultClose %} data-backdrop="static"{% endif%} role="dialog" tabindex="-1" aria-hidden="true" aria-labelledby="{{ id }}_label">
+        {% block dialog %}
+            <div class="modal-dialog">
+                {% block content %}
+                    <div class="modal-content">
+                        {% block contentInner %}
+                            {% block header %}
+                                {% if not noHeader %}
+                                    <div class="modal-header">
+                                        {% block headerInner %}
+                                            <div class="modal-header-tools">{% block headerToolsInner %}{% endblock %}{% if not noDefaultClose %}<button class="close" data-dismiss="modal" aria-hidden="true">&times;</button>{% endif %}</div>
+                                            {% if title is defined %}<h3 id="{{ id }}_label" class="modal-title">{{ title|raw }}</h3>{% endif %}
+                                        {% endblock %}
+                                    </div>
+                                {% endif %}
+                            {% endblock %}
+                            {% block body %}
+                                <div class="modal-body{% if bodyClasses is defined %} {{ bodyClasses }}{% endif %}">
+                                    {% block bodyInner %}{% endblock %}
+                                </div>
+                            {% endblock %}
+                            {% block footer %}
+                                <div class="modal-footer">
+                                    {% block footerInner %}
+                                        <div class="modal-footer-left">{% block footerLeftInner %}{% endblock %}</div>
+                                        <div class="modal-footer-center">{% block footerCenterInner %}{% endblock %}</div>
+                                        <div class="modal-footer-right">{% block footerRightInner %}{% endblock %}</div>
+                                    {% endblock %}
+                                </div>
+                            {% endblock %}
+                        {% endblock %}
+                    </div>
+                {% endblock %}
+            </div>
+        {% endblock %}
+    </div>
+{% endblock %}

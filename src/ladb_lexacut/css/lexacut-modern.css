@@ -1,0 +1,785 @@
+/**
+ * LexaCut Modern UI
+ * Elegant · Minimal · Classy
+ * 
+ * Override stylesheet for OpenCutList
+ * Transforms the interface into a refined, timeless design
+ */
+
+/* ========================================================================
+   CSS VARIABLES - Design System
+   ======================================================================== */
+
+:root {
+  /* Colors - Primary */
+  --primary-600: #2563eb;
+  --primary-500: #3b82f6;
+  --primary-400: #60a5fa;
+  
+  /* Colors - Neutral (Elegant Grays) */
+  --neutral-900: #111827;
+  --neutral-800: #1f2937;
+  --neutral-700: #374151;
+  --neutral-600: #4b5563;
+  --neutral-500: #6b7280;
+  --neutral-400: #9ca3af;
+  --neutral-300: #d1d5db;
+  --neutral-200: #e5e7eb;
+  --neutral-100: #f3f4f6;
+  --neutral-50:  #f9fafb;
+  
+  /* Colors - Accent */
+  --success-500: #10b981;
+  --warning-500: #f59e0b;
+  --error-500:   #ef4444;
+  --info-500:    #6366f1;
+  
+  /* Typography */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  
+  /* Spacing (8px grid) */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  
+  /* Border Radius */
+  --radius-sm:   0.25rem;
+  --radius-base: 0.5rem;
+  --radius-lg:   0.75rem;
+  --radius-xl:   1rem;
+  
+  /* Shadows (Subtle) */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-base: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  
+  /* Transitions */
+  --transition-fast:   150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base:   200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ========================================================================
+   GLOBAL REFINEMENTS
+   ======================================================================== */
+
+body {
+  font-family: var(--font-primary);
+  color: var(--neutral-800);
+  background-color: var(--neutral-50);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Refined scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--neutral-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--neutral-300);
+  border-radius: var(--radius-base);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neutral-400);
+}
+
+/* ========================================================================
+   BUTTONS - Elegant & Minimal
+   ======================================================================== */
+
+.btn {
+  font-family: var(--font-primary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-base);
+  border: none;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+/* Primary Button */
+.btn-primary {
+  background: var(--primary-600);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--primary-500);
+  color: white;
+}
+
+.btn-primary:active,
+.btn-primary.active {
+  background: var(--primary-600);
+}
+
+/* Default Button (Minimal) */
+.btn-default {
+  background: white;
+  color: var(--neutral-700);
+  border: 1px solid var(--neutral-300);
+  box-shadow: none;
+}
+
+.btn-default:hover {
+  background: var(--neutral-50);
+  border-color: var(--neutral-400);
+  color: var(--neutral-900);
+}
+
+/* Danger Button (Subtle) */
+.btn-danger {
+  background: white;
+  color: var(--error-500);
+  border: 1px solid var(--error-500);
+}
+
+.btn-danger:hover {
+  background: var(--error-500);
+  color: white;
+}
+
+/* Button Group Refinement */
+.btn-group .btn {
+  border-radius: 0;
+}
+
+.btn-group .btn:first-child {
+  border-top-left-radius: var(--radius-base);
+  border-bottom-left-radius: var(--radius-base);
+}
+
+.btn-group .btn:last-child {
+  border-top-right-radius: var(--radius-base);
+  border-bottom-right-radius: var(--radius-base);
+}
+
+/* ========================================================================
+   CARDS & PANELS - Breathing Space
+   ======================================================================== */
+
+.panel,
+.ladb-page,
+.card {
+  background: white;
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-6);
+  margin-bottom: var(--space-4);
+}
+
+.panel-heading,
+.card-header {
+  background: white;
+  border-bottom: 1px solid var(--neutral-200);
+  padding: var(--space-4) var(--space-6);
+  font-weight: 600;
+  color: var(--neutral-900);
+  border-top-left-radius: var(--radius-lg);
+  border-top-right-radius: var(--radius-lg);
+}
+
+.panel-body,
+.card-body {
+  padding: var(--space-6);
+}
+
+/* ========================================================================
+   TABLES - Clean & Scannable
+   ======================================================================== */
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table thead {
+  border-bottom: 2px solid var(--neutral-300);
+}
+
+.table thead th {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--neutral-600);
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  background: var(--neutral-50);
+}
+
+.table tbody tr {
+  border-bottom: 1px solid var(--neutral-200);
+  transition: background-color var(--transition-fast);
+}
+
+.table tbody tr:hover {
+  background: var(--neutral-50);
+}
+
+.table tbody td {
+  padding: var(--space-4);
+  color: var(--neutral-800);
+  font-size: 0.875rem;
+}
+
+/* Remove heavy Bootstrap borders */
+.table-bordered {
+  border: none;
+}
+
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > td {
+  border: none;
+}
+
+/* ========================================================================
+   FORMS & INPUTS - Refined Focus
+   ======================================================================== */
+
+.form-control,
+input[type="text"],
+input[type="number"],
+input[type="email"],
+select,
+textarea {
+  font-family: var(--font-primary);
+  font-size: 0.875rem;
+  color: var(--neutral-800);
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--radius-base);
+  padding: var(--space-3) var(--space-4);
+  transition: all var(--transition-fast);
+  background: white;
+}
+
+.form-control:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--primary-500);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  outline: none;
+}
+
+.form-control:disabled,
+input:disabled {
+  background: var(--neutral-100);
+  color: var(--neutral-500);
+  cursor: not-allowed;
+}
+
+/* Form Labels */
+.form-label,
+label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--neutral-700);
+  margin-bottom: var(--space-2);
+  display: block;
+}
+
+/* ========================================================================
+   MODALS - Centered Elegance
+   ======================================================================== */
+
+.modal-content {
+  border-radius: var(--radius-xl);
+  border: none;
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.modal-header {
+  background: white;
+  border-bottom: 1px solid var(--neutral-200);
+  padding: var(--space-6);
+}
+
+.modal-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--neutral-900);
+}
+
+.modal-body {
+  padding: var(--space-6);
+  background: white;
+}
+
+.modal-footer {
+  background: var(--neutral-50);
+  border-top: 1px solid var(--neutral-200);
+  padding: var(--space-4) var(--space-6);
+}
+
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+/* ========================================================================
+   HEADER & NAVIGATION - Refined Top Bar
+   ======================================================================== */
+
+.ladb-header {
+  background: white;
+  border-bottom: 1px solid var(--neutral-200);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-4) var(--space-6);
+}
+
+.ladb-header h1,
+.ladb-header h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--neutral-900);
+  margin: 0;
+  letter-spacing: -0.025em;
+}
+
+/* Tabs */
+.nav-tabs {
+  border-bottom: 2px solid var(--neutral-200);
+  padding: 0 var(--space-6);
+}
+
+.nav-tabs > li > a {
+  color: var(--neutral-600);
+  font-weight: 500;
+  font-size: 0.875rem;
+  padding: var(--space-4) var(--space-5);
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: all var(--transition-fast);
+}
+
+.nav-tabs > li > a:hover {
+  color: var(--neutral-900);
+  background: transparent;
+  border-bottom-color: var(--neutral-300);
+}
+
+.nav-tabs > li.active > a {
+  color: var(--primary-600);
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--primary-600);
+  font-weight: 600;
+}
+
+/* ========================================================================
+   ALERTS - Subtle Notifications
+   ======================================================================== */
+
+.alert {
+  border-radius: var(--radius-base);
+  border: 1px solid;
+  padding: var(--space-4) var(--space-5);
+  font-size: 0.875rem;
+  margin-bottom: var(--space-4);
+}
+
+.alert-info {
+  background: rgba(99, 102, 241, 0.1);
+  border-color: var(--info-500);
+  color: var(--neutral-800);
+}
+
+.alert-success {
+  background: rgba(16, 185, 129, 0.1);
+  border-color: var(--success-500);
+  color: var(--neutral-800);
+}
+
+.alert-warning {
+  background: rgba(245, 158, 11, 0.1);
+  border-color: var(--warning-500);
+  color: var(--neutral-800);
+}
+
+.alert-danger {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: var(--error-500);
+  color: var(--neutral-800);
+}
+
+/* ========================================================================
+   BADGES & LABELS - Refined Pills
+   ======================================================================== */
+
+.badge,
+.label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: var(--space-1) var(--space-3);
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.badge-primary,
+.label-primary {
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--primary-600);
+}
+
+.badge-success,
+.label-success {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--success-500);
+}
+
+.badge-warning,
+.label-warning {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--warning-500);
+}
+
+.badge-danger,
+.label-danger {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--error-500);
+}
+
+/* ========================================================================
+   DROPDOWNS - Clean Menus
+   ======================================================================== */
+
+.dropdown-menu {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--neutral-200);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-2);
+  min-width: 200px;
+}
+
+.dropdown-menu > li > a {
+  padding: var(--space-3) var(--space-4);
+  font-size: 0.875rem;
+  color: var(--neutral-700);
+  border-radius: var(--radius-base);
+  transition: all var(--transition-fast);
+}
+
+.dropdown-menu > li > a:hover {
+  background: var(--neutral-100);
+  color: var(--neutral-900);
+}
+
+.dropdown-menu > .divider {
+  margin: var(--space-2) 0;
+  background: var(--neutral-200);
+}
+
+/* ========================================================================
+   LOADING STATES - Elegant Skeleton
+   ======================================================================== */
+
+.loading,
+.spinner {
+  color: var(--neutral-400);
+}
+
+/* ========================================================================
+   ICONS - Subtle & Aligned
+   ======================================================================== */
+
+i[class*="ladb-opencutlist-icon-"] {
+  color: var(--neutral-600);
+  transition: color var(--transition-fast);
+}
+
+.btn i[class*="ladb-opencutlist-icon-"] {
+  font-size: 1rem;
+}
+
+/* ========================================================================
+   UTILITY CLASSES
+   ======================================================================== */
+
+/* Spacing utilities */
+.mt-4 { margin-top: var(--space-4); }
+.mb-4 { margin-bottom: var(--space-4); }
+.p-4 { padding: var(--space-4); }
+.p-6 { padding: var(--space-6); }
+
+/* Text utilities */
+.text-muted {
+  color: var(--neutral-500);
+}
+
+.text-primary {
+  color: var(--primary-600);
+}
+
+.text-success {
+  color: var(--success-500);
+}
+
+.text-danger {
+  color: var(--error-500);
+}
+
+/* ========================================================================
+   RESPONSIVE REFINEMENTS
+   ======================================================================== */
+
+@media (max-width: 768px) {
+  .btn {
+    padding: var(--space-2) var(--space-4);
+    font-size: 0.8125rem;
+  }
+  
+  .panel,
+  .card {
+    padding: var(--space-4);
+  }
+  
+  .modal-header,
+  .modal-body,
+  .modal-footer {
+    padding: var(--space-4);
+  }
+}
+
+/* ========================================================================
+   PRINT STYLES - Clean Output
+   ======================================================================== */
+
+@media print {
+  body {
+    background: white;
+  }
+  
+  .btn,
+  .no-print {
+    display: none !important;
+  }
+  
+  .panel,
+  .card {
+    box-shadow: none;
+    border: 1px solid var(--neutral-300);
+  }
+}
+
+/* ========================================================================
+   ANIMATIONS - Subtle & Purposeful
+   ======================================================================== */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn var(--transition-smooth);
+}
+
+/* ========================================================================
+   END - LexaCut Modern UI
+   ======================================================================== */
+
+
+/* ========================================================================
+   LEXACUT BRANDING - Visible Proof of Development
+   ======================================================================== */
+
+/* LexaCut Branding Badge in Header */
+.ladb-header {
+  position: relative;
+}
+
+.ladb-header::before {
+  content: '✨ LexaCut Modern UI';
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+  z-index: 1000;
+  animation: fadeInSlide 0.5s ease-out;
+}
+
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Enhanced Primary Button with Gradient */
+.btn-primary {
+  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  border: none;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.6s;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
+  box-shadow: 0 8px 16px rgba(37, 99, 235, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Subtle Background Pattern */
+body {
+  background-color: var(--neutral-50);
+  background-image: 
+    linear-gradient(to right, rgba(37, 99, 235, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(37, 99, 235, 0.02) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Footer Version Indicator */
+.ladb-footer,
+.ladb-bottombar {
+  position: relative;
+}
+
+.ladb-footer::after,
+.ladb-bottombar::after {
+  content: 'LexaCut v7.1.0 | Modern Edition by LexaPlus';
+  display: block;
+  text-align: center;
+  padding: 8px;
+  font-size: 0.7rem;
+  color: var(--neutral-500);
+  border-top: 1px solid var(--neutral-200);
+  margin-top: 12px;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+}
+
+/* Enhanced Cards with Subtle Animation */
+.panel,
+.card {
+  transition: all var(--transition-smooth);
+}
+
+.panel:hover,
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* Gradient Accent on Active Tab */
+.nav-tabs > li.active > a {
+  color: var(--primary-600);
+  background: linear-gradient(to bottom, transparent, rgba(37, 99, 235, 0.05));
+  border: none;
+  border-bottom: 2px solid var(--primary-600);
+  font-weight: 600;
+}
+
+/* Loading Spinner with Branding */
+.loading {
+  position: relative;
+}
+
+.loading::after {
+  content: 'LexaCut Modern UI';
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--primary-600);
+  white-space: nowrap;
+}
+
+/* Enhanced Modal Backdrop */
+.modal-backdrop.in {
+  opacity: 0.6;
+  backdrop-filter: blur(6px);
+}
+
+/* Glow Effect on Focus */
+.form-control:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--primary-500);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+  outline: none;
+}
+
+/* ========================================================================
+   END LEXACUT BRANDING
+   ======================================================================== */

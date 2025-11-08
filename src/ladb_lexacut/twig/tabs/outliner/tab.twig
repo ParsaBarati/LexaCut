@@ -1,0 +1,22 @@
+{% extends 'tabs/base-tab.twig' %}
+
+{% block headerHeadingInner %}<span id="ladb_filename" class="text-muted pull-right"></span>{{ parent() }}{% endblock %}
+
+{% block headerToolsInner %}
+    <button id="ladb_btn_generate" class="btn btn-primary"><i class="ladb-opencutlist-icon-refresh"></i><span class="hidden-xs"> {{ 'default.refresh'|i18next }}</span></button>
+    &nbsp;
+    <button id="ladb_btn_options" class="btn btn-default"><i class="ladb-opencutlist-icon-settings"></i><span class="hidden-sm hidden-xs">  {{ 'default.options'|i18next }}</span></button>
+    <button class="btn btn-default" data-help-page="outliner"><i class="ladb-opencutlist-icon-help"></i></button>
+    &nbsp;
+    <button id="ladb_btn_side_fold" class="btn btn-default"><i class="ladb-opencutlist-icon-side-fold"></i></button>
+{% endblock %}
+
+{% block headerInner %}
+    {{ parent() }}
+    <ul class="ladb-file-tabs nav nav-tabs no-print"></ul>
+{% endblock %}
+
+{% block containerInner %}
+    {{ parent() }}
+    <div class="ladb-page"></div>
+{% endblock %}

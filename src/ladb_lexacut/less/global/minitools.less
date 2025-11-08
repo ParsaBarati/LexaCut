@@ -1,0 +1,155 @@
+//
+// Minitools
+//
+
+.ladb-minitools {
+  text-align: center;
+  white-space: nowrap;
+
+  &.ladb-minitools-right {
+    float: right;
+  }
+
+  &.ladb-minitools-left {
+    float: left;
+  }
+
+  &.ladb-minitools-inline {
+    display: inline-block;
+  }
+
+  &.ladb-minitools-lg, &.ladb-minitools-lgw {
+    font-size: 150%;
+    line-height: 35px;
+
+    > a {
+      width: 28px;
+    }
+
+  }
+
+  &.ladb-minitools-lgw {
+
+    &.ladb-minitools-right {
+      margin-right: 20px;
+    }
+
+    &.ladb-minitools-left {
+      margin-left: 20px;
+    }
+
+  }
+
+  .ladb-separator {
+    border-right: 1px solid #eee;
+    margin: 0 8px;
+
+    &.ladb-separator-dark {
+      border-color: #ccc;
+    }
+
+    &.ladb-separator-white {
+      border-color: #fff;
+    }
+
+  }
+
+  a {
+    color: @ladb-global-lighter-color;
+    width: 20px;
+    text-align: center;
+    display: inline-block;
+
+    &[href]:hover, &[href]:focus, &[data-toggle=popover]:hover, &.ladb-active {
+      color: #888;
+
+      &.ladb-tool-info {
+        color: darken(@ladb-brand-info, 30%);
+      }
+
+      &.ladb-tool-warning {
+        color: darken(@ladb-brand-warning, 30%);
+      }
+
+      &.ladb-tool-danger {
+        color: darken(@ladb-brand-danger, 30%);
+      }
+
+      &.ladb-tool-white {
+        color: darken(#fff, 30%);
+      }
+
+      &.ladb-tool-dark {
+        color: darken(#888, 30%);
+      }
+
+      &.ladb-tool-black {
+        color: lighten(#000, 30%);
+      }
+
+    }
+
+    &:hover, &:focus {
+      text-decoration: none;
+    }
+
+    &.ladb-tool-info {
+      color: @ladb-brand-info;
+    }
+
+    &.ladb-tool-warning {
+      color: @ladb-brand-warning;
+    }
+
+    &.ladb-tool-danger {
+      color: @ladb-brand-danger;
+    }
+
+    &.ladb-tool-white {
+      color: #fff;
+    }
+
+    &.ladb-tool-dark {
+      color: #888;
+    }
+
+    &.ladb-tool-black {
+      color: #000;
+    }
+
+    &.ladb-tool-text {
+      width: inherit;
+      border-style: solid;
+      border-width: 1px;
+      border-radius: 5px;
+      font-size: 80%;
+      padding: 1px 2px;
+    }
+
+  }
+
+}
+
+.ladb-minitools-holder {
+
+  &:hover {
+    a.ladb-click-tool {
+      color: #888;
+    }
+  }
+
+  &.ladb-active {
+    a.ladb-active-tool {
+      color: #888;
+    }
+  }
+
+}
+
+@media print {
+
+  .ladb-minitools a {
+    color: #000 !important;
+  }
+
+}
