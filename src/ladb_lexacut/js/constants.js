@@ -1,12 +1,12 @@
 // CONSTANTS
 // ======================
 
-const EXTENSION_BUILD = '202511080942';   // /!\ Auto-generated line, do not edit //
+const EXTENSION_BUILD = '202511081103';   // /!\ Auto-generated line, do not edit //
 
 // LEXACUT BRANDING
 const LEXACUT_BRANDING = {
     name: 'LexaCut',
-    version: '8.0.0',
+    version: '8.0.1',
     edition: 'Modern UI',
     developer: 'LexaPlus',
     tagline: 'Elegant, Minimal & Classy'
