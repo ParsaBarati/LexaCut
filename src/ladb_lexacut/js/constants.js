@@ -6,7 +6,7 @@ const EXTENSION_BUILD = '202511081103';   // /!\ Auto-generated line, do not edi
 // LEXACUT BRANDING
 const LEXACUT_BRANDING = {
     name: 'LexaCut',
-    version: '8.0.1',
+    version: '8.0.2',
     edition: 'Modern UI',
     developer: 'LexaPlus',
     tagline: 'Elegant, Minimal & Classy'
