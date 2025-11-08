@@ -19,8 +19,30 @@
     <link rel="stylesheet" href="../css/ladb-opencutlist-icons.min.css">
     <!-- LexaCut Modern UI - Elegant, Minimal, Classy -->
     <link rel="stylesheet" href="../css/lexacut-modern.min.css">
+    <style>
+        /* LexaCut Branding - Inline to ensure loading */
+        body::before {
+            content: '✨ LEXACUT v8.0.1 - MODERN UI' !important;
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%) !important;
+            color: white !important;
+            text-align: center !important;
+            padding: 8px !important;
+            font-weight: 700 !important;
+            font-size: 14px !important;
+            z-index: 999999 !important;
+            letter-spacing: 1px !important;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2) !important;
+        }
+        body {
+            padding-top: 40px !important;
+        }
+    </style>
 </head>
-<body>
+<body data-lexacut="true" data-version="8.0.1">
 <script type="text/javascript">
     window.onerror = function (errorMsg, url, lineNumber) {
         alert('Error: ' + errorMsg + '\n Script: ' + url + '\n Line: ' + lineNumber);

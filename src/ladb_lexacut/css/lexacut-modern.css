@@ -665,11 +665,12 @@ i[class*="ladb-opencutlist-icon-"] {
 
 /* Enhanced Primary Button with Gradient */
 .btn-primary {
-  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
-  color: white;
+  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%) !important;
+  color: white !important;
   position: relative;
   overflow: hidden;
-  border: none;
+  border: none !important;
+  font-weight: 600 !important;
 }
 
 .btn-primary::before {
@@ -688,9 +689,9 @@ i[class*="ladb-opencutlist-icon-"] {
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
-  box-shadow: 0 8px 16px rgba(37, 99, 235, 0.4);
-  transform: translateY(-2px);
+  background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%) !important;
+  box-shadow: 0 8px 16px rgba(37, 99, 235, 0.4) !important;
+  transform: translateY(-2px) !important;
 }
 
 .btn-primary:active {
@@ -699,11 +700,11 @@ i[class*="ladb-opencutlist-icon-"] {
 
 /* Subtle Background Pattern */
 body {
-  background-color: var(--neutral-50);
+  background-color: var(--neutral-50) !important;
   background-image: 
-    linear-gradient(to right, rgba(37, 99, 235, 0.02) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(37, 99, 235, 0.02) 1px, transparent 1px);
-  background-size: 20px 20px;
+    linear-gradient(to right, rgba(37, 99, 235, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(37, 99, 235, 0.05) 1px, transparent 1px) !important;
+  background-size: 20px 20px !important;
 }
 
 /* Footer Version Indicator */
