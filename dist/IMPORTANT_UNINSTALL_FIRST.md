@@ -29,7 +29,7 @@
 1. **SketchUp را دوباره باز کنید**
 2. بروید: **Window** → **Extension Manager**
 3. کلیک کنید: **Install Extension**
-4. فایل را انتخاب کنید: **`lexacut-v8.0.0.rbz`**
+4. فایل را انتخاب کنید: **`lexacut-v8.0.1.rbz`**
 5. تایید کنید
 6. **SketchUp را ببندید و دوباره باز کنید**
 
@@ -84,7 +84,7 @@ You should see:
 1. **Extensions menu** has "LexaCut" listed
 2. **Window title** shows "LexaCut - Modern Cutting List"
 3. **Header badge** shows "✨ LexaCut Modern UI" (top-right)
-4. **Footer** shows "LexaCut v8.0.0 | Modern Edition"
+4. **Footer** shows "LexaCut v8.0.1 | Modern Edition"
 5. **Buttons** have blue gradient with hover effects
 
 If you don't see these, the old version is still interfering.
@@ -118,7 +118,7 @@ Include:
 
 ---
 
-**Version:** 8.0.0  
-**Build Date:** November 8, 2025  
+**Version:** 8.0.1  
+**Build Date:** November 8, 2025 11:08 AM  
 **Status:** Fixed - Separate extension with unique data storage
 
