@@ -1,7 +1,7 @@
 module Ladb::OpenCutList
 
     EXTENSION_NAME = 'LexaCut'.freeze
-    EXTENSION_VERSION = '8.0.2'.freeze
+    EXTENSION_VERSION = '8.0.3'.freeze
     EXTENSION_BUILD = '202511081123'.freeze
 
     DEFAULT_LANGUAGE = 'en'
