@@ -123,7 +123,7 @@ module Ladb::OpenCutList
       @observers = []
 
       @started = false
-      @zzz = false
+      @zzz = false  # LexaCut: Auto-update disabled for separate extension
 
       @tabs_dialog = nil
       @tabs_dialog_maximized = false
@@ -1340,9 +1340,11 @@ module Ladb::OpenCutList
     end
 
     def _assert_not_zzz
+      # LexaCut: Disabled auto-update sleep mode for separate extension
       # Plugin is sleeping (zzz) right after updating itself.
-      UI.messagebox(get_i18n_string('core.upgrade.success')) if @zzz
-      !@zzz
+      # UI.messagebox(get_i18n_string('core.upgrade.success')) if @zzz
+      # !@zzz
+      true  # Always return true - LexaCut doesn't sleep
     end
 
     # -- Commands ---

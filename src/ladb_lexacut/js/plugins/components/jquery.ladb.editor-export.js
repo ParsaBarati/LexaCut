@@ -93,7 +93,7 @@
         $('a.ladb-editor-export-column-item-align-btn', $item).on('click', function () {
             const $icon = $('i', $(this));
             let align = $item.data('align');
-            $icon.removeClass('ladb-opencutlist-icon-align-' + align);
+            $icon.removeClass('ladb-lexacut-icon-align-' + align);
             switch (align) {
                 case 'left':
                     align = 'center';
@@ -106,7 +106,7 @@
                     break;
             }
             $item.data('align', align);
-            $icon.addClass('ladb-opencutlist-icon-align-' + align);
+            $icon.addClass('ladb-lexacut-icon-align-' + align);
             return false;
         });
         $('a.ladb-editor-export-column-item-visibility-btn', $item).on('click', function () {
@@ -115,13 +115,13 @@
             if (hidden === true) {
                 hidden = false;
                 $item.removeClass('ladb-inactive');
-                $icon.removeClass('ladb-opencutlist-icon-eye-close');
-                $icon.addClass('ladb-opencutlist-icon-eye-open');
+                $icon.removeClass('ladb-lexacut-icon-eye-close');
+                $icon.addClass('ladb-lexacut-icon-eye-open');
             } else {
                 hidden = true;
                 $item.addClass('ladb-inactive');
-                $icon.addClass('ladb-opencutlist-icon-eye-close');
-                $icon.removeClass('ladb-opencutlist-icon-eye-open');
+                $icon.addClass('ladb-lexacut-icon-eye-close');
+                $icon.removeClass('ladb-lexacut-icon-eye-open');
             }
             $item.data('hidden', hidden);
             return false;
@@ -181,13 +181,13 @@
             this.$editingItem.addClass('ladb-selected');
 
             // Buttons
-            const $btnDuplicate = $('<button class="btn btn-default"><i class="ladb-opencutlist-icon-copy"></i> ' + i18next.t('tab.cutlist.export.duplicate_column') + '</button>');
+            const $btnDuplicate = $('<button class="btn btn-default"><i class="ladb-lexacut-icon-copy"></i> ' + i18next.t('tab.cutlist.export.duplicate_column') + '</button>');
             $btnDuplicate
                 .on('click', function () {
                     that.duplicateColumn($item);
                 })
             ;
-            const $btnRemove = $('<button class="btn btn-danger"><i class="ladb-opencutlist-icon-clear"></i> ' + i18next.t('tab.cutlist.export.remove_column') + '</button>');
+            const $btnRemove = $('<button class="btn btn-danger"><i class="ladb-lexacut-icon-clear"></i> ' + i18next.t('tab.cutlist.export.remove_column') + '</button>');
             $btnRemove
                 .on('click', function () {
                     that.removeColumn($item);
@@ -329,7 +329,7 @@
 
         // Buttons
 
-        const $btnAdd = $('<button class="btn btn-default"><i class="ladb-opencutlist-icon-plus"></i> ' + i18next.t('tab.cutlist.export.add_column') + '</button>')
+        const $btnAdd = $('<button class="btn btn-default"><i class="ladb-lexacut-icon-plus"></i> ' + i18next.t('tab.cutlist.export.add_column') + '</button>')
             .on('click', function () {
                 that.addColumn('');
             });
@@ -355,7 +355,7 @@
             .append($('<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>'))
             .append($dropDown)
 
-        const $btnRemoveAll = $('<button class="btn btn-danger"><i class="ladb-opencutlist-icon-clear"></i> ' + i18next.t('tab.cutlist.export.remove_all_columns') + '</button>')
+        const $btnRemoveAll = $('<button class="btn btn-danger"><i class="ladb-lexacut-icon-clear"></i> ' + i18next.t('tab.cutlist.export.remove_all_columns') + '</button>')
             .on('click', function () {
                 $(this).blur();
                 that.$sortable.empty();

@@ -89,7 +89,7 @@
         if (!valid) {
             $(e.relatedTarget)
                 .addClass('invalid')
-                .prepend('<i class="ladb-opencutlist-icon-warning"></i>')
+                .prepend('<i class="ladb-lexacut-icon-warning"></i>')
             ;
         }
         return valid;

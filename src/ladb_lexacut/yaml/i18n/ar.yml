@@ -136,7 +136,7 @@ core:
   savepanel:
     export_to_file: "التصدير إلى ملف {{ file_format }}"
   dialog:
-    title: OpenCutList by L'Air du Bois
+    title: LexaCut - Modern Edition
   leftbar:
     more: المزيد
     more_docs: مستندات
@@ -152,7 +152,7 @@ core:
       هذه النسخة متوفرة فقط لغرض التجريب
       لا ينصح باستعمالها في الإنتاج
 
-       <a href="mailto:opencutlist@lairdubois.fr?subject=Bug%20Report%20OpenCutList%20{{ version }}%20(build: {{ build }})" target="_blank">opencutlist@lairdubois.fr</a> للتبليغ عن خطإ برمجي:
+       <a href="mailto:lexacut@lexaplus.com?subject=Bug%20Report%20OpenCutList%20{{ version }}%20(build: {{ build }})" target="_blank">lexacut@lexaplus.com</a> للتبليغ عن خطإ برمجي:
   error:
     extern: "خطأ خارجي : **{{ error }}**"
     feature_unavailable: "تتطلب هذه الخاصية توفر النسخة {{ version }} من SketchUp أو أعلى"
@@ -1860,7 +1860,7 @@ tab:
     submit: أرسل فيديو
     submit_info: |
       هل سجلت فيديو لعرض استخدام **OpenCutList** و تريد أن يظهر هنا؟
-      أعلمنا و راسلنا على **opencutlist@lairdubois.fr**!
+      أعلمنا و راسلنا على **lexacut@lexaplus.com**!
 
       *يجب أن يكون الفيديو في الوضع العامِّ على YouTube*
     error:

@@ -131,7 +131,7 @@ core:
   savepanel:
     export_to_file: 118 - Exportálás {{ file_format }} fájlba
   dialog:
-    title: 119 - OpenCutList by L'Air du Bois
+    title: 119 - LexaCut - Modern Edition
   leftbar:
     more: 120 - Továbbiak
     more_docs: 121 - Dokumentáció
@@ -147,7 +147,7 @@ core:
       Ez a verzió csak tesztelésre szolgál.
       Nem ajánlott éles környezetben használni.
 
-      Hiba jelentéséhez: <a href="mailto:opencutlist@lairdubois.fr?subject=Bug%20Report%20OpenCutList%20{{ version }}%20(build: {{ build }})" target="_blank">opencutlist@lairdubois.fr</a>.
+      Hiba jelentéséhez: <a href="mailto:lexacut@lexaplus.com?subject=Bug%20Report%20OpenCutList%20{{ version }}%20(build: {{ build }})" target="_blank">lexacut@lexaplus.com</a>.
   error:
     extern: '128 - Külső hiba : **{{ error }}**'
     feature_unavailable: 129 - Ez a funkció SketchUp {{ version }} vagy újabb verziót igényel
@@ -1855,7 +1855,7 @@ tab:
     submit: 1445 - Videó beküldése
     submit_info: |
       1446 - Készített egy videót az **OpenCutList** használatáról és szeretné, ha itt megjelenne?
-      Írjon nekünk az **opencutlist@lairdubois.fr** címre!
+      Írjon nekünk az **lexacut@lexaplus.com** címre!
 
       *A videónak nyilvánosnak kell lennie és YouTube-on kell hosztolni.*
     error:

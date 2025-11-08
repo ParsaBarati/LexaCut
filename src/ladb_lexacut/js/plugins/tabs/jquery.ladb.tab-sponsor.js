@@ -79,7 +79,7 @@
                     ;
                     $labelObjectiveProgress
                         .addClass('ladb-color-' + (objectiveReached ? 'success' : 'null'))
-                        .append((objectiveReached ? '<i class="ladb-opencutlist-icon-tick"></i> ' : '') + i18next.t('tab.sponsor.objective_funded_progress', { progress: objectiveProgress100 }))
+                        .append((objectiveReached ? '<i class="ladb-lexacut-icon-tick"></i> ' : '') + i18next.t('tab.sponsor.objective_funded_progress', { progress: objectiveProgress100 }))
                         .show()
                     ;
 

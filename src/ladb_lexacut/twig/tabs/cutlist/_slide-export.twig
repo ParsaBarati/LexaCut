@@ -19,10 +19,10 @@
 {% endblock %}
 
 {% block headerToolsInner %}
-    <button id="ladb_btn_export" class="btn btn-primary"><i class="ladb-opencutlist-icon-refresh"></i> {{ 'default.export'|i18next }}...</button>
+    <button id="ladb_btn_export" class="btn btn-primary"><i class="ladb-lexacut-icon-refresh"></i> {{ 'default.export'|i18next }}...</button>
     <div class="btn-group">
         <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="ladb-opencutlist-icon-copy"></i> {{ 'default.copy'|i18next }} <span class="caret"></span>
+            <i class="ladb-lexacut-icon-copy"></i> {{ 'default.copy'|i18next }} <span class="caret"></span>
         </button>
         <ul class="dropdown-menu">
             <li><a id="ladb_item_copy_all" href="#">{{ 'tab.cutlist.export.copy_all'|i18next }}</a></li>
@@ -30,9 +30,9 @@
         </ul>
     </div>
     &nbsp;
-    <button class="btn btn-default" data-help-page="cutlist.export"><i class="ladb-opencutlist-icon-help"></i></button>
+    <button class="btn btn-default" data-help-page="cutlist.export"><i class="ladb-lexacut-icon-help"></i></button>
     &nbsp;
-    <button id="ladb_btn_close" class="btn btn-default"><i class="ladb-opencutlist-icon-close"></i> {{ 'default.close'|i18next }}</button>
+    <button id="ladb_btn_close" class="btn btn-default"><i class="ladb-lexacut-icon-close"></i> {{ 'default.close'|i18next }}</button>
 {% endblock %}
 
 {% block containerInner %}
@@ -54,7 +54,7 @@
                         <th class="no-print ladb-table-spreadsheet-cell ladb-table-spreadsheet-cell-header-row">{{ loop.index }}</th>
                         {% for col in row %}
                             {% set colDef = colDefs[loop.index0] %}
-                            <td class="ladb-table-spreadsheet-cell{% if col and col.error %} ladb-invalid-value{% endif %}{% if col.error is not defined %}{% if colDef.align == 'center' %} text-center{% elseif colDef.align == 'right' %} text-right{% endif %}{% endif %}">{% if col and col.error %}<i class="ladb-opencutlist-icon-warning"></i>&nbsp;{{ col.error }}{% else %}{{ col|nl2br }}{% endif %}</td>
+                            <td class="ladb-table-spreadsheet-cell{% if col and col.error %} ladb-invalid-value{% endif %}{% if col.error is not defined %}{% if colDef.align == 'center' %} text-center{% elseif colDef.align == 'right' %} text-right{% endif %}{% endif %}">{% if col and col.error %}<i class="ladb-lexacut-icon-warning"></i>&nbsp;{{ col.error }}{% else %}{{ col|nl2br }}{% endif %}</td>
                         {% endfor %}
                     </tr>
                 {% endfor %}

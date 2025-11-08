@@ -229,7 +229,7 @@
             this.appendElementDef(this.elementDefs[i]);
         }
 
-        const $btnAdd = $('<button class="btn btn-default"><i class="ladb-opencutlist-icon-plus"></i> ' + i18next.t('tab.cutlist.labels.add_element') + '</button>');
+        const $btnAdd = $('<button class="btn btn-default"><i class="ladb-lexacut-icon-plus"></i> ' + i18next.t('tab.cutlist.labels.add_element') + '</button>');
         $btnAdd
             .on('click', function () {
 
@@ -248,7 +248,7 @@
 
             })
         ;
-        const $btnRemoveAll = $('<button class="btn btn-danger"><i class="ladb-opencutlist-icon-clear"></i> ' + i18next.t('tab.cutlist.labels.remove_all_elements') + '</button>');
+        const $btnRemoveAll = $('<button class="btn btn-danger"><i class="ladb-lexacut-icon-clear"></i> ' + i18next.t('tab.cutlist.labels.remove_all_elements') + '</button>');
         $btnRemoveAll
             .on('click', function () {
 
@@ -382,7 +382,7 @@
 
         // Buttons
 
-        const $btnDuplicate = $('<button class="btn btn-default"><i class="ladb-opencutlist-icon-copy"></i> ' + i18next.t('tab.cutlist.labels.duplicate_element') + '</button>');
+        const $btnDuplicate = $('<button class="btn btn-default"><i class="ladb-lexacut-icon-copy"></i> ' + i18next.t('tab.cutlist.labels.duplicate_element') + '</button>');
         $btnDuplicate
             .on('click', function () {
 
@@ -403,7 +403,7 @@
             })
         ;
 
-        const $btnRemove = $('<button class="btn btn-danger"><i class="ladb-opencutlist-icon-clear"></i> ' + i18next.t('tab.cutlist.labels.remove_element') + '</button>');
+        const $btnRemove = $('<button class="btn btn-danger"><i class="ladb-lexacut-icon-clear"></i> ' + i18next.t('tab.cutlist.labels.remove_element') + '</button>');
         $btnRemove
             .on('click', function () {
                 that.elementDefs.splice(that.elementDefs.indexOf(elementDef), 1);
@@ -412,7 +412,7 @@
             })
         ;
 
-        const $btnRotateLeft = $('<button class="btn btn-default"><i class="ladb-opencutlist-icon-rotate-left" style="font-size: 120%"></i></button>');
+        const $btnRotateLeft = $('<button class="btn btn-default"><i class="ladb-lexacut-icon-rotate-left" style="font-size: 120%"></i></button>');
         $btnRotateLeft
             .on('click', function () {
                 if (elementDef.rotation === undefined) {
@@ -424,7 +424,7 @@
             })
         ;
 
-        const $btnRotateRight = $('<button class="btn btn-default"><i class="ladb-opencutlist-icon-rotate-right" style="font-size: 120%"></i></button>');
+        const $btnRotateRight = $('<button class="btn btn-default"><i class="ladb-lexacut-icon-rotate-right" style="font-size: 120%"></i></button>');
         $btnRotateRight
             .on('click', function () {
                 if (elementDef.rotation === undefined) {

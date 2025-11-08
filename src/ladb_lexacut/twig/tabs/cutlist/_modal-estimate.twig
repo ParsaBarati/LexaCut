@@ -8,13 +8,13 @@
 
 {% block headerToolsInner %}
     {% include 'components/_widget-preset.twig' %}
-    <button class="btn btn-default btn-xs" data-help-page="cutlist.estimate"><i class="ladb-opencutlist-icon-help"></i> {{ 'default.help'|i18next }}</button>
+    <button class="btn btn-default btn-xs" data-help-page="cutlist.estimate"><i class="ladb-lexacut-icon-help"></i> {{ 'default.help'|i18next }}</button>
 {% endblock %}
 
 {% block headerInner %}
     {{ parent() }}
     <ul class="nav nav-tabs nav-justified" role="tablist">
-        <li role="presentation"{% if tab == 'general' %} class="active"{% endif %}><a href="#tab_estimate_options_general" role="tab" data-toggle="tab"><i class="ladb-opencutlist-icon-settings"></i> {{ 'tab.cutlist.estimate.options_general'|i18next }}</a></li>
+        <li role="presentation"{% if tab == 'general' %} class="active"{% endif %}><a href="#tab_estimate_options_general" role="tab" data-toggle="tab"><i class="ladb-lexacut-icon-settings"></i> {{ 'tab.cutlist.estimate.options_general'|i18next }}</a></li>
     </ul>
 {% endblock %}
 

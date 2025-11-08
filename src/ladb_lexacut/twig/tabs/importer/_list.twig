@@ -42,11 +42,11 @@
                 <tr class="ladb-importer-row{% if hasErrors %} ladb-importer-row-error{% else %} ladb-importer-row-success{% endif %}">
                     <td>
                         {% if hasErrors %}
-                            <i class="ladb-opencutlist-icon-warning ladb-color-danger" data-toggle="tooltip" data-html="true" title="<div style='text-align: left;'>{{ 'tab.importer.tooltip.errors'|i18next }} :<ul>{% for error in part.errors %}<li>{{ error|i18next }}</li>{% endfor %}</ul></div>"></i>
+                            <i class="ladb-lexacut-icon-warning ladb-color-danger" data-toggle="tooltip" data-html="true" title="<div style='text-align: left;'>{{ 'tab.importer.tooltip.errors'|i18next }} :<ul>{% for error in part.errors %}<li>{{ error|i18next }}</li>{% endfor %}</ul></div>"></i>
                         {% elseif hasWarnings %}
-                            <i class="ladb-opencutlist-icon-tick ladb-color-warning" data-toggle="tooltip" data-html="true" title="<div style='text-align: left;'>{{ 'tab.importer.tooltip.warnings'|i18next }} :<ul>{% for warning in part.warnings %}<li>{{ warning|i18next }}</li>{% endfor %}</ul></div>"></i>
+                            <i class="ladb-lexacut-icon-tick ladb-color-warning" data-toggle="tooltip" data-html="true" title="<div style='text-align: left;'>{{ 'tab.importer.tooltip.warnings'|i18next }} :<ul>{% for warning in part.warnings %}<li>{{ warning|i18next }}</li>{% endfor %}</ul></div>"></i>
                         {% else %}
-                            <i class="ladb-opencutlist-icon-tick ladb-color-success"></i>
+                            <i class="ladb-lexacut-icon-tick ladb-color-success"></i>
                         {% endif %}
                     </td>
                     {% for raw_value in part.raw_values %}

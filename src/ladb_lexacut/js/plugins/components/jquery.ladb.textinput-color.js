@@ -251,7 +251,7 @@
 
         const that = this;
 
-        this.$storeBtn = $('<div class="ladb-textinput-tool ladb-textinput-tool-btn" tabindex="-1" data-toggle="tooltip" title="' + i18next.t('core.component.textinput_color.store') + '"><i class="ladb-opencutlist-icon-plus"></i></div>')
+        this.$storeBtn = $('<div class="ladb-textinput-tool ladb-textinput-tool-btn" tabindex="-1" data-toggle="tooltip" title="' + i18next.t('core.component.textinput_color.store') + '"><i class="ladb-lexacut-icon-plus"></i></div>')
             .on('mousedown', function (e) {
                 e.preventDefault(); // Prevent gain focus
             })
@@ -281,7 +281,7 @@
         this.$storeBtn.hide();
         $toolsContainer.prepend(this.$storeBtn);
 
-        this.$removeBtn = $('<div class="ladb-textinput-tool ladb-textinput-tool-btn" tabindex="-1" data-toggle="tooltip" title="' + i18next.t('core.component.textinput_color.remove') + '"><i class="ladb-opencutlist-icon-minus"></i></div>')
+        this.$removeBtn = $('<div class="ladb-textinput-tool ladb-textinput-tool-btn" tabindex="-1" data-toggle="tooltip" title="' + i18next.t('core.component.textinput_color.remove') + '"><i class="ladb-lexacut-icon-minus"></i></div>')
             .on('mousedown', function (e) {
                 e.preventDefault(); // Prevent gain focus
             })

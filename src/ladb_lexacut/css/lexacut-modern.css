@@ -523,12 +523,12 @@ label {
    ICONS - Subtle & Aligned
    ======================================================================== */
 
-i[class*="ladb-opencutlist-icon-"] {
+i[class*="ladb-lexacut-icon-"] {
   color: var(--neutral-600);
   transition: color var(--transition-fast);
 }
 
-.btn i[class*="ladb-opencutlist-icon-"] {
+.btn i[class*="ladb-lexacut-icon-"] {
   font-size: 1rem;
 }
 

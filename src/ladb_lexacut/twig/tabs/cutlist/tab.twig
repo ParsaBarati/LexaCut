@@ -2,36 +2,36 @@
 
 {% block headerToolsInner %}
     {{ parent() }}
-    <button id="ladb_btn_generate" class="btn btn-primary"><i class="ladb-opencutlist-icon-refresh"></i><span class="hidden-xs"> {{ 'default.generate'|i18next }}</span></button>
-    <button id="ladb_btn_print" class="btn btn-default" disabled><i class="ladb-opencutlist-icon-print"></i><span class="hidden-sm hidden-xs"> {{ 'default.print'|i18next }}</span></button>
-    <button id="ladb_btn_export" class="btn btn-default" disabled><i class="ladb-opencutlist-icon-export"></i><span class="hidden-sm hidden-xs"> {{ 'default.export'|i18next }}</span></button>
+    <button id="ladb_btn_generate" class="btn btn-primary"><i class="ladb-lexacut-icon-refresh"></i><span class="hidden-xs"> {{ 'default.generate'|i18next }}</span></button>
+    <button id="ladb_btn_print" class="btn btn-default" disabled><i class="ladb-lexacut-icon-print"></i><span class="hidden-sm hidden-xs"> {{ 'default.print'|i18next }}</span></button>
+    <button id="ladb_btn_export" class="btn btn-default" disabled><i class="ladb-lexacut-icon-export"></i><span class="hidden-sm hidden-xs"> {{ 'default.export'|i18next }}</span></button>
     &nbsp;
     {% if capabilities.sketchup_version_number >= 1800000000 and capabilities.webgl_available %}
-        <button id="ladb_btn_layout" class="btn btn-default{# btn-sponsored#}" disabled><i class="ladb-opencutlist-icon-layout"></i><span class="hidden-xs"> {{ 'default.draw'|i18next }}</span></button>
+        <button id="ladb_btn_layout" class="btn btn-default{# btn-sponsored#}" disabled><i class="ladb-lexacut-icon-layout"></i><span class="hidden-xs"> {{ 'default.draw'|i18next }}</span></button>
     {% endif %}
-    <button id="ladb_btn_estimate" class="btn btn-default" disabled><i class="ladb-opencutlist-icon-estimate"></i><span class="hidden-xs"> {{ 'default.estimate'|i18next }}</span></button>
+    <button id="ladb_btn_estimate" class="btn btn-default" disabled><i class="ladb-lexacut-icon-estimate"></i><span class="hidden-xs"> {{ 'default.estimate'|i18next }}</span></button>
     &nbsp;
-    <button id="ladb_btn_options" class="btn btn-default"><i class="ladb-opencutlist-icon-settings"></i><span class="hidden-sm hidden-xs"> {{ 'default.options'|i18next }}</span></button>
-    <button class="btn btn-default" data-help-page="cutlist"><i class="ladb-opencutlist-icon-help"></i></button>
+    <button id="ladb_btn_options" class="btn btn-default"><i class="ladb-lexacut-icon-settings"></i><span class="hidden-sm hidden-xs"> {{ 'default.options'|i18next }}</span></button>
+    <button class="btn btn-default" data-help-page="cutlist"><i class="ladb-lexacut-icon-help"></i></button>
     <div class="btn-group">
-        <button id="ladb_btn_menu" class="no-print btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ladb-opencutlist-icon-submenu"></i> <span class="caret"></span></button>
+        <button id="ladb_btn_menu" class="no-print btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ladb-lexacut-icon-submenu"></i> <span class="caret"></span></button>
         <ul class="dropdown-menu dropdown-menu-right">
-            <li class="disabled"><a id="ladb_item_highlight_all_parts" href="#"><i class="ladb-opencutlist-icon-magnifier"></i> {{ 'tab.cutlist.menu.highlight_parts'|i18next }}</a></li>
+            <li class="disabled"><a id="ladb_item_highlight_all_parts" href="#"><i class="ladb-lexacut-icon-magnifier"></i> {{ 'tab.cutlist.menu.highlight_parts'|i18next }}</a></li>
             <li role="separator" class="divider"></li>
-            <li class="disabled"><a id="ladb_item_labels_all_parts" href="#"><i class="ladb-opencutlist-icon-labels"></i> {{ 'tab.cutlist.menu.labels_parts'|i18next }}...</a></li>
+            <li class="disabled"><a id="ladb_item_labels_all_parts" href="#"><i class="ladb-lexacut-icon-labels"></i> {{ 'tab.cutlist.menu.labels_parts'|i18next }}...</a></li>
             <li role="separator" class="divider"></li>
-            <li class="disabled"><a id="ladb_item_export_2d_all_parts" href="#"><i class="ladb-opencutlist-icon-2d"></i> {{ 'tab.cutlist.menu.write_2d_parts'|i18next }}...</a></li>
-            <li class="disabled"><a id="ladb_item_export_3d_all_parts" href="#"><i class="ladb-opencutlist-icon-3d"></i> {{ 'tab.cutlist.menu.write_3d_parts'|i18next }}...</a></li>
+            <li class="disabled"><a id="ladb_item_export_2d_all_parts" href="#"><i class="ladb-lexacut-icon-2d"></i> {{ 'tab.cutlist.menu.write_2d_parts'|i18next }}...</a></li>
+            <li class="disabled"><a id="ladb_item_export_3d_all_parts" href="#"><i class="ladb-lexacut-icon-3d"></i> {{ 'tab.cutlist.menu.write_3d_parts'|i18next }}...</a></li>
             <li role="separator" class="divider"></li>
-            <li class="disabled"><a id="ladb_item_show_all_groups" href="#"><i class="ladb-opencutlist-icon-eye-open"></i> {{ 'tab.cutlist.menu.show_all_groups'|i18next }}</a></li>
+            <li class="disabled"><a id="ladb_item_show_all_groups" href="#"><i class="ladb-lexacut-icon-eye-open"></i> {{ 'tab.cutlist.menu.show_all_groups'|i18next }}</a></li>
             <li role="separator" class="divider"></li>
-            <li class="disabled"><a id="ladb_item_numbers_save" href="#"><i class="ladb-opencutlist-icon-save"></i> {{ 'tab.cutlist.menu.numbers_save'|i18next }}</a></li>
-            <li class="disabled"><a id="ladb_item_numbers_reset" href="#"><i class="ladb-opencutlist-icon-refresh"></i> {{ 'tab.cutlist.menu.numbers_reset'|i18next }}</a></li>
+            <li class="disabled"><a id="ladb_item_numbers_save" href="#"><i class="ladb-lexacut-icon-save"></i> {{ 'tab.cutlist.menu.numbers_save'|i18next }}</a></li>
+            <li class="disabled"><a id="ladb_item_numbers_reset" href="#"><i class="ladb-lexacut-icon-refresh"></i> {{ 'tab.cutlist.menu.numbers_reset'|i18next }}</a></li>
             <li role="separator" class="divider"></li>
-            <li class="disabled"><a id="ladb_item_expand_all" href="#"><i class="ladb-opencutlist-icon-arrow-down"></i> {{ 'tab.cutlist.menu.expand_all'|i18next }}</a></li>
-            <li class="disabled"><a id="ladb_item_collapse_all" href="#"><i class="ladb-opencutlist-icon-arrow-up"></i> {{ 'tab.cutlist.menu.collapse_all'|i18next }}</a></li>
+            <li class="disabled"><a id="ladb_item_expand_all" href="#"><i class="ladb-lexacut-icon-arrow-down"></i> {{ 'tab.cutlist.menu.expand_all'|i18next }}</a></li>
+            <li class="disabled"><a id="ladb_item_collapse_all" href="#"><i class="ladb-lexacut-icon-arrow-up"></i> {{ 'tab.cutlist.menu.collapse_all'|i18next }}</a></li>
             <li role="separator" class="divider"></li>
-            <li class="dropdown-item-danger"><a id="ladb_item_reset_prices" href="#"><i class="ladb-opencutlist-icon-eraser"></i> {{ 'tab.cutlist.menu.reset_prices'|i18next }}...</a></li>
+            <li class="dropdown-item-danger"><a id="ladb_item_reset_prices" href="#"><i class="ladb-lexacut-icon-eraser"></i> {{ 'tab.cutlist.menu.reset_prices'|i18next }}...</a></li>
         </ul>
     </div>
 {% endblock %}

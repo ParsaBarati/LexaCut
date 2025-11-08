@@ -1,11 +1,11 @@
 {% extends 'tabs/base-tab.twig' %}
 
-{% block headerHeadingInner %}<i class="ladb-opencutlist-icon-settings"></i> {{ parent() }}{% endblock %}
+{% block headerHeadingInner %}<i class="ladb-lexacut-icon-settings"></i> {{ parent() }}{% endblock %}
 
 {% block headerToolsInner %}
     {{ parent() }}
     <div class="btn-group">
-        <button id="ladb_btn_menu" class="no-print btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ladb-opencutlist-icon-preset"></i> {{ 'core.preset.manage'|i18next }} <span class="caret"></span></button>
+        <button id="ladb_btn_menu" class="no-print btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ladb-lexacut-icon-preset"></i> {{ 'core.preset.manage'|i18next }} <span class="caret"></span></button>
         <ul class="dropdown-menu dropdown-menu-right">
             <li><a id="ladb_item_export_global_presets" href="#">{{ 'tab.settings.presets.export_global_presets'|i18next }}...</a></li>
             <li><a id="ladb_item_import_global_presets" href="#">{{ 'tab.settings.presets.import_global_presets'|i18next }}...</a></li>
@@ -20,7 +20,7 @@
         </ul>
     </div>
     &nbsp;
-    <button class="btn btn-default" data-help-page="settings"><i class="ladb-opencutlist-icon-help"></i></button>
+    <button class="btn btn-default" data-help-page="settings"><i class="ladb-lexacut-icon-help"></i></button>
 {% endblock %}
 
 {% block containerInner %}
@@ -33,7 +33,7 @@
                 <div class="panel-body">
                     <div id="ladb_reload_alert" class="alert alert-warning" style="display: none;">
                         <div class="media">
-                            <div class="media-left"><i class="ladb-opencutlist-icon-warning" style="font-size: 150%;"></i></div>
+                            <div class="media-left"><i class="ladb-lexacut-icon-warning" style="font-size: 150%;"></i></div>
                             <div class="media-body">
                                 {% for language, enabled in capabilities.languages if enabled %}
                                     <div class="ladb-reaload-msg ladb-reaload-msg-{{ language }}">{{ ('language_reload_msg.'~language)|i18next }}</div>
@@ -42,13 +42,13 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <button id="ladb_btn_reset" class="btn btn-default btn-xs pull-right"><i class="ladb-opencutlist-icon-reset"></i> {{ 'default.reset_to_app_defaults'|i18next }}</button>
+                        <button id="ladb_btn_reset" class="btn btn-default btn-xs pull-right"><i class="ladb-lexacut-icon-reset"></i> {{ 'default.reset_to_app_defaults'|i18next }}</button>
                         <label>{{ 'tab.settings.language'|i18next }}</label>
                         <select id="ladb_select_language" class="form-control">
                             <option value="auto" data-content="<span style='color: #ccc; font-style: italic;'>{{ 'tab.settings.language_auto'|i18next }}</span>"></option>
                             <option data-divider="true"></option>
                             {% for language, enabled in capabilities.languages %}
-                                <option value="{{ language }}" data-content="<i class='ladb-opencutlist-icon-{% if language starts with 'zz' %}bug ladb-color-success{% else %}circle{% if enabled %}-checked ladb-color-success{% else %} ladb-color-danger{% endif %}{% endif %}'></i> <span class='ladb-language-prefix'>{{ language|upper }}</span>{{ ('language.'~language)|i18next }}"></option>
+                                <option value="{{ language }}" data-content="<i class='ladb-lexacut-icon-{% if language starts with 'zz' %}bug ladb-color-success{% else %}circle{% if enabled %}-checked ladb-color-success{% else %} ladb-color-danger{% endif %}{% endif %}'></i> <span class='ladb-language-prefix'>{{ language|upper }}</span>{{ ('language.'~language)|i18next }}"></option>
                             {% endfor %}
                         </select>
                     </div>
@@ -80,15 +80,15 @@
                         <div class="ladb-fake-dialog">
                             <div class="ladb-fake-dialog-titlebar">OpenCutList</div>
                             <div class="ladb-fake-dialog-leftbar"></div>
-                            <button id="ladb_btn_top_up" class="btn btn-sm btn-default"><i class="ladb-opencutlist-icon-arrow-down"></i></button>
-                            <button id="ladb_btn_top_down" class="btn btn-sm btn-default"><i class="ladb-opencutlist-icon-arrow-up"></i></button>
-                            <button id="ladb_btn_left_up" class="btn btn-sm btn-default"><i class="ladb-opencutlist-icon-arrow-right"></i></button>
-                            <button id="ladb_btn_left_down" class="btn btn-sm btn-default"><i class="ladb-opencutlist-icon-arrow-left"></i></button>
-                            <button id="ladb_btn_left_top_reset" class="btn btn-sm btn-default"><i class="ladb-opencutlist-icon-reset"></i></button>
-                            <button id="ladb_btn_width_up" class="btn btn-sm btn-default"><i class="ladb-opencutlist-icon-plus"></i></button>
-                            <button id="ladb_btn_width_down" class="btn btn-sm btn-default"><i class="ladb-opencutlist-icon-minus"></i></button>
-                            <button id="ladb_btn_height_up" class="btn btn-sm btn-default"><i class="ladb-opencutlist-icon-plus"></i></button>
-                            <button id="ladb_btn_height_down" class="btn btn-sm btn-default"><i class="ladb-opencutlist-icon-minus"></i></button>
+                            <button id="ladb_btn_top_up" class="btn btn-sm btn-default"><i class="ladb-lexacut-icon-arrow-down"></i></button>
+                            <button id="ladb_btn_top_down" class="btn btn-sm btn-default"><i class="ladb-lexacut-icon-arrow-up"></i></button>
+                            <button id="ladb_btn_left_up" class="btn btn-sm btn-default"><i class="ladb-lexacut-icon-arrow-right"></i></button>
+                            <button id="ladb_btn_left_down" class="btn btn-sm btn-default"><i class="ladb-lexacut-icon-arrow-left"></i></button>
+                            <button id="ladb_btn_left_top_reset" class="btn btn-sm btn-default"><i class="ladb-lexacut-icon-reset"></i></button>
+                            <button id="ladb_btn_width_up" class="btn btn-sm btn-default"><i class="ladb-lexacut-icon-plus"></i></button>
+                            <button id="ladb_btn_width_down" class="btn btn-sm btn-default"><i class="ladb-lexacut-icon-minus"></i></button>
+                            <button id="ladb_btn_height_up" class="btn btn-sm btn-default"><i class="ladb-lexacut-icon-plus"></i></button>
+                            <button id="ladb_btn_height_down" class="btn btn-sm btn-default"><i class="ladb-lexacut-icon-minus"></i></button>
                         </div>
                     </div>
                 </div>

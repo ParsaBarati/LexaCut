@@ -16,7 +16,7 @@
         const that = this;
 
         let $btn = $('<a href="#">')
-            .html('<i class="ladb-opencutlist-icon-news-fill"></i> ' + title)
+            .html('<i class="ladb-lexacut-icon-news-fill"></i> ' + title)
             .on('click', function (e) {
                 that.dialog.selectTab('news');
             })

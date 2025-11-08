@@ -202,13 +202,13 @@ LadbAbstractDialog.prototype.changeLabelProgress = function (html) {
 
 LadbAbstractDialog.prototype.changeCancelBtnLabelProgress = function (text, icon = 'stop') {
     if (this.$progress) {
-        $('.ladb-progress-btn-cancel', this.$progress).html("<i class='ladb-opencutlist-icon-" + icon + "'></i> " + text);
+        $('.ladb-progress-btn-cancel', this.$progress).html("<i class='ladb-lexacut-icon-" + icon + "'></i> " + text);
     }
 };
 
 LadbAbstractDialog.prototype.changeNextBtnLabelProgress = function (text, icon = 'skip-forward') {
     if (this.$progress) {
-        $('.ladb-progress-btn-next', this.$progress).html("<i class='ladb-opencutlist-icon-" + icon + "'></i> " + text);
+        $('.ladb-progress-btn-next', this.$progress).html("<i class='ladb-lexacut-icon-" + icon + "'></i> " + text);
     }
 };
 
@@ -389,13 +389,13 @@ LadbAbstractDialog.prototype.notifyErrors = function (errors) {
                     options = error[1];
                 }
             }
-            this.notify('<i class="ladb-opencutlist-icon-warning"></i> ' + i18next.t(key, options), 'error');
+            this.notify('<i class="ladb-lexacut-icon-warning"></i> ' + i18next.t(key, options), 'error');
         }
     }
 };
 
 LadbAbstractDialog.prototype.notifySuccess = function (text, buttons) {
-    this.notify('<i class="ladb-opencutlist-icon-check-mark"></i> ' + text, 'success', buttons);
+    this.notify('<i class="ladb-lexacut-icon-check-mark"></i> ' + text, 'success', buttons);
 };
 
 // ContextMenu /////
@@ -449,7 +449,7 @@ LadbAbstractDialog.prototype.showContextMenu = function (clientX, clientY, items
                                 item.callback();
                             }
                         })
-                        .html(Twig.twig({ data: "<i class='ladb-opencutlist-icon-{{ icon }}'></i>&nbsp;{{ text|escape('html') }}" }).render(item))
+                        .html(Twig.twig({ data: "<i class='ladb-lexacut-icon-{{ icon }}'></i>&nbsp;{{ text|escape('html') }}" }).render(item))
                 ).addClass(item.class).addClass(item.disabled ? 'disabled' : '')
             )
         } else if (item.separator) {

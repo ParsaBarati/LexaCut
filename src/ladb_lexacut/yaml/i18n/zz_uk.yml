@@ -131,7 +131,7 @@ core:
   savepanel:
     export_to_file: 118 - Експортувати до файлу {{ file_format }}
   dialog:
-    title: 119 - OpenCutList by L'Air du Bois
+    title: 119 - LexaCut - Modern Edition
   leftbar:
     more: 120 - Ще
     more_docs: 121 - Документація
@@ -147,7 +147,7 @@ core:
       Ця версія доступна лише для тестування.
       Не рекомендується використовувати її у виробництві.
 
-      Щоб повідомити про помилку: <a href="mailto:opencutlist@lairdubois.fr?subject=Bug%20Report%20OpenCutList%20{{ version }}%20(build: {{ build }})" target="_blank">opencutlist@lairdubois.fr</a>.
+      Щоб повідомити про помилку: <a href="mailto:lexacut@lexaplus.com?subject=Bug%20Report%20OpenCutList%20{{ version }}%20(build: {{ build }})" target="_blank">lexacut@lexaplus.com</a>.
   error:
     extern: '128 - Зовнішня помилка: **{{ error }}**'
     feature_unavailable: 129 - Для цієї функції потрібен SketchUp {{ version }} або новіше
@@ -1855,7 +1855,7 @@ tab:
     submit: 1445 - Запропонувати відео
     submit_info: |
       1446 - Ви зробили відео, в якому показано, як користуватися **OpenCutList**, і хотіли б, щоб воно з'явилося тут?
-      Повідомте нам, написавши нам на **opencutlist@lairdubois.fr**!
+      Повідомте нам, написавши нам на **lexacut@lexaplus.com**!
 
       *Відео має бути загальнодоступним і розміщеним на YouTube.*
     error:

@@ -306,10 +306,10 @@
                         ;
                         that.dialog.setupTooltips($(e.relatedTarget));
                         if (e.attrs.oko === '-') {
-                            $okoBtn.append($('<i class="ladb-opencutlist-icon-eye-open"></i>'))
+                            $okoBtn.append($('<i class="ladb-lexacut-icon-eye-open"></i>'))
                             $(e.relatedTarget).addClass('ko');
                         } else {
-                            $okoBtn.append($('<i class="ladb-opencutlist-icon-eye-close"></i>'))
+                            $okoBtn.append($('<i class="ladb-lexacut-icon-eye-close"></i>'))
                         }
                     })
                     .tokenfield($.extend({
@@ -3230,7 +3230,7 @@
                         qPlaceholder: '∞',
                         qHidden: false,
                         emptyVal: '0',
-                        dropdownActionLabel: '<i class="ladb-opencutlist-icon-plus"></i> ' + i18next.t('tab.cutlist.packing.option_std_bin_' + (group.material_is_1d ? '1' : '2') + 'd_add'),
+                        dropdownActionLabel: '<i class="ladb-lexacut-icon-plus"></i> ' + i18next.t('tab.cutlist.packing.option_std_bin_' + (group.material_is_1d ? '1' : '2') + 'd_add'),
                         dropdownActionCallback: function () {
                             fnEditMaterial({
                                 callback: function ($editMaterialModal) {
@@ -3344,14 +3344,14 @@
                 $('#ladb-cutlist-packing-collapse-expert')
                     .on('shown.bs.collapse', function () {
                         $('i', $btnExpert)
-                            .removeClass('ladb-opencutlist-icon-plus')
-                            .addClass('ladb-opencutlist-icon-minus')
+                            .removeClass('ladb-lexacut-icon-plus')
+                            .addClass('ladb-lexacut-icon-minus')
                         ;
                     })
                     .on('hidden.bs.collapse', function () {
                         $('i', $btnExpert)
-                            .addClass('ladb-opencutlist-icon-plus')
-                            .removeClass('ladb-opencutlist-icon-minus')
+                            .addClass('ladb-lexacut-icon-plus')
+                            .removeClass('ladb-lexacut-icon-minus')
                         ;
                     })
                 ;
@@ -3556,12 +3556,12 @@
                     let property = $item.data('property');
                     if (property.startsWith('-')) {
                         property = property.substring(1);
-                        $icon.addClass('ladb-opencutlist-icon-sort-asc');
-                        $icon.removeClass('ladb-opencutlist-icon-sort-desc');
+                        $icon.addClass('ladb-lexacut-icon-sort-asc');
+                        $icon.removeClass('ladb-lexacut-icon-sort-desc');
                     } else {
                         property = '-' + property;
-                        $icon.removeClass('ladb-opencutlist-icon-sort-asc');
-                        $icon.addClass('ladb-opencutlist-icon-sort-desc');
+                        $icon.removeClass('ladb-lexacut-icon-sort-asc');
+                        $icon.addClass('ladb-lexacut-icon-sort-desc');
                     }
                     $item.data('property', property);
                 });
@@ -3911,7 +3911,7 @@
         $.each(defs, function () {
             const $btn = $('button.ladb-btn-group-' + this, $group);
             const $i = $('i', $btn);
-            const clazz = 'ladb-opencutlist-icon-' + this + '-selection';
+            const clazz = 'ladb-lexacut-icon-' + this + '-selection';
             let doEffet = false;
             if (that.selectionPartIds.length > 0) {
                 doEffet = !$i.hasClass(clazz);
@@ -3941,25 +3941,25 @@
             $editPartBtn
                 .prop('title', i18next.t('tab.cutlist.tooltip.edit_parts_properties') + '...')
                 .tooltip('fixTitle');
-            $('i', $highlightPartBtn).addClass('ladb-opencutlist-icon-magnifier-multiple');
-            $('i', $editPartBtn).addClass('ladb-opencutlist-icon-edit-multiple');
-            $('i', $selectPartBtn).addClass('ladb-opencutlist-icon-check-box-with-check-sign');
+            $('i', $highlightPartBtn).addClass('ladb-lexacut-icon-magnifier-multiple');
+            $('i', $editPartBtn).addClass('ladb-lexacut-icon-edit-multiple');
+            $('i', $selectPartBtn).addClass('ladb-lexacut-icon-check-box-with-check-sign');
         } else {
             $row.removeClass('ladb-selected');
             $selectPartBtn.removeClass('ladb-active');
-            if ($('i', $highlightPartBtn).hasClass('ladb-opencutlist-icon-magnifier')) {
+            if ($('i', $highlightPartBtn).hasClass('ladb-lexacut-icon-magnifier')) {
                 $highlightPartBtn
                     .prop('title', i18next.t('tab.cutlist.tooltip.highlight_part'))
                     .tooltip('fixTitle');
-                $('i', $highlightPartBtn).removeClass('ladb-opencutlist-icon-magnifier-multiple');
+                $('i', $highlightPartBtn).removeClass('ladb-lexacut-icon-magnifier-multiple');
             }
-            if ($('i', $editPartBtn).hasClass('ladb-opencutlist-icon-edit')) {
+            if ($('i', $editPartBtn).hasClass('ladb-lexacut-icon-edit')) {
                 $editPartBtn
                     .prop('title', i18next.t('tab.cutlist.tooltip.edit_part_properties') + '...')
                     .tooltip('fixTitle');
-                $('i', $editPartBtn).removeClass('ladb-opencutlist-icon-edit-multiple');
+                $('i', $editPartBtn).removeClass('ladb-lexacut-icon-edit-multiple');
             }
-            $('i', $selectPartBtn).removeClass('ladb-opencutlist-icon-check-box-with-check-sign');
+            $('i', $selectPartBtn).removeClass('ladb-lexacut-icon-check-box-with-check-sign');
         }
     };
 
@@ -4855,7 +4855,7 @@
         const $btn = $('.ladb-btn-folding-toggle-row', $row);
         const $i = $('i', $btn);
 
-        if ($i.hasClass('ladb-opencutlist-icon-arrow-down')) {
+        if ($i.hasClass('ladb-lexacut-icon-arrow-down')) {
             this.expandFoldingRow($row, dataKey);
         } else {
             this.collapseFoldingRow($row, dataKey);
@@ -4867,8 +4867,8 @@
         const $btn = $('.ladb-btn-folding-toggle-row', $row);
         const $i = $('i', $btn);
 
-        $i.addClass('ladb-opencutlist-icon-arrow-up');
-        $i.removeClass('ladb-opencutlist-icon-arrow-down');
+        $i.addClass('ladb-lexacut-icon-arrow-up');
+        $i.removeClass('ladb-lexacut-icon-arrow-down');
 
         // Show children
         $row.siblings('tr[data-folder-id=' + rowId + ']').removeClass('hide');
@@ -4880,8 +4880,8 @@
         const $btn = $('.ladb-btn-folding-toggle-row', $row);
         const $i = $('i', $btn);
 
-        $i.addClass('ladb-opencutlist-icon-arrow-down');
-        $i.removeClass('ladb-opencutlist-icon-arrow-up');
+        $i.addClass('ladb-lexacut-icon-arrow-down');
+        $i.removeClass('ladb-lexacut-icon-arrow-up');
 
         // Hide children
         $row.siblings('tr[data-folder-id=' + rowId + ']').addClass('hide');
@@ -4939,12 +4939,12 @@
         const $summaryToggleIconBtn = $('i', $summaryToggleBtn);
 
         $group.removeClass('no-print');
-        $i.addClass('ladb-opencutlist-icon-eye-open');
-        $i.removeClass('ladb-opencutlist-icon-eye-close');
+        $i.addClass('ladb-lexacut-icon-eye-open');
+        $i.removeClass('ladb-lexacut-icon-eye-close');
         $summaryRow.removeClass('ladb-hidden');
         $summaryToggleBtn.removeClass('ladb-tool-dark');
-        $summaryToggleIconBtn.addClass('ladb-opencutlist-icon-eye-open');
-        $summaryToggleIconBtn.removeClass('ladb-opencutlist-icon-eye-close');
+        $summaryToggleIconBtn.addClass('ladb-lexacut-icon-eye-open');
+        $summaryToggleIconBtn.removeClass('ladb-lexacut-icon-eye-close');
 
         if (doNotSaveState === undefined || !doNotSaveState) {
             if (presetValues === undefined) presetValues = this.generateOptions;
@@ -4968,12 +4968,12 @@
         const $summaryToggleIconBtn = $('i', $summaryToggleBtn);
 
         $group.addClass('no-print');
-        $i.removeClass('ladb-opencutlist-icon-eye-open');
-        $i.addClass('ladb-opencutlist-icon-eye-close');
+        $i.removeClass('ladb-lexacut-icon-eye-open');
+        $i.addClass('ladb-lexacut-icon-eye-close');
         $summaryRow.addClass('ladb-hidden');
         $summaryToggleBtn.addClass('ladb-tool-dark');
-        $summaryToggleIconBtn.removeClass('ladb-opencutlist-icon-eye-open');
-        $summaryToggleIconBtn.addClass('ladb-opencutlist-icon-eye-close');
+        $summaryToggleIconBtn.removeClass('ladb-lexacut-icon-eye-open');
+        $summaryToggleIconBtn.addClass('ladb-lexacut-icon-eye-close');
 
         if (doNotSaveState === undefined || !doNotSaveState) {
             if (presetValues === undefined) presetValues = this.generateOptions;
@@ -6359,12 +6359,12 @@
                 let property = $item.data('property');
                 if (property.startsWith('-')) {
                     property = property.substring(1);
-                    $icon.addClass('ladb-opencutlist-icon-sort-asc');
-                    $icon.removeClass('ladb-opencutlist-icon-sort-desc');
+                    $icon.addClass('ladb-lexacut-icon-sort-asc');
+                    $icon.removeClass('ladb-lexacut-icon-sort-desc');
                 } else {
                     property = '-' + property;
-                    $icon.removeClass('ladb-opencutlist-icon-sort-asc');
-                    $icon.addClass('ladb-opencutlist-icon-sort-desc');
+                    $icon.removeClass('ladb-lexacut-icon-sort-asc');
+                    $icon.addClass('ladb-lexacut-icon-sort-desc');
                 }
                 $item.data('property', property);
             });
@@ -6387,12 +6387,12 @@
                 let property = $item.data('property');
                 if (property.startsWith('-')) {
                     property = property.substring(1);
-                    $icon.addClass('ladb-opencutlist-icon-sort-asc');
-                    $icon.removeClass('ladb-opencutlist-icon-sort-desc');
+                    $icon.addClass('ladb-lexacut-icon-sort-asc');
+                    $icon.removeClass('ladb-lexacut-icon-sort-desc');
                 } else {
                     property = '-' + property;
-                    $icon.removeClass('ladb-opencutlist-icon-sort-asc');
-                    $icon.addClass('ladb-opencutlist-icon-sort-desc');
+                    $icon.removeClass('ladb-lexacut-icon-sort-asc');
+                    $icon.addClass('ladb-lexacut-icon-sort-desc');
                 }
                 $item.data('property', property);
             });

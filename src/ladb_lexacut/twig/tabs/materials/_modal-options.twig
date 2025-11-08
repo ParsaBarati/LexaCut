@@ -5,14 +5,14 @@
 
 {% block headerToolsInner %}
     {% include 'components/_widget-preset.twig' %}
-    <button class="btn btn-default btn-xs" data-help-page="materials.options"><i class="ladb-opencutlist-icon-help"></i> {{ 'default.help'|i18next }}</button>
+    <button class="btn btn-default btn-xs" data-help-page="materials.options"><i class="ladb-lexacut-icon-help"></i> {{ 'default.help'|i18next }}</button>
 {% endblock %}
 
 {% block headerInner %}
     {{ parent() }}
     <ul class="nav nav-tabs nav-justified" role="tablist">
         <li role="presentation"{% if tab == 'general' %} class="active"{% endif %}><a href="#tab_options_general" role="tab" data-toggle="tab">{{ 'tab.materials.option.general'|i18next }}</a></li>
-        <li role="presentation"{% if tab == 'material_order_strategy' %} class="active"{% endif %}><a href="#tab_options_material_order_strategy" role="tab" data-toggle="tab"><i class="ladb-opencutlist-icon-sort-asc"></i> {{ 'tab.materials.option.material_order_strategy'|i18next }}</a></li>
+        <li role="presentation"{% if tab == 'material_order_strategy' %} class="active"{% endif %}><a href="#tab_options_material_order_strategy" role="tab" data-toggle="tab"><i class="ladb-lexacut-icon-sort-asc"></i> {{ 'tab.materials.option.material_order_strategy'|i18next }}</a></li>
     </ul>
 {% endblock %}
 
@@ -22,7 +22,7 @@
             <div role="tabpanel" class="tab-pane{% if tab == 'general' %} active{% endif %}" id="tab_options_general">
                 <div class="checkbox">
                     <div class="col-xs-offset-1 col-xs-10">
-                        <div class="ladb-minitools ladb-minitools-right"><a tabindex="-1" data-toggle="popover" data-trigger="hover" data-placement="left" title="{{ 'default.help'|i18next }}" data-content="{{ 'tab.materials.option.minimize_on_smart_paint_help'|i18next }}"><i class="ladb-opencutlist-icon-help"></i></a></div>
+                        <div class="ladb-minitools ladb-minitools-right"><a tabindex="-1" data-toggle="popover" data-trigger="hover" data-placement="left" title="{{ 'default.help'|i18next }}" data-content="{{ 'tab.materials.option.minimize_on_smart_paint_help'|i18next }}"><i class="ladb-lexacut-icon-help"></i></a></div>
                         <label>
                             <input type="checkbox" id="ladb_input_minimize_on_smart_paint"> <span>{{ 'tab.materials.option.minimize_on_smart_paint'|i18next }}</span>
                         </label>

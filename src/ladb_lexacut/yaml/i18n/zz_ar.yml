@@ -131,7 +131,7 @@ core:
   savepanel:
     export_to_file: 118 - التصدير إلى ملف {{ file_format }}
   dialog:
-    title: 119 - OpenCutList by L'Air du Bois
+    title: 119 - LexaCut - Modern Edition
   leftbar:
     more: 120 - المزيد
     more_docs: 121 - مستندات
@@ -142,7 +142,7 @@ core:
   bottombar:
     report_a_bug: 126 - الإبلاغ عن خطأ
   warning:
-    dev: "127 - *OpenCutList* أنت تستعمل نسخة **ما زالت تحت التطوير** من \nهذه النسخة متوفرة فقط لغرض التجريب\nلا ينصح باستعمالها في الإنتاج\n\n <a href=\"mailto:opencutlist@lairdubois.fr?subject=Bug%20Report%20OpenCutList%20{{ version }}%20(build: {{ build }})\" target=\"_blank\">opencutlist@lairdubois.fr</a> للتبليغ عن خطإ برمجي:\n"
+    dev: "127 - *OpenCutList* أنت تستعمل نسخة **ما زالت تحت التطوير** من \nهذه النسخة متوفرة فقط لغرض التجريب\nلا ينصح باستعمالها في الإنتاج\n\n <a href=\"mailto:lexacut@lexaplus.com?subject=Bug%20Report%20OpenCutList%20{{ version }}%20(build: {{ build }})\" target=\"_blank\">lexacut@lexaplus.com</a> للتبليغ عن خطإ برمجي:\n"
   error:
     extern: '128 - خطأ خارجي : **{{ error }}**'
     feature_unavailable: 129 - تتطلب هذه الخاصية توفر النسخة {{ version }} من SketchUp أو أعلى
@@ -1818,7 +1818,7 @@ tab:
     submit: 1445 - أرسل فيديو
     submit_info: |
       1446 - هل سجلت فيديو لعرض استخدام **OpenCutList** و تريد أن يظهر هنا؟
-      أعلمنا و راسلنا على **opencutlist@lairdubois.fr**!
+      أعلمنا و راسلنا على **lexacut@lexaplus.com**!
 
       *يجب أن يكون الفيديو في الوضع العامِّ على YouTube*
     error:

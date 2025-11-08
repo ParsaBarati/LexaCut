@@ -89,7 +89,7 @@
                 const $toggleSelectAllBtn = $('#ladb_btn_toggle_select_all');
 
                 if (that.generateOptions.show_hidden_instances) {
-                    $('i', $toggleHiddenBtn).addClass('ladb-opencutlist-icon-check-box-with-check-sign');
+                    $('i', $toggleHiddenBtn).addClass('ladb-lexacut-icon-check-box-with-check-sign');
                 }
 
                 // Bind buttons
@@ -103,9 +103,9 @@
                     rubyCallCommand('core_set_model_preset', { dictionary: 'outliner_options', values: that.generateOptions });
 
                     if (that.generateOptions.show_hidden_instances) {
-                        $('i', $(this)).addClass('ladb-opencutlist-icon-check-box-with-check-sign');
+                        $('i', $(this)).addClass('ladb-lexacut-icon-check-box-with-check-sign');
                     } else {
-                        $('i', $(this)).removeClass('ladb-opencutlist-icon-check-box-with-check-sign');
+                        $('i', $(this)).removeClass('ladb-lexacut-icon-check-box-with-check-sign');
                     }
                     that.renderNodes();
                     return false;

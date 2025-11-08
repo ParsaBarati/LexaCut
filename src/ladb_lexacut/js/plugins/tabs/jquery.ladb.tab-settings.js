@@ -53,11 +53,11 @@
             }
             const $i = $('i', $row);
             if (selected) {
-                $i.addClass('ladb-opencutlist-icon-check-box-with-check-sign');
-                $i.removeClass('ladb-opencutlist-icon-check-box');
+                $i.addClass('ladb-lexacut-icon-check-box-with-check-sign');
+                $i.removeClass('ladb-lexacut-icon-check-box');
             } else {
-                $i.removeClass('ladb-opencutlist-icon-check-box-with-check-sign');
-                $i.addClass('ladb-opencutlist-icon-check-box');
+                $i.removeClass('ladb-lexacut-icon-check-box-with-check-sign');
+                $i.addClass('ladb-lexacut-icon-check-box');
             }
         };
         const fnUpdateActionStatus = function () {

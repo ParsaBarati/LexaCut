@@ -12,7 +12,7 @@
     {% if not model_is_empty %}
         <div class="alert alert-warning">
             <div class="media">
-                <div class="media-left"><i class="ladb-opencutlist-icon-warning ladb-opencutlist-icon-lg"></i></div>
+                <div class="media-left"><i class="ladb-lexacut-icon-warning ladb-lexacut-icon-lg"></i></div>
                 <div class="media-body">{{ 'tab.importer.import.options'|i18next }}</div>
             </div>
             <hr>
@@ -21,8 +21,8 @@
                     <label class="control-label col-xs-3">{{ 'tab.importer.import.option_remove_all_?'|i18next }}</label>
                     <div class="col-xs-8">
                         <select class="form-control" id="ladb_importer_import_select_remove_all">
-                            <option value="0" data-content="<i class='ladb-opencutlist-icon-plus'></i> {{ 'tab.importer.import.option_remove_all_false'|i18next }}"></option>
-                            <option value="1" data-content="<span class='ladb-color-danger'><i class='ladb-opencutlist-icon-warning'></i> {{ 'tab.importer.import.option_remove_all_true'|i18next }}</span>"></option>
+                            <option value="0" data-content="<i class='ladb-lexacut-icon-plus'></i> {{ 'tab.importer.import.option_remove_all_false'|i18next }}"></option>
+                            <option value="1" data-content="<span class='ladb-color-danger'><i class='ladb-lexacut-icon-warning'></i> {{ 'tab.importer.import.option_remove_all_true'|i18next }}</span>"></option>
                         </select>
                     </div>
                 </div>
@@ -49,7 +49,7 @@
 {% endblock %}
 
 {% block footerLeftInner %}
-    <button class="btn btn-default" data-help-page="importer.import"><i class="ladb-opencutlist-icon-help"></i> {{ 'default.help'|i18next }}</button>
+    <button class="btn btn-default" data-help-page="importer.import"><i class="ladb-lexacut-icon-help"></i> {{ 'default.help'|i18next }}</button>
 {% endblock %}
 
 {% block footerRightInner %}

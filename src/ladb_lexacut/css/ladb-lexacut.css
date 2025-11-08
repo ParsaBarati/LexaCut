@@ -2252,7 +2252,7 @@ div.ladb-textinput > .ladb-textinput-tools.ladb-textinput-tools-right .ladb-text
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
   margin-top: 3px;
 }
-.ladb-material-box .ladb-overlay-icon .ladb-group-type-icon.ladb-material-type-0 i.ladb-opencutlist-icon-unknow:before {
+.ladb-material-box .ladb-overlay-icon .ladb-group-type-icon.ladb-material-type-0 i.ladb-lexacut-icon-unknow:before {
   opacity: 0.5;
 }
 .ladb-material-box .ladb-footer {
@@ -2438,10 +2438,10 @@ div.ladb-textinput > .ladb-textinput-tools.ladb-textinput-tools-right .ladb-text
 .ladb-cutlist-group tbody tr.ladb-cutlist-row td.ladb-cutlist-value.ladb-cutlist-value-right {
   text-align: right;
 }
-.ladb-cutlist-group tbody tr.ladb-cutlist-row td.ladb-cutlist-value span.ladb-opencutlist-icon {
+.ladb-cutlist-group tbody tr.ladb-cutlist-row td.ladb-cutlist-value span.ladb-lexacut-icon {
   color: #999;
 }
-.ladb-cutlist-group tbody tr.ladb-cutlist-row td.ladb-cutlist-value i.ladb-opencutlist-icon-asterisk {
+.ladb-cutlist-group tbody tr.ladb-cutlist-row td.ladb-cutlist-value i.ladb-lexacut-icon-asterisk {
   color: #5bc0de;
 }
 .ladb-cutlist-group tbody tr.ladb-cutlist-row td.ladb-cutlist-value hr {
@@ -2734,7 +2734,7 @@ div.ladb-textinput > .ladb-textinput-tools.ladb-textinput-tools-right .ladb-text
     color: #000;
   }
   .ladb-cutlist-group tbody tr.ladb-cutlist-row td.ladb-cutlist-value i,
-  .ladb-cutlist-group tbody tr.ladb-cutlist-row td.ladb-cutlist-value span.ladb-opencutlist-icon {
+  .ladb-cutlist-group tbody tr.ladb-cutlist-row td.ladb-cutlist-value span.ladb-lexacut-icon {
     color: #000 !important;
   }
   .ladb-cutlist-group tbody tr.ladb-cutlist-row td.ladb-cutlist-value hr {
@@ -3357,7 +3357,7 @@ div.ladb-textinput > .ladb-textinput-tools.ladb-textinput-tools-right .ladb-text
 .ladb-outliner-group tbody tr.ladb-outliner-row td.ladb-cutlist-value.ladb-cutlist-value-right {
   text-align: right;
 }
-.ladb-outliner-group tbody tr.ladb-outliner-row td.ladb-cutlist-value span.ladb-opencutlist-icon {
+.ladb-outliner-group tbody tr.ladb-outliner-row td.ladb-cutlist-value span.ladb-lexacut-icon {
   color: #999;
 }
 .ladb-outliner-group tbody tr.ladb-outliner-row .ladb-outliner-node-type {

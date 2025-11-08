@@ -72,7 +72,7 @@
         const $row = $(
             '<div class="ladb-editor-sizes-row">' +
                 '<input type="hidden">' +
-                '<div class="ladb-textinput-tool ladb-handle"><i class="ladb-opencutlist-icon-reorder"></i></div>' +
+                '<div class="ladb-textinput-tool ladb-handle"><i class="ladb-lexacut-icon-reorder"></i></div>' +
             '</div>')
         ;
         $row.data('size-def', sizeDef);
@@ -138,7 +138,7 @@
 
         const $removeRow = $(
             '<div class="ladb-editor-sizes-remove-row">' +
-                '<button tabindex="-1" class="btn btn-default btn-xs"><i class="ladb-opencutlist-icon-minus"></i></button>' +
+                '<button tabindex="-1" class="btn btn-default btn-xs"><i class="ladb-lexacut-icon-minus"></i></button>' +
             '</div>'
         );
         this.$removeRows.append($removeRow);

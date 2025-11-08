@@ -9,7 +9,7 @@
 
 {% block headerToolsInner %}
     {% include 'components/_widget-preset.twig' %}
-    <button class="btn btn-default btn-xs" data-help-page="cutlist.export"><i class="ladb-opencutlist-icon-help"></i> {{ 'default.help'|i18next }}</button>
+    <button class="btn btn-default btn-xs" data-help-page="cutlist.export"><i class="ladb-lexacut-icon-help"></i> {{ 'default.help'|i18next }}</button>
 {% endblock %}
 
 {% block headerInner %}
@@ -31,7 +31,7 @@
         </div>
     </div>
     <ul class="nav nav-tabs nav-justified" role="tablist">
-        <li role="presentation"{% if tab == 'customize' %} class="active"{% endif %}><a href="#tab_export_options_customize" role="tab" data-toggle="tab"><i class="ladb-opencutlist-icon-settings"></i> {{ 'tab.cutlist.export.options_customize'|i18next }}</a></li>
+        <li role="presentation"{% if tab == 'customize' %} class="active"{% endif %}><a href="#tab_export_options_customize" role="tab" data-toggle="tab"><i class="ladb-lexacut-icon-settings"></i> {{ 'tab.cutlist.export.options_customize'|i18next }}</a></li>
         <li role="presentation"{% if tab == 'general' %} class="active"{% endif %}><a href="#tab_export_options_general" role="tab" data-toggle="tab">{{ 'tab.cutlist.export.options'|i18next }}</a></li>
     </ul>
 {% endblock %}
@@ -95,16 +95,16 @@
     <button class="btn btn-default" data-dismiss="modal">{{ 'default.cancel'|i18next }}</button>
     <button class="btn btn-default" id="ladb_cutlist_export_btn_preview">{{ 'default.preview'|i18next }}</button>
     <div class="btn-group dropup">
-        <button type="button" class="btn btn-primary" id="ladb_cutlist_export_btn_export">{{ 'default.export'|i18next }}&nbsp;<i class="ladb-opencutlist-icon-arrow-right"></i>&nbsp;<span id="ladb_cutlist_export_btn_export_format"></span></button>
+        <button type="button" class="btn btn-primary" id="ladb_cutlist_export_btn_export">{{ 'default.export'|i18next }}&nbsp;<i class="ladb-lexacut-icon-arrow-right"></i>&nbsp;<span id="ladb_cutlist_export_btn_export_format"></span></button>
         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span class="caret"></span>
         </button>
         <ul class="dropdown-menu">
-            <li><a id="ladb_cutlist_export_btn_export_csv" href="#">{{ 'default.export'|i18next }}&nbsp;<i class="ladb-opencutlist-icon-arrow-right"></i>&nbsp;CSV</a></li>
-            <li><a id="ladb_cutlist_export_btn_export_xlsx" href="#">{{ 'default.export'|i18next }}&nbsp;<i class="ladb-opencutlist-icon-arrow-right"></i>&nbsp;XLSX</a></li>
+            <li><a id="ladb_cutlist_export_btn_export_csv" href="#">{{ 'default.export'|i18next }}&nbsp;<i class="ladb-lexacut-icon-arrow-right"></i>&nbsp;CSV</a></li>
+            <li><a id="ladb_cutlist_export_btn_export_xlsx" href="#">{{ 'default.export'|i18next }}&nbsp;<i class="ladb-lexacut-icon-arrow-right"></i>&nbsp;XLSX</a></li>
             <li role="separator" class="divider"></li>
-            <li><a id="ladb_cutlist_export_btn_export_copy_all" href="#">{{ 'default.copy'|i18next }}&nbsp;<i class="ladb-opencutlist-icon-arrow-right"></i>&nbsp;{{ 'tab.cutlist.export.copy_all'|i18next }}</a></li>
-            <li><a id="ladb_cutlist_export_btn_export_copy_values" href="#">{{ 'default.copy'|i18next }}&nbsp;<i class="ladb-opencutlist-icon-arrow-right"></i>&nbsp;{{ 'tab.cutlist.export.copy_values'|i18next }}</a></li>
+            <li><a id="ladb_cutlist_export_btn_export_copy_all" href="#">{{ 'default.copy'|i18next }}&nbsp;<i class="ladb-lexacut-icon-arrow-right"></i>&nbsp;{{ 'tab.cutlist.export.copy_all'|i18next }}</a></li>
+            <li><a id="ladb_cutlist_export_btn_export_copy_values" href="#">{{ 'default.copy'|i18next }}&nbsp;<i class="ladb-lexacut-icon-arrow-right"></i>&nbsp;{{ 'tab.cutlist.export.copy_values'|i18next }}</a></li>
         </ul>
     </div>
 {% endblock %}

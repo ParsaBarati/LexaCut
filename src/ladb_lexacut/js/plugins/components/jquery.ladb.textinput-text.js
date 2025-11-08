@@ -54,7 +54,7 @@
                             if (item.category !== currentCategory) {
                                 let categoryIcon = '';
                                 if (autocompleteOptions.categoryIcon) {
-                                    categoryIcon = '<i class="ladb-opencutlist-icon-' + autocompleteOptions.categoryIcon + '"></i> ';
+                                    categoryIcon = '<i class="ladb-lexacut-icon-' + autocompleteOptions.categoryIcon + '"></i> ';
                                 }
                                 ul.append('<li class="ui-autocomplete-category">' + categoryIcon + item.category + "</li>");
                                 currentCategory = item.category;
@@ -66,7 +66,7 @@
                             li.find('div').css('padding-left', '24px');
                         }
                         if (item.icon) {
-                            li.find('div').prepend('<i class="ladb-opencutlist-icon-' + item.icon + '"' + (item.color ? ' style="color:' + item.color + '"' : '') + '></i> ');
+                            li.find('div').prepend('<i class="ladb-lexacut-icon-' + item.icon + '"' + (item.color ? ' style="color:' + item.color + '"' : '') + '></i> ');
                         }
                     });
                 },

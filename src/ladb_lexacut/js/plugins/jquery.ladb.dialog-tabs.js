@@ -44,55 +44,55 @@
             {
                 name: 'materials',
                 bar: 'leftbar',
-                icon: 'ladb-opencutlist-icon-materials',
+                icon: 'ladb-lexacut-icon-materials',
                 sponsorAd: false
             },
             {
                 name: 'cutlist',
                 bar: 'leftbar',
-                icon: 'ladb-opencutlist-icon-cutlist',
+                icon: 'ladb-lexacut-icon-cutlist',
                 sponsorAd: true
             },
             {
                 name: 'outliner',
                 bar: 'leftbar',
-                icon: 'ladb-opencutlist-icon-outliner',
+                icon: 'ladb-lexacut-icon-outliner',
                 sponsorAd: false
             },
             {
                 name: 'importer',
                 bar: 'leftbar',
-                icon: 'ladb-opencutlist-icon-import',
+                icon: 'ladb-lexacut-icon-import',
                 sponsorAd: true
             },
             {
                 name: 'tutorials',
                 bar: 'leftbar-bottom',
-                icon: 'ladb-opencutlist-icon-tutorials',
+                icon: 'ladb-lexacut-icon-tutorials',
                 sponsorAd: false
             },
             {
                 name: 'news',
                 bar: null,
-                icon: 'ladb-opencutlist-icon-news',
+                icon: 'ladb-lexacut-icon-news',
                 sponsorAd: false
             },
             {
                 name: 'forum',
                 bar: null,
-                icon: 'ladb-opencutlist-icon-forum',
+                icon: 'ladb-lexacut-icon-forum',
                 sponsorAd: false
             },
             {
                 name: 'settings',
                 bar: 'bottombar',
-                icon: 'ladb-opencutlist-icon-settings',
+                icon: 'ladb-lexacut-icon-settings',
                 sponsorAd: true
             },
             {
                 name: 'sponsor',
                 bar: 'bottombar',
-                icon: 'ladb-opencutlist-icon-sponsor',
+                icon: 'ladb-lexacut-icon-sponsor',
                 classes: 'ladb-highlighted-sponsor',
                 sponsorAd: false
             },

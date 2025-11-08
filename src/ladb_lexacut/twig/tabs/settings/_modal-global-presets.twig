@@ -4,7 +4,7 @@
 {% set title = ('tab.settings.presets.'~actionName~'_global_presets')|i18next %}
 
 {% block headerToolsInner %}
-    <button class="btn btn-default btn-xs" data-help-page="settings.presets.{{ actionName }}"><i class="ladb-opencutlist-icon-help"></i> {{ 'default.help'|i18next }}</button>
+    <button class="btn btn-default btn-xs" data-help-page="settings.presets.{{ actionName }}"><i class="ladb-lexacut-icon-help"></i> {{ 'default.help'|i18next }}</button>
 {% endblock %}
 
 {% block bodyInner %}
@@ -36,7 +36,7 @@
                 {% endif %}
                 {% for name in presets[dictionary][section]|keys|sort %}
                     <tr><td class="ladb-preset-row selected " data-path="{{ dictionary }}|{{ section }}|{{ name|escape('html') }}">
-                        <div class="ladb-minitools ladb-minitools-inline"><a href="#"><i class="ladb-opencutlist-icon-check-box-with-check-sign"></i></a></div> {% if name == '_default' %}{{ 'core.preset.user_defaults'|i18next }}{% else %}{{ name }}{% endif %}
+                        <div class="ladb-minitools ladb-minitools-inline"><a href="#"><i class="ladb-lexacut-icon-check-box-with-check-sign"></i></a></div> {% if name == '_default' %}{{ 'core.preset.user_defaults'|i18next }}{% else %}{{ name }}{% endif %}
                     </td></tr>
                 {% endfor %}
             {% endfor %}
@@ -45,8 +45,8 @@
 {% endblock %}
 
 {% block footerLeftInner %}
-    <button class="btn btn-default" id="ladb_settings_btn_select_all"><i class="ladb-opencutlist-icon-check-box-with-check-sign"></i> {{ 'default.select_all'|i18next }}</button>
-    <button class="btn btn-default" id="ladb_settings_btn_unselect_all"><i class="ladb-opencutlist-icon-check-box"></i> {{ 'default.unselect_all'|i18next }}</button>
+    <button class="btn btn-default" id="ladb_settings_btn_select_all"><i class="ladb-lexacut-icon-check-box-with-check-sign"></i> {{ 'default.select_all'|i18next }}</button>
+    <button class="btn btn-default" id="ladb_settings_btn_unselect_all"><i class="ladb-lexacut-icon-check-box"></i> {{ 'default.unselect_all'|i18next }}</button>
 {% endblock %}
 
 {% block footerRightInner %}

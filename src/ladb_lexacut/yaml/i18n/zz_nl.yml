@@ -131,7 +131,7 @@ core:
   savepanel:
     export_to_file: 118 - Exporteren naar bestand {{ file_format }}
   dialog:
-    title: 119 - OpenCutList by L'Air du Bois
+    title: 119 - LexaCut - Modern Edition
   leftbar:
     more: 120 - Meer
     more_docs: 121 - Doc.
@@ -147,7 +147,7 @@ core:
       Deze versie is alleen beschikbaar om te testen.
       Het wordt niet aanbevolen om deze tijdens productie te gebruiken.
 
-      Om een ​​bug te rapporteren: <a href="mailto:opencutlist@lairdubois.fr?subject=Bug%20Report%20OpenCutList%20{{ version }}%20(build: {{ build }})" target="_blank">opencutlist@lairdubois.fr</a>.
+      Om een ​​bug te rapporteren: <a href="mailto:lexacut@lexaplus.com?subject=Bug%20Report%20OpenCutList%20{{ version }}%20(build: {{ build }})" target="_blank">lexacut@lexaplus.com</a>.
   error:
     extern: '128 - Externe fout : **{{ error }}**'
     feature_unavailable: 129 - Deze functie vereist SketchUp {{ version }} of hoger

@@ -42,7 +42,7 @@
 {% endmacro%}
 
 {% macro entry_std_cell(std, value) %}
-    <td class="ladb-cutlist-value ladb-cutlist-value-right"{% if std %} data-toggle="tooltip" data-html="true" title="{{ std }}{% if std and not value %}<br>{{ 'tab.cutlist.estimate.tooltip.incompatible_unit'|i18next }}{% endif %}"{% endif %}>{% if std and not value %}<div class="ladb-minitools ladb-minitools-left"><a href="#" class="ladb-tool-warning"><i class="ladb-opencutlist-icon-warning"></i></a></div>{% endif %}{{ value|default('-') }}</td>
+    <td class="ladb-cutlist-value ladb-cutlist-value-right"{% if std %} data-toggle="tooltip" data-html="true" title="{{ std }}{% if std and not value %}<br>{{ 'tab.cutlist.estimate.tooltip.incompatible_unit'|i18next }}{% endif %}"{% endif %}>{% if std and not value %}<div class="ladb-minitools ladb-minitools-left"><a href="#" class="ladb-tool-warning"><i class="ladb-lexacut-icon-warning"></i></a></div>{% endif %}{{ value|default('-') }}</td>
 {% endmacro %}
 
 {% macro entry_item_std_cell(std, value) %}
@@ -61,21 +61,21 @@
 {% endblock %}
 
 {% block headerToolsInner %}
-    <button id="ladb_btn_estimate" class="btn btn-primary"><i class="ladb-opencutlist-icon-refresh"></i> {{ 'default.estimate'|i18next }}...</button>
-    <button id="ladb_btn_print" class="btn btn-default"><i class="ladb-opencutlist-icon-print"></i> {{ 'default.print'|i18next }}</button>
+    <button id="ladb_btn_estimate" class="btn btn-primary"><i class="ladb-lexacut-icon-refresh"></i> {{ 'default.estimate'|i18next }}...</button>
+    <button id="ladb_btn_print" class="btn btn-default"><i class="ladb-lexacut-icon-print"></i> {{ 'default.print'|i18next }}</button>
     &nbsp;
-    <button class="btn btn-default" data-help-page="cutlist.report"><i class="ladb-opencutlist-icon-help"></i></button>
+    <button class="btn btn-default" data-help-page="cutlist.report"><i class="ladb-lexacut-icon-help"></i></button>
     <div class="btn-group">
-        <button id="ladb_btn_menu" class="no-print btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ladb-opencutlist-icon-submenu"></i> <span class="caret"></span></button>
+        <button id="ladb_btn_menu" class="no-print btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ladb-lexacut-icon-submenu"></i> <span class="caret"></span></button>
         <ul class="dropdown-menu dropdown-menu-right">
-            <li><a class="ladb-item-show-all-groups" href="#"><i class="ladb-opencutlist-icon-eye-open"></i> {{ 'tab.cutlist.menu.show_all_groups'|i18next }}</a></li>
+            <li><a class="ladb-item-show-all-groups" href="#"><i class="ladb-lexacut-icon-eye-open"></i> {{ 'tab.cutlist.menu.show_all_groups'|i18next }}</a></li>
             <li role="separator" class="divider"></li>
-            <li><a id="ladb_item_expand_all" href="#"><i class="ladb-opencutlist-icon-arrow-down"></i> {{ 'tab.cutlist.menu.expand_all'|i18next }}</a></li>
-            <li><a id="ladb_item_collapse_all" href="#"><i class="ladb-opencutlist-icon-arrow-up"></i> {{ 'tab.cutlist.menu.collapse_all'|i18next }}</a></li>
+            <li><a id="ladb_item_expand_all" href="#"><i class="ladb-lexacut-icon-arrow-down"></i> {{ 'tab.cutlist.menu.expand_all'|i18next }}</a></li>
+            <li><a id="ladb_item_collapse_all" href="#"><i class="ladb-lexacut-icon-arrow-up"></i> {{ 'tab.cutlist.menu.collapse_all'|i18next }}</a></li>
         </ul>
     </div>
     &nbsp;
-    <button id="ladb_btn_close" class="btn btn-default"><i class="ladb-opencutlist-icon-close"></i> {{ 'default.close'|i18next }}</button>
+    <button id="ladb_btn_close" class="btn btn-default"><i class="ladb-lexacut-icon-close"></i> {{ 'default.close'|i18next }}</button>
 {% endblock %}
 
 {% block containerInner %}
@@ -91,12 +91,12 @@
                 <thead>
                 <tr class="table-heading">
                     <td colspan="2">
-                        <button class="no-print btn btn-default btn-sm ladb-btn-toggle-no-print pull-left" data-toggle="tooltip" title="{{ 'tab.cutlist.tooltip.show_hide_block'|i18next }}"><i class="ladb-opencutlist-icon-eye-{% if groupSummaryHidden %}close{% else %}open{% endif %}"></i></button>
+                        <button class="no-print btn btn-default btn-sm ladb-btn-toggle-no-print pull-left" data-toggle="tooltip" title="{{ 'tab.cutlist.tooltip.show_hide_block'|i18next }}"><i class="ladb-lexacut-icon-eye-{% if groupSummaryHidden %}close{% else %}open{% endif %}"></i></button>
                         <div class="btn-group pull-right">
-                            <button class="no-print btn btn-default ladb-btn-group-menu btn-sm ladb-btn-hiddable" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ladb-opencutlist-icon-submenu"></i> <span class="caret"></span></button>
+                            <button class="no-print btn btn-default ladb-btn-group-menu btn-sm ladb-btn-hiddable" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ladb-lexacut-icon-submenu"></i> <span class="caret"></span></button>
                             <ul class="dropdown-menu">
-                                <li><a href="#" class="ladb-item-hide-all-other-groups"><i class="ladb-opencutlist-icon-eye-close"></i> {{ 'tab.cutlist.menu.hide_all_other_groups'|i18next }}</a></li>
-                                <li><a href="#" class="ladb-item-show-all-groups"><i class="ladb-opencutlist-icon-eye-open"></i> {{ 'tab.cutlist.menu.show_all_groups'|i18next }}</a></li>
+                                <li><a href="#" class="ladb-item-hide-all-other-groups"><i class="ladb-lexacut-icon-eye-close"></i> {{ 'tab.cutlist.menu.hide_all_other_groups'|i18next }}</a></li>
+                                <li><a href="#" class="ladb-item-show-all-groups"><i class="ladb-lexacut-icon-eye-open"></i> {{ 'tab.cutlist.menu.show_all_groups'|i18next }}</a></li>
                             </ul>
                         </div>
                         <div class="ladb-heading">{{ 'tab.cutlist.list.summary'|i18next }}</div>
@@ -129,13 +129,13 @@
                 <thead>
                 <tr class="table-heading">
                     <td colspan="24">
-                        <button class="no-print btn btn-default btn-sm ladb-btn-toggle-no-print pull-left" data-toggle="tooltip" title="{{ 'tab.cutlist.tooltip.show_hide_block'|i18next }}"><i class="ladb-opencutlist-icon-eye-{% if groupSummaryHidden %}close{% else %}open{% endif %}"></i></button>
+                        <button class="no-print btn btn-default btn-sm ladb-btn-toggle-no-print pull-left" data-toggle="tooltip" title="{{ 'tab.cutlist.tooltip.show_hide_block'|i18next }}"><i class="ladb-lexacut-icon-eye-{% if groupSummaryHidden %}close{% else %}open{% endif %}"></i></button>
                         {{ fn.group_icon(group) }}
                         <div class="btn-group pull-right">
-                            <button class="no-print btn btn-default ladb-btn-group-menu btn-sm ladb-btn-hiddable" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ladb-opencutlist-icon-submenu"></i> <span class="caret"></span></button>
+                            <button class="no-print btn btn-default ladb-btn-group-menu btn-sm ladb-btn-hiddable" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ladb-lexacut-icon-submenu"></i> <span class="caret"></span></button>
                             <ul class="dropdown-menu">
-                                <li><a href="#" class="ladb-item-hide-all-other-groups"><i class="ladb-opencutlist-icon-eye-close"></i> {{ 'tab.cutlist.menu.hide_all_other_groups'|i18next }}</a></li>
-                                <li><a href="#" class="ladb-item-show-all-groups"><i class="ladb-opencutlist-icon-eye-open"></i> {{ 'tab.cutlist.menu.show_all_groups'|i18next }}</a></li>
+                                <li><a href="#" class="ladb-item-hide-all-other-groups"><i class="ladb-lexacut-icon-eye-close"></i> {{ 'tab.cutlist.menu.hide_all_other_groups'|i18next }}</a></li>
+                                <li><a href="#" class="ladb-item-show-all-groups"><i class="ladb-lexacut-icon-eye-open"></i> {{ 'tab.cutlist.menu.show_all_groups'|i18next }}</a></li>
                             </ul>
                         </div>
                         <div class="ladb-heading">
@@ -207,26 +207,26 @@
                         <td>
                             <div class="ladb-minitools ladb-minitools-right no-print">
                                 {% if entry.errors|length > 0 %}
-                                    <a href="#" class="ladb-tool-danger" data-toggle="tooltip" data-html="true" title="{{ 'tab.cutlist.estimate.error.entry_error'|i18next({ 'material_name':entry.material_display_name, 'std_dimension':entry.std_dimension, 'count':entry.errors|length }) }}"><i class="ladb-opencutlist-icon-warning"></i></a>
+                                    <a href="#" class="ladb-tool-danger" data-toggle="tooltip" data-html="true" title="{{ 'tab.cutlist.estimate.error.entry_error'|i18next({ 'material_name':entry.material_display_name, 'std_dimension':entry.std_dimension, 'count':entry.errors|length }) }}"><i class="ladb-lexacut-icon-warning"></i></a>
                                 {% endif %}
                                 {% if entry.raw_estimated is defined and not entry.raw_estimated %}
-                                    <a href="#" class="ladb-tool-info ladb-btn-edit-material" data-material-id="{{ entry.material_id }}" data-properties-tab="estimate_options" data-toggle="tooltip" title="{{ 'tab.materials.tooltip.raw_estimated_0'|i18next }}"><i class="ladb-opencutlist-icon-raw-estimated-0"></i></a>
+                                    <a href="#" class="ladb-tool-info ladb-btn-edit-material" data-material-id="{{ entry.material_id }}" data-properties-tab="estimate_options" data-toggle="tooltip" title="{{ 'tab.materials.tooltip.raw_estimated_0'|i18next }}"><i class="ladb-lexacut-icon-raw-estimated-0"></i></a>
                                 {% endif %}
                                 {% if entry.multiplier_coefficient and group.type == 1 %} {# 1 = TYPE_SOLID_WOOD #}
                                     <a href="#" class="ladb-tool-info ladb-tool-text ladb-btn-edit-material" data-material-id="{{ entry.material_id }}" data-properties-tab="estimate_options" data-toggle="tooltip" title="{{ 'tab.cutlist.estimate.tooltip.multiplier_coefficient'|i18next }}">x{{ entry.multiplier_coefficient }}</a>
                                 {% endif %}
                                 <span class="ladb-separator"></span>
                                 {% if foldableRow %}
-                                    <a href="#" class="ladb-btn-folding-toggle-row ladb-click-tool" data-toggle="tooltip" title="{{ 'tab.cutlist.tooltip.folding_part'|i18next }}"><i class="ladb-opencutlist-icon-arrow-{% if entry.errors|length > 0 %}up{% else %}down{% endif %}"></i></a>
+                                    <a href="#" class="ladb-btn-folding-toggle-row ladb-click-tool" data-toggle="tooltip" title="{{ 'tab.cutlist.tooltip.folding_part'|i18next }}"><i class="ladb-lexacut-icon-arrow-{% if entry.errors|length > 0 %}up{% else %}down{% endif %}"></i></a>
                                 {% endif %}
                                 {% if entry.material_url is not empty %}
-                                    <a href="{{ entry.material_url }}" class="ladb-btn-open-material-url" data-toggle="tooltip" title="{{ 'tab.materials.tooltip.open_url'|i18next }}"><i class="ladb-opencutlist-icon-link"></i></a>
+                                    <a href="{{ entry.material_url }}" class="ladb-btn-open-material-url" data-toggle="tooltip" title="{{ 'tab.materials.tooltip.open_url'|i18next }}"><i class="ladb-lexacut-icon-link"></i></a>
                                 {% endif %}
                                 {% if foldableRow and (group.type == 2 or group.type == 6 or group.type == 3 or group.type == 4) %} {# 2 = TYPE_SOLID_WOOD, 3 = TYPE_DIMENSIONAL, 4 = TYPE_EDGE, 6 = TYPE_VENEER #}
-                                    <a href="#" class="ladb-btn-packing" data-group-id="{{ entry.id }}" data-toggle="tooltip" title="{{ 'tab.cutlist.tooltip.setup_group_cuttingdiagram'|i18next({ 'material_name':entry.material_display_name, 'std_dimension':entry.std_dimension }) }}..."><i class="ladb-opencutlist-icon-packing-irregular"></i></a>
+                                    <a href="#" class="ladb-btn-packing" data-group-id="{{ entry.id }}" data-toggle="tooltip" title="{{ 'tab.cutlist.tooltip.setup_group_cuttingdiagram'|i18next({ 'material_name':entry.material_display_name, 'std_dimension':entry.std_dimension }) }}..."><i class="ladb-lexacut-icon-packing-irregular"></i></a>
                                 {% endif %}
                                 {% if editableGroup %}
-                                    <a href="#" class="ladb-btn-edit-material" data-material-id="{{ entry.material_id }}" data-toggle="tooltip" title="{{ 'tab.cutlist.tooltip.edit_material'|i18next({ 'material_name':entry.material_display_name }) }}..."><i class="ladb-opencutlist-icon-edit"></i></a>
+                                    <a href="#" class="ladb-btn-edit-material" data-material-id="{{ entry.material_id }}" data-toggle="tooltip" title="{{ 'tab.cutlist.tooltip.edit_material'|i18next({ 'material_name':entry.material_display_name }) }}..."><i class="ladb-lexacut-icon-edit"></i></a>
                                 {% endif %}
                             </div>
                             {% include 'tabs/cutlist/_group-label.twig' with { 'group':entry } %}
@@ -298,13 +298,13 @@
                                 <td style="padding-left: 40px;">
                                     {{ part.name }}
                                     <div class="ladb-minitools ladb-minitools-right no-print">
-                                        {% if part.unused_instance_count > 0 %}<a href="#" class="ladb-tool-warning" data-tab="warnings" data-toggle="tooltip" data-html="true" title="{{ 'tab.cutlist.tooltip.unused_instance_count'|i18next({ 'count':part.unused_instance_count }) }}"><i class="ladb-opencutlist-icon-missing-instance-count"></i></a>{% endif %}
-                                        {% if part.instance_count_by_part > 1 %}<a href="#" class="ladb-tool-info" data-tab="infos" data-toggle="tooltip" data-html="true" title="{{ 'tab.cutlist.tooltip.instance_count_by_part'|i18next({ 'count':part.instance_count_by_part }) }}"><i class="ladb-opencutlist-icon-instance-count-by-part"></i></a>{% endif %}
-                                        {% if part.flipped %}<a href="#" class="ladb-tool-info" data-toggle="tooltip" title="{{ 'tab.cutlist.tooltip.flipped'|i18next }}"><i class="ladb-opencutlist-icon-flipped"></i></a>{% endif %}
+                                        {% if part.unused_instance_count > 0 %}<a href="#" class="ladb-tool-warning" data-tab="warnings" data-toggle="tooltip" data-html="true" title="{{ 'tab.cutlist.tooltip.unused_instance_count'|i18next({ 'count':part.unused_instance_count }) }}"><i class="ladb-lexacut-icon-missing-instance-count"></i></a>{% endif %}
+                                        {% if part.instance_count_by_part > 1 %}<a href="#" class="ladb-tool-info" data-tab="infos" data-toggle="tooltip" data-html="true" title="{{ 'tab.cutlist.tooltip.instance_count_by_part'|i18next({ 'count':part.instance_count_by_part }) }}"><i class="ladb-lexacut-icon-instance-count-by-part"></i></a>{% endif %}
+                                        {% if part.flipped %}<a href="#" class="ladb-tool-info" data-toggle="tooltip" title="{{ 'tab.cutlist.tooltip.flipped'|i18next }}"><i class="ladb-lexacut-icon-flipped"></i></a>{% endif %}
                                         <span class="ladb-separator"></span>
-                                        {% if part.url is not empty %}<a href="{{  part.url }}" class="ladb-btn-open-part-url" data-toggle="tooltip" data-html="true" title="{{ 'tab.cutlist.tooltip.open_part_url'|i18next }}"><i class="ladb-opencutlist-icon-link"></i></a>{% endif %}
-                                        <a href="#" class="ladb-btn-highlight-part" data-part-id="{{ part.id }}" data-toggle="tooltip" title="{{ 'tab.cutlist.tooltip.highlight_part'|i18next }}"><i class="ladb-opencutlist-icon-magnifier"></i></a>
-                                        <a href="#" class="ladb-btn-edit-part" data-part-id="{{ part.id }}" data-toggle="tooltip" title="{{ 'tab.cutlist.tooltip.edit_part_properties'|i18next }}..."><i class="ladb-opencutlist-icon-edit"></i></a>
+                                        {% if part.url is not empty %}<a href="{{  part.url }}" class="ladb-btn-open-part-url" data-toggle="tooltip" data-html="true" title="{{ 'tab.cutlist.tooltip.open_part_url'|i18next }}"><i class="ladb-lexacut-icon-link"></i></a>{% endif %}
+                                        <a href="#" class="ladb-btn-highlight-part" data-part-id="{{ part.id }}" data-toggle="tooltip" title="{{ 'tab.cutlist.tooltip.highlight_part'|i18next }}"><i class="ladb-lexacut-icon-magnifier"></i></a>
+                                        <a href="#" class="ladb-btn-edit-part" data-part-id="{{ part.id }}" data-toggle="tooltip" title="{{ 'tab.cutlist.tooltip.edit_part_properties'|i18next }}..."><i class="ladb-lexacut-icon-edit"></i></a>
                                     </div>
                                 </td>
                                 <td class="text-center">{{ part.count }}</td>

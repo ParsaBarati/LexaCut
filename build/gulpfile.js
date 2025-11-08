@@ -239,7 +239,7 @@ gulp.task('default', gulp.series('build'));
 // ===================
 
 gulp.task('lexacut_less_compile', function () {
-    return gulp.src('../src/ladb_lexacut/less/ladb-opencutlist.less')
+    return gulp.src('../src/ladb_lexacut/less/ladb-lexacut.less')
         .pipe(less())
         .pipe(gulp.dest('../src/ladb_lexacut/css'));
 });

@@ -16,8 +16,8 @@ const LEXACUT_BRANDING = {
 
 const SELECT_PICKER_OPTIONS = {
     size: 10,
-    iconBase: 'ladb-opencutlist-icon',
-    tickIcon: 'ladb-opencutlist-icon-tick',
+    iconBase: 'ladb-lexacut-icon',
+    tickIcon: 'ladb-lexacut-icon-tick',
     showTick: true,
     dropupAuto: false
 };
