@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Ladb::OpenCutList::Zip
+module Ladb::LexaCut::Zip
   module TraditionalEncryption # :nodoc:
     def initialize(password)
       @password = password

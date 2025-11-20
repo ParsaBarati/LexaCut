@@ -1,6 +1,6 @@
 require 'matrix'
 
-module Ladb::OpenCutList::Geometrix
+module Ladb::LexaCut::Geometrix
 
   class EllipseFinder
 

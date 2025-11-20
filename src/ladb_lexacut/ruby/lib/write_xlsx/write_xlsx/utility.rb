@@ -3,7 +3,7 @@
 
 require_relative 'col_name'
 
-module Ladb::OpenCutList
+module Ladb::LexaCut
 module Writexlsx
   module Utility
     ROW_MAX       = 1048576  # :nodoc:

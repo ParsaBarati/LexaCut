@@ -78,23 +78,10 @@
                 sponsorAd: false
             },
             {
-                name: 'forum',
-                bar: null,
-                icon: 'ladb-lexacut-icon-forum',
-                sponsorAd: false
-            },
-            {
                 name: 'settings',
                 bar: 'bottombar',
                 icon: 'ladb-lexacut-icon-settings',
                 sponsorAd: true
-            },
-            {
-                name: 'sponsor',
-                bar: 'bottombar',
-                icon: 'ladb-lexacut-icon-sponsor',
-                classes: 'ladb-highlighted-sponsor',
-                sponsorAd: false
             },
             {
                 name: 'about',
@@ -726,7 +713,7 @@
                 that.lastListedNewsTimestamp = that.getSetting(SETTING_KEY_LAST_LISTED_NEWS_TIMESTAMP, null);
 
                 // Check if JS build number corresponds to Ruby build number
-                if (EXTENSION_BUILD !== that.capabilities.build) {
+                if (false /* LexaCut: disable zzz */) {
 
                     // Flag as sleeping
                     that.zzz = true;

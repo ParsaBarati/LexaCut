@@ -4,7 +4,7 @@ _label: English
 _disabled_msg: |
   This language has not yet been **fully translated**.
 
-  To help complete the translation, please visit the [LexaCut Documentation](https://docs.opencutlist.org/for-translators/general).
+  To help complete the translation, please visit the [LexaCut Documentation](https://docs.lexacut.org/for-translators/general).
 # the reload message will be displayed when a user switches to this language
 _reload_msg: "To reflect all changes, you must **close** and **reopen** the LexaCut window."
 _description: "Cutlist and Cutting Diagram Generator for Woodworkers. Open Source, crowdfunded and easy to use ;)"
@@ -536,7 +536,7 @@ tab:
       dynamic_attributes_name_help: |
         If this option is selected, the designation of parts will be extracted from the attribute *Name*, if defined.
 
-        <i class='ladb-opencutlist-icon-warning'></i> Part instances with the same component definition will be separated if the attribute *Name* does not have the same value.
+        <i class='ladb-lexacut-icon-warning'></i> Part instances with the same component definition will be separated if the attribute *Name* does not have the same value.
       part_number_with_letters: Use letters to enumerate parts
       part_number_with_letters_help: "If this option is selected, parts are enumerated using letters (A, B, C, ... Z, AA, AB, ...)."
       part_number_sequence_by_group: Reset the enumeration of parts for each group
@@ -571,11 +571,11 @@ tab:
       group_order_strategy: Group Sorting
       group_order_strategy_help: |
         Reorganize the tiles to define the sort order within each group.
-        Properties can be sorted in <i class="ladb-opencutlist-icon-sort-asc"></i> *ascending* or <i class="ladb-opencutlist-icon-sort-desc"></i> *descending* order.
+        Properties can be sorted in <i class="ladb-lexacut-icon-sort-asc"></i> *ascending* or <i class="ladb-lexacut-icon-sort-desc"></i> *descending* order.
       part_order_strategy: Part Sorting
       part_order_strategy_help: |
         Reorganize the tiles to define the sort order within each group of parts.
-        Properties can be sorted in <i class="ladb-opencutlist-icon-sort-asc"></i> *ascending* or <i class="ladb-opencutlist-icon-sort-desc"></i> *descending* order.
+        Properties can be sorted in <i class="ladb-lexacut-icon-sort-asc"></i> *ascending* or <i class="ladb-lexacut-icon-sort-desc"></i> *descending* order.
       dimension_column_order_strategy: Dimension Order
       dimension_column_order_strategy_help: |
         Rearrange the following properties to define the display order of dimension columns.
@@ -985,7 +985,7 @@ tab:
         cutting_dimensions: This cutting diagramm uses the **raw** dimensions of the parts.
         cutting_dimensions_increase_1d: "These raw dimensions have been configured on the material '{{ material_name }}': length oversize (**{{ length_increase }}**)."
         cutting_dimensions_increase_2d: "These raw dimensions have been configured on the material '{{ material_name }}': length oversize (**{{ length_increase }}**) and width oversize (**{{ width_increase }}**)."
-        cutting_dimensions_edge_decrement: Dimensions reduced by the thickness of the edge banding. <i class='ladb-opencutlist-icon-edge-decremented'></i>
+        cutting_dimensions_edge_decrement: Dimensions reduced by the thickness of the edge banding. <i class='ladb-lexacut-icon-edge-decremented'></i>
     packing:
       title: Cutting Diagram
       option_problem_type: Type
@@ -1234,7 +1234,7 @@ tab:
         cutting_dimensions: This cutting diagramm uses the **raw** dimensions of the parts.
         cutting_dimensions_increase_1d: "These raw dimensions have been configured on the material '{{ material_name }}': length oversize (**{{ length_increase }}**)."
         cutting_dimensions_increase_2d: "These raw dimensions have been configured on the material '{{ material_name }}': length oversize (**{{ length_increase }}**) and width oversize (**{{ width_increase }}**)."
-        cutting_dimensions_edge_decrement: Dimensions reduced by the thickness of the edge banding. <i class='ladb-opencutlist-icon-edge-decremented'></i>
+        cutting_dimensions_edge_decrement: Dimensions reduced by the thickness of the edge banding. <i class='ladb-lexacut-icon-edge-decremented'></i>
     labels:
       title: Labels
       options_layout: Layout
@@ -1248,7 +1248,7 @@ tab:
       remove_all_elements: $t(default.remove_all)
       part_order_strategy_help: |
         Reorganize the tiles to define the sort order of labels.
-        Properties can be sorted in <i class="ladb-opencutlist-icon-sort-asc"></i> *increasing* or <i class="ladb-opencutlist-icon-sort-desc"></i> *decreasing* order.
+        Properties can be sorted in <i class="ladb-lexacut-icon-sort-asc"></i> *increasing* or <i class="ladb-lexacut-icon-sort-desc"></i> *decreasing* order.
       offset_help: |
         The *offset* defines the position of the **first label** to be printed on the **first page**.
         Select the box that corresponds to your choice.
@@ -1546,7 +1546,7 @@ tab:
         The parts to be included in the *parts list* must be instances of a **component**.
         If you use only groups, convert them into components.
         The use of components makes it possible to replicate identical parts without duplicating them.
-      no_typed_materials: "Apply a material to the parts to be included in the parts list and define the properties of this material (**$t(tab.materials.type_1)**, **$t(tab.materials.type_2)**, **$t(tab.materials.type_3)** or **$t(tab.materials.type_5)**) on the tab <i class=\"ladb-opencutlist-icon-materials\"></i> **Materials**."
+      no_typed_materials: "Apply a material to the parts to be included in the parts list and define the properties of this material (**$t(tab.materials.type_1)**, **$t(tab.materials.type_2)**, **$t(tab.materials.type_3)** or **$t(tab.materials.type_5)**) on the tab <i class=\"ladb-lexacut-icon-materials\"></i> **Materials**."
     obsolete_base: "To stay in sync, you need to refresh the parts list."
   materials:
     label: Materials
@@ -1698,7 +1698,7 @@ tab:
       material_order_strategy: Material Sorting
       material_order_strategy_help: |
         Rearrange the following properties to define the sorting strategy for the materials in the list.
-        Properties can be sorted in <i class="ladb-opencutlist-icon-sort-asc"></i> *ascending* or <i class="ladb-opencutlist-icon-sort-desc"></i> *descending* order.
+        Properties can be sorted in <i class="ladb-lexacut-icon-sort-asc"></i> *ascending* or <i class="ladb-lexacut-icon-sort-desc"></i> *descending* order.
       property_type: Type
       property_name: Name
     delete:
@@ -1989,7 +1989,7 @@ tab:
     version: Version
     credits: Technical Credits
     credits_authors: |
-      *LexaCut* is developped by [Boris Beaulant](https://www.lairdubois.fr/@borisbeaulant) and [Martin Müller](https://www.lairdubois.fr/@mobilarte). *List all [contributors](https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension/graphs/contributors)*.
+      *LexaCut* is developped by [Boris Beaulant](https://www.lairdubois.fr/@borisbeaulant) and [Martin Müller](https://www.lairdubois.fr/@mobilarte). *List all [contributors](https://github.com/lairdubois/lairdubois-lexacut-sketchup-extension/graphs/contributors)*.
     credits_translations: Translations
     credits_translators: |
       - [Martin Müller](https://www.lairdubois.fr/@mobilarte) (*English*, *German*)
@@ -2010,7 +2010,7 @@ tab:
       - Milan Divovic (*Serbian*)
     credits_description: |
       The developpment of this extension is linked to the sharing plateform project [L'Air du Bois](https://www.lairdubois.fr).
-      This extension is *Open Source* as well and available under [GNU GPLv3](https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension/blob/master/LICENSE) license on [GitHub](https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension).
+      This extension is *Open Source* as well and available under [GNU GPLv3](https://github.com/lairdubois/lairdubois-lexacut-sketchup-extension/blob/master/LICENSE) license on [GitHub](https://github.com/lairdubois/lairdubois-lexacut-sketchup-extension).
     credits_runtime: Runtime
     credits_development: Development environment
     credits_vendors: |

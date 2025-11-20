@@ -1,4 +1,4 @@
-module Ladb::OpenCutList
+module Ladb::LexaCut
 
   require 'fileutils'
   require 'json'
@@ -275,7 +275,7 @@ module Ladb::OpenCutList
       puts '-' * heading.length
       puts heading
       puts '-' * heading.length
-      puts "OpenCutList #{EXTENSION_VERSION} (build:#{EXTENSION_BUILD}) / #{language} - SketchUp #{Sketchup.version} - #{platform_name}"
+      puts "LexaCut #{EXTENSION_VERSION} (build:#{EXTENSION_BUILD}) / #{language} - SketchUp #{Sketchup.version} - #{platform_name}"
       puts "#{e.inspect}"
       puts e.backtrace.join("\n")
       puts '-' * heading.length
@@ -828,7 +828,7 @@ module Ladb::OpenCutList
       submenu.add_separator
       SMART_TOOLS_STRIPPED_NAMES.each do |stripped_name|
 
-        clazz = Object.const_get("Ladb::OpenCutList::Smart#{stripped_name.capitalize}Tool")
+        clazz = Object.const_get("Ladb::LexaCut::Smart#{stripped_name.capitalize}Tool")
 
         smart_tool_submenu = submenu.add_submenu(get_i18n_string("core.menu.item.smart_#{stripped_name}"))
         smart_tool_submenu.add_item(get_i18n_string("core.menu.item.smart_#{stripped_name}")) {
@@ -885,7 +885,7 @@ module Ladb::OpenCutList
 
       SMART_TOOLS_STRIPPED_NAMES.each do |stripped_name|
 
-        clazz = Object.const_get("Ladb::OpenCutList::Smart#{stripped_name.capitalize}Tool")
+        clazz = Object.const_get("Ladb::LexaCut::Smart#{stripped_name.capitalize}Tool")
 
         cmd = UI::Command.new(get_i18n_string("core.toolbar.command.smart_#{stripped_name}")) {
           if Sketchup.active_model && _assert_not_zzz

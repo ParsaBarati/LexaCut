@@ -4,7 +4,7 @@ _label: Čeština
 _disabled_msg: |
   Tento jazyk ještě nebyl **úplně přeložen**.
 
-  Chcete-li překlad dokončit, nahlédněte prosím do [Dokumentace k OpenCutListu](https://docs.opencutlist.org/for-translators/general).
+  Chcete-li překlad dokončit, nahlédněte prosím do [Dokumentace k LexaCutu](https://docs.lexacut.org/for-translators/general).
 # the reload message will be displayed when a user switches to this language
 _reload_msg: "Chcete-li provést změny, musíte toto okno **zavřít** a **znovu otevřít**."
 _description: "Kusovník a nářezový plán pro truhláře. Zdarma, financován z darů a snadno použitelný ;)"
@@ -99,7 +99,7 @@ default:
   deprecated: Zastaralé
 core:
   menu:
-    submenu: OpenCutList
+    submenu: LexaCut
     item:
       generate_cutlist:  Generovat kusovník
       edit_part_properties: $t(tab.cutlist.edit_part_properties)
@@ -119,10 +119,10 @@ core:
       smart_export: $t(core.toolbar.command.smart_export)
       reset_dialog_position: Resetujte polohu okna
   toolbar:
-    name: OpenCutList
+    name: LexaCut
     tools: Nástroje
     command:
-      dialog: OpenCutList
+      dialog: LexaCut
       smart_draw: Kreslení dílů
       smart_handle: Práce s díly
       smart_paint: Materiály dílů
@@ -148,11 +148,11 @@ core:
     report_a_bug: Nahlásit chybu
   warning:
     dev: |
-      Používáte **vyvíjenou** verzi *OpenCutList*.
+      Používáte **vyvíjenou** verzi *LexaCut*.
       Tato verze je k dispozici pouze pro testování.
       Nedoporučuje se jej používat ve výrobě.
 
-      Chcete-li nahlásit chybu:<a href="mailto:lexacut@lexaplus.com?subject=Bug%20Report%20OpenCutList%20{{ version }}%20(build: {{ build }})" target="_blank">lexacut@lexaplus.com</a>.
+      Chcete-li nahlásit chybu:<a href="mailto:lexacut@lexaplus.com?subject=Bug%20Report%20LexaCut%20{{ version }}%20(build: {{ build }})" target="_blank">lexacut@lexaplus.com</a>.
   error:
     extern: "Externí chyba: **{{ error }}**"
     feature_unavailable: "Tato funkce vyžaduje aplikaci SketchUp {{ version }} nebo vyšší"
@@ -171,12 +171,12 @@ core:
     layers_change: Značky v aktivním modelu se změnily.
     drawing_change: Design aktivního modelu byl upraven.
   upgrade:
-    unavailable: Nelze najít nejnovější verzi *OpenCutList*.
+    unavailable: Nelze najít nejnovější verzi *LexaCut*.
     available: |
-      K dispozici je nová verze *OpenCutList*.
+      K dispozici je nová verze *LexaCut*.
       Aktualizujte a získejte nejnovější funkce!
     up_to_date: |
-      Již máte nejnovější verzi *OpenCutList*.
+      Již máte nejnovější verzi *LexaCut*.
 
       *Zvažte sponzorství tohoto projektu, které nám pomůže přidat ještě více funkcí!*
     downloading: Probíhá stahování
@@ -186,7 +186,7 @@ core:
     manual_download: Manuální stahování
     zzz: "V současné době odpočívám po aktualizaci. Chcete-li mě probudit, musíte restartovat SketchUp."
     success: |
-      Aktualizace OpenCutList skončila!
+      Aktualizace LexaCut skončila!
 
       Znovu spusťte SKETCHUP tím se aktivují změny.
     error:
@@ -462,7 +462,7 @@ tab:
         Zde určete počet vrstev, které dělí nakreslenou část na tloušťku.
 
         *Příklad:* Pokud máte navržený díl o tloušťce *38 mm* a chcete jej vyrobit slepením dvou panelů o tloušťce *19 mm*, zadejte do tohoto pole **2**.
-        *OpenCutList pak bude počítat 2 díly o tloušťce 19 mm místo 1 dílu o tloušťce 38 mm.*
+        *LexaCut pak bude počítat 2 díly o tloušťce 19 mm místo 1 dílu o tloušťce 38 mm.*
       description: Popis
       description_help: |
         *Popis* vám umožňuje poskytnout personalizované informace o každé definované části.
@@ -536,7 +536,7 @@ tab:
       dynamic_attributes_name_help: |
         Pokud je tato možnost povolena, označení součástí, které jsou dynamickými součástmi, bude extrahováno z atributu *Name*, pokud je definován.
 
-        <i class='ladb-opencutlist-icon-warning'></i> Instance součástí se stejnou definicí komponenty budou odděleny, pokud atribut *Name* nemá stejnou hodnotu.
+        <i class='ladb-lexacut-icon-warning'></i> Instance součástí se stejnou definicí komponenty budou odděleny, pokud atribut *Name* nemá stejnou hodnotu.
       part_number_with_letters: K číslování dílů používejte písmena
       part_number_with_letters_help: "Pokud je tato možnost aktivována, jsou místnosti očíslovány písmeny (A, B, C, ... Z, AA, AB, ...)."
       part_number_sequence_by_group: Resetujte čísla dílů podle skupiny
@@ -565,17 +565,17 @@ tab:
       hide_material_colors: Skrýt barvy materiálu
       hide_material_colors_help: "Pokud je vybrána tato možnost, barvy materiálu se nezobrazí."
       minimize_on_highlight: Minimalizovat po *'$t(tab.cutlist.highlight_part)...'*
-      minimize_on_highlight_help: "Pokud je vybrána tato možnost, okno OpenCutList bude minimalizováno při použití funkce *'$t(tab.cutlist.highlight_part)'*."
+      minimize_on_highlight_help: "Pokud je vybrána tato možnost, okno LexaCut bude minimalizováno při použití funkce *'$t(tab.cutlist.highlight_part)'*."
       general: Všeobecné
       sorting: Třídění
       group_order_strategy: Řazení skupin
       group_order_strategy_help: |
         Zreorganizujte dílce tak, aby se definovalo pořadí řazení v rámci každé skupiny.
-        Vlastnosti lze seřadit <i class="ladb-opencutlist-icon-sort-asc"></i> *vzestupně* nebo <i class="ladb-opencutlist-icon-sort-desc"></i> *sestupně*.
+        Vlastnosti lze seřadit <i class="ladb-lexacut-icon-sort-asc"></i> *vzestupně* nebo <i class="ladb-lexacut-icon-sort-desc"></i> *sestupně*.
       part_order_strategy: Třídění dílců
       part_order_strategy_help: |
         Reorganizujte následující vlastnosti a definujte pořadí řazení v každé skupině.
-        Vlastnosti lze řadit ve <i class="ladb-opencutlist-icon-sort-asc"></i> *vzestupném* nebo <i class="ladb-opencutlist-icon-sort-desc"></i> *sestupném* pořadí.
+        Vlastnosti lze řadit ve <i class="ladb-lexacut-icon-sort-asc"></i> *vzestupném* nebo <i class="ladb-lexacut-icon-sort-desc"></i> *sestupném* pořadí.
       dimension_column_order_strategy: Pořadí rozměrů
       dimension_column_order_strategy_help: |
         Uspořádáním následujících rozměrů nastavíte pořadí zobrazených sloupců.
@@ -985,7 +985,7 @@ tab:
         cutting_dimensions: Tento nářezový plán používá **hrubé** rozměry dílů.
         cutting_dimensions_increase_1d: "Tyto hrubé rozměry byly nakonfigurovány na materiálu '{{ material_name }}': hrubé délky (**{{ length_increase }}**)."
         cutting_dimensions_increase_2d: "Tyto hrubé rozměry byly nakonfigurovány na materiálu '{{ material_name }}': hrubé délky (**{{ length_increase }}**) a hrubé šířky (**{{ width_increase }}**)."
-        cutting_dimensions_edge_decrement: Rozměry zmenšené o tloušťku hrany. <i class='ladb-opencutlist-icon-edge-decremented'></i>
+        cutting_dimensions_edge_decrement: Rozměry zmenšené o tloušťku hrany. <i class='ladb-lexacut-icon-edge-decremented'></i>
     packing:
       title: Nářezový plán
       option_problem_type: Typ
@@ -1234,7 +1234,7 @@ tab:
         cutting_dimensions: Tento nářezový plán používá **hrubé** rozměry dílů.
         cutting_dimensions_increase_1d: "Tyto hrubé rozměry byly nakonfigurovány na materiálu '{{ material_name }}': hrubé délky (**{{ length_increase }}**)."
         cutting_dimensions_increase_2d: "Tyto hrubé rozměry byly nakonfigurovány na materiálu '{{ material_name }}': hrubé délky (**{{ length_increase }}**) a hrubé šířky (**{{ width_increase }}**)."
-        cutting_dimensions_edge_decrement: Rozměry zmenšené o tloušťku hrany. <i class='ladb-opencutlist-icon-edge-decremented'></i>
+        cutting_dimensions_edge_decrement: Rozměry zmenšené o tloušťku hrany. <i class='ladb-lexacut-icon-edge-decremented'></i>
     labels:
       title: Štítky
       options_layout: Rozložení
@@ -1248,7 +1248,7 @@ tab:
       remove_all_elements: $t(default.remove_all)
       part_order_strategy_help: |
         Reorganizujte následující vlastnosti a definujte pořadí řazení štítků.
-        Vlastnosti lze řadit ve <i class="ladb-opencutlist-icon-sort-asc"></i> *vzestupném* nebo <i class="ladb-opencutlist-icon-sort-desc"></i> *sestupném* pořadí.
+        Vlastnosti lze řadit ve <i class="ladb-lexacut-icon-sort-asc"></i> *vzestupném* nebo <i class="ladb-lexacut-icon-sort-desc"></i> *sestupném* pořadí.
       offset_help: |
         *Offset* umožňuje definovat pozici **prvního štítku** na **první stránce**.
         Zaškrtněte políčko, které odpovídá vašemu výběru.
@@ -1546,7 +1546,7 @@ tab:
         Dílce, které mají být zahrnuty do *kusovníku*, musí být instancemi **komponenty**.
         Pokud používáte pouze skupiny, převeďte je na komponenty.
         Použitím komponent u skupiny dílců je lze replikovat, aniž by byly duplikovány.
-      no_typed_materials: "Použijte materiál na díly, které mají být zahrnuty do seznamu dílů, a definujte vlastnosti tohoto materiálu (**$t(tab.materials.type_1)**, **$t(tab.materials.type_2)**, **$t(tab.materials.type_3)** nebo **$t(tab.materials.type_5)**) na kartě <i class=\"ladb-opencutlist-icon-materials\"></i> **Materials**."
+      no_typed_materials: "Použijte materiál na díly, které mají být zahrnuty do seznamu dílů, a definujte vlastnosti tohoto materiálu (**$t(tab.materials.type_1)**, **$t(tab.materials.type_2)**, **$t(tab.materials.type_3)** nebo **$t(tab.materials.type_5)**) na kartě <i class=\"ladb-lexacut-icon-materials\"></i> **Materials**."
     obsolete_base: "Chcete-li zůstat v synchronizaci, musíte znovu vygenerovat seznam dílů."
   materials:
     label: Materiály
@@ -1693,12 +1693,12 @@ tab:
       title: Export do souboru .skm
     option:
       minimize_on_smart_paint: Zmenšit po * 'Vybarvit díly s...'*
-      minimize_on_smart_paint_help: "Pokud je tato možnost povolena, okno OpenCutList bude minimalizováno při použití funkce *'Color parts with...'*."
+      minimize_on_smart_paint_help: "Pokud je tato možnost povolena, okno LexaCut bude minimalizováno při použití funkce *'Color parts with...'*."
       general: Všeobecné
       material_order_strategy: Třídění materiálu
       material_order_strategy_help: |
         Změňte pořadí následujících vlastností a definujte strategii třídění pro materiály v seznamu.
-        Každou vlastnost lze řadit v <i class="ladb-opencutlist-icon-sort-asc"></i>*vzestupném* nebo <i class="ladb-opencutlist-icon-sort-desc"></i>*sestupném* pořadí.
+        Každou vlastnost lze řadit v <i class="ladb-lexacut-icon-sort-asc"></i>*vzestupném* nebo <i class="ladb-lexacut-icon-sort-desc"></i>*sestupném* pořadí.
       property_type: Typ
       property_name: Název
     delete:
@@ -1762,7 +1762,7 @@ tab:
       hide_tags: Skrýt znaky
       hide_tags_help: "Pokud je vybrána tato možnost, **znaky** se nezobrazí."
       minimize_on_set_active: Minimalizovat po '$t(tab.outliner.tooltip.set_active_node)'
-      minimize_on_set_active_help: "Pokud je tato možnost vybrána, okno OpenCutList bude minimalizováno při použití funkce *'$t(tab.outliner.tooltip.set_active_node)'*."
+      minimize_on_set_active_help: "Pokud je tato možnost vybrána, okno LexaCut bude minimalizováno při použití funkce *'$t(tab.outliner.tooltip.set_active_node)'*."
     error:
       no_model: Model není otevřen. Potřebujeme více informací ;)
       no_entities: Váš model je prázdný!
@@ -1779,7 +1779,7 @@ tab:
     title: Importovat dílce
     help: |
       Tato stránka umožňuje importovat dílce (definované obdélníkovým ohraničovacím rámečkem) do vašeho modelu ze souboru [CSV](https://cs.wikipedia.org/wiki/CSV).
-      Potom můžete použít funkce *OpenCutList* pro dílce, které byly generovány jiným softwarem než *SketchUp*.
+      Potom můžete použít funkce *LexaCut* pro dílce, které byly generovány jiným softwarem než *SketchUp*.
       Začněte kliknutím na tlačítko **Otevřít soubor CSV**.
     open_csv: Otevřete soubor CSV
     import_to_model: Import do modelu
@@ -1856,10 +1856,10 @@ tab:
     label: Návody
     title: Návody
     help: |
-      Zde najdete neúplný seznam videí vytvořených komunitou, která používá plugin *OpenCutList*.
+      Zde najdete neúplný seznam videí vytvořených komunitou, která používá plugin *LexaCut*.
     submit: Odeslat video
     submit_info: |
-      Natočili jste video prezentující použití **OpenCutList** a chcete ho vidět zde?
+      Natočili jste video prezentující použití **LexaCut** a chcete ho vidět zde?
       Dejte nám vědět na **lexacut@lexaplus.com**!
 
       *Video musí být veřejné a hostované na YouTube.*
@@ -1869,7 +1869,7 @@ tab:
     label: Zprávy
     title: Zprávy
     help: |
-      Nejnovější zprávy z *OpenCutList*.
+      Nejnovější zprávy z *LexaCut*.
     comment: Komentář
     error:
       fail_to_load_list: Nelze načíst seznam zpráv.
@@ -1877,7 +1877,7 @@ tab:
     label: Fórum
     title: Fórum
     help: |
-      Tato nástěnka umožnuje výměnu zpráv s komunitou uživatelů a týmem *OpenCutList*.
+      Tato nástěnka umožnuje výměnu zpráv s komunitou uživatelů a týmem *LexaCut*.
     create_conversation: Založte téma
     reply: Odpověď
     tags: Štítky
@@ -1893,24 +1893,24 @@ tab:
     label: Sponzor
     title: Sponzor
     description: |
-      **OpenCutList** je *Open Source* software podporovaný uživateli prostřednictvím <a href="https://opencollective.com/" target="_blank">Open Collective</a> platformy.
+      **LexaCut** je *Open Source* software podporovaný uživateli prostřednictvím <a href="https://opencollective.com/" target="_blank">Open Collective</a> platformy.
       Podpořte tento projekt finančním příspěvkem!
     contribute: Přispět
     backers: "Finanční přispěvatel: {{ count }}"
     backers_plural: "Finanční přispěvatelé: {{ count }}"
-    ad: "OpenCutList není zdarma"
+    ad: "LexaCut není zdarma"
     objective: Objektivní
-    objective_slogan: "OpenCutList je pro všechny"
+    objective_slogan: "LexaCut je pro všechny"
     objective_title:
       default: Objekty
       cuttingdiagram_export: Financování vývozu řezných diagramů
     objective_details:
       default: |
-        Neustálé zlepšování *OpenCutList* je pro nás důležité, a proto projekt stále potřebuje vaši pomoc pro další aktualizaci!
+        Neustálé zlepšování *LexaCut* je pro nás důležité, a proto projekt stále potřebuje vaši pomoc pro další aktualizaci!
       cuttingdiagram_export: |
-        Je pro nás důležité, aby *OpenCutList* bylo možné přizpůsobit velmi rozdílným očekáváním uživatelů od funkce *řezový diagram*.
+        Je pro nás důležité, aby *LexaCut* bylo možné přizpůsobit velmi rozdílným očekáváním uživatelů od funkce *řezový diagram*.
         Pro další rozšíření možností bychom rádi umožnili export rozvrhových diagramů ve formátu **SVG** a **DXF**.
-        Tím, že nám poskytnete prostředky pro práci na těchto exportech, nám dáte příležitost pomoci vám co nejlépe využít *OpenCutList*.
+        Tím, že nám poskytnete prostředky pro práci na těchto exportech, nám dáte příležitost pomoci vám co nejlépe využít *LexaCut*.
     objective_crowdfunding: |
       Vývoj nových funkcí bude probíhat prostřednictvím **Investičního financování** a může být zahájen po dosažení **Finančního cíle**.
     objective_thanks: |
@@ -1957,26 +1957,26 @@ tab:
         Vyberte předvolby ze souboru **.json**, které chcete importovat.
         Vezměte prosím na vědomí, že přednastavení se stejným názvem, které již existuje, bude nahrazeno importovanou verzí.
       import_global_presets_success: |
-        Předvolby *OpenCutList* byly úspěšně importovány.
-        Aby se změny projevily, musíte **zavřít** a **znovu otevřít** okno OpenCutList.
+        Předvolby *LexaCut* byly úspěšně importovány.
+        Aby se změny projevily, musíte **zavřít** a **znovu otevřít** okno LexaCut.
       dump_global_presets: Výpis výchozího nastavení
       dump_model_presets: Výpis nastavení modelu
       reset_global_presets: Opětovná reinicializace výchozího nastavení
       reset_global_presets_confirm: |
-        Chystáte se resetovat všechny uložené předvolby *OpenCutList*.
+        Chystáte se resetovat všechny uložené předvolby *LexaCut*.
         Tato operace je konečná. **Všechny předvolby budou ztraceny**.
         Potvrďte pokračování.
       reset_global_presets_success: |
-        Předvolby *OpenCutList* byly resetovány.
-        Aby se změny projevily, je třeba okno OpenCutList **zavřít** a **znovu otevřít**.
+        Předvolby *LexaCut* byly resetovány.
+        Aby se změny projevily, je třeba okno LexaCut **zavřít** a **znovu otevřít**.
       reset_model_presets: Opětovná inicializace nastavení modelu
       reset_model_presets_confirm: |
-        Chystáte se resetovat všechna nastavení *OpenCutList* pro aktuální model.
+        Chystáte se resetovat všechna nastavení *LexaCut* pro aktuální model.
         Tato operace je konečná. **Všechna nastavení budou obnovena na výchozí hodnoty.**
         Potvrďte pokračování.
       reset_model_presets_success: |
-        Nastavení *OpenCutList* pro aktuální model bylo resetováno.
-        Aby se změny projevily, je třeba okno OpenCutList **zavřít** a **znovu otevřít**.
+        Nastavení *LexaCut* pro aktuální model bylo resetováno.
+        Aby se změny projevily, je třeba okno LexaCut **zavřít** a **znovu otevřít**.
       error:
         no_preset_to_export: Žádné předvolby k exportu.
         no_preset_to_import: Žádné předvolby k importu.
@@ -1989,7 +1989,7 @@ tab:
     version: Verze
     credits: Technické kredity
     credits_authors: |
-      *OpenCutList* vyvíjejí [Boris Beaulant](https://www.lairdubois.fr/@borisbeaulant) a [Martin Müller](https://www.lairdubois.fr/@mobilarte). *Seznam všech [přispěvatelů](https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension/graphs/contributors)*.
+      *LexaCut* vyvíjejí [Boris Beaulant](https://www.lairdubois.fr/@borisbeaulant) a [Martin Müller](https://www.lairdubois.fr/@mobilarte). *Seznam všech [přispěvatelů](https://github.com/lairdubois/lairdubois-lexacut-sketchup-extension/graphs/contributors)*.
     credits_translations: Překlady
     credits_translators: |
       - [Radek Rýznar](https://onlinesketchup.cz) (*česky*)
@@ -2010,7 +2010,7 @@ tab:
       - Milan Divović (*srbsko*)
     credits_description: |
       Vývoj tohoto rozšíření souvisí s projektem sdílení platforem [L'Air du Bois](https://www.lairdubois.fr).
-      Toto rozšíření je také *Open Source* a je k dispozici pod licencí [GNU GPLv3](https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension/blob/master/LICENSE) na [GitHub](https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension).
+      Toto rozšíření je také *Open Source* a je k dispozici pod licencí [GNU GPLv3](https://github.com/lairdubois/lairdubois-lexacut-sketchup-extension/blob/master/LICENSE) na [GitHub](https://github.com/lairdubois/lairdubois-lexacut-sketchup-extension).
     credits_runtime: Spustit
     credits_development: Vývoj
     credits_vendors: |

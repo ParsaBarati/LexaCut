@@ -1,6 +1,6 @@
 require_relative '../wrapper'
 
-module Ladb::OpenCutList::Fiddle
+module Ladb::LexaCut::Fiddle
 
   module Imagy
     extend Wrapper

@@ -4,7 +4,7 @@ require 'forwardable'
 
 require_relative 'file_split'
 
-module Ladb::OpenCutList::Zip
+module Ladb::LexaCut::Zip
   # Zip::File is modeled after java.util.zip.ZipFile from the Java SDK.
   # The most important methods are those for accessing information about
   # the entries in
@@ -72,7 +72,7 @@ module Ladb::OpenCutList::Zip
     def initialize(path_or_io, create: false, buffer: false, **options)
       super()
       options  = DEFAULT_RESTORE_OPTIONS
-                 .merge(compression_level: Ladb::OpenCutList::Zip.default_compression)
+                 .merge(compression_level: Ladb::LexaCut::Zip.default_compression)
                  .merge(options)
       @name    = path_or_io.respond_to?(:path) ? path_or_io.path : path_or_io
       @create  = create ? true : false # allow any truthy value to mean true
@@ -90,7 +90,7 @@ module Ladb::OpenCutList::Zip
       # to the block and is automatically closed afterwards, just as with
       # ruby's builtin File::open method.
       def open(file_name, create: false, **options)
-        zf = Ladb::OpenCutList::Zip::File.new(file_name, create: create, **options)
+        zf = Ladb::LexaCut::Zip::File.new(file_name, create: create, **options)
         return zf unless block_given?
 
         begin
@@ -112,7 +112,7 @@ module Ladb::OpenCutList::Zip
 
         io = ::StringIO.new(io) if io.kind_of?(::String)
 
-        zf = Ladb::OpenCutList::Zip::File.new(io, create: create, buffer: true, **options)
+        zf = Ladb::LexaCut::Zip::File.new(io, create: create, buffer: true, **options)
         return zf unless block_given?
 
         yield zf
@@ -131,7 +131,7 @@ module Ladb::OpenCutList::Zip
       # local entry headers (which contain the same information as the
       # central directory).
       def foreach(zip_file_name, &block)
-        Ladb::OpenCutList::Zip::File.open(zip_file_name) do |zip_file|
+        Ladb::LexaCut::Zip::File.open(zip_file_name) do |zip_file|
           zip_file.each(&block)
         end
       end
@@ -139,7 +139,7 @@ module Ladb::OpenCutList::Zip
       # Count the entries in a zip archive without reading the whole set of
       # entry data into memory.
       def count_entries(path_or_io)
-        cdir = Ladb::OpenCutList::Zip::CentralDirectory.new
+        cdir = Ladb::LexaCut::Zip::CentralDirectory.new
 
         if path_or_io.kind_of?(String)
           ::File.open(path_or_io, 'rb') do |f|
@@ -201,12 +201,12 @@ module Ladb::OpenCutList::Zip
 
     # Convenience method for adding the contents of a file to the archive
     def add(entry, src_path, &continue_on_exists_proc)
-      continue_on_exists_proc ||= proc { Ladb::OpenCutList::Zip.continue_on_exists_proc }
+      continue_on_exists_proc ||= proc { Ladb::LexaCut::Zip.continue_on_exists_proc }
       check_entry_exists(entry, continue_on_exists_proc, 'add')
-      new_entry = if entry.kind_of?(Ladb::OpenCutList::Zip::Entry)
+      new_entry = if entry.kind_of?(Ladb::LexaCut::Zip::Entry)
                     entry
                   else
-                    Ladb::OpenCutList::Zip::Entry.new(
+                    Ladb::LexaCut::Zip::Entry.new(
                       @name, entry.to_s,
                       compression_level: @compression_level
                     )
@@ -218,8 +218,8 @@ module Ladb::OpenCutList::Zip
     # Convenience method for adding the contents of a file to the archive
     # in Stored format (uncompressed)
     def add_stored(entry, src_path, &continue_on_exists_proc)
-      entry = Ladb::OpenCutList::Zip::Entry.new(
-        @name, entry.to_s, compression_method: Ladb::OpenCutList::Zip::Entry::STORED
+      entry = Ladb::LexaCut::Zip::Entry.new(
+        @name, entry.to_s, compression_method: Ladb::LexaCut::Zip::Entry::STORED
       )
       add(entry, src_path, &continue_on_exists_proc)
     end
@@ -252,7 +252,7 @@ module Ladb::OpenCutList::Zip
     # NB: The caller is responsible for making sure `destination_directory` is
     # safe, if it is passed.
     def extract(entry, entry_path = nil, destination_directory: '.', &block)
-      block ||= proc { Ladb::OpenCutList::Zip.on_exists_proc }
+      block ||= proc { Ladb::LexaCut::Zip.on_exists_proc }
       found_entry = get_entry(entry)
       entry_path ||= found_entry.name
       found_entry.extract(entry_path, destination_directory: destination_directory, &block)
@@ -264,7 +264,7 @@ module Ladb::OpenCutList::Zip
       return if name.kind_of?(StringIO) || !commit_required?
 
       on_success_replace do |tmp_file|
-        Ladb::OpenCutList::Zip::OutputStream.open(tmp_file) do |zos|
+        Ladb::LexaCut::Zip::OutputStream.open(tmp_file) do |zos|
           @cdir.each do |e|
             e.write_to_zip_output_stream(zos)
             e.clean_up
@@ -280,7 +280,7 @@ module Ladb::OpenCutList::Zip
     def write_buffer(io = ::StringIO.new)
       return unless commit_required?
 
-      Ladb::OpenCutList::Zip::OutputStream.write_buffer(io) do |zos|
+      Ladb::LexaCut::Zip::OutputStream.write_buffer(io) do |zos|
         @cdir.each { |e| e.write_to_zip_output_stream(zos) }
         zos.comment = comment
       end
@@ -330,13 +330,13 @@ module Ladb::OpenCutList::Zip
 
       entry_name = entry_name.dup.to_s
       entry_name << '/' unless entry_name.end_with?('/')
-      @cdir << Ladb::OpenCutList::Zip::StreamableDirectory.new(@name, entry_name, nil, permission)
+      @cdir << Ladb::LexaCut::Zip::StreamableDirectory.new(@name, entry_name, nil, permission)
     end
 
     private
 
     def initialize_cdir(path_or_io, buffer: false)
-      @cdir = Ladb::OpenCutList::Zip::CentralDirectory.new
+      @cdir = Ladb::LexaCut::Zip::CentralDirectory.new
 
       if ::File.size?(@name.to_s)
         # There is a file, which exists, that is associated with this zip.
@@ -370,8 +370,8 @@ module Ladb::OpenCutList::Zip
     def check_entry_exists(entry_name, continue_on_exists_proc, proc_name)
       return unless @cdir.include?(entry_name)
 
-      continue_on_exists_proc ||= proc { Ladb::OpenCutList::Zip.continue_on_exists_proc }
-      raise Ladb::OpenCutList::Zip::EntryExistsError.new proc_name, entry_name unless continue_on_exists_proc.call
+      continue_on_exists_proc ||= proc { Ladb::LexaCut::Zip.continue_on_exists_proc }
+      raise Ladb::LexaCut::Zip::EntryExistsError.new proc_name, entry_name unless continue_on_exists_proc.call
 
       remove get_entry(entry_name)
     end

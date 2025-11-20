@@ -363,7 +363,7 @@ gulp.task('lexacut_rbz_create', function () {
         blob.push('!src/ladb_lexacut/yaml/i18n/zz*.yml');
     }
     return gulp.src(blob, { cwd: '../', base: '../src'})
-        .pipe(zip('lexacut-v8.0.4.rbz'))
+        .pipe(zip('lexacut-v8.0.12.rbz'))
         .pipe(gulp.dest('../dist'));
 });
 

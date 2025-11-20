@@ -18,7 +18,7 @@ require_relative '../chart'
 require_relative '../chart/pie'
 require_relative '../utility'
 
-module Ladb::OpenCutList
+module Ladb::LexaCut
 module Writexlsx
   class Chart
     class Doughnut < Pie

@@ -1,4 +1,4 @@
-module Ladb::OpenCutList
+module Ladb::LexaCut
 
   module Point3dUtils
 

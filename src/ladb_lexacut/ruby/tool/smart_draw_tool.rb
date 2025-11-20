@@ -1,4 +1,4 @@
-module Ladb::OpenCutList
+module Ladb::LexaCut
 
   require_relative 'smart_tool'
   require_relative 'smart_handle_tool'

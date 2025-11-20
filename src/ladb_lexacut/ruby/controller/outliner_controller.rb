@@ -1,4 +1,4 @@
-module Ladb::OpenCutList
+module Ladb::LexaCut
 
   require 'set'
   require_relative 'controller'

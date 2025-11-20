@@ -28,7 +28,7 @@
 # 02110-1301  USA
 ######################### END LICENSE BLOCK #########################
 
-module Ladb::OpenCutList::CharDet
+module Ladb::LexaCut::CharDet
   MINIMUM_DATA_THRESHOLD = 4
   MINIMUM_THRESHOLD = 0.20
   EPureAscii = 0

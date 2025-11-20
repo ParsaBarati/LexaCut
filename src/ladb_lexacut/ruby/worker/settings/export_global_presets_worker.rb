@@ -1,4 +1,4 @@
-module Ladb::OpenCutList
+module Ladb::LexaCut
 
   require_relative '../../plugin'
 
@@ -18,7 +18,7 @@ module Ladb::OpenCutList
 
     def run
 
-      path = UI.savepanel(PLUGIN.get_i18n_string('tab.settings.presets.export_global_presets'), '', 'OpenCutListPresets.json')
+      path = UI.savepanel(PLUGIN.get_i18n_string('tab.settings.presets.export_global_presets'), '', 'LexaCutPresets.json')
       if path
 
         # Force "json" file extension

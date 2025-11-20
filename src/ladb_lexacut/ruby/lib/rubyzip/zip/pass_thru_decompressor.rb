@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Ladb::OpenCutList::Zip
+module Ladb::LexaCut::Zip
   class PassThruDecompressor < Decompressor # :nodoc:all
     def initialize(*args)
       super
@@ -25,7 +25,7 @@ module Ladb::OpenCutList::Zip
     alias eof? eof
   end
 
-  Ladb::OpenCutList::Zip::Decompressor.register(Ladb::OpenCutList::Zip::COMPRESSION_METHOD_STORE, Ladb::OpenCutList::Zip::PassThruDecompressor)
+  Ladb::LexaCut::Zip::Decompressor.register(Ladb::LexaCut::Zip::COMPRESSION_METHOD_STORE, Ladb::LexaCut::Zip::PassThruDecompressor)
 end
 
 # Copyright (C) 2002, 2003 Thomas Sondergaard

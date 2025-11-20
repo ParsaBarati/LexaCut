@@ -4,7 +4,7 @@
 require_relative '../package/xml_writer_simple'
 require_relative '../utility'
 
-module Ladb::OpenCutList
+module Ladb::LexaCut
 module Writexlsx
   module Package
     class SharedStrings

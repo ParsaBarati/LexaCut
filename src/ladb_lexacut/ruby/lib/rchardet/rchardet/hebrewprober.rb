@@ -124,7 +124,7 @@
 # charset identified, either "windows-1255" or "ISO-8859-8".
 
 # windows-1255 / ISO-8859-8 code points of interest
-module Ladb::OpenCutList::CharDet
+module Ladb::LexaCut::CharDet
   FINAL_KAF = "\xea"
   NORMAL_KAF = "\xeb"
   FINAL_MEM = "\xed"

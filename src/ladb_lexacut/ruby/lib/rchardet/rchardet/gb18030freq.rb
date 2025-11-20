@@ -40,7 +40,7 @@
 # 
 # Typical Distribution Ratio about 25% of Ideal one, still much higher that RDR
 
-module Ladb::OpenCutList::CharDet
+module Ladb::LexaCut::CharDet
 GB18030_TYPICAL_DISTRIBUTION_RATIO = 0.9
 
 GB18030_TABLE_SIZE = 3760

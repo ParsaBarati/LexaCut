@@ -3,7 +3,7 @@
 
 require_relative 'image_property'
 
-module Ladb::OpenCutList
+module Ladb::LexaCut
 module Writexlsx
   class Image
     attr_reader :row, :col, :x_offset, :y_offset, :x_scale, :y_scale

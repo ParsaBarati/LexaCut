@@ -9,7 +9,7 @@ require_relative 'chart/axis'
 require_relative 'chart/caption'
 require_relative 'chart/series'
 
-module Ladb::OpenCutList
+module Ladb::LexaCut
 module Writexlsx
   class Table
     include Writexlsx::Utility

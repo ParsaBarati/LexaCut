@@ -1,4 +1,4 @@
-module Ladb::OpenCutList
+module Ladb::LexaCut
 
   require_relative '../../tool/smart_axes_tool'
 

@@ -1,4 +1,4 @@
-module Ladb::OpenCutList
+module Ladb::LexaCut
 
   require_relative '../../plugin'
 
@@ -9,7 +9,7 @@ module Ladb::OpenCutList
     def run
 
       # Open panel
-      path = UI.openpanel(PLUGIN.get_i18n_string('tab.settings.presets.import_global_presets'), '', 'OpenCutListPresets.json')
+      path = UI.openpanel(PLUGIN.get_i18n_string('tab.settings.presets.import_global_presets'), '', 'LexaCutPresets.json')
       if path
 
         begin

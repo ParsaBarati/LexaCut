@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-module Ladb::OpenCutList::Zip
+module Ladb::LexaCut::Zip
   class Deflater < Compressor # :nodoc:all
-    def initialize(output_stream, level = Ladb::OpenCutList::Zip.default_compression, encrypter = NullEncrypter.new)
+    def initialize(output_stream, level = Ladb::LexaCut::Zip.default_compression, encrypter = NullEncrypter.new)
       super()
       @output_stream = output_stream
       @zlib_deflater = ::Zlib::Deflate.new(level, -::Zlib::MAX_WBITS)

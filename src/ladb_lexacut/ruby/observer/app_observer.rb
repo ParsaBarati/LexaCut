@@ -1,4 +1,4 @@
-module Ladb::OpenCutList
+module Ladb::LexaCut
 
   require_relative 'model_observer'
   require_relative 'options_provider_observer'

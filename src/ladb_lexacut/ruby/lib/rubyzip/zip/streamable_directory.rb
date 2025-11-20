@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Ladb::OpenCutList::Zip
+module Ladb::LexaCut::Zip
   class StreamableDirectory < Entry # :nodoc:
     def initialize(zipfile, entry, src_path = nil, permission = nil)
       super(zipfile, entry)

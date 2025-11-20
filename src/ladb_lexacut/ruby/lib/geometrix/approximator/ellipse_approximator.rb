@@ -1,4 +1,4 @@
-module Ladb::OpenCutList::Geometrix
+module Ladb::LexaCut::Geometrix
 
   require_relative '../finder/ellipse_finder'
   require_relative '../finder/circle_finder'

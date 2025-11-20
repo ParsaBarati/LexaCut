@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Ladb::OpenCutList
+module Ladb::LexaCut
   module BinPacking2D
     # Number of bytes of computer running code
     # from https://gist.github.com/pithyless/9738125

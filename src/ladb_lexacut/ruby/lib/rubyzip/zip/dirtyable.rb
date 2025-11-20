@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Ladb::OpenCutList::Zip
+module Ladb::LexaCut::Zip
   module Dirtyable # :nodoc:all
     def initialize(dirty_on_create: true)
       @dirty = dirty_on_create

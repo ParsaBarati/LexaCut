@@ -54,7 +54,7 @@ require_relative 'rchardet/sjisprober'
 require_relative 'rchardet/universaldetector'
 require_relative 'rchardet/utf8prober'
 
-module Ladb::OpenCutList
+module Ladb::LexaCut
   module CharDet
     def CharDet.detect(aBuf)
       aBuf = aBuf.dup.force_encoding(Encoding::BINARY)

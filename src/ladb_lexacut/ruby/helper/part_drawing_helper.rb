@@ -1,4 +1,4 @@
-module Ladb::OpenCutList
+module Ladb::LexaCut
 
   require_relative '../model/cutlist/part'
   require_relative '../worker/common/common_drawing_decomposition_worker'

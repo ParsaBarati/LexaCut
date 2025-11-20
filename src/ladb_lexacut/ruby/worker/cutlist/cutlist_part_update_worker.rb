@@ -1,4 +1,4 @@
-module Ladb::OpenCutList
+module Ladb::LexaCut
 
   require_relative '../../helper/bounding_box_helper'
   require_relative '../../model/attributes/definition_attributes'

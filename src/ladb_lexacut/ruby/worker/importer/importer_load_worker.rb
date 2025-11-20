@@ -1,4 +1,4 @@
-module Ladb::OpenCutList
+module Ladb::LexaCut
 
   require 'csv'
   require_relative '../../lib/rchardet/rchardet'

@@ -35,7 +35,7 @@
 # this table is modified base on win1251BulgarianCharToOrderMap, so 
 # only number <64 is sure valid
 
-module Ladb::OpenCutList::CharDet
+module Ladb::LexaCut::CharDet
 Latin5_BulgarianCharToOrderMap = [
 255,255,255,255,255,255,255,255,255,255,254,255,255,254,255,255,  # 00
 255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,  # 10

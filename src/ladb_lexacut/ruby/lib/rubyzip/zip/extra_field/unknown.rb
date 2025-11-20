@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Ladb::OpenCutList::Zip
+module Ladb::LexaCut::Zip
   # A class to hold unknown extra fields so that they are preserved.
   class ExtraField::Unknown # :nodoc:
     def initialize

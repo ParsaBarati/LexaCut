@@ -1,4 +1,4 @@
-module Ladb::OpenCutList
+module Ladb::LexaCut
 
   require_relative '../../lib/fiddle/imagy/imagy'
   require_relative '../../helper/sanitizer_helper'

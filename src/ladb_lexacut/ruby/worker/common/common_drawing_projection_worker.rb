@@ -1,4 +1,4 @@
-module Ladb::OpenCutList
+module Ladb::LexaCut
 
   require_relative '../../lib/fiddle/clippy/clippy'
   require_relative '../../lib/kuix/kuix'

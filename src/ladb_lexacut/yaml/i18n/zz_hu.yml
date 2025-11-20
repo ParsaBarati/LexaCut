@@ -2,8 +2,8 @@ _label: 1 - Magyar
 _disabled_msg: |
   2 - Ezt a nyelvet még nem fordították le **teljesen**.
 
-  A fordítás véglegesítéséhez kérjük, tekintse meg az [OpenCutList Documentation](https://docs.opencutlist.org/for-translators/general) dokumentumot.
-_reload_msg: 3 - A változtatások érvényesítéséhez **be kell zárnia** és **újra meg kell nyitnia** az OpenCutList ablakot.
+  A fordítás véglegesítéséhez kérjük, tekintse meg az [LexaCut Documentation](https://docs.lexacut.org/for-translators/general) dokumentumot.
+_reload_msg: 3 - A változtatások érvényesítéséhez **be kell zárnia** és **újra meg kell nyitnia** az LexaCut ablakot.
 _description: 4 - Faipari Szakembereknek Szabáslista és Szabásterv készítő program. Nyílt forráskódú, közösségi finanszírozású és könnyen használható ;)
 default:
   minimize: 5 - Kis méret
@@ -94,7 +94,7 @@ default:
   deprecated: 90 - Lecserélt
 core:
   menu:
-    submenu: 91 - OpenCutList
+    submenu: 91 - LexaCut
     item:
       generate_cutlist: 92 - Alkatrészlista Készítése
       edit_part_properties: $t(tab.cutlist.edit_part_properties)
@@ -114,10 +114,10 @@ core:
       smart_export: $t(core.toolbar.command.smart_export)
       reset_dialog_position: 108 - Ablak Pozíció Alaphelyzetbe
   toolbar:
-    name: 109 - OpenCutList
+    name: 109 - LexaCut
     tools: 110 - Eszközök
     command:
-      dialog: 111 - OpenCutList
+      dialog: 111 - LexaCut
       smart_draw: 112 - Alkatrész Rajzolása
       smart_handle: 113 - Alkatrészek Kezelése
       smart_paint: 114 - Alkatrészek Festése
@@ -143,11 +143,11 @@ core:
     report_a_bug: 126 - Hiba jelentése
   warning:
     dev: |
-      127 - Ön az *OpenCutList* **fejlesztői** verzióját használja.
+      127 - Ön az *LexaCut* **fejlesztői** verzióját használja.
       Ez a verzió csak tesztelésre szolgál.
       Nem ajánlott éles környezetben használni.
 
-      Hiba jelentéséhez: <a href="mailto:lexacut@lexaplus.com?subject=Bug%20Report%20OpenCutList%20{{ version }}%20(build: {{ build }})" target="_blank">lexacut@lexaplus.com</a>.
+      Hiba jelentéséhez: <a href="mailto:lexacut@lexaplus.com?subject=Bug%20Report%20LexaCut%20{{ version }}%20(build: {{ build }})" target="_blank">lexacut@lexaplus.com</a>.
   error:
     extern: '128 - Külső hiba : **{{ error }}**'
     feature_unavailable: 129 - Ez a funkció SketchUp {{ version }} vagy újabb verziót igényel
@@ -166,12 +166,12 @@ core:
     layers_change: 138 - A címkék megváltoztak az aktív modellben.
     drawing_change: 139 - Az aktív modell kialakítása módosult.
   upgrade:
-    unavailable: 140 - Az *OpenCutList* legújabb verziója nem található.
+    unavailable: 140 - Az *LexaCut* legújabb verziója nem található.
     available: |
-      141 - Az *OpenCutList* új verziója elérhető.
+      141 - Az *LexaCut* új verziója elérhető.
       Frissítsen az új funkciók eléréséhez!
     up_to_date: |
-      142 - Ön már az *OpenCutList* legújabb verzióját használja.
+      142 - Ön már az *LexaCut* legújabb verzióját használja.
 
       *Fontoljon meg egy támogatást a projektnek, hogy még több funkciót adhassunk hozzá!*
     downloading: 143 - Letöltés folyamatban
@@ -181,7 +181,7 @@ core:
     manual_download: 147 - Kézi letöltés
     zzz: 148 - Jelenleg pihenek a frissítés után. Az újraindításhoz indítsa újra a SketchUp-ot.
     success: |
-      149 - OpenCutList frissítés befejezve!
+      149 - LexaCut frissítés befejezve!
 
       INDÍTSA ÚJRA A SKETCHUP-OT a változtatások aktiválásához.
     error:
@@ -457,7 +457,7 @@ tab:
         367 - Itt adja meg a rajzolt alkatrész vastagságában lévő rétegek számát.
 
         *Példa:* Ha van egy *38mm* vastagságú tábla és két *19mm*-es tábla összeragasztásával szeretné elkészíteni, írjon **2**-t ebbe a mezőbe.
-        *Az OpenCutList ekkor 2 db 19mm-es vastagságú táblát fog számolni 1 db 38mm-es helyett.*
+        *Az LexaCut ekkor 2 db 19mm-es vastagságú táblát fog számolni 1 db 38mm-es helyett.*
       description: 368 - Leírás
       description_help: |
         369 - A *Leírás* személyre szabott információt ad minden alkatrész definícióhoz.
@@ -531,7 +531,7 @@ tab:
       dynamic_attributes_name_help: |
         411 - Ha ez az opció be van kapcsolva, az alkatrészek megnevezése a *Name* attribútumból lesz kinyerve, ha az meg van adva.
 
-        <i class='ladb-opencutlist-icon-warning'></i> Az azonos komponens definícióval rendelkező alkatrész példányok külön lesznek választva, ha a *Name* attribútum értéke nem egyezik.
+        <i class='ladb-lexacut-icon-warning'></i> Az azonos komponens definícióval rendelkező alkatrész példányok külön lesznek választva, ha a *Name* attribútum értéke nem egyezik.
       part_number_with_letters: 412 - Betűk használata az alkatrészek számozásához
       part_number_with_letters_help: 413 - Ha ez az opció be van kapcsolva, az alkatrészek betűkkel lesznek számozva (A, B, C, ... Z, AA, AB, ...).
       part_number_sequence_by_group: 414 - Alkatrészek számozásának újrakezdése minden csoportnál
@@ -560,17 +560,17 @@ tab:
       hide_material_colors: 434 - Anyagszínek elrejtése
       hide_material_colors_help: 435 - Ha ez az opció be van kapcsolva, az anyagszínek nem lesznek megjelenítve.
       minimize_on_highlight: 436 - Minimalizálás a *'$t(tab.cutlist.highlight_part)...'* után
-      minimize_on_highlight_help: 437 - Ha ez az opció be van kapcsolva, az OpenCutList ablak minimalizálva lesz, amikor a *'$t(tab.cutlist.highlight_part)'* funkció használva van.
+      minimize_on_highlight_help: 437 - Ha ez az opció be van kapcsolva, az LexaCut ablak minimalizálva lesz, amikor a *'$t(tab.cutlist.highlight_part)'* funkció használva van.
       general: 438 - Általános
       sorting: 439 - Rendezés
       group_order_strategy: 440 - Csoportok rendezése
       group_order_strategy_help: |
         441 - Rendezze újra az alábbi tulajdonságokat a csoportok sorrendjének meghatározásához.
-        Minden tulajdonság rendezhető <i class="ladb-opencutlist-icon-sort-asc"></i> *növekvő* vagy <i class="ladb-opencutlist-icon-sort-desc"></i> *csökkenő* sorrendben.
+        Minden tulajdonság rendezhető <i class="ladb-lexacut-icon-sort-asc"></i> *növekvő* vagy <i class="ladb-lexacut-icon-sort-desc"></i> *csökkenő* sorrendben.
       part_order_strategy: 442 - Alkatrészek rendezése
       part_order_strategy_help: |
         443 - Rendezze át a csempéket az alkatrészcsoportokon belüli rendezési sorrend meghatározásához.
-        A tulajdonságok <i class="ladb-opencutlist-icon-sort-asc"></i> *növekvő* vagy <i class="ladb-opencutlist-icon-sort-desc"></i> *csökkenő* sorrendbe rendezhetők.
+        A tulajdonságok <i class="ladb-lexacut-icon-sort-asc"></i> *növekvő* vagy <i class="ladb-lexacut-icon-sort-desc"></i> *csökkenő* sorrendbe rendezhetők.
       dimension_column_order_strategy: 444 - Méret oszlopok sorrendje
       dimension_column_order_strategy_help: |
         445 - Rendezze át a következő tulajdonságokat a méret oszlopok megjelenítési sorrendjének meghatározásához.
@@ -980,7 +980,7 @@ tab:
         cutting_dimensions: 794 - Ez a szabásterv az alkatrészek **nyers** méreteit használja.
         cutting_dimensions_increase_1d: '795 - Ezek a nyers méretek a ''{{ material_name }}'' anyagnál lettek beállítva: hossz ráhagyás (**{{ length_increase }}**).'
         cutting_dimensions_increase_2d: '796 - Ezek a nyers méretek a ''{{ material_name }}'' anyagnál lettek beállítva: hossz ráhagyás (**{{ length_increase }}**) és szélesség ráhagyás (**{{ width_increase }}**).'
-        cutting_dimensions_edge_decrement: 797 - Az élzáró vastagságával csökkentett méretek. <i class='ladb-opencutlist-icon-edge-decremented'></i>
+        cutting_dimensions_edge_decrement: 797 - Az élzáró vastagságával csökkentett méretek. <i class='ladb-lexacut-icon-edge-decremented'></i>
     packing:
       title: 798 - Szabásterv
       option_problem_type: 799 - Típus
@@ -1229,7 +1229,7 @@ tab:
         cutting_dimensions: 989 - Ez a szabásterv az alkatrészek **nyers** méreteit használja.
         cutting_dimensions_increase_1d: '990 - Ezek a nyers méretek a ''{{ material_name }}'' anyagnál lettek beállítva: hossz ráhagyás (**{{ length_increase }}**).'
         cutting_dimensions_increase_2d: '991 - Ezek a nyers méretek a ''{{ material_name }}'' anyagnál lettek beállítva: hossz ráhagyás (**{{ length_increase }}**) és szélesség ráhagyás (**{{ width_increase }}**).'
-        cutting_dimensions_edge_decrement: 992 - Az élzáró vastagságával csökkentett méretek. <i class='ladb-opencutlist-icon-edge-decremented'></i>
+        cutting_dimensions_edge_decrement: 992 - Az élzáró vastagságával csökkentett méretek. <i class='ladb-lexacut-icon-edge-decremented'></i>
     labels:
       title: 993 - Címkék
       options_layout: 994 - Elrendezés
@@ -1243,7 +1243,7 @@ tab:
       remove_all_elements: $t(default.remove_all)
       part_order_strategy_help: |
         1003 - Rendezze át a csempéket a címkék sorrendjének meghatározásához.
-        A tulajdonságok <i class="ladb-opencutlist-icon-sort-asc"></i> *növekvő* vagy <i class="ladb-opencutlist-icon-sort-desc"></i> *csökkenő* sorrendbe rendezhetők.
+        A tulajdonságok <i class="ladb-lexacut-icon-sort-asc"></i> *növekvő* vagy <i class="ladb-lexacut-icon-sort-desc"></i> *csökkenő* sorrendbe rendezhetők.
       offset_help: |
         1004 - Az *eltolás* határozza meg az **első címke** pozícióját az **első oldalon**.
         Válassza ki a kívánt pozíciónak megfelelő négyzetet.
@@ -1541,7 +1541,7 @@ tab:
         1221 - Az *alkatrészlistába* felveendő alkatrészeknek **komponens** példányoknak kell lenniük.
         Ha csak csoportokat használ, alakítsa át őket komponensekké.
         A komponensek használata lehetővé teszi az azonos alkatrészek másolását azok megkettőzése nélkül.
-      no_typed_materials: 1222 - Alkalmazzon anyagot az alkatrészlistába felveendő alkatrészekre, és határozza meg az anyag tulajdonságait (**$t(tab.materials.type_1)**, **$t(tab.materials.type_2)**, **$t(tab.materials.type_3)** vagy **$t(tab.materials.type_5)**) az <i class="ladb-opencutlist-icon-materials"></i> **Anyagok** fülön.
+      no_typed_materials: 1222 - Alkalmazzon anyagot az alkatrészlistába felveendő alkatrészekre, és határozza meg az anyag tulajdonságait (**$t(tab.materials.type_1)**, **$t(tab.materials.type_2)**, **$t(tab.materials.type_3)** vagy **$t(tab.materials.type_5)**) az <i class="ladb-lexacut-icon-materials"></i> **Anyagok** fülön.
     obsolete_base: 1223 - A friss adatokhoz újra kell generálni az alkatrészlistát.
   materials:
     label: 1224 - Anyagok
@@ -1688,12 +1688,12 @@ tab:
       title: 1320 - Exportálás .skm fájlba
     option:
       minimize_on_smart_paint: '1321 - Csökkentés a következő után: *''Alkatrészek színezése ezzel...''*'
-      minimize_on_smart_paint_help: 1322 - Ha ez az opció engedélyezve van, az OpenCutList ablak automatikusan kisméretű lesz, amikor az *'Alkatrészek színezése ezzel...'* funkciót használja.
+      minimize_on_smart_paint_help: 1322 - Ha ez az opció engedélyezve van, az LexaCut ablak automatikusan kisméretű lesz, amikor az *'Alkatrészek színezése ezzel...'* funkciót használja.
       general: 1323 - Általános
       material_order_strategy: 1324 - Anyagok rendezése
       material_order_strategy_help: |
         1325 - Rendezze át a csempéket az anyaglista rendezési stratégiájának meghatározásához.
-        A tulajdonságok <i class="ladb-opencutlist-icon-sort-asc"></i> *növekvő* vagy <i class="ladb-opencutlist-icon-sort-desc"></i> *csökkenő* sorrendbe rendezhetők.
+        A tulajdonságok <i class="ladb-lexacut-icon-sort-asc"></i> *növekvő* vagy <i class="ladb-lexacut-icon-sort-desc"></i> *csökkenő* sorrendbe rendezhetők.
       property_type: 1326 - Típus
       property_name: 1327 - Név
     delete:
@@ -1757,7 +1757,7 @@ tab:
       hide_tags: 1376 - Címkék elrejtése
       hide_tags_help: 1377 - Ha ez az opció be van kapcsolva, az alkatrészek **címkéi** nem lesznek megjelenítve.
       minimize_on_set_active: 1378 - Kisméretűre állítás '$t(tab.outliner.tooltip.set_active_node)' után
-      minimize_on_set_active_help: 1379 - Ha ez az opció engedélyezve van, az OpenCutList ablak automatikusan kisméretű lesz, amikor a *'$t(tab.outliner.tooltip.set_active_node)'* funkciót használja.
+      minimize_on_set_active_help: 1379 - Ha ez az opció engedélyezve van, az LexaCut ablak automatikusan kisméretű lesz, amikor a *'$t(tab.outliner.tooltip.set_active_node)'* funkciót használja.
     error:
       no_model: 1380 - Nincs nyitott modell. További információra van szükségem ;)
       no_entities: 1381 - A modell üres!
@@ -1774,7 +1774,7 @@ tab:
     title: 1388 - Alkatrészek importálása
     help: |
       1389 - Ezen az oldalon alkatrészeket importálhat (téglalap alakú befoglaló dobozzal meghatározva) a modelljébe [CSV](https://hu.wikipedia.org/wiki/CSV) fájlból.
-      Így az *OpenCutList* funkcióit olyan alkatrészekhez is használhatja, amelyeket nem a *SketchUp*-ban hozott létre.
+      Így az *LexaCut* funkcióit olyan alkatrészekhez is használhatja, amelyeket nem a *SketchUp*-ban hozott létre.
       Kattintson a **CSV fájl megnyitása** gombra a kezdéshez.
     open_csv: 1390 - CSV fájl megnyitása
     import_to_model: 1391 - Importálás a modellbe
@@ -1851,10 +1851,10 @@ tab:
     label: 1442 - Oktatóanyagok
     title: 1443 - Oktatóanyagok
     help: |
-      1444 - Itt találhatók a közösség által készített videók az *OpenCutList* használatáról.
+      1444 - Itt találhatók a közösség által készített videók az *LexaCut* használatáról.
     submit: 1445 - Videó beküldése
     submit_info: |
-      1446 - Készített egy videót az **OpenCutList** használatáról és szeretné, ha itt megjelenne?
+      1446 - Készített egy videót az **LexaCut** használatáról és szeretné, ha itt megjelenne?
       Írjon nekünk az **lexacut@lexaplus.com** címre!
 
       *A videónak nyilvánosnak kell lennie és YouTube-on kell hosztolni.*
@@ -1864,7 +1864,7 @@ tab:
     label: 1448 - Hírek
     title: 1449 - Hírek
     help: |
-      1450 - Az *OpenCutList* legfrissebb hírei.
+      1450 - Az *LexaCut* legfrissebb hírei.
     comment: 1451 - Hozzászólás
     error:
       fail_to_load_list: 1452 - Nem sikerült betölteni a hírlistát.
@@ -1872,7 +1872,7 @@ tab:
     label: 1453 - Fórum
     title: 1454 - Fórum
     help: |
-      1455 - Ez a fórum lehetővé teszi a felhasználói közösséggel és az *OpenCutList* csapatával való kommunikációt.
+      1455 - Ez a fórum lehetővé teszi a felhasználói közösséggel és az *LexaCut* csapatával való kommunikációt.
     create_conversation: 1456 - Téma indítása
     reply: 1457 - Válasz
     tags: 1458 - Címkék
@@ -1888,24 +1888,24 @@ tab:
     label: 1461 - Támogatás
     title: 1462 - Támogatás
     description: |
-      1463 - Az **OpenCutList** egy *nyílt forráskódú* szoftver, amelyet a felhasználói támogatnak az <a href="https://opencollective.com/" target="_blank">Open Collective</a> platformon keresztül.
+      1463 - Az **LexaCut** egy *nyílt forráskódú* szoftver, amelyet a felhasználói támogatnak az <a href="https://opencollective.com/" target="_blank">Open Collective</a> platformon keresztül.
       Támogassa a projektet anyagi hozzájárulással!
     contribute: 1464 - Támogatás
     backers: 1465 - {{ count }} anyagi támogató
     backers_plural: 1466 - {{ count }} anyagi támogató
-    ad: 1467 - Az OpenCutList nem ingyenes
+    ad: 1467 - Az LexaCut nem ingyenes
     objective: 1468 - Célkitűzés
-    objective_slogan: 1469 - Az OpenCutList mindannyiunké
+    objective_slogan: 1469 - Az LexaCut mindannyiunké
     objective_title:
       default: 1470 - Célkitűzések
       cuttingdiagram_export: 1471 - A vágási diagram exportálás finanszírozása
     objective_details:
       default: |
-        1472 - Az *OpenCutList* folyamatos fejlesztése fontos számunkra, és a projektnek továbbra is szüksége van a segítségére a következő frissítéshez!
+        1472 - Az *LexaCut* folyamatos fejlesztése fontos számunkra, és a projektnek továbbra is szüksége van a segítségére a következő frissítéshez!
       cuttingdiagram_export: |
-        1473 - Fontos számunkra, hogy az *OpenCutList* alkalmazkodni tudjon a felhasználók nagyon különböző elvárásaihoz a *vágási diagram* funkció terén.
+        1473 - Fontos számunkra, hogy az *LexaCut* alkalmazkodni tudjon a felhasználók nagyon különböző elvárásaihoz a *vágási diagram* funkció terén.
         A lehetőségek további bővítéséhez szeretnénk lehetővé tenni az elrendezési diagramok exportálását **SVG** és **DXF** formátumban.
-        Azzal, hogy biztosítja számunkra az eszközöket ezeken az exportokon való munkához, lehetőséget ad nekünk arra, hogy segítsünk Önnek a legtöbbet kihozni az *OpenCutList*-ből.
+        Azzal, hogy biztosítja számunkra az eszközöket ezeken az exportokon való munkához, lehetőséget ad nekünk arra, hogy segítsünk Önnek a legtöbbet kihozni az *LexaCut*-ből.
     objective_crowdfunding: |
       1474 - Az új funkciók fejlesztése **Közösségi finanszírozáson** keresztül történik, és akkor kezdődik, amikor a **Pénzügyi cél** teljesül.
     objective_thanks: |
@@ -1952,26 +1952,26 @@ tab:
         1510 - Válassza ki a **.json** fájlból importálni kívánt beállításokat.
         Megjegyzés: ha már létezik azonos nevű beállítás, azt felülírja az importált verzió.
       import_global_presets_success: |
-        1511 - Az *OpenCutList* beállítások sikeresen importálva.
-        A változtatások érvényesítéséhez **be kell zárnia** és **újra kell nyitnia** az OpenCutList ablakot.
+        1511 - Az *LexaCut* beállítások sikeresen importálva.
+        A változtatások érvényesítéséhez **be kell zárnia** és **újra kell nyitnia** az LexaCut ablakot.
       dump_global_presets: 1512 - Beállítások mentése
       dump_model_presets: 1513 - Modell beállítások mentése
       reset_global_presets: 1514 - Beállítások alaphelyzetbe állítása
       reset_global_presets_confirm: |
-        1515 - Az összes mentett *OpenCutList* beállítást alaphelyzetbe fogja állítani.
+        1515 - Az összes mentett *LexaCut* beállítást alaphelyzetbe fogja állítani.
         Ez a művelet nem vonható vissza. **Minden beállítás elvész.**
         Erősítse meg a folytatáshoz.
       reset_global_presets_success: |
-        1516 - Az *OpenCutList* beállítások alaphelyzetbe állítva.
-        A változtatások érvényesítéséhez **be kell zárnia** és **újra kell nyitnia** az OpenCutList ablakot.
+        1516 - Az *LexaCut* beállítások alaphelyzetbe állítva.
+        A változtatások érvényesítéséhez **be kell zárnia** és **újra kell nyitnia** az LexaCut ablakot.
       reset_model_presets: 1517 - Modell beállítások alaphelyzetbe állítása
       reset_model_presets_confirm: |
-        1518 - Az aktuális modell összes *OpenCutList* beállítását alaphelyzetbe fogja állítani.
+        1518 - Az aktuális modell összes *LexaCut* beállítását alaphelyzetbe fogja állítani.
         Ez a művelet nem vonható vissza. **Minden beállítás visszaáll az alapértelmezett értékre.**
         Erősítse meg a folytatáshoz.
       reset_model_presets_success: |
-        1519 - Az aktuális modell *OpenCutList* beállításai alaphelyzetbe állítva.
-        A változtatások érvényesítéséhez **be kell zárnia** és **újra kell nyitnia** az OpenCutList ablakot.
+        1519 - Az aktuális modell *LexaCut* beállításai alaphelyzetbe állítva.
+        A változtatások érvényesítéséhez **be kell zárnia** és **újra kell nyitnia** az LexaCut ablakot.
       error:
         no_preset_to_export: 1520 - Nincs exportálható beállítás.
         no_preset_to_import: 1521 - Nincs importálható beállítás.
@@ -1984,7 +1984,7 @@ tab:
     version: 1527 - Verzió
     credits: 1528 - Technikai közreműködők
     credits_authors: |
-      1529 - Az *OpenCutList*-et [Boris Beaulant](https://www.lairdubois.fr/@borisbeaulant) és [Martin Müller](https://www.lairdubois.fr/@mobilarte) fejleszti. *Az összes [közreműködő](https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension/graphs/contributors) listája*.
+      1529 - Az *LexaCut*-et [Boris Beaulant](https://www.lairdubois.fr/@borisbeaulant) és [Martin Müller](https://www.lairdubois.fr/@mobilarte) fejleszti. *Az összes [közreműködő](https://github.com/lairdubois/lairdubois-lexacut-sketchup-extension/graphs/contributors) listája*.
     credits_translations: 1530 - Fordítások
     credits_translators: |
       1531 - - Zoltán Nagy és Roland Kovács (*magyar*)
@@ -2005,7 +2005,7 @@ tab:
       - Milan Divovic (*szerb*)
     credits_description: |
       1532 - A bővítmény fejlesztése az [L'Air du Bois](https://www.lairdubois.fr) megosztási platform projekthez kapcsolódik.
-      Ez a bővítmény szintén *nyílt forráskódú* és elérhető [GNU GPLv3](https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension/blob/master/LICENSE) licenc alatt a [GitHub](https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension)-on.
+      Ez a bővítmény szintén *nyílt forráskódú* és elérhető [GNU GPLv3](https://github.com/lairdubois/lairdubois-lexacut-sketchup-extension/blob/master/LICENSE) licenc alatt a [GitHub](https://github.com/lairdubois/lairdubois-lexacut-sketchup-extension)-on.
     credits_runtime: 1533 - Futtatókörnyezet
     credits_development: 1534 - Fejlesztői környezet
     credits_vendors: |

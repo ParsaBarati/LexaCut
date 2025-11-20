@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Ladb::OpenCutList::BinPacking2D
+module Ladb::LexaCut::BinPacking2D
   #
   # Core computing for 2D Bin Packing.
   #

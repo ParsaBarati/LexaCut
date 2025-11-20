@@ -3,7 +3,7 @@
 #
 # Top level entry point to Bin Packing
 #
-module Ladb::OpenCutList::BinPacking2D
+module Ladb::LexaCut::BinPacking2D
   require_relative 'packing2d'
   require_relative 'options'
   require_relative 'box'
@@ -93,7 +93,7 @@ module Ladb::OpenCutList::BinPacking2D
     # Dumps the packing.
     #
     def dump
-      puts('# OpenCutList BinPacking2D Dump')
+      puts('# LexaCut BinPacking2D Dump')
       rotatable_str = if @options.rotatable
                         'r'
                       else

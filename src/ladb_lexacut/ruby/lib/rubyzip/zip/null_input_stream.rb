@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-module Ladb::OpenCutList::Zip
+module Ladb::LexaCut::Zip
   module NullInputStream # :nodoc:all
-    include Ladb::OpenCutList::Zip::NullDecompressor
-    include Ladb::OpenCutList::Zip::IOExtras::AbstractInputStream
+    include Ladb::LexaCut::Zip::NullDecompressor
+    include Ladb::LexaCut::Zip::IOExtras::AbstractInputStream
   end
 end
 

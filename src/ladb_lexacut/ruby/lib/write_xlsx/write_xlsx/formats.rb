@@ -3,7 +3,7 @@
 
 require_relative 'package/xml_writer_simple'
 
-module Ladb::OpenCutList
+module Ladb::LexaCut
 module Writexlsx
   class Formats
     include Writexlsx::Utility

@@ -1,4 +1,4 @@
-module Ladb::OpenCutList
+module Ladb::LexaCut
 
   require_relative '../../model/formula/formula_data'
   require_relative '../../model/formula/formula_wrapper'

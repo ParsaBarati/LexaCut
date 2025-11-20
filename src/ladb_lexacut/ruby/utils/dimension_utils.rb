@@ -1,4 +1,4 @@
-﻿module Ladb::OpenCutList
+﻿module Ladb::LexaCut
 
   module DimensionUtils
 
@@ -158,12 +158,12 @@
       [ LENGTH_MIN_PRECISION, length_precision ].max
     end
 
-    # Take a Length, convert to float in inches rounded to "OpenCutList" precision
+    # Take a Length, convert to float in inches rounded to "LexaCut" precision
     def self.to_ocl_precision_f(l)
       l.to_f.round(ocl_length_precision)
     end
 
-    # Take a Length, convert to string representation in model unit rounded to "OpenCutList" precision
+    # Take a Length, convert to string representation in model unit rounded to "LexaCut" precision
     def self.to_ocl_precision_s(l)
       Sketchup.format_length(l, ocl_length_precision).gsub(/~ /, '') # Remove ~ if it exists
     end

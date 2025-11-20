@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Ladb::OpenCutList::BinPacking2D
+module Ladb::LexaCut::BinPacking2D
   #
   # Implements a subdivision of the bin by guillotine cuts.
   # It gives the contained box an x, y reference and the necessary

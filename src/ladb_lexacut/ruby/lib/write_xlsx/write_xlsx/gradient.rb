@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Ladb::OpenCutList
+module Ladb::LexaCut
 module Writexlsx
   module Gradient
     def gradient_properties(args)

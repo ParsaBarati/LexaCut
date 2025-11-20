@@ -1,4 +1,4 @@
-module Ladb::OpenCutList
+module Ladb::LexaCut
 
   require 'securerandom'
 
@@ -30,7 +30,7 @@ module Ladb::OpenCutList
         if File.directory?(materials_dir)
 
           # Join with OpenCutList subdir and create it if it doesn't exist
-          dir = File.join(materials_dir, 'OpenCutList')
+          dir = File.join(materials_dir, 'LexaCut')
           unless File.directory?(dir)
             FileUtils.mkdir_p(dir)
           end

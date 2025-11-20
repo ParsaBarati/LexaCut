@@ -4,7 +4,7 @@ require 'forwardable'
 
 require_relative 'dirtyable'
 
-module Ladb::OpenCutList::Zip
+module Ladb::LexaCut::Zip
   class CentralDirectory # :nodoc:
     extend Forwardable
     include Dirtyable
@@ -44,7 +44,7 @@ module Ladb::OpenCutList::Zip
       @entry_set.each { |entry| entry.write_c_dir_entry(io) }
       eocd_offset = io.tell
       cdir_size = eocd_offset - cdir_offset
-      if Ladb::OpenCutList::Zip.write_zip64_support &&
+      if Ladb::LexaCut::Zip.write_zip64_support &&
          (cdir_offset > 0xFFFFFFFF || cdir_size > 0xFFFFFFFF || @entry_set.size > 0xFFFF)
         write_64_e_o_c_d(io, cdir_offset, cdir_size)
         write_64_eocd_locator(io, eocd_offset)
@@ -199,11 +199,11 @@ module Ladb::OpenCutList::Zip
     end
 
     def read_local_extra_field(io)
-      buf = io.read(Ladb::OpenCutList::Zip::LOCAL_ENTRY_STATIC_HEADER_LENGTH) || ''
-      return '' unless buf.bytesize == Ladb::OpenCutList::Zip::LOCAL_ENTRY_STATIC_HEADER_LENGTH
+      buf = io.read(Ladb::LexaCut::Zip::LOCAL_ENTRY_STATIC_HEADER_LENGTH) || ''
+      return '' unless buf.bytesize == Ladb::LexaCut::Zip::LOCAL_ENTRY_STATIC_HEADER_LENGTH
 
       head, _, _, _, _, _, _, _, _, _, n_len, e_len = buf.unpack('VCCvvvvVVVvv')
-      return '' unless head == Ladb::OpenCutList::Zip::LOCAL_ENTRY_SIGNATURE
+      return '' unless head == Ladb::LexaCut::Zip::LOCAL_ENTRY_SIGNATURE
 
       io.seek(n_len, IO::SEEK_CUR) # Skip over the entry name.
       io.read(e_len)

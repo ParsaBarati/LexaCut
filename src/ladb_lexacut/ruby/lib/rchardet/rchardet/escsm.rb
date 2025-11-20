@@ -26,7 +26,7 @@
 # 02110-1301  USA
 ######################### END LICENSE BLOCK #########################
 
-module Ladb::OpenCutList::CharDet
+module Ladb::LexaCut::CharDet
   HZ_cls = [
     1,0,0,0,0,0,0,0,  # 00 - 07 
     0,0,0,0,0,0,0,0,  # 08 - 0f 

@@ -1,4 +1,4 @@
-module Ladb::OpenCutList::Geometrix
+module Ladb::LexaCut::Geometrix
 
   class CentroidFinder
 

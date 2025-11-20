@@ -1,4 +1,4 @@
-module Ladb::OpenCutList
+module Ladb::LexaCut
 
   require 'cgi'
   require_relative '../../lib/fiddle/imagy/imagy'

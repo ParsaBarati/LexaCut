@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Ladb::OpenCutList::Zip
+module Ladb::LexaCut::Zip
   class DecryptedIo # :nodoc:all
     CHUNK_SIZE = 32_768
 

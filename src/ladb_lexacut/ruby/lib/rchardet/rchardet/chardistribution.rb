@@ -26,7 +26,7 @@
 # 02110-1301  USA
 ######################### END LICENSE BLOCK #########################
 
-module Ladb::OpenCutList::CharDet
+module Ladb::LexaCut::CharDet
   ENOUGH_DATA_THRESHOLD = 1024
   SURE_YES = 0.99
   SURE_NO = 0.01

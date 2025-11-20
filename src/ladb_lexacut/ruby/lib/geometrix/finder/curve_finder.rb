@@ -1,4 +1,4 @@
-module Ladb::OpenCutList::Geometrix
+module Ladb::LexaCut::Geometrix
 
   require_relative 'ellipse_finder'
 

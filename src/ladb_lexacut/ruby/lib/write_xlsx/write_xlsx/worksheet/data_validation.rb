@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 # frozen_string_literal: true
 
-module Ladb::OpenCutList
+module Ladb::LexaCut
 module Writexlsx
   class Worksheet
     class DataValidation   # :nodoc:

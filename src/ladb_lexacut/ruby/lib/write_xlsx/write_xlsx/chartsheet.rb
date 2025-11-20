@@ -13,7 +13,7 @@
 
 require_relative 'worksheet'
 
-module Ladb::OpenCutList
+module Ladb::LexaCut
 module Writexlsx
   class Chartsheet < Worksheet
     include Writexlsx::Utility

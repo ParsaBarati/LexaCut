@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-module Ladb::OpenCutList::Zip
+module Ladb::LexaCut::Zip
   class ExtraField::Generic # :nodoc:
     def self.register_map
       return unless const_defined?(:HEADER_ID)
 
-      Ladb::OpenCutList::Zip::ExtraField::ID_MAP[const_get(:HEADER_ID)] = self
+      Ladb::LexaCut::Zip::ExtraField::ID_MAP[const_get(:HEADER_ID)] = self
     end
 
     def self.name

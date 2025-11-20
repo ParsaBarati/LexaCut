@@ -6,7 +6,7 @@
 #
 require 'stringio'
 
-module Ladb::OpenCutList
+module Ladb::LexaCut
 module Writexlsx
   module Package
     class XMLWriterSimple

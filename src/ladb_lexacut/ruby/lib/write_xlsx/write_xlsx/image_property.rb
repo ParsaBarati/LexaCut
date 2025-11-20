@@ -3,7 +3,7 @@
 
 require 'digest/md5'
 
-module Ladb::OpenCutList
+module Ladb::LexaCut
 module Writexlsx
   class ImageProperty
     attr_reader :type, :width, :height, :name, :x_dpi, :y_dpi, :md5

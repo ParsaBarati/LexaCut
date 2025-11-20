@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Ladb::OpenCutList::Zip
+module Ladb::LexaCut::Zip
   class EntrySet # :nodoc:all
     include Enumerable
 
@@ -72,14 +72,14 @@ module Ladb::OpenCutList::Zip
     protected
 
     def sorted_entries
-      Ladb::OpenCutList::Zip.sort_entries ? @entry_set.sort.to_h : @entry_set
+      Ladb::LexaCut::Zip.sort_entries ? @entry_set.sort.to_h : @entry_set
     end
 
     private
 
     def to_key(entry)
       k = entry.to_s.chomp('/')
-      k.downcase! if Ladb::OpenCutList::Zip.case_insensitive_match
+      k.downcase! if Ladb::LexaCut::Zip.case_insensitive_match
       k
     end
   end

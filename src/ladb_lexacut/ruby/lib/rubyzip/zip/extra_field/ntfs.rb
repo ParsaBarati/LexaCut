@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Ladb::OpenCutList::Zip
+module Ladb::LexaCut::Zip
   # PKWARE NTFS Extra Field (0x000a)
   # Only Tag 0x0001 is supported
   class ExtraField::NTFS < ExtraField::Generic # :nodoc:
@@ -86,7 +86,7 @@ module Ladb::OpenCutList::Zip
     end
 
     def from_ntfs_time(ntfs_time)
-      Ladb::OpenCutList::Zip::DOSTime.at(ntfs_time / WINDOWS_TICK - SEC_TO_UNIX_EPOCH)
+      Ladb::LexaCut::Zip::DOSTime.at(ntfs_time / WINDOWS_TICK - SEC_TO_UNIX_EPOCH)
     end
 
     def to_ntfs_time(time)

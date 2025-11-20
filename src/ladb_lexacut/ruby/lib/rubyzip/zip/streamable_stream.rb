@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Ladb::OpenCutList::Zip
+module Ladb::LexaCut::Zip
   class StreamableStream < DelegateClass(Entry) # :nodoc:all
     def initialize(entry)
       super(entry)
@@ -40,7 +40,7 @@ module Ladb::OpenCutList::Zip
 
     def write_to_zip_output_stream(output_stream)
       output_stream.put_next_entry(self)
-      get_input_stream { |is| Ladb::OpenCutList::Zip::IOExtras.copy_stream(output_stream, is) }
+      get_input_stream { |is| Ladb::LexaCut::Zip::IOExtras.copy_stream(output_stream, is) }
     end
 
     def clean_up

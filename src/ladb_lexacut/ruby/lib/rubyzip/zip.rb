@@ -40,7 +40,7 @@ require_relative 'zip/errors'
 # The main entry points are File, InputStream and OutputStream. For a
 # file/directory interface in the style of the standard ruby ::File and
 # ::Dir APIs then `require_relative 'zip/filesystem'` and see FileSystem.
-module Ladb::OpenCutList
+module Ladb::LexaCut
   module Zip
     extend self
     attr_accessor :unicode_names,

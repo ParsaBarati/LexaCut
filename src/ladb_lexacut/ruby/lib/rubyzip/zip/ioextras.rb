@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Ladb::OpenCutList::Zip
+module Ladb::LexaCut::Zip
   module IOExtras # :nodoc:
     CHUNK_SIZE = 131_072
 

@@ -42,7 +42,7 @@
 # 
 # Typical Distribution Ratio, 25% of IDR 
 
-module Ladb::OpenCutList::CharDet
+module Ladb::LexaCut::CharDet
 JIS_TYPICAL_DISTRIBUTION_RATIO = 3.0
 
 # Char to FreqOrder table , 

@@ -38,7 +38,7 @@
 # Random Distribution Ration = 512 / (2350-512) = 0.279.
 # 
 # Typical Distribution Ratio  
-module Ladb::OpenCutList::CharDet
+module Ladb::LexaCut::CharDet
 EUCKR_TYPICAL_DISTRIBUTION_RATIO = 6.0
 
 EUCKR_TABLE_SIZE = 2352

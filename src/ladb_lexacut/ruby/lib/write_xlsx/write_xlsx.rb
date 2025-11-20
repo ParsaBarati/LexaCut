@@ -85,7 +85,7 @@ require_relative 'write_xlsx/workbook'
 #
 # see Writexlsx::Workbook, Writexlsx::Worksheet, Writexlsx::Chart etc.
 #
-module Ladb::OpenCutList
+module Ladb::LexaCut
 class WriteXLSX < Writexlsx::Workbook
 end
 

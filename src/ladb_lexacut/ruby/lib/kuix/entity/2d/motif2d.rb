@@ -1,4 +1,4 @@
-module Ladb::OpenCutList::Kuix
+module Ladb::LexaCut::Kuix
 
   class Motif2d < Entity2d
 

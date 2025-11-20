@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Ladb::OpenCutList::Zip
+module Ladb::LexaCut::Zip
   module IOExtras # :nodoc:
     # Implements many of the convenience methods of IO
     # such as gets, getc, readline and readlines

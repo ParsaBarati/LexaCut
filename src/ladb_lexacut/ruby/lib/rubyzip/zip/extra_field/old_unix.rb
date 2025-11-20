@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Ladb::OpenCutList::Zip
+module Ladb::LexaCut::Zip
   # Olf Info-ZIP Extra for UNIX uid/gid and file timestampes
   class ExtraField::OldUnix < ExtraField::Generic # :nodoc:
     HEADER_ID = 'UX'

@@ -16,7 +16,7 @@
 require_relative '../package/xml_writer_simple'
 require_relative '../utility'
 
-module Ladb::OpenCutList
+module Ladb::LexaCut
 module Writexlsx
   class Chart
     # The Column chart module also supports the following sub-types:

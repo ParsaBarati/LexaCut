@@ -1,4 +1,4 @@
-module Ladb::OpenCutList
+module Ladb::LexaCut
 
   require_relative 'controller'
   require_relative '../model/attributes/material_attributes'

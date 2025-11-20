@@ -6,7 +6,7 @@ require_relative 'filesystem/directory_iterator'
 require_relative 'filesystem/dir'
 require_relative 'filesystem/file'
 
-module Ladb::OpenCutList::Zip
+module Ladb::LexaCut::Zip
   # The ZipFileSystem API provides an API for accessing entries in
   # a zip archive that is similar to ruby's builtin File and Dir
   # classes.

@@ -2,7 +2,7 @@
 
 require_relative 'file_stat'
 
-module Ladb::OpenCutList::Zip
+module Ladb::LexaCut::Zip
   module FileSystem
     # Instances of this class are normally accessed via the accessor
     # Zip::File::file. An instance of File behaves like ruby's

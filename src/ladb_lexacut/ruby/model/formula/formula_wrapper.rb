@@ -1,4 +1,4 @@
-module Ladb::OpenCutList
+module Ladb::LexaCut
 
   require_relative '../../utils/unit_utils'
   require_relative '../../utils/path_utils'

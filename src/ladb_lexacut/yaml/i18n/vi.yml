@@ -4,9 +4,9 @@ _label: Tiếng Việt
 _disabled_msg: |
   Ngôn ngữ này chưa được **dịch hoàn chỉnh**.
 
-  Để giúp hoàn thiện bản dịch, vui lòng tham khảo [Tài liệu OpenCutList](https://docs.opencutlist.org/for-translators/general).
+  Để giúp hoàn thiện bản dịch, vui lòng tham khảo [Tài liệu LexaCut](https://docs.lexacut.org/for-translators/general).
 # the reload message will be displayed when a user switches to this language
-_reload_msg: "Để hiển thị tất cả các thay đổi, bạn phải **đóng** và **mở lại** cửa sổ OpenCutList."
+_reload_msg: "Để hiển thị tất cả các thay đổi, bạn phải **đóng** và **mở lại** cửa sổ LexaCut."
 _description: "Danh sách cắt và Trình tạo sơ đồ cắt cho thợ mộc. Mã nguồn mở, được huy động vốn từ cộng đồng và dễ sử dụng;)"
 default:
   minimize: Thu nhỏ
@@ -99,7 +99,7 @@ default:
   deprecated: Đã lỗi thời
 core:
   menu:
-    submenu: OpenCutList
+    submenu: LexaCut
     item:
       generate_cutlist:  Tạo mới danh sách các bộ phận
       edit_part_properties: $t(tab.cutlist.edit_part_properties)
@@ -119,10 +119,10 @@ core:
       smart_export: $t(core.toolbar.command.smart_export)
       reset_dialog_position: Đặt lại vị trí cửa sổ
   toolbar:
-    name: OpenCutList
+    name: LexaCut
     tools: Công cụ
     command:
-      dialog: OpenCutList
+      dialog: LexaCut
       smart_draw: Vẽ các bộ phận
       smart_handle: Thao tác các bộ phận
       smart_paint: Tô màu các bộ phận
@@ -136,7 +136,7 @@ core:
   savepanel:
     export_to_file: "Xuất tệp định dạng {{ file_format }}"
   dialog:
-    title: OpenCutList tạo bởi L'Air du Bois
+    title: LexaCut tạo bởi L'Air du Bois
   leftbar:
     more: Nhiều hơn
     more_docs: Tài liệu.
@@ -148,11 +148,11 @@ core:
     report_a_bug: Báo cáo lỗi
   warning:
     dev: |
-      Bạn đang sử dụng phiên bản **phát triển** của *OpenCutList*.
+      Bạn đang sử dụng phiên bản **phát triển** của *LexaCut*.
       Phiên bản này chỉ có sẵn để thử nghiệm.
       Nó không được khuyến khích sử dụng trong sản xuất.
 
-      Để báo cáo lỗi: <a href="mailto:lexacut@lexaplus.com?subject=Bug%20Report%20OpenCutList%20{{ version }}%20(build: {{ build }})" target="_blank">lexacut@lexaplus.com</a>.
+      Để báo cáo lỗi: <a href="mailto:lexacut@lexaplus.com?subject=Bug%20Report%20LexaCut%20{{ version }}%20(build: {{ build }})" target="_blank">lexacut@lexaplus.com</a>.
   error:
     extern: "Lỗi bên ngoài : **{{ error }}**"
     feature_unavailable: "Chức năng này yêu cầu Sketchup phiên bản {{ version }} hoặc cao hơn"
@@ -171,12 +171,12 @@ core:
     layers_change: Các thẻ trong mô hình đang hoạt động đã thay đổi.
     drawing_change: Thiết kế của mô hình hoạt động đã được sửa đổi.
   upgrade:
-    unavailable: Không thể tìm thấy phiên bản mới nhất của *OpenCutList*.
+    unavailable: Không thể tìm thấy phiên bản mới nhất của *LexaCut*.
     available: |
-      Đã có phiên bản mới của *OpenCutList*.
+      Đã có phiên bản mới của *LexaCut*.
       Cập nhật để có được các tính năng mới nhất!
     up_to_date: |
-      Bạn đã có phiên bản mới nhất của *OpenCutList*.
+      Bạn đã có phiên bản mới nhất của *LexaCut*.
 
       *Hãy xem xét tài trợ cho dự án này để giúp chúng tôi thêm nhiều tính năng hơn nữa!*
     downloading: Đang tải xuống
@@ -186,7 +186,7 @@ core:
     manual_download: Tải xuống thủ công
     zzz: "Tôi hiện đang nghỉ ngơi sau khi cập nhật. Để đánh thức tôi dậy, bạn phải khởi động lại SketchUp."
     success: |
-      Bản cập nhật của OpenCutList đã hoàn thành!
+      Bản cập nhật của LexaCut đã hoàn thành!
 
       CHẠY LẠI SKETCHUP để kích hoạt các thay đổi.
     error:
@@ -462,7 +462,7 @@ tab:
         Xác định ở đây số lớp phân chia phần được vẽ theo độ dày của nó.
 
         *Ví dụ:* Nếu bạn có một bộ phận được thiết kế với độ dày *38mm* và bạn muốn tạo ra nó bằng cách dán hai tấm *19mm* lại với nhau, hãy nhập **2** vào trường này.
-        *OpenCutList sau đó sẽ đếm 2 phần có độ dày 19mm thay vì 1 phần 38mm.*
+        *LexaCut sau đó sẽ đếm 2 phần có độ dày 19mm thay vì 1 phần 38mm.*
       description: Mô tả
       description_help: |
         *Mô tả* cho phép bạn cung cấp thông tin được cá nhân hóa về từng định nghĩa bộ phận.
@@ -536,7 +536,7 @@ tab:
       dynamic_attributes_name_help: |
         Nếu tùy chọn này được chọn, ký hiệu của các bộ phận sẽ được trích xuất từ ​​thuộc tính *Tên*, nếu chúng được xác định.
 
-        <i class='ladb-opencutlist-icon-warning'></i> Các phiên bản của các bộ phận có cùng định nghĩa sẽ được tách ra nếu thuộc tính *Tên* không có cùng giá trị.
+        <i class='ladb-lexacut-icon-warning'></i> Các phiên bản của các bộ phận có cùng định nghĩa sẽ được tách ra nếu thuộc tính *Tên* không có cùng giá trị.
       part_number_with_letters: Dùng chữ cái để liệt kê các bộ phận
       part_number_with_letters_help: "Nếu tùy chọn này được chọn, các bộ phận được liệt kê bằng các chữ cái (A, B, C, ... Z, AA, AB, ...)."
       part_number_sequence_by_group: Khởi tạo lại việc liệt kê các bộ phận cho mỗi nhóm
@@ -565,17 +565,17 @@ tab:
       hide_material_colors: Ẩn màu sắc vật liệu
       hide_material_colors_help: "Nếu tùy chọn này được chọn, màu vật liệu sẽ không được hiển thị."
       minimize_on_highlight: Thu nhỏ sau *'$t(tab.cutlist.highlight_part)...'*
-      minimize_on_highlight_help: "Nếu tùy chọn này được chọn, cửa sổ OpenCutList sẽ được thu nhỏ khi chức năng *'$t(tab.cutlist.highlight_part)'* được sử dụng."
+      minimize_on_highlight_help: "Nếu tùy chọn này được chọn, cửa sổ LexaCut sẽ được thu nhỏ khi chức năng *'$t(tab.cutlist.highlight_part)'* được sử dụng."
       general: Chung
       sorting: Sắp xếp
       group_order_strategy: Sắp xếp nhóm
       group_order_strategy_help: |
         Sắp xếp lại các ô để xác định thứ tự sắp xếp trong mỗi nhóm.
-        Thuộc tính có thể được sắp xếp trong <i class="ladb-opencutlist-icon-sort-asc"></i> *tăng dần* hoặc <i class="ladb-opencutlist-icon-sort-desc"></i> *giảm dần* thứ tự.
+        Thuộc tính có thể được sắp xếp trong <i class="ladb-lexacut-icon-sort-asc"></i> *tăng dần* hoặc <i class="ladb-lexacut-icon-sort-desc"></i> *giảm dần* thứ tự.
       part_order_strategy: Sắp xếp bộ phận
       part_order_strategy_help: |
         Sắp xếp lại các ô để xác định thứ tự sắp xếp trong từng nhóm bộ phận.
-        Thuộc tính có thể được sắp xếp theo thứ tự <i class="ladb-opencutlist-icon-sort-asc"></i> *tăng dần* hoặc <i class="ladb-opencutlist-icon-sort-desc"></i> *giảm dần *.
+        Thuộc tính có thể được sắp xếp theo thứ tự <i class="ladb-lexacut-icon-sort-asc"></i> *tăng dần* hoặc <i class="ladb-lexacut-icon-sort-desc"></i> *giảm dần *.
       dimension_column_order_strategy: Thứ tự kích thước
       dimension_column_order_strategy_help: |
         Sắp xếp lại các thuộc tính kích thước sau để xác định thứ tự hiển thị của các cột.
@@ -985,7 +985,7 @@ tab:
         cutting_dimensions: Sơ đồ cắt này sử dụng kích thước **thô** của các bộ phận.
         cutting_dimensions_increase_1d: "Các kích thước thô này đã được định cấu hình trên vật liệu '{{ material_name }}': chiều dài quá khổ (**{{ length_increase }}**)."
         cutting_dimensions_increase_2d: "Các kích thước thô này đã được định cấu hình trên vật liệu '{{ material_name }}': chiều dài quá khổ (**{{ length_increase }}**) và chiều rộng quá khổ (**{{ width_increase }}**)."
-        cutting_dimensions_edge_decrement: Kích thước giảm theo độ dày của dải cạnh. <i class='ladb-opencutlist-icon-edge-decremented'></i>
+        cutting_dimensions_edge_decrement: Kích thước giảm theo độ dày của dải cạnh. <i class='ladb-lexacut-icon-edge-decremented'></i>
     packing:
       title: Sơ đồ cắt
       option_problem_type: Loại
@@ -1234,7 +1234,7 @@ tab:
         cutting_dimensions: Sơ đồ cắt này sử dụng kích thước **thô** của các bộ phận.
         cutting_dimensions_increase_1d: "Các kích thước thô này đã được định cấu hình trên vật liệu '{{ material_name }}': chiều dài quá khổ (**{{ length_increase }}**)."
         cutting_dimensions_increase_2d: "Các kích thước thô này đã được định cấu hình trên vật liệu '{{ material_name }}': chiều dài quá khổ (**{{ length_increase }}**) và chiều rộng quá khổ (**{{ width_increase }}**)."
-        cutting_dimensions_edge_decrement: Kích thước giảm theo độ dày của dải cạnh. <i class='ladb-opencutlist-icon-edge-decremented'></i>
+        cutting_dimensions_edge_decrement: Kích thước giảm theo độ dày của dải cạnh. <i class='ladb-lexacut-icon-edge-decremented'></i>
     labels:
       title: Nhãn
       options_layout: Bố trí
@@ -1248,7 +1248,7 @@ tab:
       remove_all_elements: $t(default.remove_all)
       part_order_strategy_help: |
         Sắp xếp lại các ô tiêu đề để xác định thứ tự sắp xếp của nhãn.
-        Thuộc tính có thể được sắp xếp theo thứ tự <i class="ladb-opencutlist-icon-sort-asc"></i> *tăng dần* hoặc <i class="ladb-opencutlist-icon-sort-desc"></i> *giảm dần*.
+        Thuộc tính có thể được sắp xếp theo thứ tự <i class="ladb-lexacut-icon-sort-asc"></i> *tăng dần* hoặc <i class="ladb-lexacut-icon-sort-desc"></i> *giảm dần*.
       offset_help: |
         *Độ lệch* xác định vị trí của **nhãn đầu tiên** sẽ được in trên **trang đầu tiên**.
         Chọn hộp tương ứng với lựa chọn của bạn.
@@ -1546,7 +1546,7 @@ tab:
         Các bộ phận được bao gồm trong *danh sách bộ phận* phải thuộc phiên bản của một **component**.
         Nếu bạn chỉ sử dụng các nhóm, hãy chuyển đổi chúng thành các components.
         Việc sử dụng các component giúp tự sao chép các bộ phận giống hệt nhau mà không cần sao chép chúng.
-      no_typed_materials: "Áp dụng vật liệu cho các bộ phận sẽ được đưa vào danh sách bộ phận và xác định các thuộc tính của vật liệu này (**$t(tab.materials.type_1)**, **$t(tab.materials.type_2)**, **$t(tab.materials.type_3)** hoặc **$t(tab.materials.type_5)**) trên tab <i class=\"ladb-opencutlist-icon-materials\"></i> **Vật liệu**."
+      no_typed_materials: "Áp dụng vật liệu cho các bộ phận sẽ được đưa vào danh sách bộ phận và xác định các thuộc tính của vật liệu này (**$t(tab.materials.type_1)**, **$t(tab.materials.type_2)**, **$t(tab.materials.type_3)** hoặc **$t(tab.materials.type_5)**) trên tab <i class=\"ladb-lexacut-icon-materials\"></i> **Vật liệu**."
     obsolete_base: "Để luôn đồng bộ, danh sách bộ phận phải được tạo lại."
   materials:
     label: Vật liệu
@@ -1693,12 +1693,12 @@ tab:
       title: Xuất tệp .skm
     option:
       minimize_on_smart_paint: Giảm sau * 'Các bộ phận tô màu....'*
-      minimize_on_smart_paint_help: "Nếu tùy chọn này được bật, cửa sổ OpenCutList sẽ được thu nhỏ khi sử dụng chức năng *'Color parts with...'*."
+      minimize_on_smart_paint_help: "Nếu tùy chọn này được bật, cửa sổ LexaCut sẽ được thu nhỏ khi sử dụng chức năng *'Color parts with...'*."
       general: Chung
       material_order_strategy: Sắp xếp vật liệu
       material_order_strategy_help: |
         Sắp xếp lại các ô để xác định chiến lược sắp xếp cho danh sách vật liệu.
-        Thuộc tính có thể được sắp xếp theo thứ tự <i class="ladb-opencutlist-icon-sort-asc"></i> *tăng dần* hoặc <i class="ladb-opencutlist-icon-sort-desc"></i> *giảm dần*.
+        Thuộc tính có thể được sắp xếp theo thứ tự <i class="ladb-lexacut-icon-sort-asc"></i> *tăng dần* hoặc <i class="ladb-lexacut-icon-sort-desc"></i> *giảm dần*.
       property_type: Loại
       property_name: Tên
     delete:
@@ -1762,7 +1762,7 @@ tab:
       hide_tags: Ẩn các nhãn hiệu
       hide_tags_help: "Nếu tùy chọn này được chọn, **Nhãn hiệu** sẽ không được hiển thị."
       minimize_on_set_active: Thu nhỏ sau '$t(tab.outliner.tooltip.set_active_node)'
-      minimize_on_set_active_help: "Nếu tùy chọn này được chọn, cửa sổ OpenCutList sẽ được thu nhỏ khi hàm *'$t(tab.outliner.tooltip.set_active_node)'* được sử dụng."
+      minimize_on_set_active_help: "Nếu tùy chọn này được chọn, cửa sổ LexaCut sẽ được thu nhỏ khi hàm *'$t(tab.outliner.tooltip.set_active_node)'* được sử dụng."
     error:
       no_model: Không có mô hình nào được mở. Bạn sẽ cần phải cung cấp cho tôi thêm thông tin;)
       no_entities: Mô hình của bạn trống!
@@ -1779,7 +1779,7 @@ tab:
     title: Nhập các bộ phận
     help: |
       Trang này cho phép bạn nhập các bộ phận (được xác định bởi hộp giới hạn hình chữ nhật) vào mô hình của bạn từ tệp [CSV](https://en.wikipedia.org/wiki/Comma-separated_values) file.
-      Sau đó, bạn có thể sử dụng các tính năng của *OpenCutList* cho các bộ phận đã được tạo bởi một phần mềm khác với *SketchUp*.
+      Sau đó, bạn có thể sử dụng các tính năng của *LexaCut* cho các bộ phận đã được tạo bởi một phần mềm khác với *SketchUp*.
       Nhấp vào nút **Mở tệp CSV** để bắt đầu.
     open_csv: Mở tệp CSV
     import_to_model: Nhập vào mô hình
@@ -1856,10 +1856,10 @@ tab:
     label: Hướng dẫn
     title: Hướng dẫn
     help: |
-      Tìm ở đây một danh sách không đầy đủ các video do cộng đồng tạo ra xung quanh việc sử dụng *OpenCutList*.
+      Tìm ở đây một danh sách không đầy đủ các video do cộng đồng tạo ra xung quanh việc sử dụng *LexaCut*.
     submit: Gửi video
     submit_info: |
-      Bạn đã tạo một video giới thiệu về cách sử dụng **OpenCutList** và bạn muốn thấy video đó xuất hiện ở đây?
+      Bạn đã tạo một video giới thiệu về cách sử dụng **LexaCut** và bạn muốn thấy video đó xuất hiện ở đây?
       Hãy cho chúng tôi biết bằng cách viết thư cho chúng tôi tại **lexacut@lexaplus.com**!
 
       *Video phải được công khai và lưu trữ trên YouTube..*
@@ -1869,7 +1869,7 @@ tab:
     label: Tin tức
     title: Tin tức
     help: |
-      Tin tức mới nhất từ *OpenCutList*.
+      Tin tức mới nhất từ *LexaCut*.
     comment: Bình luận
     error:
       fail_to_load_list: Không thể tải danh sách tin tức.
@@ -1877,7 +1877,7 @@ tab:
     label: Diễn đàn
     title: Diễn đàn
     help: |
-      Bảng tin này cho phép bạn trao đổi với cộng đồng người dùng và nhóm *OpenCutList*.
+      Bảng tin này cho phép bạn trao đổi với cộng đồng người dùng và nhóm *LexaCut*.
     create_conversation: Bắt đầu một chủ đề
     reply: Trả lời
     tags: Các thẻ
@@ -1893,24 +1893,24 @@ tab:
     label: Nhà tài trợ
     title: Nhà tài trợ
     description: |
-      **OpenCutList** là phần mềm *Nguồn mở* được người dùng hỗ trợ thông qua nền tảng <a href="https://opencollective.com/" target="_blank">Open Collective</a>.
+      **LexaCut** là phần mềm *Nguồn mở* được người dùng hỗ trợ thông qua nền tảng <a href="https://opencollective.com/" target="_blank">Open Collective</a>.
       Hỗ trợ dự án này bằng cách đóng góp tài chính!
     contribute: Đóng góp
     backers: "{{ count }} người đóng góp tài chính"
     backers_plural: "{{ count }} người đóng góp tài chính"
-    ad: "OpenCutList không miễn phí"
+    ad: "LexaCut không miễn phí"
     objective: Đối tượng
-    objective_slogan: "OpenCutList là tất cả của chúng ta"
+    objective_slogan: "LexaCut là tất cả của chúng ta"
     objective_title:
       default: Mục tiêu
       cuttingdiagram_export: Kinh phí của sơ đồ cắt được xuất
     objective_details:
       default: |
-        Sự cải tiến liên tục của *OpenCutList* rất quan trọng đối với chúng tôi và dự án tiếp tục cần sự trợ giúp của bạn cho bản cập nhật tiếp theo!
+        Sự cải tiến liên tục của *LexaCut* rất quan trọng đối với chúng tôi và dự án tiếp tục cần sự trợ giúp của bạn cho bản cập nhật tiếp theo!
       cuttingdiagram_export: |
-        Điều quan trọng đối với chúng tôi là *OpenCutList* có thể được điều chỉnh cho phù hợp với những kỳ vọng rất khác nhau của người dùng đối với chức năng *Sơ đồ cắt*.
+        Điều quan trọng đối với chúng tôi là *LexaCut* có thể được điều chỉnh cho phù hợp với những kỳ vọng rất khác nhau của người dùng đối với chức năng *Sơ đồ cắt*.
         Để tiếp tục mở rộng các chức năng, chúng tôi muốn cho phép xuất sơ đồ cắt ở định dạng **SVG** và **DXF**.
-        Bằng cách cung cấp cho chúng tôi phương tiện để xử lý các bản xuất này, bạn đang cho chúng tôi cơ hội giúp bạn tận dụng tối đa *OpenCutList*.
+        Bằng cách cung cấp cho chúng tôi phương tiện để xử lý các bản xuất này, bạn đang cho chúng tôi cơ hội giúp bạn tận dụng tối đa *LexaCut*.
     objective_crowdfunding: |
       Việc phát triển các tính năng mới sẽ được thực hiện thông qua **Gây quỹ** và sẽ bắt đầu khi đạt được **Mục tiêu tài chính**.
     objective_thanks: |
@@ -1957,26 +1957,26 @@ tab:
         Chọn các mẫu cài đặt trong tệp **.json** mà bạn muốn nhập.
         Xin lưu ý rằng cài đặt mẫu có cùng tên đã tồn tại sẽ được thay thế bằng phiên bản đã nhập.
       import_global_presets_success: |
-        *OpenCutList* mẫu cài đặt đã được nhập thành công.
-        Để nhìn thấy các thay đổi, bạn phải **đóng** và **mở lại** cửa sổ OpenCutList.
+        *LexaCut* mẫu cài đặt đã được nhập thành công.
+        Để nhìn thấy các thay đổi, bạn phải **đóng** và **mở lại** cửa sổ LexaCut.
       dump_global_presets: Kết xuất mẫu cài đặt trước
       dump_model_presets: Kết xuất cài đặt mô hình
       reset_global_presets: Cài đặt lại các mẫu cài đặt trước
       reset_global_presets_confirm: |
-        Bạn sắp đặt lại tất cả các mẫu cài đặt trước *OpenCutList* đã lưu của mình
+        Bạn sắp đặt lại tất cả các mẫu cài đặt trước *LexaCut* đã lưu của mình
          Sau khi hành động kết thúc: **Tất cả các mẫu cài đặt trước sẽ bị mất.**
         Xác nhận để tiếp tục.
       reset_global_presets_success: |
-        Mẫu cài đặt *OpenCutList* đã được đặt lại
-        Để thấy các thay đổi, bạn phải **đóng** và **mở lại** cửa sổ OpenCutList.
+        Mẫu cài đặt *LexaCut* đã được đặt lại
+        Để thấy các thay đổi, bạn phải **đóng** và **mở lại** cửa sổ LexaCut.
       reset_model_presets: Cài đặt lại các cài đặt của mô hình
       reset_model_presets_confirm: |
-        Bạn sắp cài đặt lại tất cả các cài đặt *OpenCutList* cho mô hình hiện tại.
+        Bạn sắp cài đặt lại tất cả các cài đặt *LexaCut* cho mô hình hiện tại.
         Sau khi hành động này kết thúc. **Tất cả cài đặt sẽ được khôi phục về giá trị mặc định.**
         Xác nhận để tiếp tục.
       reset_model_presets_success: |
-        Cáì đặt *OpenCutList* cho mô hình hiện tại đã được đặt lại.
-        Để thấy các thay đổi, bạn phải **đóng** và **mở lại** cửa sổ OpenCutList.
+        Cáì đặt *LexaCut* cho mô hình hiện tại đã được đặt lại.
+        Để thấy các thay đổi, bạn phải **đóng** và **mở lại** cửa sổ LexaCut.
       error:
         no_preset_to_export: Không có mẫu cài đặt trước nào để xuất.
         no_preset_to_import: Không có mẫu cài đặt trước nào để nhập.
@@ -1989,7 +1989,7 @@ tab:
     version: Phiên bản
     credits: Thông tin kỹ thuật
     credits_authors: |
-      *OpenCutList* được phát triển bởi [Boris Beaulant](https://www.lairdubois.fr/@borisbeaulant) và [Martin Müller](https://www.lairdubois.fr/@mobilarte). *Liệt kê tất cả [người đóng góp](https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension/graphs/contributors)*.
+      *LexaCut* được phát triển bởi [Boris Beaulant](https://www.lairdubois.fr/@borisbeaulant) và [Martin Müller](https://www.lairdubois.fr/@mobilarte). *Liệt kê tất cả [người đóng góp](https://github.com/lairdubois/lairdubois-lexacut-sketchup-extension/graphs/contributors)*.
     credits_translations: Bản dịch
     credits_translators: |
       - Nguyễn Ngọc Tân (*Tiếng Việt*)
@@ -2010,7 +2010,7 @@ tab:
       - Milan Divovic (*Tiếng Serbia*)
     credits_description: |
       Việc phát triển phần mở rộng này được liên kết với dự án chia sẻ [L'Air du Bois](https://www.lairdubois.fr).
-      Tiện ích mở rộng này cũng là *Nguồn mở* và có sẵn theo giấy phép [GNU GPLv3](https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension/blob/master/LICENSE) giấy phép trên [GitHub](https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension).
+      Tiện ích mở rộng này cũng là *Nguồn mở* và có sẵn theo giấy phép [GNU GPLv3](https://github.com/lairdubois/lairdubois-lexacut-sketchup-extension/blob/master/LICENSE) giấy phép trên [GitHub](https://github.com/lairdubois/lairdubois-lexacut-sketchup-extension).
     credits_runtime: Thời gian chạy
     credits_development: Môi trương phát triển
     credits_vendors: |

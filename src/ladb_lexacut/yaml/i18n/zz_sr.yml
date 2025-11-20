@@ -2,8 +2,8 @@ _label: 1 - Srpski
 _disabled_msg: |
   2 - Ovaj jezik još nije u **potpunosti preveden**.
 
-  Da biste pomogli u završetku prevoda, pogledajte [Documentation OpenCutList](https://docs.opencutlist.org/for-translators/general).
-_reload_msg: 3 - Da bi ste primenili sve izmene, morate **zatvoriti** i **ponovo otvoriti** OpenCutList prozor.
+  Da biste pomogli u završetku prevoda, pogledajte [Documentation LexaCut](https://docs.lexacut.org/for-translators/general).
+_reload_msg: 3 - Da bi ste primenili sve izmene, morate **zatvoriti** i **ponovo otvoriti** LexaCut prozor.
 _description: 4 - Generator lista i dijagrama rezanja za stolare. Otvoreni kod, finansiran dobrovoljnim prilozima i jednostavan za upotrebu ;)
 default:
   minimize: 5 - Smanji
@@ -94,7 +94,7 @@ default:
   deprecated: 90 - Zastarelo
 core:
   menu:
-    submenu: 91 - OpenCutList
+    submenu: 91 - LexaCut
     item:
       generate_cutlist: 92 - Generiši krojnu listu
       edit_part_properties: $t(tab.cutlist.edit_part_properties)
@@ -114,10 +114,10 @@ core:
       smart_export: $t(core.toolbar.command.smart_export)
       reset_dialog_position: 108 - Resetuj položaj prozora
   toolbar:
-    name: 109 - OpenCutList
+    name: 109 - LexaCut
     tools: 110 - Alati
     command:
-      dialog: 111 - OpenCutList
+      dialog: 111 - LexaCut
       smart_draw: 112 - Nacrtaj komade
       smart_handle: 113 - Upravljaj komadima
       smart_paint: 114 - Oboji komade
@@ -143,11 +143,11 @@ core:
     report_a_bug: 126 - Prijavi grešku
   warning:
     dev: |
-      127 - Koristite **razvojnu** verziju *​​OpenCutList*.
+      127 - Koristite **razvojnu** verziju *​​LexaCut*.
       Ova verzija je dostupna samo za testiranje.
       Ne preporučuje se upotreba u proizvodnji.
 
-      Da biste prijavili grešku: <a href="mailto:lexacut@lexaplus.com?subject=Bug%20Report%20OpenCutList%20{{ version }}%20(build: {{ build }})" target="_blank">lexacut@lexaplus.com</a>.
+      Da biste prijavili grešku: <a href="mailto:lexacut@lexaplus.com?subject=Bug%20Report%20LexaCut%20{{ version }}%20(build: {{ build }})" target="_blank">lexacut@lexaplus.com</a>.
   error:
     extern: '128 - Spoljašnja greška: **{{ error }}**'
     feature_unavailable: 129 - Ova funkcija zahteva SketchUp {{ version }} ili noviji
@@ -166,12 +166,12 @@ core:
     layers_change: 138 - Oznake u aktivnom modelu su promenjene.
     drawing_change: 139 - Aktivni model je izmenjen.
   upgrade:
-    unavailable: 140 - Najnovija verzija *OpenCutList* nije pronađena.
+    unavailable: 140 - Najnovija verzija *LexaCut* nije pronađena.
     available: |
-      141 - Dostupna je nova verzija *OpenCutList*.
+      141 - Dostupna je nova verzija *LexaCut*.
       Ažurirajte da biste dobili najnovije funkcije!
     up_to_date: |
-      142 - Već imate najnoviju verziju *​​OpenCutList*.
+      142 - Već imate najnoviju verziju *​​LexaCut*.
 
       *Razmislite o sponzorstvu ovog projekta da biste nam pomogli da dodamo još više mogućnosti!*
     downloading: 143 - Preuzimanje je u toku
@@ -181,7 +181,7 @@ core:
     manual_download: 147 - Manuelno preuzimanje
     zzz: 148 - Trenutno sam neaktivan nakon ažuriranja. Da biste me aktivirali, morate ponovo pokrenuti SketchUp.
     success: |
-      149 - Završeno je ažuriranje OpenCutList-a!
+      149 - Završeno je ažuriranje LexaCut-a!
 
       PONOVO učitajte SKETCHUP da biste aktivirali izmene.
     error:
@@ -457,7 +457,7 @@ tab:
         367 - Ovde definišite broj slojeva kojima se komad deli po svojoj debljini.
 
         *Exemple :* Ako za nacrtani komad debljine *38* mm želite da ga napravite lepljenjem od dva panela od *19* mm, unesite **2** u ovo polje.
-        *OpenCutList će tada uračunati 2 komada debljine 19 mm umesto 1 komada debljine 38 mm.*
+        *LexaCut će tada uračunati 2 komada debljine 19 mm umesto 1 komada debljine 38 mm.*
       description: 368 - Opis
       description_help: |
         369 - Polje *Opis* omogućava unošenje prilagođenih informacija za svaku definiciju komada.
@@ -531,7 +531,7 @@ tab:
       dynamic_attributes_name_help: |
         411 - Ako je odabrana ova opcija, oznaka delova izvući će se iz atributa *Ime*, ako je definisana.
 
-        <i class='ladb-opencutlist-icon-warning'></i> Delovi sa ​​istom definicijom razdvojiće se ako atribut *Ime* nema istu vrednost.
+        <i class='ladb-lexacut-icon-warning'></i> Delovi sa ​​istom definicijom razdvojiće se ako atribut *Ime* nema istu vrednost.
       part_number_with_letters: 412 - Koristite slova za označavanje delova
       part_number_with_letters_help: 413 - Ako je ova opcija odabrana, delovi se označavaju slovima (A, B, C, ... Z, AA, AB, ...).
       part_number_sequence_by_group: 414 - Ponovno incijaliziujte označavanje delova za svaku grupu
@@ -560,17 +560,17 @@ tab:
       hide_material_colors: 434 - Sakrij boje materijala
       hide_material_colors_help: 435 - Aktiviranjem ove opcije sakrivaju se boje materijala.
       minimize_on_highlight: 436 - Umanji nakon *'$t(tab.cutlist.highlight_part)...'*
-      minimize_on_highlight_help: 437 - Označite ovu opciju da se prozor OpenCutList smanji kada se funkcija aktivira *'$t(tab.cutlist.highlight_part)'*.
+      minimize_on_highlight_help: 437 - Označite ovu opciju da se prozor LexaCut smanji kada se funkcija aktivira *'$t(tab.cutlist.highlight_part)'*.
       general: 438 - Uopšteno
       sorting: 439 - Sorting
       group_order_strategy: 440 - Sortiraj grupe
       group_order_strategy_help: |
         441 - Preuredite sledeća svojstva da biste definisali strategiju sortiranja grupa.
-        Svako svojstvo može se sortirati <i class="ladb-opencutlist-icon-sort-asc"></i> *rastuće* ili <i class="ladb-opencutlist-icon-sort-desc"></i> *opadajuće*.
+        Svako svojstvo može se sortirati <i class="ladb-lexacut-icon-sort-asc"></i> *rastuće* ili <i class="ladb-lexacut-icon-sort-desc"></i> *opadajuće*.
       part_order_strategy: 442 - Sortiranje delova
       part_order_strategy_help: |
         443 - Promenite redosled sledećih svojstava da bi ste definisali strategiju sortiranja materijala sa popisa.
-        Svako svojstvo može se sortirati u <i class="ladb-opencutlist-icon-sort-asc"> </i> *uzlazni* ili <i class="ladb-opencutlist-icon-sort-desc"> </i> *silazni* redosled.
+        Svako svojstvo može se sortirati u <i class="ladb-lexacut-icon-sort-asc"> </i> *uzlazni* ili <i class="ladb-lexacut-icon-sort-desc"> </i> *silazni* redosled.
       dimension_column_order_strategy: 444 - Redosled dimenzija
       dimension_column_order_strategy_help: |
         445 - Organizujte sledeća svojstva dimenzija da definišete redosled prikaza kolona.
@@ -980,7 +980,7 @@ tab:
         cutting_dimensions: 794 - Ovaj dijagram rezanja koristi **sirove** dimenzije delova.
         cutting_dimensions_increase_1d: 795 - Ove sirove dimenzije su konfigurisane na materijalu '{{ material_name }}' prekoračenje dužine (**{{ length_increase }}**).*
         cutting_dimensions_increase_2d: 796 - Ove sirove dimenzije su konfigurisane na materijalu '{{ material_name }}' prekoračenje dužine (**{{ length_increase }}**) i prekoračenje širine (**{{ width_increase }}**).
-        cutting_dimensions_edge_decrement: 797 - Dimenzije smanjene za debljinu kant trake. <i class='ladb-opencutlist-icon-edge-decremented'></i>
+        cutting_dimensions_edge_decrement: 797 - Dimenzije smanjene za debljinu kant trake. <i class='ladb-lexacut-icon-edge-decremented'></i>
     packing:
       title: 798 - Dijagram rezanja
       option_problem_type: 799 - Tip
@@ -1229,7 +1229,7 @@ tab:
         cutting_dimensions: 989 - Ova šema sečenja koristi dimenzije **umanjene** za kantovanje.
         cutting_dimensions_increase_1d: 990 - Dimenzije uvećane za rezervu po dužini (**{{ length_increase }}**) podešenu na materijalu '{{ material_name }}'.
         cutting_dimensions_increase_2d: 991 - Dimenzije uvećane za rezerve podešene na materijalu '{{ material_name }}' u dužini (**{{ length_increase }}**) i širini (**{{ width_increase }}**).
-        cutting_dimensions_edge_decrement: 992 - Dimenzije smanjene za debljinu kant trake. <i class='ladb-opencutlist-icon-edge-decremented'></i>
+        cutting_dimensions_edge_decrement: 992 - Dimenzije smanjene za debljinu kant trake. <i class='ladb-lexacut-icon-edge-decremented'></i>
     labels:
       title: 993 - Oznake
       options_layout: 994 - Izgled
@@ -1243,7 +1243,7 @@ tab:
       remove_all_elements: $t(default.remove_all)
       part_order_strategy_help: |
         1003 - Podesite redosled svojstava za sortiranje oznaka.
-        Svako svojstvo može biti <i class="ladb-opencutlist-icon-sort-asc"></i> *rastuće* ili <i class="ladb-opencutlist-icon-sort-desc"></i> *opadajuće*.
+        Svako svojstvo može biti <i class="ladb-lexacut-icon-sort-asc"></i> *rastuće* ili <i class="ladb-lexacut-icon-sort-desc"></i> *opadajuće*.
       offset_help: |
         1004 - *Pomak* određuje poziciju **prve oznake** na **prvoj stranici**.
          Odaberite odgovarajuće polje.
@@ -1541,7 +1541,7 @@ tab:
         1221 - Delovi koji se uključuju na *listu dilova* moraju biti primerci **komponente**.
         Ako koristite samo grupe, pretvorite ih u komponente.
         Korišćenjem komponenata za delove, oni se mogu ponoviti bez dupliranja.
-      no_typed_materials: 1222 - Nanesite materijal na komade koji će biti uključeni u listu delova i definišite osobine tog materijala. (**$t(tab.materials.type_1)**, **$t(tab.materials.type_2)**, **$t(tab.materials.type_3)** ou **$t(tab.materials.type_5)**) dans l'onglet <i class="ladb-opencutlist-icon-materials"></i>**Matières**.
+      no_typed_materials: 1222 - Nanesite materijal na komade koji će biti uključeni u listu delova i definišite osobine tog materijala. (**$t(tab.materials.type_1)**, **$t(tab.materials.type_2)**, **$t(tab.materials.type_3)** ou **$t(tab.materials.type_5)**) dans l'onglet <i class="ladb-lexacut-icon-materials"></i>**Matières**.
     obsolete_base: 1223 - Da biste ostali sinhronizovani, morate ponovo generisati krojnu listu.
   materials:
     label: 1224 - Materijali
@@ -1688,12 +1688,12 @@ tab:
       title: 1320 - Izvoz u .skm datoteku
     option:
       minimize_on_smart_paint: 1321 - Minimizuj prozor nakon *'Bojenje delova sa...*'
-      minimize_on_smart_paint_help: 1322 - Kada je opcija aktivna, prozor OpenCutList se minimizira prilikom korišćenja funkcije *'Bojenje delova sa...'*.
+      minimize_on_smart_paint_help: 1322 - Kada je opcija aktivna, prozor LexaCut se minimizira prilikom korišćenja funkcije *'Bojenje delova sa...'*.
       general: 1323 - Uopšteno
       material_order_strategy: 1324 - Sortiranje materijala
       material_order_strategy_help: |
         1325 - Promenite redosled sledećih svojstava da bi ste definisali strategiju sortiranja materijala sa popisa.
-        Svako svojstvo može se sortirati u <i class="ladb-opencutlist-icon-sort-asc"> </i> *uzlazno* ili <i class="ladb-opencutlist-icon-sort-desc"> </i> *silazni* redosled.
+        Svako svojstvo može se sortirati u <i class="ladb-lexacut-icon-sort-asc"> </i> *uzlazno* ili <i class="ladb-lexacut-icon-sort-desc"> </i> *silazni* redosled.
       property_type: 1326 - Tip
       property_name: 1327 - Naziv
     delete:
@@ -1757,7 +1757,7 @@ tab:
       hide_tags: 1376 - Sakrij oznake
       hide_tags_help: 1377 - Ako je ova opcija odabrana, **oznake** neće biti prikazane.
       minimize_on_set_active: 1378 - Minimizuj nakon '$t(tab.outliner.tooltip.set_active_node)'
-      minimize_on_set_active_help: 1379 - Kada je opcija aktivna, prozor OpenCutList se minimizira prilikom korišćenja funkcije *'$t(tab.outliner.tooltip.set_active_node)'*.
+      minimize_on_set_active_help: 1379 - Kada je opcija aktivna, prozor LexaCut se minimizira prilikom korišćenja funkcije *'$t(tab.outliner.tooltip.set_active_node)'*.
     error:
       no_model: 1380 - Nijedan model nije otvoren. Morate mi dati više informacija ;)
       no_entities: 1381 - Nema sadržaja u vašem modelu !
@@ -1774,7 +1774,7 @@ tab:
     title: 1388 - Uvezi delove
     help: |
       1389 - Ova stranica vam omogućava uvoz komada (u obliku paralelepipeda) u vaš model iz [CSV] fajla (https://fr.wikipedia.org/wiki/Comma-separated_values).
-      Na taj način možete iskoristiti prednosti liste sečenja iz *OpenCutList* tako što ćete svoje komade generisati u nekom drugom softveru, a ne u *SketchUp-u*.
+      Na taj način možete iskoristiti prednosti liste sečenja iz *LexaCut* tako što ćete svoje komade generisati u nekom drugom softveru, a ne u *SketchUp-u*.
       Kliknite dugme **Otvori CSV fajl** da započnete.
     open_csv: 1390 - Otvorite CSV fajl
     import_to_model: 1391 - Uvezi u model
@@ -1851,10 +1851,10 @@ tab:
     label: 1442 - Uputstvo
     title: 1443 - Uputstvo
     help: |
-      1444 - Ovdje pronađite nepotpunu listu video zapisa koje je zajednica napravila kako se upotrebljava *OpenCutList*.
+      1444 - Ovdje pronađite nepotpunu listu video zapisa koje je zajednica napravila kako se upotrebljava *LexaCut*.
     submit: 1445 - Pošaljite videozapis
     submit_info: |
-      1446 - Ako ste napravili video o korišćenju **OpenCutList** i želite da ga prikažemo ovde?
+      1446 - Ako ste napravili video o korišćenju **LexaCut** i želite da ga prikažemo ovde?
        Pošaljite nam email na **lexacut@lexaplus.com**!
 
       *Video mora biti javan i na YouTube-u.*
@@ -1864,7 +1864,7 @@ tab:
     label: 1448 - Novosti
     title: 1449 - Novosti
     help: |
-      1450 - Najnovije vesti od *OpenCutList*.
+      1450 - Najnovije vesti od *LexaCut*.
     comment: 1451 - Komentar
     error:
       fail_to_load_list: 1452 - Nije moguće učitati listu vesti.
@@ -1872,7 +1872,7 @@ tab:
     label: 1453 - Forum
     title: 1454 - Forum
     help: |
-      1455 - Ovaj forum omogućava vam razmenu poruka sa korisničkom zajednicom i timom *OpenCutList*.
+      1455 - Ovaj forum omogućava vam razmenu poruka sa korisničkom zajednicom i timom *LexaCut*.
     create_conversation: 1456 - Započnite temu
     reply: 1457 - Odgovori
     tags: 1458 - Oznake
@@ -1888,24 +1888,24 @@ tab:
     label: 1461 - Sponzor
     title: 1462 - Sponzor
     description: |
-      1463 - **OpenCutList** je *Open Source* softver koji korisnici podržavaju putem <a href="https://opencollective.com/" target="_ blank">Open Collective</a> platforme.
+      1463 - **LexaCut** je *Open Source* softver koji korisnici podržavaju putem <a href="https://opencollective.com/" target="_ blank">Open Collective</a> platforme.
       Podržite ovaj projekat davanjem novčanog doprinosa!
     contribute: 1464 - Doprinesi
     backers: 1465 - {{ count }} podržali finansijski
     backers_plural: 1466 - {{ count }} podržali finansijski
-    ad: 1467 - OpenCutList je plaćeni softver
+    ad: 1467 - LexaCut je plaćeni softver
     objective: 1468 - Cilj
-    objective_slogan: 1469 - OpenCutList smo svi mi
+    objective_slogan: 1469 - LexaCut smo svi mi
     objective_title:
       default: 1470 - Ciljevi
       cuttingdiagram_export: 1471 - Plaćanje za izvoz liste rezanja
     objective_details:
       default: |
-        1472 - Stalno poboljšanje *OpenCutList* nam je važno i projekt će i dalje trebati vašu pomoć za svoje sledeće ažuriranje !
+        1472 - Stalno poboljšanje *LexaCut* nam je važno i projekt će i dalje trebati vašu pomoć za svoje sledeće ažuriranje !
       cuttingdiagram_export: |
-        1473 - Cilj nam je da *OpenCutList* zadovolji različite potrebe korisnika u funkciji *calepinage*.
+        1473 - Cilj nam je da *LexaCut* zadovolji različite potrebe korisnika u funkciji *calepinage*.
         Da bismo proširili opcije, želimo omogućiti izvoz dijagrama calepinage u **SVG** i **DXF** formatu.
-        Vaš doprinos u radu na ovim izvozima nam pomaže da vam omogućimo najbolje iskustvo sa *OpenCutList*.
+        Vaš doprinos u radu na ovim izvozima nam pomaže da vam omogućimo najbolje iskustvo sa *LexaCut*.
     objective_crowdfunding: |
       1474 - Razvoj ove nove funkcionalnosti izvršiće se putem **participativnog finansiranja** i započeće kada se postigne njegov **finansijski cilj**.
     objective_thanks: |
@@ -1952,26 +1952,26 @@ tab:
         1510 - Odaberite podešavanja iz **.json** datoteke za uvoz.
         Upozorenje: postojeća podešavanja sa istim imenom biće zamenjena uvezenom verzijom.
       import_global_presets_success: |
-        1511 - Podešavanja *OpenCutList* su uspešno uvezena.
-        Za primenu promena, **zatvorite** i ponovo **otvorite** prozor OpenCutList.
+        1511 - Podešavanja *LexaCut* su uspešno uvezena.
+        Za primenu promena, **zatvorite** i ponovo **otvorite** prozor LexaCut.
       dump_global_presets: 1512 - Izvoz podešavanja
       dump_model_presets: 1513 - Izvoz podešavanja modela
       reset_global_presets: 1514 - Resetuj podešavanja
       reset_global_presets_confirm: |
-        1515 - Spremate se da obrišete sva sačuvana *OpenCutList* podešavanja.
+        1515 - Spremate se da obrišete sva sačuvana *LexaCut* podešavanja.
         Ova akcija je nepovratna. **Sva podešavanja će biti izgubljena.**
         Potvrdite za nastavak.
       reset_global_presets_success: |
-        1516 - Podešavanja *OpenCutList* su vraćena na podrazumevane vrednosti.
-        Za primenu promena, **zatvorite** i ponovo **otvorite** prozor OpenCutList.
+        1516 - Podešavanja *LexaCut* su vraćena na podrazumevane vrednosti.
+        Za primenu promena, **zatvorite** i ponovo **otvorite** prozor LexaCut.
       reset_model_presets: 1517 - Resetuj podešavanja modela
       reset_model_presets_confirm: |
-        1518 - Spremate se da resetujete sva *OpenCutList* podešavanja za trenutni model.
+        1518 - Spremate se da resetujete sva *LexaCut* podešavanja za trenutni model.
         Ova radnja je nepovratna. **Sva podešavanja će biti vraćena na početne vrednosti.**
         Potvrdite za nastavak.
       reset_model_presets_success: |
-        1519 - Podešavanja *OpenCutList* za trenutni model su vraćena na podrazumevane vrednosti.
-        Za primenu promena, **zatvorite** i ponovo **otvorite** prozor OpenCutList.
+        1519 - Podešavanja *LexaCut* za trenutni model su vraćena na podrazumevane vrednosti.
+        Za primenu promena, **zatvorite** i ponovo **otvorite** prozor LexaCut.
       error:
         no_preset_to_export: 1520 - Nema unapred podešenih vrednosti za izvoz.
         no_preset_to_import: 1521 - Nema unapred podešenih vrednosti za uvoz.
@@ -1984,7 +1984,7 @@ tab:
     version: 1527 - Verzija
     credits: 1528 - Tehničke zasluge
     credits_authors: |
-      1529 - *OpenCutList* razvijaju [Boris Beaulant](https://www.lairdubois.fr/@borisbeaulant) i [Martin Müller](https://www.lairdubois.fr/@mobilarte). *Lista svih [contributors](https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension/graphs/contributors)*.
+      1529 - *LexaCut* razvijaju [Boris Beaulant](https://www.lairdubois.fr/@borisbeaulant) i [Martin Müller](https://www.lairdubois.fr/@mobilarte). *Lista svih [contributors](https://github.com/lairdubois/lairdubois-lexacut-sketchup-extension/graphs/contributors)*.
     credits_translations: 1530 - Prevodi
     credits_translators: |
       1531 - - Milan Divovic (*srpski*)
@@ -2005,7 +2005,7 @@ tab:
       - Zoltán Nagy, Roland Kovács (*mađarski*)
     credits_description: |
       1532 - Razvoj ovog dodatka deo je projekta platforme za deljenje [L'Air du Bois](https://www.lairdubois.fr).
-      Kao takav, dodatak je takođe *Open Source* i dostupan je pod [GNU GPLv3](https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension/blob/master/LICENSE) licencom na svom [dépôt GitHub](https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension).
+      Kao takav, dodatak je takođe *Open Source* i dostupan je pod [GNU GPLv3](https://github.com/lairdubois/lairdubois-lexacut-sketchup-extension/blob/master/LICENSE) licencom na svom [dépôt GitHub](https://github.com/lairdubois/lairdubois-lexacut-sketchup-extension).
     credits_runtime: 1533 - Vreme rada
     credits_development: 1534 - Razvoj
     credits_vendors: |

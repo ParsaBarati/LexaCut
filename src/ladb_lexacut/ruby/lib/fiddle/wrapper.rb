@@ -1,11 +1,11 @@
-module Ladb::OpenCutList
+module Ladb::LexaCut
 
   module Fiddle
   end
 
 end
 
-module Ladb::OpenCutList::Fiddle
+module Ladb::LexaCut::Fiddle
 
   require 'fiddle'
   require 'fiddle/import'
@@ -49,10 +49,10 @@ module Ladb::OpenCutList::Fiddle
 
         case Sketchup.platform
         when :platform_osx
-          lib_dir = File.join(Ladb::OpenCutList::PLUGIN_DIR, 'bin', 'osx', 'lib')
+          lib_dir = File.join(Ladb::LexaCut::PLUGIN_DIR, 'bin', 'osx', 'lib')
           lib_file = "lib#{_lib_name}.dylib"
         when :platform_win
-          lib_dir = File.join(Ladb::OpenCutList::PLUGIN_DIR, 'bin', 'win', 'lib')
+          lib_dir = File.join(Ladb::LexaCut::PLUGIN_DIR, 'bin', 'win', 'lib')
           lib_file = "#{_lib_name}.dll"
         else
           raise "Invalid platform : #{Sketchup.platform}"
@@ -62,14 +62,14 @@ module Ladb::OpenCutList::Fiddle
 
         raise "'#{_lib_name}' lib not found : #{lib_path}" unless File.exist?(lib_path)
 
-        if Ladb::OpenCutList::Plugin::IS_RBZ
+        if Ladb::LexaCut::Plugin::IS_RBZ
 
           # Copy lib to temp dir for 2 reasons:
           # - The system locks the file after loading. By uploading a copy, the file can still be updated.
           # - Fiddle lib loader seems to have troubles with non-ASCII encoded path :( -> temp dir is short file name compatible.
 
-          tmp_lib_dir = File.join(Ladb::OpenCutList::PLUGIN.temp_dir, 'fiddle')
-          tmp_lib_path = File.join(tmp_lib_dir, "#{Ladb::OpenCutList::EXTENSION_BUILD}_#{lib_file}")
+          tmp_lib_dir = File.join(Ladb::LexaCut::PLUGIN.temp_dir, 'fiddle')
+          tmp_lib_path = File.join(tmp_lib_dir, "#{Ladb::LexaCut::EXTENSION_BUILD}_#{lib_file}")
 
           # Create the directory if it doesn't exist
           Dir.mkdir(tmp_lib_dir) unless Dir.exist?(tmp_lib_dir)
@@ -95,7 +95,7 @@ module Ladb::OpenCutList::Fiddle
         @lib_loaded = true
 
       rescue Exception => e
-        Ladb::OpenCutList::PLUGIN.dump_exception(e, true, Sketchup.platform == :platform_win ? "To resolve this issue, try installing the Microsoft Visual C++ Redistributable available here :\nhttps://aka.ms/vs/17/release/vc_redist.x64.exe" : nil)
+        Ladb::LexaCut::PLUGIN.dump_exception(e, true, Sketchup.platform == :platform_win ? "To resolve this issue, try installing the Microsoft Visual C++ Redistributable available here :\nhttps://aka.ms/vs/17/release/vc_redist.x64.exe" : nil)
         @lib_loaded = false
       end
 

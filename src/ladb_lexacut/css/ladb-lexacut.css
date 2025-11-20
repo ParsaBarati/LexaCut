@@ -400,11 +400,12 @@ table.table-bordered > tbody > tr.table-row-section {
   right: 0;
 }
 .alert .countdown .countdown-bar {
-  background-color: #f77f00;
+  background-color: #3b82f6;
   height: 3px;
 }
 .ladb-bottombar {
   position: fixed;
+  top: 93vh;
   bottom: 0;
   right: 0;
   left: 90px;
@@ -470,7 +471,7 @@ table.table-bordered > tbody > tr.table-row-section {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  background: #3e3b33;
+  background: #1f2937;
   width: 90px;
 }
 .ladb-leftbar.ladb-full-width {
@@ -488,7 +489,7 @@ table.table-bordered > tbody > tr.table-row-section {
   display: block;
   text-align: center;
   text-decoration: none;
-  color: #d6d4cd;
+  color: #f9fafb;
   position: relative;
   padding-top: 12px;
   height: 80px;
@@ -496,7 +497,7 @@ table.table-bordered > tbody > tr.table-row-section {
 }
 .ladb-leftbar a.ladb-separator,
 .ladb-leftbar .ladb-toggle-handle.ladb-separator {
-  border-left: 1px solid #d6d4cd;
+  border-left: 1px solid #f9fafb;
 }
 .ladb-leftbar a.ladb-highlighted-sponsor,
 .ladb-leftbar .ladb-toggle-handle.ladb-highlighted-sponsor {
@@ -519,8 +520,8 @@ table.table-bordered > tbody > tr.table-row-section {
 }
 .ladb-leftbar a:hover,
 .ladb-leftbar .ladb-toggle-handle:hover {
-  background-color: #d6d4cd;
-  color: #3e3b33;
+  background-color: #374151;
+  color: #f9fafb;
 }
 .ladb-leftbar a:hover.ladb-highlighted-sponsor,
 .ladb-leftbar .ladb-toggle-handle:hover.ladb-highlighted-sponsor {
@@ -528,12 +529,12 @@ table.table-bordered > tbody > tr.table-row-section {
 }
 .ladb-leftbar a.ladb-active,
 .ladb-leftbar .ladb-toggle-handle.ladb-active {
-  background-color: #f77f00;
+  background-color: #3b82f6;
   color: #fff;
 }
 .ladb-leftbar a.ladb-active.ladb-highlighted-sponsor,
 .ladb-leftbar .ladb-toggle-handle.ladb-active.ladb-highlighted-sponsor {
-  background-color: #f77f00;
+  background-color: #3b82f6;
   color: #fff;
 }
 .ladb-leftbar a.ladb-active.ladb-sponsored,
@@ -549,7 +550,7 @@ table.table-bordered > tbody > tr.table-row-section {
   position: absolute;
   top: 5px;
   right: 5px;
-  background-color: #f77f00;
+  background-color: #3b82f6;
   border-radius: 5px;
   border-bottom-left-radius: 0;
   padding: 3px 5px;
@@ -560,7 +561,7 @@ table.table-bordered > tbody > tr.table-row-section {
   background-color: #888;
 }
 .ladb-leftbar .ladb-leftbar-subbar {
-  background-color: #3e3b33;
+  background-color: #1f2937;
   width: 90px;
   height: 80px;
 }
@@ -590,16 +591,16 @@ table.table-bordered > tbody > tr.table-row-section {
   border-color: #999;
 }
 .ladb-leftbar .ladb-leftbar-subbar:hover .ladb-subbar-toggle .ladb-toggle-handle {
-  background-color: #d6d4cd;
-  color: #3e3b33;
+  background-color: #374151;
+  color: #f9fafb;
 }
 .ladb-leftbar .ladb-leftbar-subbar:hover .ladb-subbar-toggle .ladb-toggle-arrow {
   display: block;
-  border-left-color: #d6d4cd;
+  border-left-color: #374151;
 }
 .ladb-leftbar .ladb-leftbar-subbar:hover .ladb-subbar-panel {
   display: block;
-  background-color: #3e3b33;
+  background-color: #1f2937;
   height: 80px;
 }
 .ladb-leftbar .ladb-leftbar-subbar .ladb-subbar-toggle {
@@ -607,7 +608,7 @@ table.table-bordered > tbody > tr.table-row-section {
   width: 95px;
 }
 .ladb-leftbar .ladb-leftbar-subbar .ladb-subbar-toggle.ladb-nav-active {
-  border-color: #f77f00;
+  border-color: #3b82f6;
 }
 .ladb-leftbar .ladb-leftbar-subbar .ladb-subbar-toggle .ladb-toggle-handle {
   float: left;
@@ -620,7 +621,7 @@ table.table-bordered > tbody > tr.table-row-section {
   width: 0;
   height: 0;
   border-style: solid;
-  border-color: transparent transparent transparent #3e3b33;
+  border-color: transparent transparent transparent #1f2937;
   border-width: 40px 0 40px 5px;
 }
 .ladb-leftbar .ladb-leftbar-subbar .ladb-subbar-panel {
@@ -656,7 +657,7 @@ body {
   overflow-x: hidden;
 }
 .ladb-dialog-tabs body {
-  background-color: #3e3b33;
+  background-color: #1f2937;
 }
 blockquote {
   font-size: 100%;
@@ -847,7 +848,7 @@ input[type=checkbox][disabled] + span {
 .ladb-loading .spinner > div {
   width: 12px;
   height: 12px;
-  background-color: #3e3b33;
+  background-color: #1f2937;
   margin: 0 2px;
   border-radius: 100%;
   display: inline-block;
@@ -1609,7 +1610,7 @@ a:focus,
   width: 100%;
   height: 100%;
   display: table;
-  background: #3e3b33;
+  background: #1f2937;
 }
 .ladb-zzz a {
   display: table-cell;
@@ -1767,7 +1768,7 @@ div.ladb-textinput > .ladb-textinput-tools.ladb-textinput-tools-right .ladb-text
   border-radius: 5px;
 }
 .ladb-textinput-color-picker ul li:hover {
-  border-color: #f77f00;
+  border-color: #3b82f6;
 }
 .ladb-textinput-size .ladb-textinput-input {
   width: 100%;
@@ -1898,7 +1899,7 @@ div.ladb-textinput > .ladb-textinput-tools.ladb-textinput-tools-right .ladb-text
   fill: #66afe9;
 }
 .ladb-editor-label-offset svg rect:hover {
-  stroke: #f77f00;
+  stroke: #3b82f6;
 }
 .ladb-editor-std-attributes .ladb-editor-std-attributes-rows .ladb-editor-std-attributes-row {
   margin-bottom: 10px;
@@ -2044,7 +2045,7 @@ div.ladb-textinput > .ladb-textinput-tools.ladb-textinput-tools-right .ladb-text
   top: 20px;
   left: 0;
   bottom: 0;
-  background-color: #3e3b33;
+  background-color: #1f2937;
 }
 #ladb_tab_settings .ladb-fake-dialog .btn {
   width: 34px;
@@ -2194,8 +2195,8 @@ div.ladb-textinput > .ladb-textinput-tools.ladb-textinput-tools-right .ladb-text
   min-height: 64px;
 }
 .ladb-material-box:hover {
-  border-color: #f77f00 !important;
-  box-shadow: 0 0 1px 1px #f77f00 !important;
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 1px 1px #3b82f6 !important;
 }
 .ladb-material-box.ladb-active {
   padding: 3px;
@@ -2644,7 +2645,7 @@ div.ladb-textinput > .ladb-textinput-tools.ladb-textinput-tools-right .ladb-text
   cursor: pointer;
 }
 #ladb_cutlist_modal_part svg .edge:hover .edge-inner {
-  fill: #f77f00 !important;
+  fill: #3b82f6 !important;
 }
 #ladb_cutlist_modal_part svg .edge.ladb-active .edge-inner {
   fill: #668EEE;
@@ -2660,9 +2661,9 @@ div.ladb-textinput > .ladb-textinput-tools.ladb-textinput-tools-right .ladb-text
   cursor: pointer;
 }
 #ladb_cutlist_modal_part svg .face:hover .face-inner {
-  fill: #f77f00 !important;
+  fill: #3b82f6 !important;
   fill-opacity: 0.2;
-  stroke: #f77f00 !important;
+  stroke: #3b82f6 !important;
   stroke-width: 2px;
 }
 #ladb_cutlist_modal_part svg .face.ladb-active .face-inner {
@@ -2689,7 +2690,7 @@ div.ladb-textinput > .ladb-textinput-tools.ladb-textinput-tools-right .ladb-text
   fill: url(#diagonalHatchOver) !important;
 }
 #ladb_cutlist_modal_part svg .increase:hover .edge-inner {
-  fill: #f77f00 !important;
+  fill: #3b82f6 !important;
 }
 #ladb_cutlist_modal_part svg .increase.ladb-active .increase-area {
   fill: url(#diagonalHatchActive);
@@ -2757,7 +2758,7 @@ div.ladb-textinput > .ladb-textinput-tools.ladb-textinput-tools-right .ladb-text
 .ladb-cutlist-cuttingdiagram-group svg .bar:hover .sheet-inner,
 .ladb-cutlist-cuttingdiagram-group svg .sheet:hover .bar-inner,
 .ladb-cutlist-cuttingdiagram-group svg .bar:hover .bar-inner {
-  fill: #f77f00;
+  fill: #3b82f6;
 }
 .ladb-cutlist-cuttingdiagram-group svg .sheet .sheet-outer,
 .ladb-cutlist-cuttingdiagram-group svg .bar .sheet-outer,
@@ -2781,19 +2782,19 @@ div.ladb-textinput > .ladb-textinput-tools.ladb-textinput-tools-right .ladb-text
   cursor: url('../img/cursor-highlight.png'), auto;
 }
 .ladb-cutlist-cuttingdiagram-group svg .part:hover .part-outer {
-  fill: #f77f00;
+  fill: #3b82f6;
 }
 .ladb-cutlist-cuttingdiagram-group svg .part:hover .part-inner {
-  fill: #ffe2c4;
+  fill: #fefeff;
   filter: none;
 }
 .ladb-cutlist-cuttingdiagram-group svg .part:hover .part-projection-shape {
-  fill: #ff982b;
+  fill: #6ca1f8;
   filter: none;
 }
 .ladb-cutlist-cuttingdiagram-group svg .part:hover .part-projection-machining {
-  fill: #ffbd78;
-  stroke: #ff982b;
+  fill: #b5d0fc;
+  stroke: #6ca1f8;
   filter: none;
 }
 .ladb-cutlist-cuttingdiagram-group svg .part .part-outer {
@@ -2821,10 +2822,10 @@ div.ladb-textinput > .ladb-textinput-tools.ladb-textinput-tools-right .ladb-text
   fill: #fafafa;
 }
 .ladb-cutlist-cuttingdiagram-group svg .leftover:hover .leftover-cross {
-  stroke: #f77f00;
+  stroke: #3b82f6;
 }
 .ladb-cutlist-cuttingdiagram-group svg .leftover:hover .leftover-bullet {
-  fill: #f77f00;
+  fill: #3b82f6;
 }
 .ladb-cutlist-cuttingdiagram-group svg .leftover .leftover-inner {
   fill: #fff;
@@ -2841,7 +2842,7 @@ div.ladb-textinput > .ladb-textinput-tools.ladb-textinput-tools-right .ladb-text
 }
 .ladb-cutlist-cuttingdiagram-group svg .cut:hover .cut-outer,
 .ladb-cutlist-cuttingdiagram-group svg .cut:hover .cut-inner {
-  fill: #f77f00;
+  fill: #3b82f6;
   fill-opacity: 1;
 }
 .ladb-cutlist-cuttingdiagram-group svg .cut.cut-trimming.cut-highlighted .cut-outer,
@@ -2853,7 +2854,7 @@ div.ladb-textinput > .ladb-textinput-tools.ladb-textinput-tools-right .ladb-text
 }
 .ladb-cutlist-cuttingdiagram-group svg .cut.cut-trimming:hover .cut-outer,
 .ladb-cutlist-cuttingdiagram-group svg .cut.cut-trimming:hover .cut-inner {
-  fill: #f77f00;
+  fill: #3b82f6;
 }
 .ladb-cutlist-cuttingdiagram-group svg .cut.cut-trimming:hover .cut-outer {
   fill-opacity: 1;
@@ -3055,7 +3056,7 @@ div.ladb-textinput > .ladb-textinput-tools.ladb-textinput-tools-right .ladb-text
   background: none;
 }
 .ladb-three-viewer.ladb-three-viewer-slide-layout .ladb-three-viewer-explode-factor-slider-wrapper .slider-track-high {
-  background-color: #f77f00;
+  background-color: #3b82f6;
 }
 @media print {
   .ladb-three-viewer.ladb-three-viewer-slide-layout {
@@ -3083,7 +3084,7 @@ div.ladb-textinput > .ladb-textinput-tools.ladb-textinput-tools-right .ladb-text
   justify-content: center;
 }
 .ladb-cutlist-packing-preview a.ladb-btn-scrollto:hover svg {
-  border-color: #f77f00;
+  border-color: #3b82f6;
 }
 .ladb-cutlist-packing-preview a.ladb-btn-scrollto svg {
   shape-rendering: geometricPrecision;
@@ -3150,14 +3151,14 @@ div.ladb-textinput > .ladb-textinput-tools.ladb-textinput-tools-right .ladb-text
   cursor: url('../img/cursor-highlight.png'), auto;
 }
 .ladb-cutlist-packing-group svg .item:hover .item-outer {
-  fill: #ffe2c4;
+  fill: #fefeff;
 }
 .ladb-cutlist-packing-group svg .item:hover .item-inner {
-  fill: #ffe2c4;
+  fill: #fefeff;
   filter: none;
 }
 .ladb-cutlist-packing-group svg .item:hover .item-projection-shape {
-  fill: #ff982b;
+  fill: #6ca1f8;
   filter: none;
 }
 .ladb-cutlist-packing-group svg .item .item-outer {
@@ -3182,14 +3183,14 @@ div.ladb-textinput > .ladb-textinput-tools.ladb-textinput-tools-right .ladb-text
 }
 .ladb-cutlist-packing-group svg.problem-type-rectangle .item:hover .item-outer,
 .ladb-cutlist-packing-group svg.problem-type-irregular .item:hover .item-outer {
-  stroke: #f77f00;
+  stroke: #3b82f6;
 }
 .ladb-cutlist-packing-group svg .leftover {
   fill: none;
   stroke: none;
 }
 .ladb-cutlist-packing-group svg .leftover:hover .leftover-inner {
-  fill: #f77f00;
+  fill: #3b82f6;
   opacity: 0.3;
 }
 .ladb-cutlist-packing-group svg .leftover .leftover-inner {
@@ -3201,7 +3202,7 @@ div.ladb-textinput > .ladb-textinput-tools.ladb-textinput-tools-right .ladb-text
 }
 .ladb-cutlist-packing-group svg .cut:hover .cut-outer,
 .ladb-cutlist-packing-group svg .cut:hover .cut-inner {
-  fill: #f77f00;
+  fill: #3b82f6;
 }
 .ladb-cutlist-packing-group svg .cut:hover .cut-outer {
   fill-opacity: 1;
@@ -3506,8 +3507,8 @@ div.ladb-textinput > .ladb-textinput-tools.ladb-textinput-tools-right .ladb-text
   min-height: 64px;
 }
 .ladb-tutorial-box:hover {
-  border-color: #f77f00 !important;
-  box-shadow: 0 0 1px 1px #f77f00 !important;
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 1px 1px #3b82f6 !important;
 }
 .ladb-tutorial-box.ladb-active {
   padding: 3px;
@@ -3581,8 +3582,8 @@ div.ladb-textinput > .ladb-textinput-tools.ladb-textinput-tools-right .ladb-text
   min-height: 64px;
 }
 .ladb-news-update-box:hover {
-  border-color: #f77f00 !important;
-  box-shadow: 0 0 1px 1px #f77f00 !important;
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 1px 1px #3b82f6 !important;
 }
 .ladb-news-update-box.ladb-active {
   padding: 3px;
@@ -3665,8 +3666,8 @@ div.ladb-textinput > .ladb-textinput-tools.ladb-textinput-tools-right .ladb-text
   min-height: 64px;
 }
 .ladb-forum-conversation-box:hover {
-  border-color: #f77f00 !important;
-  box-shadow: 0 0 1px 1px #f77f00 !important;
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 1px 1px #3b82f6 !important;
 }
 .ladb-forum-conversation-box.ladb-active {
   padding: 3px;
@@ -3832,8 +3833,8 @@ a.ladb-forum-tag.ladb-active {
   min-height: 64px;
 }
 .ladb-sponsor-member-box:hover {
-  border-color: #f77f00 !important;
-  box-shadow: 0 0 1px 1px #f77f00 !important;
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 1px 1px #3b82f6 !important;
 }
 .ladb-sponsor-member-box.ladb-active {
   padding: 3px;

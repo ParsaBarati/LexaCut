@@ -1,4 +1,4 @@
-module Ladb::OpenCutList
+module Ladb::LexaCut
 
   require_relative '../../helper/material_attributes_caching_helper'
   require_relative '../../helper/definition_attributes_caching_helper'

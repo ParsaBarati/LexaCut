@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Ladb::OpenCutList::Zip
+module Ladb::LexaCut::Zip
   # InputStream is the basic class for reading zip entries in a
   # zip file. It is possible to create a InputStream object directly,
   # passing the zip file name to the constructor, but more often than not
@@ -43,7 +43,7 @@ module Ladb::OpenCutList::Zip
   class InputStream
     CHUNK_SIZE = 32_768
 
-    include Ladb::OpenCutList::Zip::IOExtras::AbstractInputStream
+    include Ladb::LexaCut::Zip::IOExtras::AbstractInputStream
 
     # Opens the indicated zip file. An exception is thrown
     # if the specified offset in the specified filename is
@@ -54,8 +54,8 @@ module Ladb::OpenCutList::Zip
     def initialize(context, offset: 0, decrypter: nil)
       super()
       @archive_io = get_io(context, offset)
-      @decompressor = Ladb::OpenCutList::Zip::NullDecompressor
-      @decrypter = decrypter || Ladb::OpenCutList::Zip::NullDecrypter.new
+      @decompressor = Ladb::LexaCut::Zip::NullDecompressor
+      @decrypter = decrypter || Ladb::LexaCut::Zip::NullDecrypter.new
       @current_entry = nil
       @complete_entry = nil
     end
@@ -117,7 +117,7 @@ module Ladb::OpenCutList::Zip
 
       def open_buffer(filename_or_io, offset: 0)
         warn 'open_buffer is deprecated!!! Use open instead!'
-        Ladb::OpenCutList::Zip::InputStream.open(filename_or_io, offset: offset)
+        Ladb::LexaCut::Zip::InputStream.open(filename_or_io, offset: offset)
       end
     end
 
@@ -136,7 +136,7 @@ module Ladb::OpenCutList::Zip
     end
 
     def open_entry
-      @current_entry = Ladb::OpenCutList::Zip::Entry.read_local_entry(@archive_io)
+      @current_entry = Ladb::LexaCut::Zip::Entry.read_local_entry(@archive_io)
       return if @current_entry.nil?
 
       if @current_entry.encrypted? && @decrypter.kind_of?(NullDecrypter)
@@ -159,11 +159,11 @@ module Ladb::OpenCutList::Zip
       header = @archive_io.read(@decrypter.header_bytesize)
       @decrypter.reset!(header)
 
-      Ladb::OpenCutList::Zip::DecryptedIo.new(@archive_io, @decrypter)
+      Ladb::LexaCut::Zip::DecryptedIo.new(@archive_io, @decrypter)
     end
 
     def get_decompressor
-      return Ladb::OpenCutList::Zip::NullDecompressor if @current_entry.nil?
+      return Ladb::LexaCut::Zip::NullDecompressor if @current_entry.nil?
 
       decompressed_size =
         if @current_entry.incomplete? && @current_entry.crc == 0 \
@@ -173,11 +173,11 @@ module Ladb::OpenCutList::Zip
           @current_entry.size
         end
 
-      decompressor_class = Ladb::OpenCutList::Zip::Decompressor.find_by_compression_method(
+      decompressor_class = Ladb::LexaCut::Zip::Decompressor.find_by_compression_method(
         @current_entry.compression_method
       )
       if decompressor_class.nil?
-        raise Ladb::OpenCutList::Zip::CompressionMethodError, @current_entry.compression_method
+        raise Ladb::LexaCut::Zip::CompressionMethodError, @current_entry.compression_method
       end
 
       decompressor_class.new(@decrypted_io, decompressed_size)

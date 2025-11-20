@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Ladb::OpenCutList::Zip
+module Ladb::LexaCut::Zip
   module IOExtras # :nodoc:
     # Implements many of the output convenience methods of IO.
     # relies on <<

@@ -3,7 +3,7 @@
 #
 # Main Driver for BinPacking1D
 #
-module Ladb::OpenCutList::BinPacking1D
+module Ladb::LexaCut::BinPacking1D
   #
   # Implements the main running function.
   #

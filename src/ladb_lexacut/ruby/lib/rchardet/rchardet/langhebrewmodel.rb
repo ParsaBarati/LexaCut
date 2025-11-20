@@ -28,7 +28,7 @@
 # 02110-1301  USA
 ######################### END LICENSE BLOCK #########################
 
-module Ladb::OpenCutList::CharDet
+module Ladb::LexaCut::CharDet
 # 255: Control characters that usually does not exist in any text
 # 254: Carriage/Return
 # 253: symbol (punctuation) that does not belong to word

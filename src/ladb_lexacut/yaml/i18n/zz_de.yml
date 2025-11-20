@@ -2,7 +2,7 @@ _label: 1 - Deutsch
 _disabled_msg: |
   2 - Diese Sprache wurde noch nicht **vollständig übersetzt**.
 
-  Um bei der Fertigstellung der Übersetzung zu helfen, konsultieren Sie bitte die [OpenCutList Documentation](https://docs.opencutlist.org/for-translators/general).
+  Um bei der Fertigstellung der Übersetzung zu helfen, konsultieren Sie bitte die [LexaCut Documentation](https://docs.lexacut.org/for-translators/general).
 _reload_msg: 3 - Um alle Änderungen zu berücksichtigen, müssen Sie dieses Fenster **schließen** und **wieder öffnen**.
 _description: 4 - Holzlistengenerator für Tischler/Schreiner/Zimmerer. Open Source, crowdfunded und einfach zu bedienen ;)
 default:
@@ -94,7 +94,7 @@ default:
   deprecated: 90 - Veraltet
 core:
   menu:
-    submenu: 91 - OpenCutList
+    submenu: 91 - LexaCut
     item:
       generate_cutlist: 92 - Holzliste generieren
       edit_part_properties: $t(tab.cutlist.edit_part_properties)
@@ -114,10 +114,10 @@ core:
       smart_export: $t(core.toolbar.command.smart_export)
       reset_dialog_position: 108 - Fensterposition zurücksetzen
   toolbar:
-    name: 109 - OpenCutList
+    name: 109 - LexaCut
     tools: 110 - Werkzeuge
     command:
-      dialog: 111 - OpenCutList
+      dialog: 111 - LexaCut
       smart_draw: 112 - Teile zeichnen
       smart_handle: 113 - Teile handhaben
       smart_paint: 114 - Teile einfärben
@@ -143,11 +143,11 @@ core:
     report_a_bug: 126 - Fehler melden
   warning:
     dev: |
-      127 - Sie verwenden eine **Entwicklerversion** Version von *OpenCutList*.
+      127 - Sie verwenden eine **Entwicklerversion** Version von *LexaCut*.
       Diese Version ist nur zum Testen verfügbar.
       Es wird nicht empfohlen, diese in der Produktion zu verwenden.
 
-      Um einen Fehler zu melden: <a href="mailto:lexacut@lexaplus.com?subject=Bug%20Report%20OpenCutList%20{{ version }}%20(build: {{ build }})" target="_blank">lexacut@lexaplus.com</a>.
+      Um einen Fehler zu melden: <a href="mailto:lexacut@lexaplus.com?subject=Bug%20Report%20LexaCut%20{{ version }}%20(build: {{ build }})" target="_blank">lexacut@lexaplus.com</a>.
   error:
     extern: '128 - Externer Fehler: **{{ error }}**'
     feature_unavailable: 129 - Diese Funktion erfordert SketchUp {{ version }} oder höher
@@ -166,12 +166,12 @@ core:
     layers_change: 138 - Tags im Modell wurden verändert.
     drawing_change: 139 - Die Zeichung des aktiven Modells wurde geändert.
   upgrade:
-    unavailable: 140 - Die neueste Version von *OpenCutList* wurde nicht gefunden.
+    unavailable: 140 - Die neueste Version von *LexaCut* wurde nicht gefunden.
     available: |
-      141 - Eine neue Version von *OpenCutList* ist verfügbar.
+      141 - Eine neue Version von *LexaCut* ist verfügbar.
       Aktualisieren Sie, um die neuesten Funktionen zu erhalten!
     up_to_date: |
-      142 - Sie haben die neueste Version von *OpenCutList*.
+      142 - Sie haben die neueste Version von *LexaCut*.
 
       *Unterstützen Sie das Projekt finanziell, damit wir noch mehr Verbesserungen für Sie einbauen können!*
     downloading: 143 - Ladevorgang läuft
@@ -181,7 +181,7 @@ core:
     manual_download: 147 - Manuelles Herunterladen
     zzz: 148 - Ich ruhe mich nach meiner Aktualisierung aus. Um mich wieder in Topform zu bringen, müssen Sie SketchUp neu starten.
     success: |
-      149 - Die Aktualisierung von OpenCutList ist abgeschlossen!
+      149 - Die Aktualisierung von LexaCut ist abgeschlossen!
 
       STARTEN SIE SKETCHUP neu, um die Änderungen zu aktivieren.
     error:
@@ -457,7 +457,7 @@ tab:
         367 - Definieren Sie hier die Anzahl der Schichten, die das gezeichnete Teil in seiner Dicke unterteilen.
 
         *Beispiel:* Wenn Sie ein Teil mit einer Dicke von *38mm* gezeichnet haben und es durch Zusammenkleben von zwei *19mm* Platten herstellen wollen, geben Sie **2** in dieses Feld ein.
-        *OpenCutList zählt dann 2 Teile mit 19mm Dicke statt 1 Teil mit 38mm Dicke.*
+        *LexaCut zählt dann 2 Teile mit 19mm Dicke statt 1 Teil mit 38mm Dicke.*
       description: 368 - Beschreibung
       description_help: |
         369 - Die *Beschreibung* ermöglicht es Ihnen, benutzerdefinierte Informationen zu jeder Teildefinition anzugeben.
@@ -531,7 +531,7 @@ tab:
       dynamic_attributes_name_help: |
         411 - Ist diese Option aktiv, wird die Bezeichnung aus dem Attribut *Name* der dynamischen Komponenten gelesen, sofern es definiert ist.
 
-        <i class='ladb-opencutlist-icon-warning'></i> Die Instanzen von Teilen mit der gleichen Definition werden separat berücksichtigt, falls das Attribut *Name* nicht identisch ist.
+        <i class='ladb-lexacut-icon-warning'></i> Die Instanzen von Teilen mit der gleichen Definition werden separat berücksichtigt, falls das Attribut *Name* nicht identisch ist.
       part_number_with_letters: 412 - Buchstaben zur Aufzählung der Teile verwenden
       part_number_with_letters_help: 413 - Ist diese Option aktiv, werden Teile mittels Buchstaben (A, B, C, ... Z, AA, AB, ...) durchnummeriert.
       part_number_sequence_by_group: 414 - Teilenummerierung für jede Gruppe neu initialisieren
@@ -560,17 +560,17 @@ tab:
       hide_material_colors: 434 - Farben von Materialien ausblenden
       hide_material_colors_help: 435 - Ist diese Option aktiv, werden die Farben der Materialien nicht angezeigt.
       minimize_on_highlight: 436 - Minimieren nach *'$t(tab.cutlist.highlight_part)...'*
-      minimize_on_highlight_help: 437 - Wenn diese Option aktiviert ist, wird das OpenCutList Fenster minimiert, wenn die Funktion *'$t(tab.cutlist.highlight_part)'* verwendet wird.
+      minimize_on_highlight_help: 437 - Wenn diese Option aktiviert ist, wird das LexaCut Fenster minimiert, wenn die Funktion *'$t(tab.cutlist.highlight_part)'* verwendet wird.
       general: 438 - Allgemein
       sorting: 439 - Sortierung
       group_order_strategy: 440 - Gruppensortierung
       group_order_strategy_help: |
         441 - Die Sortierreihenfolge der Gruppen wird durch die Anordnung der folgenden Kacheln definiert.
-        Eigenschaften können in <i class="ladb-opencutlist-icon-sort-asc"></i> *aufsteigender* oder <i class="ladb-opencutlist-icon-sort-desc"></i> *absteigender* Reihenfolge sortiert werden.
+        Eigenschaften können in <i class="ladb-lexacut-icon-sort-asc"></i> *aufsteigender* oder <i class="ladb-lexacut-icon-sort-desc"></i> *absteigender* Reihenfolge sortiert werden.
       part_order_strategy: 442 - Teilesortierung
       part_order_strategy_help: |
         443 - Die Sortierreihenfolge der Teile wird durch die Anordnung der folgenden Kacheln definiert.
-        Eigenschaften können in <i class="ladb-opencutlist-icon-sort-asc"></i> *aufsteigender* oder <i class="ladb-opencutlist-icon-sort-desc"></i> *absteigender* Reihenfolge sortiert werden.
+        Eigenschaften können in <i class="ladb-lexacut-icon-sort-asc"></i> *aufsteigender* oder <i class="ladb-lexacut-icon-sort-desc"></i> *absteigender* Reihenfolge sortiert werden.
       dimension_column_order_strategy: 444 - Reihenfolge der Spalten
       dimension_column_order_strategy_help: |
         445 - Die Reihenfolge der Dimensionsspalten wird durch die Anordnung der Kacheln definiert.
@@ -980,7 +980,7 @@ tab:
         cutting_dimensions: 794 - Dieser Schnittplan verwendet die **Rohmaße** der Teile.
         cutting_dimensions_increase_1d: '795 - Übermaß wurde auf dem Material ''{{ material_name }}'' konfiguriert: Längenzumaß von (**{{ length_increase }}**).'
         cutting_dimensions_increase_2d: '796 - Übermaße wurden auf dem Material ''{{ material_name }}'' konfiguriert: Längenzumaß (**{{ length_increase }}**) und Breitenzumaß (**{{ width_increase }}**).'
-        cutting_dimensions_edge_decrement: 797 - Maße reduziert um die Materialstärke der Kantenbänder. <i class='ladb-opencutlist-icon-edge-decremented'></i>
+        cutting_dimensions_edge_decrement: 797 - Maße reduziert um die Materialstärke der Kantenbänder. <i class='ladb-lexacut-icon-edge-decremented'></i>
     packing:
       title: 798 - Schnittplan
       option_problem_type: 799 - Typ
@@ -1229,7 +1229,7 @@ tab:
         cutting_dimensions: 989 - Dieser Schnittplan verwendet die **Rohmaße** der Teile.
         cutting_dimensions_increase_1d: '990 - Übermaß wurde auf dem Material ''{{ material_name }}'' konfiguriert: Längenzumaß von (**{{ length_increase }}**).'
         cutting_dimensions_increase_2d: '991 - Übermaße wurden auf dem Material ''{{ material_name }}'' konfiguriert: Längenzumaß (**{{ length_increase }}**) und Breitenzumaß (**{{ width_increase }}**).'
-        cutting_dimensions_edge_decrement: 992 - Maße reduziert um die Materialstärke der Kantenbänder. <i class='ladb-opencutlist-icon-edge-decremented'></i>
+        cutting_dimensions_edge_decrement: 992 - Maße reduziert um die Materialstärke der Kantenbänder. <i class='ladb-lexacut-icon-edge-decremented'></i>
     labels:
       title: 993 - Etiketten
       options_layout: 994 - Gestaltung
@@ -1243,7 +1243,7 @@ tab:
       remove_all_elements: $t(default.remove_all)
       part_order_strategy_help: |
         1003 - Die Sortierreihenfolge der Etiketten wird durch die Anordnung der folgenden Kacheln definiert.
-        Jede Eigenschaft kann in <i class="ladb-opencutlist-icon-sort-asc"></i> *aufsteigender* oder <i class="ladb-opencutlist-icon-sort-desc"></i> *absteigender* Reihenfolge sortiert werden.
+        Jede Eigenschaft kann in <i class="ladb-lexacut-icon-sort-asc"></i> *aufsteigender* oder <i class="ladb-lexacut-icon-sort-desc"></i> *absteigender* Reihenfolge sortiert werden.
       offset_help: |
         1004 - Mit dem *Versatz* können Sie die Position des **ersten Etiketts** auf der **ersten Seite** festlegen.
         Wählen Sie das Kästchen aus, das Ihrer Wahl entspricht.
@@ -1541,7 +1541,7 @@ tab:
         1221 - Zur Berücksichtigung in der *Holzliste* müssen die Teile Instanzen einer **Komponente** sein.
         Falls Sie ausschliesslich Gruppen verwenden, müssen Sie diese in Komponenten konvertieren.
         Durch die Verwendung von Komponenten können Teile repliziert werden ohne sie zu kopieren.
-      no_typed_materials: 1222 - Tragen Sie ein Material auf die Teile auf, die Sie in Ihrer Holzliste sehen möchten und definieren Sie den Typ dieses Materials (**$t(tab.materials.type_1)**, **$t(tab.materials.type_2)**, **$t(tab.materials.type_3)** oder **$t(tab.materials.type_5)**) im Tab <i class="ladb-opencutlist-icon-materials"></i> **Materialien**.
+      no_typed_materials: 1222 - Tragen Sie ein Material auf die Teile auf, die Sie in Ihrer Holzliste sehen möchten und definieren Sie den Typ dieses Materials (**$t(tab.materials.type_1)**, **$t(tab.materials.type_2)**, **$t(tab.materials.type_3)** oder **$t(tab.materials.type_5)**) im Tab <i class="ladb-lexacut-icon-materials"></i> **Materialien**.
     obsolete_base: 1223 - Um synchron zu bleiben, müssen Sie die Holzliste neu generieren.
   materials:
     label: 1224 - Materialien
@@ -1688,12 +1688,12 @@ tab:
       title: 1320 - In .skm Datei exportieren
     option:
       minimize_on_smart_paint: 1321 - Reduzieren nach *'Teile einfärben mit...'*
-      minimize_on_smart_paint_help: 1322 - Wenn diese Option aktiviert ist, wird das OpenCutList-Fenster verkleinert, wenn die Funktion *'Teile einfärben mit...'* verwendet wird.
+      minimize_on_smart_paint_help: 1322 - Wenn diese Option aktiviert ist, wird das LexaCut-Fenster verkleinert, wenn die Funktion *'Teile einfärben mit...'* verwendet wird.
       general: 1323 - Allgemein
       material_order_strategy: 1324 - Material-Sortierung
       material_order_strategy_help: |
         1325 - Die Sortierreihenfolge der Materialien wird durch die Anordnung der folgenden Kacheln definiert.
-        Eigenschaften können in <i class="ladb-opencutlist-icon-sort-asc"></i> *aufsteigender* oder <i class="ladb-opencutlist-icon-sort-desc"></i> *absteigender* Reihenfolge sortiert werden.
+        Eigenschaften können in <i class="ladb-lexacut-icon-sort-asc"></i> *aufsteigender* oder <i class="ladb-lexacut-icon-sort-desc"></i> *absteigender* Reihenfolge sortiert werden.
       property_type: 1326 - Typ
       property_name: 1327 - Bezeichnung
     delete:
@@ -1757,7 +1757,7 @@ tab:
       hide_tags: 1376 - Badges ausblenden
       hide_tags_help: 1377 - Ist diese Option aktiv, werden **Badges** nicht angezeigt.
       minimize_on_set_active: 1378 - Verkleinern nach '$t(tab.outliner.tooltip.set_active_node)'
-      minimize_on_set_active_help: 1379 - Wenn diese Option aktiviert ist, wird das OpenCutList-Fenster minimiert, wenn die Funktion *'$t(tab.outliner.tooltip.set_active_node)'* verwendet wird.
+      minimize_on_set_active_help: 1379 - Wenn diese Option aktiviert ist, wird das LexaCut-Fenster minimiert, wenn die Funktion *'$t(tab.outliner.tooltip.set_active_node)'* verwendet wird.
     error:
       no_model: 1380 - Kein Modell ist offen. Sie müssen mir mehr Information geben ;)
       no_entities: 1381 - Ihr Modell ist leer!
@@ -1774,7 +1774,7 @@ tab:
     title: 1388 - Teile importieren
     help: |
       1389 - An dieser Stelle können Sie Teile, als rechteckige Volumen (quaderförmig), aus einer [CSV](https://de.wikipedia.org/wiki/Comma-separated_values) Datei in Ihr Modell importieren.
-      Sie können damit die Holzliste von *OpenCutList* verwenden, die Teile jedoch mit einer anderen Software als *SketchUp* generieren.
+      Sie können damit die Holzliste von *LexaCut* verwenden, die Teile jedoch mit einer anderen Software als *SketchUp* generieren.
       Klicken Sie auf **CSV-Datei öffnen** zum Starten.
     open_csv: 1390 - CSV-Datei öffnen
     import_to_model: 1391 - Ins Modell importieren
@@ -1851,10 +1851,10 @@ tab:
     label: 1442 - Tutorials
     title: 1443 - Tutorials
     help: |
-      1444 - Hier finden Sie eine nicht abschließende Liste von Videos, die von der Gemeinschaft rund um die Verwendung von *OpenCutList* erstellt wurden.
+      1444 - Hier finden Sie eine nicht abschließende Liste von Videos, die von der Gemeinschaft rund um die Verwendung von *LexaCut* erstellt wurden.
     submit: 1445 - Video einreichen
     submit_info: |
-      1446 - Sie haben ein Video erstellt, in dem Sie die Verwendung von **OpenCutList** vorstellen und möchten, dass es hier erscheint?
+      1446 - Sie haben ein Video erstellt, in dem Sie die Verwendung von **LexaCut** vorstellen und möchten, dass es hier erscheint?
       Lassen Sie es uns wissen, indem Sie uns an **lexacut@lexaplus.com** schreiben!
 
       *Das Video muss öffentlich sein und auf YouTube gehostet werden.*
@@ -1864,7 +1864,7 @@ tab:
     label: 1448 - Neuigkeiten
     title: 1449 - Neuigkeiten
     help: |
-      1450 - Die aktuellen Nachrichten von *OpenCutList*.
+      1450 - Die aktuellen Nachrichten von *LexaCut*.
     comment: 1451 - Kommentieren
     error:
       fail_to_load_list: 1452 - Nachrichtenliste konnte nicht geladen werden.
@@ -1872,7 +1872,7 @@ tab:
     label: 1453 - Forum
     title: 1454 - Forum
     help: |
-      1455 - In diesem Bereich können Sie sich mit der *OpenCutList*-Community und dem Team austauschen.
+      1455 - In diesem Bereich können Sie sich mit der *LexaCut*-Community und dem Team austauschen.
     create_conversation: 1456 - Diskussion starten
     reply: 1457 - Antworten
     tags: 1458 - Tags
@@ -1888,24 +1888,24 @@ tab:
     label: 1461 - Sponsoring
     title: 1462 - Sponsoring
     description: |
-      1463 - **OpenCutList** ist *Open Source* Software, welche durch ihre Benutzer via <a href="https://opencollective.com/" target="_blank">Open Collective</a> unterstützt wird.
+      1463 - **LexaCut** ist *Open Source* Software, welche durch ihre Benutzer via <a href="https://opencollective.com/" target="_blank">Open Collective</a> unterstützt wird.
       Unterstützen Sie dieses Projekt, indem Sie einen finanziellen Beitrag leisten!
     contribute: 1464 - Beitragen
     backers: 1465 - {{ count }} finanzieller Sponsor
     backers_plural: 1466 - {{ count }} finanzielle Sponsoren
-    ad: 1467 - OpenCutList ist nicht umsonst
+    ad: 1467 - LexaCut ist nicht umsonst
     objective: 1468 - Ziel
-    objective_slogan: 1469 - OpenCutList sind wir alle
+    objective_slogan: 1469 - LexaCut sind wir alle
     objective_title:
       default: 1470 - Ziele
       cuttingdiagram_export: 1471 - Finanzierung von Schnittplan-Exporten
     objective_details:
       default: |
-        1472 - Die kontinuierliche Verbesserung von *OpenCutList* ist uns wichtig und das Projekt braucht weiterhin Ihre Hilfe für das nächste Update!
+        1472 - Die kontinuierliche Verbesserung von *LexaCut* ist uns wichtig und das Projekt braucht weiterhin Ihre Hilfe für das nächste Update!
       cuttingdiagram_export: |
-        1473 - Es ist uns wichtig, dass *OpenCutList* an die vielfältigen Anforderungen der Anwender an die *Schnittplan*-Funktion angepasst werden kann.
+        1473 - Es ist uns wichtig, dass *LexaCut* an die vielfältigen Anforderungen der Anwender an die *Schnittplan*-Funktion angepasst werden kann.
         Um die Möglichkeiten weiter auszubauen, möchten wir den Export von Schnittplänen im **SVG**- und **DXF**-Format ermöglichen.
-        Indem Sie uns die Mittel zur Verfügung stellen, um diese Exporte zu bearbeiten, geben Sie uns die Möglichkeit, Ihnen zu helfen, das Beste aus *OpenCutList* herauszuholen.
+        Indem Sie uns die Mittel zur Verfügung stellen, um diese Exporte zu bearbeiten, geben Sie uns die Möglichkeit, Ihnen zu helfen, das Beste aus *LexaCut* herauszuholen.
     objective_crowdfunding: |
       1474 - Die Entwicklung von neuen Funktionen wird durch **Beteiligungsfinanzierung** erfolgen und kann beginnen, sobald das **Finanzielle Ziel** erreicht ist.
     objective_thanks: |
@@ -1952,26 +1952,26 @@ tab:
         1510 - Wählen Sie die Voreinstellungen in der **.json**-Datei aus, die Sie importieren möchten.
         Bitte beachten Sie, dass eine bereits vorhandene Voreinstellung mit identischem Namen durch die importierte Version ersetzt wird.
       import_global_presets_success: |
-        1511 - Die Voreinstellungen *OpenCutList* wurden erfolgreich importiert.
-        Um die Änderungen zu berücksichtigen, müssen Sie das Fenster von OpenCutList **schließen** und **neu öffnen**.
+        1511 - Die Voreinstellungen *LexaCut* wurden erfolgreich importiert.
+        Um die Änderungen zu berücksichtigen, müssen Sie das Fenster von LexaCut **schließen** und **neu öffnen**.
       dump_global_presets: 1512 - Dump der Voreinstellungen
       dump_model_presets: 1513 - Dump der Modell-Einstellungen
       reset_global_presets: 1514 - Voreinstellungen reinitialisieren
       reset_global_presets_confirm: |
-        1515 - Sie sind dabei, alle Ihre gespeicherten *OpenCutList*-Voreinstellungen zurückzusetzen.
+        1515 - Sie sind dabei, alle Ihre gespeicherten *LexaCut*-Voreinstellungen zurückzusetzen.
         Dieser Vorgang ist endgültig. **Alle Voreinstellungen gehen verloren**.
         Bestätigen Sie, um fortzufahren.
       reset_global_presets_success: |
-        1516 - Die *OpenCutList*-Voreinstellungen wurden zurückgesetzt.
-        Um die Änderungen zu berücksichtigen, müssen Sie das Fenster von OpenCutList **schließen** und **neu öffnen**.
+        1516 - Die *LexaCut*-Voreinstellungen wurden zurückgesetzt.
+        Um die Änderungen zu berücksichtigen, müssen Sie das Fenster von LexaCut **schließen** und **neu öffnen**.
       reset_model_presets: 1517 - Modell-Einstellungen reinitialiseren
       reset_model_presets_confirm: |
-        1518 - Sie sind dabei, alle *OpenCutList*-Einstellungen für das aktuelle Modell zurückzusetzen.
+        1518 - Sie sind dabei, alle *LexaCut*-Einstellungen für das aktuelle Modell zurückzusetzen.
         Dieser Vorgang ist endgültig. **Alle Einstellungen werden auf die Standardwerte zurückgesetzt.**
         Bestätigen Sie, um fortzufahren.
       reset_model_presets_success: |
-        1519 - Die Einstellungen von *OpenCutList* für das aktuelle Modell wurden zurückgesetzt.
-        Um die Änderungen zu berücksichtigen, müssen Sie das Fenster von OpenCutList **schließen** und **neu öffnen**.
+        1519 - Die Einstellungen von *LexaCut* für das aktuelle Modell wurden zurückgesetzt.
+        Um die Änderungen zu berücksichtigen, müssen Sie das Fenster von LexaCut **schließen** und **neu öffnen**.
       error:
         no_preset_to_export: 1520 - Keine Voreinstellungen zu exportieren.
         no_preset_to_import: 1521 - Keine Voreinstellungen zu importieren.
@@ -1984,7 +1984,7 @@ tab:
     version: 1527 - Version
     credits: 1528 - Entwicklung und Programmierung
     credits_authors: |
-      1529 - *OpenCutList* wird von [Boris Beaulant](https://www.lairdubois.fr/@borisbeaulant) und [Martin Müller](https://www.lairdubois.fr/@mobilarte) entwickelt. *[Beitragende](https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension/graphs/contributors) aufzählen*.
+      1529 - *LexaCut* wird von [Boris Beaulant](https://www.lairdubois.fr/@borisbeaulant) und [Martin Müller](https://www.lairdubois.fr/@mobilarte) entwickelt. *[Beitragende](https://github.com/lairdubois/lairdubois-lexacut-sketchup-extension/graphs/contributors) aufzählen*.
     credits_translations: 1530 - Übersetzungen
     credits_translators: |
       1531 - - [Martin Müller](https://www.lairdubois.fr/@mobilarte) (*English*, *Deutsch*)
@@ -2005,7 +2005,7 @@ tab:
       - Milan Divovic (*Serbisch*)
     credits_description: |
       1532 - Die Entwicklung dieser Erweiterung ist Teil des Projektes [L'Air du Bois](https://www.lairdubois.fr), eine Austauschplattform für Holzwerker.
-      In diesem Sinn ist auch sie *Open Source* und steht unter Lizenz [GNU GPLv3](https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension/blob/master/LICENSE) auf [GitHub](https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension) allen zu Verfügung.
+      In diesem Sinn ist auch sie *Open Source* und steht unter Lizenz [GNU GPLv3](https://github.com/lairdubois/lairdubois-lexacut-sketchup-extension/blob/master/LICENSE) auf [GitHub](https://github.com/lairdubois/lairdubois-lexacut-sketchup-extension) allen zu Verfügung.
     credits_runtime: 1533 - Laufzeit
     credits_development: 1534 - Entwicklungsumgebung
     credits_vendors: |

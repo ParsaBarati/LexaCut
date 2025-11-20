@@ -1,5 +1,5 @@
 module Ladb
-  module OpenCutList
+  module LexaCut
 
     require 'sketchup.rb'
     require_relative 'plugin'
@@ -8,7 +8,7 @@ module Ladb
 
     unless file_loaded?(__FILE__)
 
-      # Setup OpenCutList UI integration
+      # Setup LexaCut UI integration
       PLUGIN.setup
 
       file_loaded(__FILE__)

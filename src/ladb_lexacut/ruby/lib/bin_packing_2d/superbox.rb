@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Ladb::OpenCutList::BinPacking2D
+module Ladb::LexaCut::BinPacking2D
   #
   # Implements a SuperBox that can contain stacked Boxes.
   #

@@ -26,7 +26,7 @@
 # 02110-1301  USA
 ######################### END LICENSE BLOCK #########################
 
-module Ladb::OpenCutList::CharDet
+module Ladb::LexaCut::CharDet
 # KOI8-R language model
 # Character Mapping Table:
 KOI8R_CharToOrderMap = [

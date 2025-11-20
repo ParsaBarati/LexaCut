@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Ladb::OpenCutList::Zip
+module Ladb::LexaCut::Zip
   class ExtraField < Hash # :nodoc:all
     ID_MAP = {}
 

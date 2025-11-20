@@ -1,4 +1,4 @@
-﻿module Ladb::OpenCutList
+﻿module Ladb::LexaCut
 
   require 'json'
   require 'securerandom'

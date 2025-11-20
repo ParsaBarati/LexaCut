@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Ladb::OpenCutList::Zip
+module Ladb::LexaCut::Zip
   module FileSystem
     # All access to Zip::File from FileSystem::File and FileSystem::Dir
     # goes through a ZipFileNameMapper, which has one responsibility: ensure

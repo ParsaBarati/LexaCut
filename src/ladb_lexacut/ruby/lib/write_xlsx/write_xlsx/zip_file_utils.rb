@@ -8,7 +8,7 @@ require 'kconv'
 require 'fileutils'
 require_relative '../../rubyzip/zip'
 
-module Ladb::OpenCutList
+module Ladb::LexaCut
 module Writexlsx
 module ZipFileUtils
   # src  file or directory

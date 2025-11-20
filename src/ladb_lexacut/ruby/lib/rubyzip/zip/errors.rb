@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Ladb::OpenCutList::Zip
+module Ladb::LexaCut::Zip
   # The superclass for all rubyzip error types. Simply rescue this one if
   # you don't need to know what sort of error has been raised.
   class Error < StandardError; end

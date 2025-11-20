@@ -1,13 +1,13 @@
 @font-face {
-  font-family: 'ladb_opencutlist';
-  src: url('../fonts/ladb_opencutlist.woff?wp1a82') format('woff');
+  font-family: 'ladb_lexacut';
+  src: url('../fonts/ladb_lexacut.woff?wp1a82') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 i, span.ladb-lexacut-icon:before {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'ladb_opencutlist' !important;
+  font-family: 'ladb_lexacut' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;

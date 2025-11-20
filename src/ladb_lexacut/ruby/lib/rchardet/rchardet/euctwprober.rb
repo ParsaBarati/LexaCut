@@ -26,7 +26,7 @@
 # 02110-1301  USA
 ######################### END LICENSE BLOCK #########################
 
-module Ladb::OpenCutList::CharDet
+module Ladb::LexaCut::CharDet
   class EUCTWProber < MultiByteCharSetProber
     def initialize
       super()

@@ -2,7 +2,7 @@ _label: 1 - Русский
 _disabled_msg: |
   2 - Этот язык еще не был **полностью переведен**.
 
-  Чтобы помочь завершить перевод, обратитесь к [OpenCutList Documentation](https://docs.opencutlist.org/for-translators/general).
+  Чтобы помочь завершить перевод, обратитесь к [LexaCut Documentation](https://docs.lexacut.org/for-translators/general).
 _reload_msg: 3 - Для того, чтобы принять все изменения, необходимо **закрыть** и **открыть** заново плагин OpenСutList.
 _description: 4 - Плагин расчета карт раскроя для деревообработчиков и не только. Открытый исходный код, краундфандинг и простота использования ;)
 default:
@@ -94,7 +94,7 @@ default:
   deprecated: 90 - Устаревшие
 core:
   menu:
-    submenu: 91 - OpenCutList
+    submenu: 91 - LexaCut
     item:
       generate_cutlist: 92 - Создать карту раскроя
       edit_part_properties: $t(tab.cutlist.edit_part_properties)
@@ -114,10 +114,10 @@ core:
       smart_export: $t(core.toolbar.command.smart_export)
       reset_dialog_position: 108 - Сброс положения окна
   toolbar:
-    name: 109 - OpenCutList
+    name: 109 - LexaCut
     tools: 110 - Инструменты
     command:
-      dialog: 111 - OpenCutList
+      dialog: 111 - LexaCut
       smart_draw: 112 - Моделирование деталей
       smart_handle: 113 - Действия с деталями
       smart_paint: 114 - Раскраска деталей
@@ -131,7 +131,7 @@ core:
   savepanel:
     export_to_file: 118 - Экспортировать в файл {{ file_format }}
   dialog:
-    title: 119 - OpenCutList от L'Air du Bois
+    title: 119 - LexaCut от L'Air du Bois
   leftbar:
     more: 120 - Ещё
     more_docs: 121 - База
@@ -143,11 +143,11 @@ core:
     report_a_bug: 126 - Сообщить об ошибке
   warning:
     dev: |
-      127 - Вы используете **находящуюся в разработке** версию *OpenCutList*.
+      127 - Вы используете **находящуюся в разработке** версию *LexaCut*.
       Эта версия доступна только для тестирования.
       Использовать в производстве НЕ РЕКОМЕНДУЕТСЯ.
 
-      Найдена ошибка - сообщите мне:<a href="mailto:lexacut@lexaplus.com?subject=Bug%20Report%20OpenCutList%20{{ version }}%20(build: {{ build }})" target="_blank">lexacut@lexaplus.com</a>.
+      Найдена ошибка - сообщите мне:<a href="mailto:lexacut@lexaplus.com?subject=Bug%20Report%20LexaCut%20{{ version }}%20(build: {{ build }})" target="_blank">lexacut@lexaplus.com</a>.
   error:
     extern: '128 - Внешняя ошибка : **{{ error }}**'
     feature_unavailable: 129 - Для работы этой функции требуется SketchUp {{ version }} или выше
@@ -166,12 +166,12 @@ core:
     layers_change: 138 - Теги в активной модели изменились.
     drawing_change: 139 - Состав активной модели была изменена.
   upgrade:
-    unavailable: 140 - Невозможно найти последнюю версию *OpenCutList*.
+    unavailable: 140 - Невозможно найти последнюю версию *LexaCut*.
     available: |
-      141 - Доступна новая версия *OpenCutList*.
+      141 - Доступна новая версия *LexaCut*.
       Для использования усовершенствованных функции, скачайте ее!
     up_to_date: |
-      142 - У вас уже есть последняя версия *OpenCutList*.
+      142 - У вас уже есть последняя версия *LexaCut*.
 
       *Рассмотрите возможность спонсорства этого проекта, чтобы поддержать нас финансово и помочь нам улучшить его функциональность!*
     downloading: 143 - Идет процесс загрузки
@@ -181,7 +181,7 @@ core:
     manual_download: 147 - Загрузка вручную
     zzz: 148 - В настоящее время я отдыхаю после обновления. Чтобы разбудить меня, вы должны перезапустить SketchUp.
     success: |
-      149 - Обновление OpenCutList завершено!
+      149 - Обновление LexaCut завершено!
 
       Перезапустите SKETCHUP для активации изменений.
     error:
@@ -457,7 +457,7 @@ tab:
         367 - Здесь можно задать количество слоев материала для набора расчетной толщины моделируемой детали .
 
         *Пример:* Если вы хотите сделать деталь толщиной *38 мм*, склеив две панели толщиной *19 мм*, то введите **2** в это поле.
-        *OpenCutList будет считать 2 детали толщиной 19 мм вместо 1 детали толщиной 38 мм.*
+        *LexaCut будет считать 2 детали толщиной 19 мм вместо 1 детали толщиной 38 мм.*
       description: 368 - Описание
       description_help: |
         369 - Параметр *Описание* дает возможность задать необходимую уточняющую информацию по детали.
@@ -531,7 +531,7 @@ tab:
       dynamic_attributes_name_help: |
         411 - Если выбрана эта опция, то обозначение деталей будет извлекаться из атрибута *Name*, если оно определено.
 
-        <i class='ladb-opencutlist-icon-warning'></i> Детали с одинаковым описанием будут разделены, если атрибут *Name* не имеет одинакового значения.
+        <i class='ladb-lexacut-icon-warning'></i> Детали с одинаковым описанием будут разделены, если атрибут *Name* не имеет одинакового значения.
       part_number_with_letters: 412 - Использовать буквы для нумерации деталей
       part_number_with_letters_help: 413 - Если эта опция активна, детали в группах списка элементов нумеруются с помощью букв (A, B, C, ... Z, AA, AB, ...).
       part_number_sequence_by_group: 414 - Нумерация каждой группы
@@ -560,17 +560,17 @@ tab:
       hide_material_colors: 434 - Скрыть цвета материалов
       hide_material_colors_help: 435 - Если эта опция активна, то цвета материалов отображаться не будут.
       minimize_on_highlight: 436 - Столбцы после *'$t(tab.cutlist.highlight_part)...'*
-      minimize_on_highlight_help: 437 - Если эта опция активна, окно OpenCutList будет свернуто, когда функция *'$t(tab.cutlist.highlight_part)'* применена.
+      minimize_on_highlight_help: 437 - Если эта опция активна, окно LexaCut будет свернуто, когда функция *'$t(tab.cutlist.highlight_part)'* применена.
       general: 438 - Общие
       sorting: 439 - Сортировка
       group_order_strategy: 440 - Сортировка групп
       group_order_strategy_help: |
         441 - Задайте следующие свойства, чтобы упорядочить сортировку группы.
-        Каждое свойство может быть отсортировано в порядке <i class="ladb-opencutlist-icon-sort-asc"></i>*по возрастанию* или <i class="ladb-opencutlist-icon-sort-desc"></i>*по убыванию*.
+        Каждое свойство может быть отсортировано в порядке <i class="ladb-lexacut-icon-sort-asc"></i>*по возрастанию* или <i class="ladb-lexacut-icon-sort-desc"></i>*по убыванию*.
       part_order_strategy: 442 - Сортировка деталей
       part_order_strategy_help: |
         443 - Определение порядка сортировки в каждой группе на основе перечисленных параметров.
-        Свойства могут быть упорядочены в <i class="ladb-opencutlist-icon-sort-asc"></i> *возрастающем* или <i class="ladb-opencutlist-icon-sort-desc"></i> *убывающем* порядке.
+        Свойства могут быть упорядочены в <i class="ladb-lexacut-icon-sort-asc"></i> *возрастающем* или <i class="ladb-lexacut-icon-sort-desc"></i> *убывающем* порядке.
       dimension_column_order_strategy: 444 - Соотношения размера
       dimension_column_order_strategy_help: |
         445 - Упорядочение по размерам для определения приоритетов сортировки столбцов.
@@ -980,7 +980,7 @@ tab:
         cutting_dimensions: 794 - Эта карта раскроя отображает детали с их **пильными** размерами.
         cutting_dimensions_increase_1d: '795 - Эти пильные размеры сконфигурированы для материала ''{{ material_name }}'': Припуск к длине (**{{ length_increase }}**).'
         cutting_dimensions_increase_2d: '796 - Эти пильные размеры сконфигурированы для материала ''{{ material_name }}'': Припуск к длине (**{{ length_increase }}**) и Припуск к ширине (**{{ width_increase }}**).'
-        cutting_dimensions_edge_decrement: 797 - Размеры уменьшены на толщину кромки. <i class='ladb-opencutlist-icon-edge-decremented'></i>
+        cutting_dimensions_edge_decrement: 797 - Размеры уменьшены на толщину кромки. <i class='ladb-lexacut-icon-edge-decremented'></i>
     packing:
       title: 798 - Карта раскроя
       option_problem_type: 799 - Тип
@@ -1229,7 +1229,7 @@ tab:
         cutting_dimensions: 989 - Эта карта раскроя отображает детали с их **пильными** размерами.
         cutting_dimensions_increase_1d: '990 - Эти пильные размеры сконфигурированы для материала ''{{ material_name }}'': Припуск к длине (**{{ length_increase }}**).'
         cutting_dimensions_increase_2d: '991 - Эти пильные размеры сконфигурированы для материала ''{{ material_name }}'': Припуск к длине (**{{ length_increase }}**) и Припуск к ширине (**{{ width_increase }}**).'
-        cutting_dimensions_edge_decrement: 992 - Размеры уменьшены на толщину кромки. <i class='ladb-opencutlist-icon-edge-decremented'></i>
+        cutting_dimensions_edge_decrement: 992 - Размеры уменьшены на толщину кромки. <i class='ladb-lexacut-icon-edge-decremented'></i>
     labels:
       title: 993 - Этикетки
       options_layout: 994 - Состав
@@ -1243,7 +1243,7 @@ tab:
       remove_all_elements: $t(default.remove_all)
       part_order_strategy_help: |
         1003 - Измените следующие свойства, чтобы задать порядок сортировки этикеток.
-        Каждое свойство может быть отсортировано <i class="ladb-opencutlist-icon-sort-asc"></i> *по возрастанию* или <i class="ladb-opencutlist-icon-sort-desc"></i> *по убыванию*.
+        Каждое свойство может быть отсортировано <i class="ladb-lexacut-icon-sort-asc"></i> *по возрастанию* или <i class="ladb-lexacut-icon-sort-desc"></i> *по убыванию*.
       offset_help: |
         1004 - *Смещение* позволяет вам задать положение **первой этикетки** на **первой странице**.
         Выделите или снимите выделение с позиций, соответствующих вашему выбору.
@@ -1541,7 +1541,7 @@ tab:
         1221 - Детали, которые могут быть включены в *карту раскроя*, должны быть в формате **компонента**.
         Если в модели для деталей использован формат группы, перед расчетом преобразуйте их в компоненты.
         Детали в формате компоненты, могут быть скопированы без их дублирования.
-      no_typed_materials: 1222 - Применить материал к деталям, подлежащим включению в список деталей, и задать свойства этого материала (**$t(tab.materials.type_1)**, **$t(tab.materials.type_2)**, **$t(tab.materials.type_3)** или **$t(tab.materials.type_5)**) можно на вкладке <i class="ladb-opencutlist-icon-materials"></i> **Материалы**.
+      no_typed_materials: 1222 - Применить материал к деталям, подлежащим включению в список деталей, и задать свойства этого материала (**$t(tab.materials.type_1)**, **$t(tab.materials.type_2)**, **$t(tab.materials.type_3)** или **$t(tab.materials.type_5)**) можно на вкладке <i class="ladb-lexacut-icon-materials"></i> **Материалы**.
     obsolete_base: 1223 - Чтобы синхронизировать изменения, необходимо заново рассчитать карту раскроя.
   materials:
     label: 1224 - Материалы
@@ -1688,12 +1688,12 @@ tab:
       title: 1320 - Экспорт в .skm файл
     option:
       minimize_on_smart_paint: 1321 - Свернуть окно после *'Раскрасить детали с помощью...'*
-      minimize_on_smart_paint_help: 1322 - Если эта опция включена, окно OpenCutList будет сворачиваться при использовании функции *'Раскрасить детали с помощью...'*.
+      minimize_on_smart_paint_help: 1322 - Если эта опция включена, окно LexaCut будет сворачиваться при использовании функции *'Раскрасить детали с помощью...'*.
       general: 1323 - Общие
       material_order_strategy: 1324 - Сортировка материала
       material_order_strategy_help: |
         1325 - Упорядочить следующие свойства для определения порядка сортировки внутри каждой группы.
-        Свойства могут быть отсортированы в <i class="ladb-opencutlist-icon-sort-asc"></i> *по возрастанию* или <i class="ladb-opencutlist-icon-sort-desc"></i> *по убыванию*.
+        Свойства могут быть отсортированы в <i class="ladb-lexacut-icon-sort-asc"></i> *по возрастанию* или <i class="ladb-lexacut-icon-sort-desc"></i> *по убыванию*.
       property_type: 1326 - Тип
       property_name: 1327 - Определение
     delete:
@@ -1757,7 +1757,7 @@ tab:
       hide_tags: 1376 - Скрыть маркеры
       hide_tags_help: 1377 - Если эта опция активирована, **маркеры**, размещенные на деталях, не отображаются.
       minimize_on_set_active: 1378 - Уменьшить после '$t(tab.outliner.tooltip.set_active_node)'
-      minimize_on_set_active_help: 1379 - Если эта опция включена, окно OpenCutList будет сворачиваться, когда *'$t(tab.outliner.tooltip.set_active_node)'* используется.
+      minimize_on_set_active_help: 1379 - Если эта опция включена, окно LexaCut будет сворачиваться, когда *'$t(tab.outliner.tooltip.set_active_node)'* используется.
     error:
       no_model: 1380 - Ни одна модель не открыта. Вам необходимо дать мне больше информации ;)
       no_entities: 1381 - Ваша модель пуста!
@@ -1774,7 +1774,7 @@ tab:
     title: 1388 - Импорт деталей
     help: |
       1389 - Этот раздел поможет вам импортировать детали (только в форме параллелепипеда) из [CSV](https://ru.wikipedia.org/wiki/CSV) файла в модель.
-      Затем вы можете использовать возможности *OpenCutList* для работы с импортированными деталями.
+      Затем вы можете использовать возможности *LexaCut* для работы с импортированными деталями.
       Кликните по клавише **Открыть CSV файл** для начала импорта.
     open_csv: 1390 - Открыть CSV файл
     import_to_model: 1391 - Импорт в модель
@@ -1851,10 +1851,10 @@ tab:
     label: 1442 - Инструкции
     title: 1443 - Инструкции
     help: |
-      1444 - Представляем подборку видео, просмотр которых поможет эффективнее использовать возможности *OpenCutList*.
+      1444 - Представляем подборку видео, просмотр которых поможет эффективнее использовать возможности *LexaCut*.
     submit: 1445 - Отправить видео
     submit_info: |
-      1446 - Вы создали видео, которое поможет эффективно использовать **OpenCutList**, и хотите, чтобы оно появилось здесь.
+      1446 - Вы создали видео, которое поможет эффективно использовать **LexaCut**, и хотите, чтобы оно появилось здесь.
       Дайте нам знать, написав нам по адресу **lexacut@lexaplus.com**!
 
       *Видео должно быть публичным и размещено на YouTube.*
@@ -1864,7 +1864,7 @@ tab:
     label: 1448 - Новости
     title: 1449 - Новости
     help: |
-      1450 - Последние новости из *OpenCutList*.
+      1450 - Последние новости из *LexaCut*.
     comment: 1451 - Комментарий
     error:
       fail_to_load_list: 1452 - Список новостей нельзя скачать.
@@ -1872,7 +1872,7 @@ tab:
     label: 1453 - Форум
     title: 1454 - Форум
     help: |
-      1455 - Эта платформа позволяет обмениваться информацией с сообществом пользователей и командой *OpenCutList*.
+      1455 - Эта платформа позволяет обмениваться информацией с сообществом пользователей и командой *LexaCut*.
     create_conversation: 1456 - Начать тему
     reply: 1457 - Ответить на
     tags: 1458 - Теги
@@ -1888,24 +1888,24 @@ tab:
     label: 1461 - Спонсоры
     title: 1462 - Спонсоры
     description: |
-      1463 - **OpenCutList** - это *Открытое исходное программное обеспечение*, поддерживаемое его пользователями посредством <a href="https://opencollective.com/" target="_blank">Open Collective</a> платформы.
+      1463 - **LexaCut** - это *Открытое исходное программное обеспечение*, поддерживаемое его пользователями посредством <a href="https://opencollective.com/" target="_blank">Open Collective</a> платформы.
       Поддержите этот проект, сделав финансовый взнос!
     contribute: 1464 - Поддержи проект
     backers: 1465 - {{ count }} финансовый спонсор
     backers_plural: 1466 - {{ count }} финансовые спонсоры
-    ad: 1467 - OpenCutList не является бесплатным
+    ad: 1467 - LexaCut не является бесплатным
     objective: 1468 - Цель
-    objective_slogan: 1469 - OpenCutList - это все мы
+    objective_slogan: 1469 - LexaCut - это все мы
     objective_title:
       default: 1470 - Цель
       cuttingdiagram_export: 1471 - Финансирование разработки новой функции
     objective_details:
       default: |
-        1472 - Постоянное совершенствование *OpenCutList* очень важно для всех нас и Ваша финансовая помощь, по-прежнему, станет основой для следующего обновления !
+        1472 - Постоянное совершенствование *LexaCut* очень важно для всех нас и Ваша финансовая помощь, по-прежнему, станет основой для следующего обновления !
       cuttingdiagram_export: |
-        1473 - Для нас важно, чтобы *OpenCutList* соответствовал ожиданиям пользователей, использующих расчет *карт раскроя*.
+        1473 - Для нас важно, чтобы *LexaCut* соответствовал ожиданиям пользователей, использующих расчет *карт раскроя*.
         Для расширения возможностей плагина мы хотели бы сделать возможным экспорт карт раскроя в формате **SVG** и **DXF**.
-        Помогая нам финансово, вы даете нам возможность расширить функционал плагина, чтобы в итоге получить максимальную отдачу от *OpenCutList*.
+        Помогая нам финансово, вы даете нам возможность расширить функционал плагина, чтобы в итоге получить максимальную отдачу от *LexaCut*.
     objective_crowdfunding: |
       1474 - Разработка новых опций будет осуществляться за счет собранных средств через **краудфандинг** и начнется, когда будет достигнута **финансовая цель**.
     objective_thanks: |
@@ -1952,26 +1952,26 @@ tab:
         1510 - Выберите файл пресета формата **.json**, который вы хотите импортировать.
         Внимание, импортируемая версия заменит существующий пресет, если они имеют одинаковое название.
       import_global_presets_success: |
-        1511 - Пресеты *OpenCutList* успешно импортированы.
-        Чтобы изменения вступили в силу, вы должны **закрыть** и снова **открыть** окно OpenCutList.
+        1511 - Пресеты *LexaCut* успешно импортированы.
+        Чтобы изменения вступили в силу, вы должны **закрыть** и снова **открыть** окно LexaCut.
       dump_global_presets: 1512 - Дамп пресетов
       dump_model_presets: 1513 - Дамп настроек модели
       reset_global_presets: 1514 - Сбросить пресеты
       reset_global_presets_confirm: |
-        1515 - Вы собираетесь удалить все свои сохраненные пресеты *OpenCutList*.
+        1515 - Вы собираетесь удалить все свои сохраненные пресеты *LexaCut*.
         Это действие необратимо. **Все пресеты будут потеряны.**
         Подтвердите, чтобы продолжить.
       reset_global_presets_success: |
-        1516 - Пресеты *OpenCutList* были удалены.
-        Чтобы применить изменения, вы должны **закрыть** и **снова открыть** окно OpenCutList.
+        1516 - Пресеты *LexaCut* были удалены.
+        Чтобы применить изменения, вы должны **закрыть** и **снова открыть** окно LexaCut.
       reset_model_presets: 1517 - Сбросить настройки модели
       reset_model_presets_confirm: |
-        1518 - Вы собираетесь сбросить все настройки *OpenCutList* для текущей модели.
+        1518 - Вы собираетесь сбросить все настройки *LexaCut* для текущей модели.
         Это действие необратимо. **Все настройки будут восстановлены до значений по умолчанию.**
         Подтвердите, чтобы продолжить.
       reset_model_presets_success: |
-        1519 - Настройки *OpenCutList* текущей модели были сброшены.
-        Чтобы применить изменения, вы должны **закрыть** и **снова открыть** окно OpenCutList.
+        1519 - Настройки *LexaCut* текущей модели были сброшены.
+        Чтобы применить изменения, вы должны **закрыть** и **снова открыть** окно LexaCut.
       error:
         no_preset_to_export: 1520 - Нет пресетов для экспорта.
         no_preset_to_import: 1521 - Нет пресетов для импорта.
@@ -1984,7 +1984,7 @@ tab:
     version: 1527 - Версия
     credits: 1528 - Технические характеристики
     credits_authors: |
-      1529 - *OpenCutList* разработал [Boris Beaulant](https://www.lairdubois.fr/@borisbeaulant) и [Martin Müller](https://www.lairdubois.fr/@mobilarte). *Весь список [соавторов](https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension/graphs/contributors)*.
+      1529 - *LexaCut* разработал [Boris Beaulant](https://www.lairdubois.fr/@borisbeaulant) и [Martin Müller](https://www.lairdubois.fr/@mobilarte). *Весь список [соавторов](https://github.com/lairdubois/lairdubois-lexacut-sketchup-extension/graphs/contributors)*.
     credits_translations: 1530 - Переводы
     credits_translators: |
       1531 - - Владимир Бадюля (*Русский*)
@@ -2005,7 +2005,7 @@ tab:
       - Милан Дивович (*серб*)
     credits_description: |
       1532 - Разработка этого расширения связана с проектом совместной платформы [L'Air du Bois](https://www.lairdubois.fr).
-      Это расширение является *Open Source*, а также доступно в разделе [GNU GPLv3](https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension/blob/master/LICENSE) с лицензией [GitHub](https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension).
+      Это расширение является *Open Source*, а также доступно в разделе [GNU GPLv3](https://github.com/lairdubois/lairdubois-lexacut-sketchup-extension/blob/master/LICENSE) с лицензией [GitHub](https://github.com/lairdubois/lairdubois-lexacut-sketchup-extension).
     credits_runtime: 1533 - Исполнение
     credits_development: 1534 - Разработка
     credits_vendors: |

@@ -27,7 +27,7 @@
 # 02110-1301  USA
 ######################### END LICENSE BLOCK #########################
 
-module Ladb::OpenCutList::CharDet
+module Ladb::LexaCut::CharDet
   FREQ_CAT_NUM = 4
 
   UDF = 0 # undefined

@@ -78,23 +78,10 @@
                 sponsorAd: false
             },
             {
-                name: 'forum',
-                bar: null,
-                icon: 'ladb-opencutlist-icon-forum',
-                sponsorAd: false
-            },
-            {
                 name: 'settings',
                 bar: 'bottombar',
                 icon: 'ladb-opencutlist-icon-settings',
                 sponsorAd: true
-            },
-            {
-                name: 'sponsor',
-                bar: 'bottombar',
-                icon: 'ladb-opencutlist-icon-sponsor',
-                classes: 'ladb-highlighted-sponsor',
-                sponsorAd: false
             },
             {
                 name: 'about',

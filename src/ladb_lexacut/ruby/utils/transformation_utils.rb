@@ -1,4 +1,4 @@
-module Ladb::OpenCutList
+module Ladb::LexaCut
 
   require_relative '../model/geom/scale3d'
   require_relative 'axis_utils'
@@ -20,7 +20,7 @@ module Ladb::OpenCutList
     #   # Skew Selected Group/Component
     #   # Select a group or component and run:
     #   e = Sketchup.active_model.selection.first
-    #   e.transformation = Ladb::OpenCutList::TransformationUtils.create_from_axes(
+    #   e.transformation = Ladb::LexaCut::TransformationUtils.create_from_axes(
     #     ORIGIN,
     #     Geom::Vector3d.new(2, 0.3, 0.3),
     #     Geom::Vector3d.new(0.3, 2, 0.3),
@@ -58,13 +58,13 @@ module Ladb::OpenCutList
     #
     # @example
     #   # Compose and Decompose Euler Angle Based Transformation
-    #   tr = Ladb::OpenCutList::TransformationUtils.create_from_euler_angles(
+    #   tr = Ladb::LexaCut::TransformationUtils.create_from_euler_angles(
     #     ORIGIN,
     #     45.degrees,
     #     45.degrees,
     #     45.degrees
     #   )
-    #   Ladb::OpenCutList::TransformationUtils.euler_angles(tr).map(&:radians)
+    #   Ladb::LexaCut::TransformationUtils.euler_angles(tr).map(&:radians)
     #
     # @return [Geom::Transformation]
     def self.create_from_euler_angles(origin = ORIGIN, x_angle = 0, y_angle = 0, z_angle = 0)
@@ -91,13 +91,13 @@ module Ladb::OpenCutList
     #   transformation = Geom::Transformation.rotation(ORIGIN, Z_AXIS, z_angle) *
     #     Geom::Transformation.rotation(ORIGIN, Y_AXIS, y_angle) *
     #     Geom::Transformation.rotation(ORIGIN, X_AXIS, x_angle)
-    #   angles = Ladb::OpenCutList::TransformationUtils.euler_angles(transformation)
+    #   angles = Ladb::LexaCut::TransformationUtils.euler_angles(transformation)
     #   angles.map(&:radians)
     #
     #   # Determine Angles of Selected Group/Component
     #   # Select a group or component and run:
     #   e = Sketchup.active_model.selection.first
-    #   Ladb::OpenCutList::TransformationUtils.euler_angles(e.transformation).map(&:radians)
+    #   Ladb::LexaCut::TransformationUtils.euler_angles(e.transformation).map(&:radians)
     #
     # @return [Array(Float, Float, Float)] X rotation, Y rotation and Z Rotation
     #   in radians.
@@ -131,8 +131,8 @@ module Ladb::OpenCutList
     #   # Note that native Reset Scale also resets skew, not just scale.
     #   # Select a skewed group or component and run:
     #   e = Sketchup.active_model.selection.first
-    #   e.transformation = Ladb::OpenCutList::TransformationUtils.remove_scaling(
-    #     Ladb::OpenCutList::TransformationUtils.remove_shearing(e.transformation, false)
+    #   e.transformation = Ladb::LexaCut::TransformationUtils.remove_scaling(
+    #     Ladb::LexaCut::TransformationUtils.remove_shearing(e.transformation, false)
     #   )
     #
     # @return [Geom::Transformation]
@@ -167,12 +167,12 @@ module Ladb::OpenCutList
     #   # Mimic Context Menu > Reset Skew
     #   # Select a skewed group or component and run:
     #   e = Sketchup.active_model.selection.first
-    #   e.transformation = Ladb::OpenCutList::TransformationUtils.remove_shearing(e.transformation, false)
+    #   e.transformation = Ladb::LexaCut::TransformationUtils.remove_shearing(e.transformation, false)
     #
     #   # Reset Skewing While Retaining Volume
     #   # Select a skewed group or component and run:
     #   e = Sketchup.active_model.selection.first
-    #   e.transformation = Ladb::OpenCutList::TransformationUtils.remove_shearing(e.transformation, true)
+    #   e.transformation = Ladb::LexaCut::TransformationUtils.remove_shearing(e.transformation, true)
     #
     # @return [Geom::Transformation]
     def self.remove_shearing(transformation, preserve_determinant_value = false)

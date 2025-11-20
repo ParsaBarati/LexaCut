@@ -3,7 +3,7 @@
 
 require_relative 'utility'
 
-module Ladb::OpenCutList
+module Ladb::LexaCut
 module Writexlsx
   ###############################################################################
   #

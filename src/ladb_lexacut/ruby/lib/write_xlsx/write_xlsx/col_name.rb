@@ -3,7 +3,7 @@
 
 require 'singleton'
 
-module Ladb::OpenCutList::Writexlsx
+module Ladb::LexaCut::Writexlsx
 class ColName
   include Singleton
 

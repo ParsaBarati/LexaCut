@@ -28,7 +28,7 @@
 # 02110-1301  USA
 ######################### END LICENSE BLOCK #########################
 
-module Ladb::OpenCutList::CharDet
+module Ladb::LexaCut::CharDet
   class MBCSGroupProber < CharSetGroupProber
     def initialize
       super

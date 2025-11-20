@@ -2,8 +2,8 @@ _label: 1 - עברית (experimental, no rtl)
 _disabled_msg: |
   2 - שפה זו טרם תורגמה **במלואה**.
 
-  כדי לסייע בהשלמת התרגום, אנא עיין ב[תיעוד OpenCutList](https://docs.opencutlist.org/for-translators/general).
-_reload_msg: 3 - על מנת לקבל את כל השינויים, עליך **לסגור** **ולפתח** מחדש את החלון OpenCutList.
+  כדי לסייע בהשלמת התרגום, אנא עיין ב[תיעוד LexaCut](https://docs.lexacut.org/for-translators/general).
+_reload_msg: 3 - על מנת לקבל את כל השינויים, עליך **לסגור** **ולפתח** מחדש את החלון LexaCut.
 _description: 4 - תוסף לחישוב תוכניות חיתוך לנגרים ועוד. קוד פתוח, מימון המונים וקל לשימוש ;)
 default:
   minimize: 5 - מזער
@@ -94,7 +94,7 @@ default:
   deprecated: 90 - מיושען
 core:
   menu:
-    submenu: 91 - OpenCutList
+    submenu: 91 - LexaCut
     item:
       generate_cutlist: 92 - צור תוכנית חיתוך
       edit_part_properties: $t(tab.cutlist.edit_part_properties)
@@ -114,10 +114,10 @@ core:
       smart_export: $t(core.toolbar.command.smart_export)
       reset_dialog_position: 108 - אפס את מיקום החלון
   toolbar:
-    name: 109 - OpenCutList
+    name: 109 - LexaCut
     tools: 110 - כלים
     command:
-      dialog: 111 - OpenCutList
+      dialog: 111 - LexaCut
       smart_draw: 112 - צייר חלקים
       smart_handle: 113 - עיבוד חלקים
       smart_paint: 114 - צביעת חלקים
@@ -131,7 +131,7 @@ core:
   savepanel:
     export_to_file: 118 - ייצוא לקובץ {{ file_format }}
   dialog:
-    title: 119 - OpenCutList מאת L'Air du Bois
+    title: 119 - LexaCut מאת L'Air du Bois
   leftbar:
     more: 120 - עוד
     more_docs: 121 - מסמכים
@@ -143,11 +143,11 @@ core:
     report_a_bug: 126 - דווח על שגיאה
   warning:
     dev: |
-      127 - אתה משתמש בגרסת **פיתוח** של *OpenCutList*.
+      127 - אתה משתמש בגרסת **פיתוח** של *LexaCut*.
       גרסה זו זמינה רק לבדיקה.
       לא מומלץ להשתמש בה בייצור.
 
-      לדיווח על שגיאה: <a href="mailto:lexacut@lexaplus.com?subject=Bug%20Report%20OpenCutList%20{{ version }}%20(build: {{ build }})" target="_blank">lexacut@lexaplus.com</a>.
+      לדיווח על שגיאה: <a href="mailto:lexacut@lexaplus.com?subject=Bug%20Report%20LexaCut%20{{ version }}%20(build: {{ build }})" target="_blank">lexacut@lexaplus.com</a>.
   error:
     extern: '128 - שגיאה חיצונית: **{{ error }}**'
     feature_unavailable: 129 - תכונה זו דורשת גרסת SketchUp {{ version }} ומעלה
@@ -166,12 +166,12 @@ core:
     layers_change: 138 - התגים במודל הפעיל השתנו.
     drawing_change: 139 - המבנה של המודל הפעיל שונה.
   upgrade:
-    unavailable: 140 - לא ניתן למצוא גרסה אחרונה של *OpenCutList*.
+    unavailable: 140 - לא ניתן למצוא גרסה אחרונה של *LexaCut*.
     available: |
-      141 - גרסה חדשה של *OpenCutList* זמינה.
+      141 - גרסה חדשה של *LexaCut* זמינה.
       הורידו אותה כדי לקבל את התכונות העדכניות ביותר!
     up_to_date: |
-      142 - כבר יש לך את הגרסה האחרונה של *OpenCutList*.
+      142 - כבר יש לך את הגרסה האחרונה של *LexaCut*.
 
       *תשקלו לתת חסות לפרויקט זה כדי לתמוך בנו כלכלית ולעזור לנו לשפר את הפונקציונליות שלו!*
     downloading: 143 - הורדה בתהליך
@@ -181,7 +181,7 @@ core:
     manual_download: 147 - הורדה ידנית
     zzz: 148 - כרגע אני נח לאחר העדכון. כדי להעיר אותי, עליכם להפעיל מחדש את SketchUp.
     success: |
-      149 - עדכון OpenCutList הושלם!
+      149 - עדכון LexaCut הושלם!
 
       הפעל מחדש את SketchUp להפעלת השינויים.
     error:
@@ -457,7 +457,7 @@ tab:
         367 - הגדירו כאן את מספר השכבות המחלקות את החלק המצויר בעוביו.
 
         *דוגמה:* אם עבור חלק מצויר בעובי *38 מ"מ*, ברצונך להשיג זאת על ידי הדבקת שני לוחות של *19 מ"מ*, ציין **2** בשדה זה.
-        *OpenCutList יספור 2 חתיכות בעובי 19 מ"מ במקום חתיכה אחת בעובי 38 מ"מ.*
+        *LexaCut יספור 2 חתיכות בעובי 19 מ"מ במקום חתיכה אחת בעובי 38 מ"מ.*
       description: 368 - תיאור
       description_help: |
         369 - *התיאור* מאפשר לך לספק מידע מותאם אישית על כל הגדרת חלק.
@@ -531,7 +531,7 @@ tab:
       dynamic_attributes_name_help: |
         411 - אם האפשרות מופעלת, ייעוד החלקים שהם רכיבים דינמיים יחולץ מהתכונה *Name* אם היא מוגדרת.
 
-        <i class='ladb-opencutlist-icon-warning'></i> חלקים עם אותה הגדרה יופרדו, אם לתכונה *Name* אין אותו ערך.
+        <i class='ladb-lexacut-icon-warning'></i> חלקים עם אותה הגדרה יופרדו, אם לתכונה *Name* אין אותו ערך.
       part_number_with_letters: 412 - השתמש באותיות כדי למספר חלקים
       part_number_with_letters_help: 413 - אם האפשרות מופעלת, חלקים בקבוצה ממוספרים באמצעות אותיות (A, B, C, ... Z, AA, AB, ...).
       part_number_sequence_by_group: 414 - מספור של כל קבוצה
@@ -560,17 +560,17 @@ tab:
       hide_material_colors: 434 - הסתר צבעי החומר
       hide_material_colors_help: 435 - אם אפשרות זו מופעלת, צבעי החומר לא יוצגו.
       minimize_on_highlight: 436 - כווץ אחרי *'$t(tab.cutlist.highlight_part)...'*
-      minimize_on_highlight_help: 437 - אם האפשרות מופעלת, חלון OpenCutList ימוזער כאשר משתמשים בפונקציה *'$t(tab.cutlist.highlight_part)'*.
+      minimize_on_highlight_help: 437 - אם האפשרות מופעלת, חלון LexaCut ימוזער כאשר משתמשים בפונקציה *'$t(tab.cutlist.highlight_part)'*.
       general: 438 - כללי
       sorting: 439 - מיון
       group_order_strategy: 440 - מיון קבוצות
       group_order_strategy_help: |
         441 - סדרו מחדש את המאפיינים הבאים כדי להגדיר את אסטרטגיית מיון הקבוצות.
-        ניתן למיין כל מאפיין בסדר <i class="ladb-opencutlist-icon-sort-asc"></i> *עולה* או <i class="ladb-opencutlist-icon-sort-desc"></i> *יורד*.
+        ניתן למיין כל מאפיין בסדר <i class="ladb-lexacut-icon-sort-asc"></i> *עולה* או <i class="ladb-lexacut-icon-sort-desc"></i> *יורד*.
       part_order_strategy: 442 - מיון חלקים
       part_order_strategy_help: |
         443 - סדר מחדש את המאפיינים הבאים כדי להגדיר מיון לחלקים בכל קבוצה.
-        ניתן למיין מאפיינים לפי סדר <i class="ladb-opencutlist-icon-sort-asc"></i> *עולה* או <i class="ladb-opencutlist-icon-sort-desc"></i> *יורד*.
+        ניתן למיין מאפיינים לפי סדר <i class="ladb-lexacut-icon-sort-asc"></i> *עולה* או <i class="ladb-lexacut-icon-sort-desc"></i> *יורד*.
       dimension_column_order_strategy: 444 - סדר עמודות
       dimension_column_order_strategy_help: |
         445 - סדר מחדש את המאפיינים הבאים כדי להגדיר את סדר התצוגה של עמודות המידות.
@@ -980,7 +980,7 @@ tab:
         cutting_dimensions: 794 - תוכנית חיתוך זו משתמשת במידות **גולמיות** של החלקים.
         cutting_dimensions_increase_1d: '795 - מידות גולמיות אלו הוגדרו בחומר ''{{ material_name }}'': אורך יתר (**{{ length_increase }}**).'
         cutting_dimensions_increase_2d: '796 - מידות גולמיות אלו הוגדרו בחומר ''{{ material_name }}'': אורך יתר (**{{ length_increase }}**) ורוחב יתר (**{{ width_increase }}**).'
-        cutting_dimensions_edge_decrement: 797 - מידות מופחתות בעובי הקאנט. <i class='ladb-opencutlist-icon-edge-decremented'></i>
+        cutting_dimensions_edge_decrement: 797 - מידות מופחתות בעובי הקאנט. <i class='ladb-lexacut-icon-edge-decremented'></i>
     packing:
       title: 798 - תוכנית חיתוך
       option_problem_type: 799 - סוג
@@ -1226,7 +1226,7 @@ tab:
         cutting_dimensions: 989 - תוכנית חיתוך זו משתמשת במידות **גולמיות** של החלקים.
         cutting_dimensions_increase_1d: '990 - מידות גולמיות אלו הוגדרו בחומר ''{{ material_name }}'': אורך יתר (**{{ length_increase }}**).'
         cutting_dimensions_increase_2d: '991 - מידות גולמיות אלו הוגדרו בחומר ''{{ material_name }}'': אורך יתר (**{{ length_increase }}**) ורוחב יתר (**{{ width_increase }}**).'
-        cutting_dimensions_edge_decrement: 992 - מידות מופחתות בעובי הקאנט. <i class='ladb-opencutlist-icon-edge-decremented'></i>
+        cutting_dimensions_edge_decrement: 992 - מידות מופחתות בעובי הקאנט. <i class='ladb-lexacut-icon-edge-decremented'></i>
     labels:
       title: 993 - תוויות
       options_layout: 994 - הרכב
@@ -1240,7 +1240,7 @@ tab:
       remove_all_elements: $t(default.remove_all)
       part_order_strategy_help: |
         1003 - ארגן מחדש את המאפיינים כדי להגדיר את סדר המיון של התוויות.
-        ניתן למיין מאפיינים לפי סדר <i class="ladb-opencutlist-icon-sort-asc"></i> *עולה* או <i class="ladb-opencutlist-icon-sort-desc"></i> *יורד*.
+        ניתן למיין מאפיינים לפי סדר <i class="ladb-lexacut-icon-sort-asc"></i> *עולה* או <i class="ladb-lexacut-icon-sort-desc"></i> *יורד*.
       offset_help: |
         1004 - *הקיזוז* מאפשר לקבוע את המיקום של התווית הראשונה **בדף הראשון**.
         בחר בתיבה התואמת לבחירתך.
@@ -1505,7 +1505,7 @@ tab:
         1221 - החלקים שברצונך להופיע בתוכנית חיתוך *חייבים להיות כ-**רכיב**.
         אם משתמשים רק בקבוצות, המירו אותן לרכיבים.
         שימוש ברכיבים מאפשר לעתיק חלקים זהים מבלי לשכפל אותם.
-      no_typed_materials: 1222 - החל חומר על החלקים שצריך לראות בתוכנית חיתוך. הגדר את סוג החומר הזה (**$t(tab.materials.type_1)**, **$t(tab.materials.type_2)**, **$t(tab.materials.type_3)** או **$t(tab.materials.type_5)**) בכרטיסייה <i class="ladb-opencutlist-icon-materials"></i>**חומרים**.
+      no_typed_materials: 1222 - החל חומר על החלקים שצריך לראות בתוכנית חיתוך. הגדר את סוג החומר הזה (**$t(tab.materials.type_1)**, **$t(tab.materials.type_2)**, **$t(tab.materials.type_3)** או **$t(tab.materials.type_5)**) בכרטיסייה <i class="ladb-lexacut-icon-materials"></i>**חומרים**.
     obsolete_base: 1223 - כדי לסנכרן שינויים, עליך לחשב מחדש את התוכנית חיתוך.
   materials:
     label: 1224 - חומרים
@@ -1625,12 +1625,12 @@ tab:
       title: 1320 - ייצוא לקובץ skm.
     option:
       minimize_on_smart_paint: 1321 - כיווץ לאחר *'צביעת חלקים עם...'*
-      minimize_on_smart_paint_help: 1322 - אם אפשרות זו מופעלת, חלון OpenCutList יצטמצם כאשר נעשה שימוש בפונקציה *'צבע חלקים עם...'*.
+      minimize_on_smart_paint_help: 1322 - אם אפשרות זו מופעלת, חלון LexaCut יצטמצם כאשר נעשה שימוש בפונקציה *'צבע חלקים עם...'*.
       general: 1323 - כללי
       material_order_strategy: 1324 - מיון חומרים
       material_order_strategy_help: |
         1325 - סדר מחדש את המאפיינים הבאים כדי להגדיר את המיון של החומרים ברשימה.
-        ניתן למיין לפי סדר <i class="ladb-opencutlist-icon-sort-asc"></i>*עולה* או <i class="ladb-opencutlist-icon-sort-desc"></i>*יורד*.
+        ניתן למיין לפי סדר <i class="ladb-lexacut-icon-sort-asc"></i>*עולה* או <i class="ladb-lexacut-icon-sort-desc"></i>*יורד*.
       property_type: 1326 - סוג
       property_name: 1327 - תיאור
     delete:
@@ -1711,7 +1711,7 @@ tab:
     title: 1388 - ייבוא חלקים
     help: |
       1389 - הדף מאפשר לייבא סדרה של חלקים (בבחירה מלבנית) למודל מקובץ [CSV](https://he.wikipedia.org/wiki/CSV).
-      ניתן להשתמש ביכולות של *OpenCutList* לחלקים שנוצרו לא בעזרת *SketchUp*.
+      ניתן להשתמש ביכולות של *LexaCut* לחלקים שנוצרו לא בעזרת *SketchUp*.
       לחץ על הלחצן **פתח קובץ CSV** כדי להתחיל.
     open_csv: 1390 - פתח קובץ CSV
     import_to_model: 1391 - ייבוא למודל
@@ -1788,7 +1788,7 @@ tab:
     label: 1442 - הוראות
     title: 1443 - הוראות
     help: |
-      1444 - מצא כאן רשימת סרטונים שנעשו על ידי הקהילה סביב השימוש ב-*OpenCutList*.
+      1444 - מצא כאן רשימת סרטונים שנעשו על ידי הקהילה סביב השימוש ב-*LexaCut*.
     submit: 1445 - שלח סרטון
     submit_info: '1446 - '
     error:
@@ -1797,7 +1797,7 @@ tab:
     label: 1448 - חדשות
     title: 1449 - חדשות
     help: |
-      1450 - חדשות אחרונות מ-*OpenCutList*.
+      1450 - חדשות אחרונות מ-*LexaCut*.
     comment: 1451 - תגובה
     error:
       fail_to_load_list: 1452 - לא ניתן לטעון את רשימת החדשות.
@@ -1805,7 +1805,7 @@ tab:
     label: 1453 - פורום
     title: 1454 - פורום
     help: |
-      1455 - הפלטפורמה מאפשרת להחליף מידע בין קהילת המשתמשים והצוות *OpenCutList*.
+      1455 - הפלטפורמה מאפשרת להחליף מידע בין קהילת המשתמשים והצוות *LexaCut*.
     create_conversation: 1456 - התחל שיחה
     reply: 1457 - השב
     tags: 1458 - תגים
@@ -1821,24 +1821,24 @@ tab:
     label: 1461 - תמיכה
     title: 1462 - תמיכה
     description: |
-      1463 - **OpenCutList** היא *תוכנת קוד פתוח* שממומנת על ידי המשתמשים באמצעות פלטפורמת <a href="https://opencollective.com/" target="_blank">Open Collective</a>.
+      1463 - **LexaCut** היא *תוכנת קוד פתוח* שממומנת על ידי המשתמשים באמצעות פלטפורמת <a href="https://opencollective.com/" target="_blank">Open Collective</a>.
       תמכו בפרויקט על ידי תרומה !
     contribute: 1464 - לתרום
     backers: 1465 - {{ count }} תורם כספי
     backers_plural: 1466 - {{ count }} תורמים כספיים
     ad: '1467 - '
     objective: 1468 - יעד
-    objective_slogan: 1469 - OpenCutList - זה כולנו
+    objective_slogan: 1469 - LexaCut - זה כולנו
     objective_title:
       default: 1470 - מטרות
       cuttingdiagram_export: 1471 - עלות תוכנית חיתוך ביצוא
     objective_details:
       default: |
-        1472 - השיפור המתמיד של *OpenCutList* חשוב לנו מאוד והפרויקט ממשיך להזדקק לעזרתכם לעדכון הבא!
+        1472 - השיפור המתמיד של *LexaCut* חשוב לנו מאוד והפרויקט ממשיך להזדקק לעזרתכם לעדכון הבא!
       cuttingdiagram_export: |
-        1473 - חשוב לנו ש*OpenCutList* יוכל להתאים לציפיות המגוונות מאוד של המשתמשים לפונקציית *תוכנית חיתוך*.
+        1473 - חשוב לנו ש*LexaCut* יוכל להתאים לציפיות המגוונות מאוד של המשתמשים לפונקציית *תוכנית חיתוך*.
         כדי להרחיב עוד יותר את האפשרויות, נרצה לאפשר לייצא תוכניות חיתוך בפורמט **SVG** ו- **DXF**.
-        על ידי מתן האמצעים לעבודה על יצוא אלה, אתה נותן לנו את ההזדמנות לאפשר לך להפיק את המרב מ-*OpenCutList*.
+        על ידי מתן האמצעים לעבודה על יצוא אלה, אתה נותן לנו את ההזדמנות לאפשר לך להפיק את המרב מ-*LexaCut*.
     objective_crowdfunding: |
       1474 - פיתוח אפשרויות חדשות ייעשה באמצעות **מימון המונים** ויכול להתחיל כאשר **היעדים הכספיים** שלו הושגו.
     objective_thanks: |
@@ -1885,26 +1885,26 @@ tab:
         1510 - בחר את המוגדרות מראש הקיימות בקובץ **.json** שברצונך לייבא.
         היזהר, אם כבר קיימת הגדרה מראש עם שם זהה, היא תוחלף בגרסה המיובאת.
       import_global_presets_success: |
-        1511 - הגדרות קבועות מראש של *OpenCutList* יובאו בהצלחה.
-        על מנת לקחת בחשבון את השינויים, עליך **לסגור** ו**לפתוח מחדש** את חלון OpenCutList.
+        1511 - הגדרות קבועות מראש של *LexaCut* יובאו בהצלחה.
+        על מנת לקחת בחשבון את השינויים, עליך **לסגור** ו**לפתוח מחדש** את חלון LexaCut.
       dump_global_presets: 1512 - גיבוי הגדרות קבועות מראש
       dump_model_presets: 1513 - גיבוי הגדרות מודל
       reset_global_presets: 1514 - אפס הגדרות קבועות מראש
       reset_global_presets_confirm: |
-        1515 - אתה עומד לאפס את כל הגדרות ה-*OpenCutList* השמורות.
+        1515 - אתה עומד לאפס את כל הגדרות ה-*LexaCut* השמורות.
         הפעולה בלתי הפיכה. **כל ההגדרות הקבועות מראש יאבדו**.
         אשר להמשיך.
       reset_global_presets_success: |
-        1516 - הגדרות קבועות מראש של *OpenCutList* אופסו.
-        על מנת להתחל את השינויים, עליך **לסגור** ו-**לפתח** מחדש את חלון OpenCutList.
+        1516 - הגדרות קבועות מראש של *LexaCut* אופסו.
+        על מנת להתחל את השינויים, עליך **לסגור** ו-**לפתח** מחדש את חלון LexaCut.
       reset_model_presets: 1517 - אפס את הגדרות המודל
       reset_model_presets_confirm: |
-        1518 - אתה עומד לאפס את כל הגדרות *OpenCutList* עבור המודל הנוכחי.
+        1518 - אתה עומד לאפס את כל הגדרות *LexaCut* עבור המודל הנוכחי.
         הפעולה בלתי הפיכה. **כל ההגדרות ישוחזרו לערכי ברירת המחדל**.
         אשר להמשיך.
       reset_model_presets_success: |
-        1519 - הגדרות *OpenCutList* של המודל הנוכחי אופסו.
-        על מנת להתחל את השינויים, עליך **לסגור** ו-**לפתח** מחדש את חלון OpenCutList.
+        1519 - הגדרות *LexaCut* של המודל הנוכחי אופסו.
+        על מנת להתחל את השינויים, עליך **לסגור** ו-**לפתח** מחדש את חלון LexaCut.
       error:
         no_preset_to_export: 1520 - אין הגדרות קבועות מראש לייצוא.
         no_preset_to_import: 1521 - אין הגדרות קבועות מראש לייבוא.
@@ -1917,7 +1917,7 @@ tab:
     version: 1527 - גרסה
     credits: 1528 - מפרט טכני
     credits_authors: |
-      1529 - *OpenCutList* פותח על ידי [Boris Beaulant](https://www.lairdubois.fr/@borisbeaulant) ו- [Martin Müller](https://www.lairdubois.fr/@mobilarte). *רשום את [התורמים](https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension/graphs/contributors)*.
+      1529 - *LexaCut* פותח על ידי [Boris Beaulant](https://www.lairdubois.fr/@borisbeaulant) ו- [Martin Müller](https://www.lairdubois.fr/@mobilarte). *רשום את [התורמים](https://github.com/lairdubois/lairdubois-lexacut-sketchup-extension/graphs/contributors)*.
     credits_translations: 1530 - תרגומים
     credits_translators: |
       1531 - - Sergey Isupov (*עברית*), ללא ממשק מימין לשמאל
@@ -1938,7 +1938,7 @@ tab:
       - Milan Divovic (*סרבי*)
     credits_description: |
       1532 - פיתוח הרחבה זו הוא חלק מפרויקט פלטפורמת השיתוף [L'Air du Bois](https://www.lairdubois.fr).
-      ובנוסף, הוא גם *קוד פתוח* וזמין ברישיון [GNU GPLv3](https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension/blob/master/LICENSE)sur son [dépôt GitHub](https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension).
+      ובנוסף, הוא גם *קוד פתוח* וזמין ברישיון [GNU GPLv3](https://github.com/lairdubois/lairdubois-lexacut-sketchup-extension/blob/master/LICENSE)sur son [dépôt GitHub](https://github.com/lairdubois/lairdubois-lexacut-sketchup-extension).
     credits_runtime: 1533 - ביצוע
     credits_development: 1534 - פיתוח
     credits_vendors: |

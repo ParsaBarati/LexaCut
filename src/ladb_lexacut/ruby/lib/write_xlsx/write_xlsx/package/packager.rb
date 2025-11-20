@@ -20,7 +20,7 @@ require_relative '../package/table'
 require_relative '../package/theme'
 require_relative '../package/vml'
 
-module Ladb::OpenCutList
+module Ladb::LexaCut
 module Writexlsx
   module Package
     class Packager

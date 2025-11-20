@@ -19,7 +19,7 @@ require_relative 'worksheet/page_setup'
 require 'tempfile'
 require 'date'
 
-module Ladb::OpenCutList
+module Ladb::LexaCut
 module Writexlsx
   class Worksheet
     include Writexlsx::Utility

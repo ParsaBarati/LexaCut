@@ -5,7 +5,7 @@ require_relative '../package/xml_writer_simple'
 require_relative '../utility'
 require_relative '../chart/caption'
 
-module Ladb::OpenCutList
+module Ladb::LexaCut
 module Writexlsx
   class Chart
     class Axis < Caption

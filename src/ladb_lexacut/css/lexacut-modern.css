@@ -2,7 +2,7 @@
  * LexaCut Modern UI
  * Elegant · Minimal · Classy
  * 
- * Override stylesheet for OpenCutList
+ * Override stylesheet for lexacut
  * Transforms the interface into a refined, timeless design
  */
 
@@ -639,7 +639,7 @@ i[class*="ladb-lexacut-icon-"] {
   content: '✨ LexaCut Modern UI';
   position: absolute;
   top: 8px;
-  right: 16px;
+  left: 16px;
   background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
   color: white;
   padding: 4px 12px;
@@ -655,7 +655,7 @@ i[class*="ladb-lexacut-icon-"] {
 @keyframes fadeInSlide {
   from {
     opacity: 0;
-    transform: translateX(20px);
+    transform: translateX(-20px);
   }
   to {
     opacity: 1;
@@ -715,7 +715,7 @@ body {
 
 .ladb-footer::after,
 .ladb-bottombar::after {
-  content: 'LexaCut v8.0.4 | Modern Edition by LexaPlus';
+    content: 'LexaCut v8.0.12 | Modern Edition by LexaPlus';
   display: block;
   text-align: center;
   padding: 8px;
@@ -746,6 +746,21 @@ body {
   border: none;
   border-bottom: 2px solid var(--primary-600);
   font-weight: 600;
+}
+
+/* ========================================================================
+   FIX FOR GENERATE BUTTON VISIBILITY - Proper Spacing
+   ======================================================================== */
+
+/* Add top padding to tab container to prevent content overlap */
+.ladb-tab .ladb-container {
+  padding-top: 20px !important;
+}
+
+/* Ensure toolbar doesn't overlap with heading on left side */
+.ladb-header-tools {
+  clear: none !important;
+  margin-left: 200px !important; /* Space for branding badge on left */
 }
 
 /* Loading Spinner with Branding */

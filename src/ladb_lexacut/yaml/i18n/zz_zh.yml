@@ -2,7 +2,7 @@ _label: 1 - 简体中文
 _disabled_msg: |
   2 - 该语言尚未**完全翻译**。
 
-  为帮助完成翻译，请查阅 [OpenCutList 文档](https://docs.opencutlist.org/for-translators/general).
+  为帮助完成翻译，请查阅 [LexaCut 文档](https://docs.lexacut.org/for-translators/general).
 _reload_msg: 3 - 要应用所有更改，您必须 **关闭** 并 **重新打开** 板材清单 窗口。
 _description: 4 - 木工的切割清单和切割图生成器。 开源，众筹且易于使用 ;)
 default:
@@ -94,7 +94,7 @@ default:
   deprecated: 90 - 已过时
 core:
   menu:
-    submenu: 91 - OpenCutList
+    submenu: 91 - LexaCut
     item:
       generate_cutlist: 92 - 生成部件清单
       edit_part_properties: $t(tab.cutlist.edit_part_properties)
@@ -114,10 +114,10 @@ core:
       smart_export: $t(core.toolbar.command.smart_export)
       reset_dialog_position: 108 - 重置窗口位置
   toolbar:
-    name: 109 - OpenCutList
+    name: 109 - LexaCut
     tools: 110 - 工具
     command:
-      dialog: 111 - OpenCutList
+      dialog: 111 - LexaCut
       smart_draw: 112 - 绘制部件
       smart_handle: 113 - 控制部件
       smart_paint: 114 - 部件材质
@@ -143,11 +143,11 @@ core:
     report_a_bug: 126 - 报告错误
   warning:
     dev: |
-      127 - 您正在使用 *OpenCutList* 的 **开发** 版本.
+      127 - 您正在使用 *LexaCut* 的 **开发** 版本.
       该版本仅供测试.
       不建议在生产环境中使用它.
 
-      报告错误: <a href="mailto:lexacut@lexaplus.com?subject=Bug%20Report%20OpenCutList%20{{ version }}%20(build: {{ build }})" target="_blank">lexacut@lexaplus.com</a>.
+      报告错误: <a href="mailto:lexacut@lexaplus.com?subject=Bug%20Report%20LexaCut%20{{ version }}%20(build: {{ build }})" target="_blank">lexacut@lexaplus.com</a>.
   error:
     extern: '128 - 外部错误 : **{{ error }}**'
     feature_unavailable: 129 - 此功能需要 SketchUp {{ version }} 或更高版本
@@ -166,12 +166,12 @@ core:
     layers_change: 138 - 活动模型中的标签已更改。
     drawing_change: 139 - 活动模型中的設計已修改。
   upgrade:
-    unavailable: 140 - 找不到 *OpenCutList* 的最新版本.
+    unavailable: 140 - 找不到 *LexaCut* 的最新版本.
     available: |
-      141 - *OpenCutList* 的新版本已发布.
+      141 - *LexaCut* 的新版本已发布.
       请更新以获取最新的功能!
     up_to_date: |
-      142 - 您已经拥有最新版本的 *OpenCutList*.
+      142 - 您已经拥有最新版本的 *LexaCut*.
 
       *考虑赞助这个项目来帮助我们添加更多功能!*
     downloading: 143 - 下载正在进行中
@@ -181,7 +181,7 @@ core:
     manual_download: 147 - 手动下载
     zzz: 148 - 我目前正在休息, 等待更新. 要唤醒我, 您必须重新启动 SketchUp.
     success: |
-      149 - OpenCutList 的更新已完成!
+      149 - LexaCut 的更新已完成!
 
       重新启动SketchUp以激活更改.
     error:
@@ -457,7 +457,7 @@ tab:
         367 - 在这里定义将绘制部件在其厚度上分割的层数数量.
 
         *示例:* 如果您有一个厚度为 *38mm* 的部件, 并且您想通过将两块 *19mm* 的面板粘合在一起制作它, 那么在此字段中输入 **2** .
-        *OpenCutList 将计算出2个厚度为 19mm 的部件, 而不是1个厚度为 38mm 的部件.*
+        *LexaCut 将计算出2个厚度为 19mm 的部件, 而不是1个厚度为 38mm 的部件.*
       description: 368 - 描述
       description_help: |
         369 - *描述* 允许您在每个部件定义上提供个性化的信息.
@@ -531,7 +531,7 @@ tab:
       dynamic_attributes_name_help: |
         411 - 如果启用此选项, 则部件的名称将从 *Name* 属性中提取(如果已定义).
 
-        <i class='ladb-opencutlist-icon-warning'></i> 如果 *Name* 属性的值不相同, 则将分隔具有相同定义的部件实例.
+        <i class='ladb-lexacut-icon-warning'></i> 如果 *Name* 属性的值不相同, 则将分隔具有相同定义的部件实例.
       part_number_with_letters: 412 - 使用字母列举部件
       part_number_with_letters_help: 413 - 如果选择此选项, 将使用字母 (A, B, C, ... Z, AA, AB, ...) 对部件进行编号.
       part_number_sequence_by_group: 414 - 为每个组重新初始化部件的编号
@@ -560,17 +560,17 @@ tab:
       hide_material_colors: 434 - 隐藏材质颜色
       hide_material_colors_help: 435 - 如果启用此选项，则不会显示材质的颜色。
       minimize_on_highlight: 436 - 在 *'$t(tab.cutlist.highlight_part)...'* 之后最小化
-      minimize_on_highlight_help: 437 - 如果选择此选项, 当使用 *'$t(tab.cutlist.highlight_part)'* 功能时, OpenCutList窗口将被最小化.
+      minimize_on_highlight_help: 437 - 如果选择此选项, 当使用 *'$t(tab.cutlist.highlight_part)'* 功能时, LexaCut窗口将被最小化.
       general: 438 - 常规
       sorting: 439 - 排序
       group_order_strategy: 440 - 群組排序
       group_order_strategy_help: |
         441 - 重新排列以下属性，以定义分组的排序策略。
-        每个属性可以按 <i class="ladb-opencutlist-icon-sort-asc"></i>升序 或 <i class="ladb-opencutlist-icon-sort-desc"></i>降序 排列。
+        每个属性可以按 <i class="ladb-lexacut-icon-sort-asc"></i>升序 或 <i class="ladb-lexacut-icon-sort-desc"></i>降序 排列。
       part_order_strategy: 442 - 部件排序
       part_order_strategy_help: |
         443 - 重新排列或调整下列的项目以定义每组部件内的项目排序顺序.
-        可以点击 <i class="ladb-opencutlist-icon-sort-asc"></i> *升序* 或 <i class="ladb-opencutlist-icon-sort-desc"></i> *降序* 调整属性的排序顺序顺序排序.
+        可以点击 <i class="ladb-lexacut-icon-sort-asc"></i> *升序* 或 <i class="ladb-lexacut-icon-sort-desc"></i> *降序* 调整属性的排序顺序顺序排序.
       dimension_column_order_strategy: 444 - 尺寸排序
       dimension_column_order_strategy_help: |
         445 - 重新安排以下尺寸属性, 以定义列的显示顺序.
@@ -980,7 +980,7 @@ tab:
         cutting_dimensions: 794 - 切割图使用部件的 **原始** 尺寸.
         cutting_dimensions_increase_1d: '795 - 这些原始尺寸已在材质 ''{{ material_name }}'' 上进行了配置 : 长度超差 (**{{ length_increase }}**).'
         cutting_dimensions_increase_2d: '796 - 这些原始尺寸已在材质 ''{{ material_name }}'' 上进行了配置 : 长度超差 (**{{ length_increase }}**) 和宽度超差 (**{{ width_increase }}**).'
-        cutting_dimensions_edge_decrement: 797 - 尺寸已减去边缘封边的厚度. <i class='ladb-opencutlist-icon-edge-decremented'></i>
+        cutting_dimensions_edge_decrement: 797 - 尺寸已减去边缘封边的厚度. <i class='ladb-lexacut-icon-edge-decremented'></i>
     packing:
       title: 798 - 切割图
       option_problem_type: 799 - 类型
@@ -1229,7 +1229,7 @@ tab:
         cutting_dimensions: 989 - 切割图使用部件的 **原始** 尺寸.
         cutting_dimensions_increase_1d: '990 - 这些原始尺寸已在材质 ''{{ material_name }}'' 上进行了配置 : 长度超差 (**{{ length_increase }}**).'
         cutting_dimensions_increase_2d: '991 - 这些原始尺寸已在材质 ''{{ material_name }}'' 上进行了配置 : 长度超差 (**{{ length_increase }}**) 和宽度超差 (**{{ width_increase }}**).'
-        cutting_dimensions_edge_decrement: 992 - 尺寸已减去边缘封边的厚度. <i class='ladb-opencutlist-icon-edge-decremented'></i>
+        cutting_dimensions_edge_decrement: 992 - 尺寸已减去边缘封边的厚度. <i class='ladb-lexacut-icon-edge-decremented'></i>
     labels:
       title: 993 - 标签
       options_layout: 994 - 布局
@@ -1243,7 +1243,7 @@ tab:
       remove_all_elements: $t(default.remove_all)
       part_order_strategy_help: |
         1003 - 重新排列项目以定义标签的排序顺序.
-        可以点击 <i class="ladb-opencutlist-icon-sort-asc"></i> *升序* 或 <i class="ladb-opencutlist-icon-sort-desc"></i> *降序* 来调整排序顺序.
+        可以点击 <i class="ladb-lexacut-icon-sort-asc"></i> *升序* 或 <i class="ladb-lexacut-icon-sort-desc"></i> *降序* 来调整排序顺序.
       offset_help: |
         1004 - *偏移* 定义了要在 **第一页** 上打印的 **第一个标签** 的位置.
         选择与您的选择相对应的框.
@@ -1541,7 +1541,7 @@ tab:
         1221 - 要包含在 *部件清单* 中的部件必须是 **组件** 的实例.
         如果你只使用了群组, 请将它们转换成组件.
         用组件使得可以复制相同的部件而不必重复定义它们.
-      no_typed_materials: 1222 - 将材质应用于部件列表中要包含的部件, 并在 <i class="ladb-opencutlist-icon-materials"></i> **材质** 选项卡上定义该材质的特性 (**$t(tab.materials.type_1)**, **$t(tab.materials.type_2)**, **$t(tab.materials.type_3)** 或 **$t(tab.materials.type_5)**).
+      no_typed_materials: 1222 - 将材质应用于部件列表中要包含的部件, 并在 <i class="ladb-lexacut-icon-materials"></i> **材质** 选项卡上定义该材质的特性 (**$t(tab.materials.type_1)**, **$t(tab.materials.type_2)**, **$t(tab.materials.type_3)** 或 **$t(tab.materials.type_5)**).
     obsolete_base: 1223 - 为了保持同步, 必须重新生成部件清单.
   materials:
     label: 1224 - 材质
@@ -1688,12 +1688,12 @@ tab:
       title: 1320 - 导出到 .skm 文件
     option:
       minimize_on_smart_paint: 1321 -  *'将部件上色为...'* 之后收合
-      minimize_on_smart_paint_help: 1322 - 如果启用此选项，当使用*'将部件上色为...'* 功能时，OpenCutList 视窗将会自动最小化
+      minimize_on_smart_paint_help: 1322 - 如果启用此选项，当使用*'将部件上色为...'* 功能时，LexaCut 视窗将会自动最小化
       general: 1323 - 常规
       material_order_strategy: 1324 - 材质排序
       material_order_strategy_help: |
         1325 - 在下方重新排列属以定义材料列表的排序策略
-        可以点击 <i class="ladb-opencutlist-icon-sort-asc"></i> *升序* 或 <i class="ladb-opencutlist-icon-sort-desc"></i> *降序* 来调整属性的排序顺序.
+        可以点击 <i class="ladb-lexacut-icon-sort-asc"></i> *升序* 或 <i class="ladb-lexacut-icon-sort-desc"></i> *降序* 来调整属性的排序顺序.
       property_type: 1326 - 类型
       property_name: 1327 - 名称
     delete:
@@ -1757,7 +1757,7 @@ tab:
       hide_tags: 1376 - 隐藏标签
       hide_tags_help: 1377 - 如果选择此选项, 将不会显示 **标签** .
       minimize_on_set_active: 1378 - 完成后最小化'$t(tab.outliner.tooltip.set_active_node)'
-      minimize_on_set_active_help: 1379 - 如果启用此选项，当使用功能*'$t(tab.outliner.tooltip.set_active_node)'*时，OpenCutList 窗口将被最小化
+      minimize_on_set_active_help: 1379 - 如果启用此选项，当使用功能*'$t(tab.outliner.tooltip.set_active_node)'*时，LexaCut 窗口将被最小化
     error:
       no_model: 1380 - 没有打开的模型. 您需要提供更多信息 ;)
       no_entities: 1381 - 您的模型为空！
@@ -1774,7 +1774,7 @@ tab:
     title: 1388 - 导入部件
     help: |
       1389 - 此页面允许您从[CSV](https://zh.wikipedia.org/wiki/%E9%80%97%E5%8F%B7%E5%88%86%E9%9A%94%E5%80%BC)文件中导入部件（由矩形边界框定义）到您的模型中.
-      然后, 您可以使用 *OpenCutList* 的功能处理由除 *SketchUp* 之外的软件生成的部件.
+      然后, 您可以使用 *LexaCut* 的功能处理由除 *SketchUp* 之外的软件生成的部件.
       点击 **打开 CSV 文件** 按钮开始.
     open_csv: 1390 - 打开 CSV 文件
     import_to_model: 1391 - 导入到模型中
@@ -1851,10 +1851,10 @@ tab:
     label: 1442 - 教程
     title: 1443 - 教程
     help: |
-      1444 - 在此查找社区围绕使用 *OpenCutList* 制作的视频的非详尽列表.
+      1444 - 在此查找社区围绕使用 *LexaCut* 制作的视频的非详尽列表.
     submit: 1445 - 提交视频
     submit_info: |
-      1446 - 您制作了一段展示 **OpenCutList** 使用方法的视频，并希望它出现在这里吗？
+      1446 - 您制作了一段展示 **LexaCut** 使用方法的视频，并希望它出现在这里吗？
       请通过邮件至 **lexacut@lexaplus.com** 告诉我们！
 
       *视频必须公开，并托管在 YouTube 上*
@@ -1864,7 +1864,7 @@ tab:
     label: 1448 - 新闻
     title: 1449 - 新闻
     help: |
-      1450 - 来自 *OpenCutList* 的最新消息.
+      1450 - 来自 *LexaCut* 的最新消息.
     comment: 1451 - 评论
     error:
       fail_to_load_list: 1452 - 无法加载新闻列表.
@@ -1872,7 +1872,7 @@ tab:
     label: 1453 - 论坛
     title: 1454 - 论坛
     help: |
-      1455 - 该留言板允许您与用户社区和 *OpenCutList* 团队进行交流.
+      1455 - 该留言板允许您与用户社区和 *LexaCut* 团队进行交流.
     create_conversation: 1456 - 开始一个话题
     reply: 1457 - 回复
     tags: 1458 - 标签
@@ -1888,24 +1888,24 @@ tab:
     label: 1461 - 赞助
     title: 1462 - 赞助
     description: |
-      1463 - **OpenCutList** 是一款 *开源软件* 由其用户通过 <a href="https://opencollective.com/" target="_blank">Open Collective</a> 平台提供支持.
+      1463 - **LexaCut** 是一款 *开源软件* 由其用户通过 <a href="https://opencollective.com/" target="_blank">Open Collective</a> 平台提供支持.
       通过提供资金捐助来支持该项目!
     contribute: 1464 - 贡献
     backers: 1465 - {{ count }} 名资金贡献者
     backers_plural: 1466 - {{ count }} 名资金贡献者
-    ad: 1467 - OpenCutList 不是免费的
+    ad: 1467 - LexaCut 不是免费的
     objective: 1468 - 目标
-    objective_slogan: 1469 - OpenCutList 我们所有人的
+    objective_slogan: 1469 - LexaCut 我们所有人的
     objective_title:
       default: 1470 - 目标
       cuttingdiagram_export: 1471 - 切割图导出的资金支持
     objective_details:
       default: |
-        1472 - *OpenCutList* 的持续改进对我们很重要，该项目的下一次更新仍然需要您的帮助!
+        1472 - *LexaCut* 的持续改进对我们很重要，该项目的下一次更新仍然需要您的帮助!
       cuttingdiagram_export: |
-        1473 - 对于 *OpenCutList* 的用户来说, 能够适应不同的期望, 尤其是对于 *切割图* 功能, 这一点对我们非常重要.
+        1473 - 对于 *LexaCut* 的用户来说, 能够适应不同的期望, 尤其是对于 *切割图* 功能, 这一点对我们非常重要.
         为了进一步拓展功能, 我们希望能够支持以 **SVG** 和 **DXF** 格式导出布局图.
-        通过向我们提供处理这些导出的方法, 通过向我们提供处理这些导出的方法, 您将让我们有机会帮助您充分利用 *OpenCutList*.
+        通过向我们提供处理这些导出的方法, 通过向我们提供处理这些导出的方法, 您将让我们有机会帮助您充分利用 *LexaCut*.
     objective_crowdfunding: |
       1474 - 新功能的开发将通过 **筹款** 完成，并将在达到 **筹款目标** 时开始.
     objective_thanks: |
@@ -1952,26 +1952,26 @@ tab:
         1510 - 选择你想要导入的 **.json** 预设文件.
         请注意, 如果已经存在具有相同名称的预设, 将被替换为新导入的版本.
       import_global_presets_success: |
-        1511 - *OpenCutList* 预设已成功导入.
-        为了应用这些更改, 您必须 **关闭** 然后 **重新打开** OpenCutList 窗口.
+        1511 - *LexaCut* 预设已成功导入.
+        为了应用这些更改, 您必须 **关闭** 然后 **重新打开** LexaCut 窗口.
       dump_global_presets: 1512 - 导出预设
       dump_model_presets: 1513 - 导出模型设置
       reset_global_presets: 1514 - 重新初始化预设
       reset_global_presets_confirm: |
-        1515 - 您即将重置所有已保存的 *OpenCutList* 预设.
+        1515 - 您即将重置所有已保存的 *LexaCut* 预设.
         此操作不可逆. **所有预设都将丢失.**
         确认以继续.
       reset_global_presets_success: |
-        1516 - *OpenCutList* 预设已重置.
-        为了应用这些更改, 您必须 **关闭** 然后 **重新打开** OpenCutList 窗口.
+        1516 - *LexaCut* 预设已重置.
+        为了应用这些更改, 您必须 **关闭** 然后 **重新打开** LexaCut 窗口.
       reset_model_presets: 1517 - 重新初始化模型设置
       reset_model_presets_confirm: |
-        1518 - 您即将重置当前模型的所有 *OpenCutList* 设置.
+        1518 - 您即将重置当前模型的所有 *LexaCut* 设置.
         此操作不可逆. **所有设置将恢复为它们的默认值.**
         确认以继续.
       reset_model_presets_success: |
-        1519 - 当前模型的 *OpenCutList* 设置已被重置.
-        为了应用这些更改, 您必须 **关闭** 然后 **重新打开** OpenCutList 窗口.
+        1519 - 当前模型的 *LexaCut* 设置已被重置.
+        为了应用这些更改, 您必须 **关闭** 然后 **重新打开** LexaCut 窗口.
       error:
         no_preset_to_export: 1520 - 没有要导出的预设.
         no_preset_to_import: 1521 - 没有要导入的预设.
@@ -1984,7 +1984,7 @@ tab:
     version: 1527 - 版本
     credits: 1528 - 技术贡献
     credits_authors: |
-      1529 - *OpenCutList* 由 [Boris Beaulant](https://www.lairdubois.fr/@borisbeaulant) 和 [Martin Müller](https://www.lairdubois.fr/@mobilarte) 开发. *列出所有 [贡献者](https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension/graphs/contributors)*.
+      1529 - *LexaCut* 由 [Boris Beaulant](https://www.lairdubois.fr/@borisbeaulant) 和 [Martin Müller](https://www.lairdubois.fr/@mobilarte) 开发. *列出所有 [贡献者](https://github.com/lairdubois/lairdubois-lexacut-sketchup-extension/graphs/contributors)*.
     credits_translations: 1530 - 翻译
     credits_translators: |
       1531 - - Martin Pan Chiu Ng, [刘涛](https://www.liutao91.cn) (*简体中文*)
@@ -2005,7 +2005,7 @@ tab:
       - Milan Divovic（*塞尔维亚人*）
     credits_description: |
       1532 - 这个插件项目的开发与共享平台项目 [L'Air du Bois](https://www.lairdubois.fr) 有关.
-      此插件也是 *开源* 的，并可根据 [GNU GPLv3](https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension/blob/master/LICENSE) 许可证在 [GitHub](https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension)上使用.
+      此插件也是 *开源* 的，并可根据 [GNU GPLv3](https://github.com/lairdubois/lairdubois-lexacut-sketchup-extension/blob/master/LICENSE) 许可证在 [GitHub](https://github.com/lairdubois/lairdubois-lexacut-sketchup-extension)上使用.
     credits_runtime: 1533 - 运行时
     credits_development: 1534 - 开发环境
     credits_vendors: |

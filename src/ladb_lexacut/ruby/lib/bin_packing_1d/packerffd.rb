@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Ladb::OpenCutList::BinPacking1D
+module Ladb::LexaCut::BinPacking1D
   #
   # Implements First-Fit Decreasing Heuristic
   #

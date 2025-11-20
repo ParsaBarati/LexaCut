@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Ladb::OpenCutList::Zip
+module Ladb::LexaCut::Zip
   class Inflater < Decompressor # :nodoc:all
     def initialize(*args)
       super
@@ -40,7 +40,7 @@ module Ladb::OpenCutList::Zip
         retry
       end
     rescue Zlib::Error => e
-      raise Ladb::OpenCutList::Zip::DecompressionError, e
+      raise Ladb::LexaCut::Zip::DecompressionError, e
     end
 
     def input_finished?
@@ -48,7 +48,7 @@ module Ladb::OpenCutList::Zip
     end
   end
 
-  Ladb::OpenCutList::Zip::Decompressor.register(Ladb::OpenCutList::Zip::COMPRESSION_METHOD_DEFLATE, Ladb::OpenCutList::Zip::Inflater)
+  Ladb::LexaCut::Zip::Decompressor.register(Ladb::LexaCut::Zip::COMPRESSION_METHOD_DEFLATE, Ladb::LexaCut::Zip::Inflater)
 end
 
 # Copyright (C) 2002, 2003 Thomas Sondergaard

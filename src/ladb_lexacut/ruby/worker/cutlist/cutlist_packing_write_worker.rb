@@ -1,4 +1,4 @@
-module Ladb::OpenCutList
+module Ladb::LexaCut
 
   require_relative 'cutlist_packing_worker'
   require_relative '../../constants'

@@ -2,7 +2,7 @@
 
 require 'rubygems'
 
-module Ladb::OpenCutList::Zip
+module Ladb::LexaCut::Zip
   class DOSTime < Time # :nodoc:all
     # MS-DOS File Date and Time format as used in Interrupt 21H Function 57H:
 

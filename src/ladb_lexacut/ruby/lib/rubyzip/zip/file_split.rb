@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Ladb::OpenCutList::Zip
+module Ladb::LexaCut::Zip
   module FileSplit # :nodoc:
     MAX_SEGMENT_SIZE = 3_221_225_472
     MIN_SEGMENT_SIZE = 65_536
@@ -78,7 +78,7 @@ module Ladb::OpenCutList::Zip
       return if zip_file_size <= segment_size
 
       segment_count = get_segment_count_for_split(zip_file_size, segment_size)
-      Ladb::OpenCutList::Zip::File.open(zip_file_name) {} # Check for correct zip structure.
+      Ladb::LexaCut::Zip::File.open(zip_file_name) {} # Check for correct zip structure.
       partial_zip_file_name = get_partial_zip_file_name(zip_file_name, partial_zip_file_name)
       szip_file_index       = 0
       ::File.open(zip_file_name, 'rb') do |zip_file|

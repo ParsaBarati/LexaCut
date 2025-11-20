@@ -1,3 +1,3 @@
-module Ladb::OpenCutList::CharDet
+module Ladb::LexaCut::CharDet
   VERSION = "1.8.0"
 end

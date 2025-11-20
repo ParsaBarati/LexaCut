@@ -27,7 +27,7 @@
 # 02110-1301  USA
 ######################### END LICENSE BLOCK #########################
 
-module Ladb::OpenCutList::CharDet
+module Ladb::LexaCut::CharDet
   SAMPLE_SIZE = 64
   SB_ENOUGH_REL_THRESHOLD = 1024
   POSITIVE_SHORTCUT_THRESHOLD = 0.95

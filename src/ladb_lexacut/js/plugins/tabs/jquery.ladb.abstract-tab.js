@@ -292,7 +292,7 @@ LadbAbstractTab.prototype.hideModalInside = function () {
 LadbAbstractTab.prototype.print = function (title, margin, size) {
 
     if (title === undefined) {
-        title = 'OpenCutList';
+        title = 'LexaCut';
     }
     // document.title = title;
 

@@ -17,7 +17,7 @@ require 'tmpdir'
 require 'tempfile'
 require 'digest/md5'
 
-module Ladb::OpenCutList
+module Ladb::LexaCut
 module Writexlsx
   OFFICE_URL     = 'http://schemas.microsoft.com/office/'   # :nodoc:
   MAX_URL_LENGTH = 2_079

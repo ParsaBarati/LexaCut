@@ -4,13 +4,13 @@ require 'pathname'
 
 require_relative 'dirtyable'
 
-module Ladb::OpenCutList::Zip
+module Ladb::LexaCut::Zip
   # Zip::Entry represents an entry in a Zip archive.
   class Entry
     include Dirtyable
 
-    STORED   = Ladb::OpenCutList::Zip::COMPRESSION_METHOD_STORE
-    DEFLATED = Ladb::OpenCutList::Zip::COMPRESSION_METHOD_DEFLATE
+    STORED   = Ladb::LexaCut::Zip::COMPRESSION_METHOD_STORE
+    DEFLATED = Ladb::LexaCut::Zip::COMPRESSION_METHOD_DEFLATE
 
     # Language encoding flag (EFS) bit
     EFS = 0b100000000000
@@ -40,7 +40,7 @@ module Ladb::OpenCutList::Zip
       @local_header_size        = nil # not known until local entry is created or read
       @internal_file_attributes = 1
       @external_file_attributes = 0
-      @header_signature         = Ladb::OpenCutList::Zip::CENTRAL_DIRECTORY_ENTRY_SIGNATURE
+      @header_signature         = Ladb::LexaCut::Zip::CENTRAL_DIRECTORY_ENTRY_SIGNATURE
 
       @version_needed_to_extract = VERSION_NEEDED_TO_EXTRACT
       @version                   = VERSION_MADE_BY
@@ -48,7 +48,7 @@ module Ladb::OpenCutList::Zip
       @ftype           = nil          # unspecified or unknown
       @filepath        = nil
       @gp_flags        = 0
-      if Ladb::OpenCutList::Zip.unicode_names
+      if Ladb::LexaCut::Zip.unicode_names
         @gp_flags |= EFS
         @version = 63
       end
@@ -72,30 +72,30 @@ module Ladb::OpenCutList::Zip
       zipfile = '', name = '',
       comment: '', size: nil, compressed_size: 0, crc: 0,
       compression_method: DEFLATED,
-      compression_level: Ladb::OpenCutList::Zip.default_compression,
-      time: Ladb::OpenCutList::Zip::DOSTime.now, extra: Ladb::OpenCutList::Zip::ExtraField.new
+      compression_level: Ladb::LexaCut::Zip.default_compression,
+      time: Ladb::LexaCut::Zip::DOSTime.now, extra: Ladb::LexaCut::Zip::ExtraField.new
     )
       super()
       @name = name
       check_name(@name)
 
       set_default_vars_values
-      @fstype = Ladb::OpenCutList::Zip::RUNNING_ON_WINDOWS ? Ladb::OpenCutList::Zip::FSTYPE_FAT : Ladb::OpenCutList::Zip::FSTYPE_UNIX
+      @fstype = Ladb::LexaCut::Zip::RUNNING_ON_WINDOWS ? Ladb::LexaCut::Zip::FSTYPE_FAT : Ladb::LexaCut::Zip::FSTYPE_UNIX
 
       @zipfile            = zipfile
       @comment            = comment || ''
       @compression_method = compression_method || DEFLATED
-      @compression_level  = compression_level || Ladb::OpenCutList::Zip.default_compression
+      @compression_level  = compression_level || Ladb::LexaCut::Zip.default_compression
       @compressed_size    = compressed_size || 0
       @crc                = crc || 0
       @size               = size
       @time               = case time
-                            when Ladb::OpenCutList::Zip::DOSTime
+                            when Ladb::LexaCut::Zip::DOSTime
                               time
                             when Time
-                              Ladb::OpenCutList::Zip::DOSTime.from_time(time)
+                              Ladb::LexaCut::Zip::DOSTime.from_time(time)
                             else
-                              Ladb::OpenCutList::Zip::DOSTime.now
+                              Ladb::LexaCut::Zip::DOSTime.now
                             end
       @extra              =
         extra.kind_of?(ExtraField) ? extra : ExtraField.new(extra.to_s)
@@ -262,7 +262,7 @@ module Ladb::OpenCutList::Zip
         return self
       end
 
-      block ||= proc { Ladb::OpenCutList::Zip.on_exists_proc }
+      block ||= proc { Ladb::LexaCut::Zip.on_exists_proc }
 
       raise "unknown file type #{inspect}" unless directory? || file? || symlink?
 
@@ -318,9 +318,9 @@ module Ladb::OpenCutList::Zip
       @dirty = false # No changes at this point.
       @local_header_offset = io.tell
 
-      static_sized_fields_buf = io.read(Ladb::OpenCutList::Zip::LOCAL_ENTRY_STATIC_HEADER_LENGTH) || ''
+      static_sized_fields_buf = io.read(Ladb::LexaCut::Zip::LOCAL_ENTRY_STATIC_HEADER_LENGTH) || ''
 
-      unless static_sized_fields_buf.bytesize == Ladb::OpenCutList::Zip::LOCAL_ENTRY_STATIC_HEADER_LENGTH
+      unless static_sized_fields_buf.bytesize == Ladb::LexaCut::Zip::LOCAL_ENTRY_STATIC_HEADER_LENGTH
         raise Error, 'Premature end of file. Not enough data for zip entry local header'
       end
 
@@ -337,8 +337,8 @@ module Ladb::OpenCutList::Zip
       set_time(@last_mod_date, @last_mod_time)
 
       @name = io.read(@name_length)
-      if Ladb::OpenCutList::Zip.force_entry_names_encoding
-        @name.force_encoding(Ladb::OpenCutList::Zip.force_entry_names_encoding)
+      if Ladb::LexaCut::Zip.force_entry_names_encoding
+        @name.force_encoding(Ladb::LexaCut::Zip.force_entry_names_encoding)
       end
       @name.tr!('\\', '/') # Normalise filepath separators after encoding set.
 
@@ -348,7 +348,7 @@ module Ladb::OpenCutList::Zip
 
       extra = io.read(@extra_length)
       if extra && extra.bytesize != @extra_length
-        raise Ladb::OpenCutList::Zip::Error, 'Truncated local zip entry header'
+        raise Ladb::LexaCut::Zip::Error, 'Truncated local zip entry header'
       end
 
       read_extra_field(extra, local: true)
@@ -358,7 +358,7 @@ module Ladb::OpenCutList::Zip
 
     def pack_local_entry
       zip64 = @extra['Zip64']
-      [Ladb::OpenCutList::Zip::LOCAL_ENTRY_SIGNATURE,
+      [Ladb::LexaCut::Zip::LOCAL_ENTRY_SIGNATURE,
        @version_needed_to_extract, # version needed to extract
        @gp_flags, # @gp_flags
        compression_method,
@@ -409,14 +409,14 @@ module Ladb::OpenCutList::Zip
 
     def set_ftype_from_c_dir_entry
       @ftype = case @fstype
-               when Ladb::OpenCutList::Zip::FSTYPE_UNIX
+               when Ladb::LexaCut::Zip::FSTYPE_UNIX
                  @unix_perms = (@external_file_attributes >> 16) & 0o7777
                  case (@external_file_attributes >> 28)
-                 when Ladb::OpenCutList::Zip::FILE_TYPE_DIR
+                 when Ladb::LexaCut::Zip::FILE_TYPE_DIR
                    :directory
-                 when Ladb::OpenCutList::Zip::FILE_TYPE_FILE
+                 when Ladb::LexaCut::Zip::FILE_TYPE_FILE
                    :file
-                 when Ladb::OpenCutList::Zip::FILE_TYPE_SYMLINK
+                 when Ladb::LexaCut::Zip::FILE_TYPE_SYMLINK
                    :symlink
                  else
                    # Best case guess for whether it is a file or not.
@@ -438,13 +438,13 @@ module Ladb::OpenCutList::Zip
     end
 
     def check_c_dir_entry_static_header_length(buf)
-      return unless buf.nil? || buf.bytesize != Ladb::OpenCutList::Zip::CDIR_ENTRY_STATIC_HEADER_LENGTH
+      return unless buf.nil? || buf.bytesize != Ladb::LexaCut::Zip::CDIR_ENTRY_STATIC_HEADER_LENGTH
 
       raise Error, 'Premature end of file. Not enough data for zip cdir entry header'
     end
 
     def check_c_dir_entry_signature
-      return if @header_signature == Ladb::OpenCutList::Zip::CENTRAL_DIRECTORY_ENTRY_SIGNATURE
+      return if @header_signature == Ladb::LexaCut::Zip::CENTRAL_DIRECTORY_ENTRY_SIGNATURE
 
       raise Error, "Zip local header magic not found at location '#{local_header_offset}'"
     end
@@ -452,28 +452,28 @@ module Ladb::OpenCutList::Zip
     def check_c_dir_entry_comment_size
       return if @comment && @comment.bytesize == @comment_length
 
-      raise Ladb::OpenCutList::Zip::Error, 'Truncated cdir zip entry header'
+      raise Ladb::LexaCut::Zip::Error, 'Truncated cdir zip entry header'
     end
 
     def read_extra_field(buf, local: false)
-      if @extra.kind_of?(Ladb::OpenCutList::Zip::ExtraField)
+      if @extra.kind_of?(Ladb::LexaCut::Zip::ExtraField)
         @extra.merge(buf, local: local) if buf
       else
-        @extra = Ladb::OpenCutList::Zip::ExtraField.new(buf, local: local)
+        @extra = Ladb::LexaCut::Zip::ExtraField.new(buf, local: local)
       end
     end
 
     def read_c_dir_entry(io) #:nodoc:all
       @dirty = false # No changes at this point.
-      static_sized_fields_buf = io.read(Ladb::OpenCutList::Zip::CDIR_ENTRY_STATIC_HEADER_LENGTH)
+      static_sized_fields_buf = io.read(Ladb::LexaCut::Zip::CDIR_ENTRY_STATIC_HEADER_LENGTH)
       check_c_dir_entry_static_header_length(static_sized_fields_buf)
       unpack_c_dir_entry(static_sized_fields_buf)
       check_c_dir_entry_signature
       set_time(@last_mod_date, @last_mod_time)
 
       @name = io.read(@name_length)
-      if Ladb::OpenCutList::Zip.force_entry_names_encoding
-        @name.force_encoding(Ladb::OpenCutList::Zip.force_entry_names_encoding)
+      if Ladb::LexaCut::Zip.force_entry_names_encoding
+        @name.force_encoding(Ladb::LexaCut::Zip.force_entry_names_encoding)
       end
       @name.tr!('\\', '/') # Normalise filepath separators after encoding set.
 
@@ -495,7 +495,7 @@ module Ladb::OpenCutList::Zip
     def get_extra_attributes_from_path(path) # :nodoc:
       stat = file_stat(path)
       @time = DOSTime.from_time(stat.mtime)
-      return if Ladb::OpenCutList::Zip::RUNNING_ON_WINDOWS
+      return if Ladb::LexaCut::Zip::RUNNING_ON_WINDOWS
 
       @unix_uid   = stat.uid
       @unix_gid   = stat.gid
@@ -519,7 +519,7 @@ module Ladb::OpenCutList::Zip
       return unless file? || directory?
 
       case @fstype
-      when Ladb::OpenCutList::Zip::FSTYPE_UNIX
+      when Ladb::LexaCut::Zip::FSTYPE_UNIX
         set_unix_attributes_on_path(dest_path)
       end
 
@@ -560,17 +560,17 @@ module Ladb::OpenCutList::Zip
       prep_cdir_zip64_extra
 
       case @fstype
-      when Ladb::OpenCutList::Zip::FSTYPE_UNIX
+      when Ladb::LexaCut::Zip::FSTYPE_UNIX
         ft = case ftype
              when :file
                @unix_perms ||= 0o644
-               Ladb::OpenCutList::Zip::FILE_TYPE_FILE
+               Ladb::LexaCut::Zip::FILE_TYPE_FILE
              when :directory
                @unix_perms ||= 0o755
-               Ladb::OpenCutList::Zip::FILE_TYPE_DIR
+               Ladb::LexaCut::Zip::FILE_TYPE_DIR
              when :symlink
                @unix_perms ||= 0o755
-               Ladb::OpenCutList::Zip::FILE_TYPE_SYMLINK
+               Ladb::LexaCut::Zip::FILE_TYPE_SYMLINK
              end
 
         unless ft.nil?
@@ -602,8 +602,8 @@ module Ladb::OpenCutList::Zip
     # Warning: may behave weird with symlinks.
     def get_input_stream(&block)
       if ftype == :directory
-        yield Ladb::OpenCutList::Zip::NullInputStream if block
-        Ladb::OpenCutList::Zip::NullInputStream
+        yield Ladb::LexaCut::Zip::NullInputStream if block
+        Ladb::LexaCut::Zip::NullInputStream
       elsif @filepath
         case ftype
         when :file
@@ -617,7 +617,7 @@ module Ladb::OpenCutList::Zip
           raise "unknown @file_type #{ftype}"
         end
       else
-        zis = Ladb::OpenCutList::Zip::InputStream.new(@zipfile, offset: local_header_offset)
+        zis = Ladb::LexaCut::Zip::InputStream.new(@zipfile, offset: local_header_offset)
         zis.instance_variable_set(:@complete_entry, self)
         zis.get_next_entry
         if block
@@ -667,7 +667,7 @@ module Ladb::OpenCutList::Zip
       elsif @filepath
         zip_output_stream.put_next_entry(self)
         get_input_stream do |is|
-          Ladb::OpenCutList::Zip::IOExtras.copy_stream(zip_output_stream, is)
+          Ladb::LexaCut::Zip::IOExtras.copy_stream(zip_output_stream, is)
         end
       else
         zip_output_stream.copy_raw_entry(self)
@@ -695,14 +695,14 @@ module Ladb::OpenCutList::Zip
     private
 
     def set_time(binary_dos_date, binary_dos_time)
-      @time = Ladb::OpenCutList::Zip::DOSTime.parse_binary_dos_format(binary_dos_date, binary_dos_time)
+      @time = Ladb::LexaCut::Zip::DOSTime.parse_binary_dos_format(binary_dos_date, binary_dos_time)
     rescue ArgumentError
-      warn 'WARNING: invalid date/time in zip entry.' if Ladb::OpenCutList::Zip.warn_invalid_date
+      warn 'WARNING: invalid date/time in zip entry.' if Ladb::LexaCut::Zip.warn_invalid_date
     end
 
-    def create_file(dest_path, _continue_on_exists_proc = proc { Ladb::OpenCutList::Zip.continue_on_exists_proc })
+    def create_file(dest_path, _continue_on_exists_proc = proc { Ladb::LexaCut::Zip.continue_on_exists_proc })
       if ::File.exist?(dest_path) && !yield(self, dest_path)
-        raise Ladb::OpenCutList::Zip::DestinationExistsError, dest_path
+        raise Ladb::LexaCut::Zip::DestinationExistsError, dest_path
       end
 
       ::File.open(dest_path, 'wb') do |os|
@@ -710,13 +710,13 @@ module Ladb::OpenCutList::Zip
           bytes_written = 0
           warned = false
           buf = +''
-          while (buf = is.sysread(Ladb::OpenCutList::Zip::Decompressor::CHUNK_SIZE, buf))
+          while (buf = is.sysread(Ladb::LexaCut::Zip::Decompressor::CHUNK_SIZE, buf))
             os << buf
             bytes_written += buf.bytesize
             next unless bytes_written > size && !warned
 
-            error = Ladb::OpenCutList::Zip::EntrySizeError.new(self)
-            raise error if Ladb::OpenCutList::Zip.validate_entry_sizes
+            error = Ladb::LexaCut::Zip::EntrySizeError.new(self)
+            raise error if Ladb::LexaCut::Zip.validate_entry_sizes
 
             warn "WARNING: #{error.message}"
             warned = true
@@ -731,7 +731,7 @@ module Ladb::OpenCutList::Zip
       return if ::File.directory?(dest_path)
 
       if ::File.exist?(dest_path)
-        raise Ladb::OpenCutList::Zip::DestinationExistsError, dest_path unless block_given? && yield(self, dest_path)
+        raise Ladb::LexaCut::Zip::DestinationExistsError, dest_path unless block_given? && yield(self, dest_path)
 
         ::FileUtils.rm_f dest_path
       end
@@ -784,7 +784,7 @@ module Ladb::OpenCutList::Zip
 
     # rubocop:disable Style/GuardClause
     def prep_local_zip64_extra
-      return unless Ladb::OpenCutList::Zip.write_zip64_support
+      return unless Ladb::LexaCut::Zip.write_zip64_support
       return if (!zip64? && @size && @size < 0xFFFFFFFF) || !file?
 
       # Might not know size here, so need ZIP64 just in case.
@@ -800,7 +800,7 @@ module Ladb::OpenCutList::Zip
     end
 
     def prep_cdir_zip64_extra
-      return unless Ladb::OpenCutList::Zip.write_zip64_support
+      return unless Ladb::LexaCut::Zip.write_zip64_support
 
       if (@size && @size >= 0xFFFFFFFF) || @compressed_size >= 0xFFFFFFFF ||
          @local_header_offset >= 0xFFFFFFFF

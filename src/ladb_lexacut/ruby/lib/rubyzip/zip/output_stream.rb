@@ -2,7 +2,7 @@
 
 require 'forwardable'
 
-module Ladb::OpenCutList::Zip
+module Ladb::LexaCut::Zip
   # ZipOutputStream is the basic class for writing zip files. It is
   # possible to create a ZipOutputStream object directly, passing
   # the zip file name to the constructor, but more often than not
@@ -23,7 +23,7 @@ module Ladb::OpenCutList::Zip
 
   class OutputStream
     extend Forwardable
-    include Ladb::OpenCutList::Zip::IOExtras::AbstractOutputStream
+    include Ladb::LexaCut::Zip::IOExtras::AbstractOutputStream
 
     def_delegators :@cdir, :comment, :comment=
 
@@ -40,9 +40,9 @@ module Ladb::OpenCutList::Zip
                        else
                          ::File.new(@file_name, 'wb')
                        end
-      @cdir = Ladb::OpenCutList::Zip::CentralDirectory.new
-      @compressor = Ladb::OpenCutList::Zip::NullCompressor.instance
-      @encrypter = encrypter || Ladb::OpenCutList::Zip::NullEncrypter.new
+      @cdir = Ladb::LexaCut::Zip::CentralDirectory.new
+      @compressor = Ladb::LexaCut::Zip::NullCompressor.instance
+      @encrypter = encrypter || Ladb::LexaCut::Zip::NullEncrypter.new
       @closed = false
       @current_entry = nil
     end
@@ -96,7 +96,7 @@ module Ladb::OpenCutList::Zip
     # +entry+ can be a ZipEntry object or a string.
     def put_next_entry(
       entry_name, comment = '', extra = ExtraField.new,
-      compression_method = Entry::DEFLATED, level = Ladb::OpenCutList::Zip.default_compression
+      compression_method = Entry::DEFLATED, level = Ladb::LexaCut::Zip.default_compression
     )
       raise Error, 'zip stream is closed' if @closed
 
@@ -126,7 +126,7 @@ module Ladb::OpenCutList::Zip
       @compressor = NullCompressor.instance
       entry.get_raw_input_stream do |is|
         is.seek(src_pos, IO::SEEK_SET)
-        Ladb::OpenCutList::Zip::Entry.read_local_entry(is)
+        Ladb::LexaCut::Zip::Entry.read_local_entry(is)
         IOExtras.copy_stream_n(@output_stream, is, entry.compressed_size)
       end
       @compressor = NullCompressor.instance
@@ -151,7 +151,7 @@ module Ladb::OpenCutList::Zip
       )
       @current_entry.gp_flags |= @encrypter.gp_flags
       @current_entry = nil
-      @compressor = Ladb::OpenCutList::Zip::NullCompressor.instance
+      @compressor = Ladb::LexaCut::Zip::NullCompressor.instance
     end
 
     def init_next_entry(entry)
@@ -166,11 +166,11 @@ module Ladb::OpenCutList::Zip
     def get_compressor(entry)
       case entry.compression_method
       when Entry::DEFLATED
-        Ladb::OpenCutList::Zip::Deflater.new(@output_stream, entry.compression_level, @encrypter)
+        Ladb::LexaCut::Zip::Deflater.new(@output_stream, entry.compression_level, @encrypter)
       when Entry::STORED
-        Ladb::OpenCutList::Zip::PassThruCompressor.new(@output_stream)
+        Ladb::LexaCut::Zip::PassThruCompressor.new(@output_stream)
       else
-        raise Ladb::OpenCutList::Zip::CompressionMethodError, entry.compression_method
+        raise Ladb::LexaCut::Zip::CompressionMethodError, entry.compression_method
       end
     end
 

@@ -1,4 +1,4 @@
-module Ladb::OpenCutList
+module Ladb::LexaCut
 
   require_relative 'size2d'
   require_relative '../../utils/axis_utils'

@@ -1,7 +1,7 @@
 require 'json'
 require_relative '../wrapper'
 
-module Ladb::OpenCutList::Fiddle
+module Ladb::LexaCut::Fiddle
 
   module Packy
     extend Wrapper

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Ladb::OpenCutList::Zip
+module Ladb::LexaCut::Zip
   class PassThruCompressor < Compressor # :nodoc:all
     def initialize(output_stream)
       super()

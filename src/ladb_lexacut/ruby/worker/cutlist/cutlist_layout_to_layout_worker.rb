@@ -1,4 +1,4 @@
-module Ladb::OpenCutList
+module Ladb::LexaCut
 
   require_relative '../../helper/layer_visibility_helper'
   require_relative '../../helper/sanitizer_helper'

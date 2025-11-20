@@ -41,7 +41,7 @@
 # 
 # Typical Distribution Ratio about 25% of Ideal one, still much higher than RDR
 
-module Ladb::OpenCutList::CharDet
+module Ladb::LexaCut::CharDet
 BIG5_TYPICAL_DISTRIBUTION_RATIO = 0.75
 
 #Char to FreqOrder table

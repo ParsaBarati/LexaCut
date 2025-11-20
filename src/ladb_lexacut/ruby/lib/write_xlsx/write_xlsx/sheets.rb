@@ -4,7 +4,7 @@
 require 'delegate'
 require_relative 'package/xml_writer_simple'
 
-module Ladb::OpenCutList
+module Ladb::LexaCut
 module Writexlsx
   class Sheets < DelegateClass(Array)
     include Writexlsx::Utility

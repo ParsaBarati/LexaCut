@@ -1,4 +1,4 @@
-module Ladb::OpenCutList::Kuix
+module Ladb::LexaCut::Kuix
 
   class Line < Entity3d
 

@@ -1,4 +1,4 @@
-module Ladb::OpenCutList
+module Ladb::LexaCut
 
   require_relative 'transformation_manipulator'
   require_relative 'plane_manipulator'

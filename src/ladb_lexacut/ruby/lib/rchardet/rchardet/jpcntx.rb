@@ -26,7 +26,7 @@
 # 02110-1301  USA
 ######################### END LICENSE BLOCK #########################
 
-module Ladb::OpenCutList::CharDet
+module Ladb::LexaCut::CharDet
   NUM_OF_CATEGORY = 6
   DONT_KNOW = -1
   ENOUGH_REL_THRESHOLD = 100
