@@ -97,6 +97,9 @@ default:
   thickness: Thickness
   height: Height
   deprecated: Deprecated
+  project: Project
+  client: Client
+  date: Date
 core:
   menu:
     submenu: LexaCut
@@ -1797,16 +1800,40 @@ tab:
     client: Client
     date: Date
     cost_breakdown: Cost Breakdown
+    category: Category
+    cost: Cost
+    details: Details
+    description: Description
+    quantity: Quantity
+    unit: Unit
+    total: Total
     materials: Materials
+    boresh_kari: BoreshKari (Cutting)
     cnc: CNC Operations
     edge_banding: Edge Banding
     fittings: Fittings & Hardware
+    painting: Painting
+    plate: Plate
+    wood_tools: Wood Tools
     financial_summary: Financial Summary
     subtotal: Subtotal
     overheads: Overheads
     total_with_overheads: Total with Overheads
     profit: Profit
     final_price: Final Price
+    click_for_details: "Click for details →"
+    item_count: Items
+    unit_price: Unit Price
+    hide_zero_cost: Hide Zero Cost Items
+    show_overhead_details: Show Details
+    hide_overhead_details: Hide Details
+    overhead_1: "Overhead 1 (25%)"
+    overhead_2: "Overhead 2 (4%)"
+    overhead_3: "Overhead 3 (2%)"
+    overhead_4: "Overhead 4 (2%)"
+    contingency: "Contingency (2.5%)"
+    no_items: No items to display
+    close: Close
     instructions: Generate a parts list first, then come back here to calculate costs.
     step1: "Step 1: Generate a parts list in the Parts tab"
     step2: "Step 2: Enter your project information below"

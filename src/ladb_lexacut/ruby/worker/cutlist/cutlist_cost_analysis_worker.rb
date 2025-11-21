@@ -135,7 +135,9 @@ module Ladb::LexaCut
 
       response = http.request(request)
 
-      unless response.code.to_i == 200
+      # Accept both 200 (OK) and 201 (Created) as success
+      status_code = response.code.to_i
+      unless status_code >= 200 && status_code < 300
         error_body = response.body rescue 'Unknown error'
         raise "API request failed with status #{response.code}: #{error_body}"
       end
