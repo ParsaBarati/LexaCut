@@ -131,7 +131,7 @@ core:
   savepanel:
     export_to_file: 118 - Exportar a un fichero {{ file_format }}
   dialog:
-    title: 119 - LexaCut por L'Air du Bois
+    title: 119 - LexaCut por Lexaplus & Renzo Group
   leftbar:
     more: 120 - Más
     more_docs: 121 - Doc.
@@ -2004,7 +2004,7 @@ tab:
       - Zoltán Nagy, Roland Kovács (*húngaro*)
       - Milan Divovic (*serbio*)
     credits_description: |
-      1532 - El desarrollo de esta extensión está vinculado al proyecto de plataforma de intercambio. [L'Air du Bois](https://www.lairdubois.fr).
+      1532 - El desarrollo de esta extensión está vinculado al proyecto de plataforma de intercambio. [Lexaplus & Renzo Group](https://www.lairdubois.fr).
       Esta extensión también es de *código abierto* y está disponible en [GNU GPLv3](https://github.com/lairdubois/lairdubois-lexacut-sketchup-extension/blob/master/LICENSE) licencia en [GitHub](https://github.com/lairdubois/lairdubois-lexacut-sketchup-extension).
     credits_runtime: 1533 - Tiempo de ejecución
     credits_development: 1534 - Desarrollo

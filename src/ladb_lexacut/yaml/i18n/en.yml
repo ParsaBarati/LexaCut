@@ -283,6 +283,7 @@ tab:
       Select the parts to be used for the parts list in the current scene and click **Generate**.
       If no component is selected, all visible components on the scene will be considered.
     is_selection: Selection only
+    cost_analysis: Cost Analysis
     select_part: Select part
     select_part_plural: Select parts
     material_undefined: Without material
@@ -1774,6 +1775,42 @@ tab:
         Your model does not contain any instance to be displayed here.
         An instance is a **group** or a **component** in the scene.
     obsolete_base: "To stay in sync, you need to refresh the structure."
+  costanalysis:
+    label: Cost Analysis
+    title: Cost Analysis
+    help: |
+      This page allows you to calculate the cost of your project based on the parts list.
+      Enter project information and click **Calculate Cost** to get a detailed cost breakdown.
+    cost_analysis: Cost Analysis
+    calculate: Calculate Cost
+    calculating: Calculating costs...
+    please_wait: Please wait while we calculate your project costs.
+    project_info: Project Information
+    project_name: Project Name
+    project_name_placeholder: Enter project name
+    client_name: Client Name
+    client_name_placeholder: Enter client name
+    waste_percentage: Waste Percentage
+    waste_percentage_help: Enter as decimal (e.g., 0.15 for 15% waste)
+    project_information: Project Information
+    project: Project
+    client: Client
+    date: Date
+    cost_breakdown: Cost Breakdown
+    materials: Materials
+    cnc: CNC Operations
+    edge_banding: Edge Banding
+    fittings: Fittings & Hardware
+    financial_summary: Financial Summary
+    subtotal: Subtotal
+    overheads: Overheads
+    total_with_overheads: Total with Overheads
+    profit: Profit
+    final_price: Final Price
+    instructions: Generate a parts list first, then come back here to calculate costs.
+    step1: "Step 1: Generate a parts list in the Parts tab"
+    step2: "Step 2: Enter your project information below"
+    step3: "Step 3: Click Calculate Cost to get the cost breakdown"
   importer:
     label: Import
     title: Import Parts
@@ -2009,7 +2046,7 @@ tab:
       - Zoltán Nagy, Roland Kovács (*Hungarian*)
       - Milan Divovic (*Serbian*)
     credits_description: |
-      The developpment of this extension is linked to the sharing plateform project [L'Air du Bois](https://www.lairdubois.fr).
+      The developpment of this extension is linked to the sharing plateform project [Lexaplus & Renzo Group](https://www.lairdubois.fr).
       This extension is *Open Source* as well and available under [GNU GPLv3](https://github.com/lairdubois/lairdubois-lexacut-sketchup-extension/blob/master/LICENSE) license on [GitHub](https://github.com/lairdubois/lairdubois-lexacut-sketchup-extension).
     credits_runtime: Runtime
     credits_development: Development environment

@@ -208,7 +208,7 @@ We'd love to hear your thoughts on:
 - Release Date: November 8, 2025
 
 **Based on OpenCutList**
-- Original Project: L'Air du Bois (lairdubois.fr)
+- Original Project: Lexaplus & Renzo Group (lairdubois.fr)
 - Original Version: 7.0.1
 - License: GNU GPLv3
 

@@ -1,0 +1,5 @@
+Length - raw,Width - raw,Quantity,Edge Length 1,Edge Length 2,Edge Width 1,Edge Width 2,Material name,Designation,Instance names,Area - final,Description
+0,0,0,,,,,,,,,Empty Row Should Be Filtered
+1000.0,500.0,1,PVC,PVC,PVC,PVC,ام دی اف,Component#Large,,5.0 m²,Very Large Panel
+5.0,2.0,100,,,,,ملامین,Component#Small,,0.001 m²,Very Small Panel
+60.0,20.0,1,,,,,Unknown Material,Component#Unknown,,0.12 m²,Unknown Material Test

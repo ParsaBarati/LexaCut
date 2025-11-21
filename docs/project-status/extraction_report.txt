@@ -1,0 +1,3569 @@
+EXTRACTION REPORT FOR: ANALIZ-MALI-GHARARDAD-BIM.xlsm
+
+========================================
+SECTION 1: VBA MACROS
+========================================
+Status: VBA Macros detected. Extracting...
+
+--- MODULE: ThisWorkbook.cls ---
+------------------------------
+Attribute VB_Name = "ThisWorkbook"
+Attribute VB_Base = "0{00020819-0000-0000-C000-000000000046}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = True
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = True
+
+------------------------------
+
+--- MODULE: Module45.bas ---
+------------------------------
+Attribute VB_Name = "Module45"
+Sub Macro1()
+Attribute Macro1.VB_ProcData.VB_Invoke_Func = " \n14"
+'
+' Macro1 Macro
+'
+
+'
+    Selection.NumberFormat = "#,###_-[$ÑíÇá-fa-IR]"
+End Sub
+Sub Macro2()
+Attribute Macro2.VB_ProcData.VB_Invoke_Func = " \n14"
+'
+' Macro2 Macro
+'
+
+'
+    Range("C7:C16").Select
+End Sub
+Sub Macro3()
+Attribute Macro3.VB_ProcData.VB_Invoke_Func = " \n14"
+'
+' Macro3 Macro
+'
+
+'
+    Range("C7").Select
+    ActiveCell.FormulaR1C1 = "=ROUNDUP(RC,0)"
+    Range("C7").Select
+End Sub
+
+------------------------------
+
+--- MODULE: Sheet2.cls ---
+------------------------------
+Attribute VB_Name = "Sheet2"
+Attribute VB_Base = "0{00020820-0000-0000-C000-000000000046}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = True
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = True
+
+------------------------------
+
+--- MODULE: Sheet17.cls ---
+------------------------------
+Attribute VB_Name = "Sheet17"
+Attribute VB_Base = "0{00020820-0000-0000-C000-000000000046}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = True
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = True
+Attribute VB_Control = "ListBoxSh, 1, 0, MSForms, ListBox"
+
+
+
+
+Private Sub Worksheet_Activate()
+
+Dim sh
+  Me.ListBoxSh.Clear
+   For Each sh In ThisWorkbook.Sheets
+     Me.ListBoxSh.AddItem sh.Name
+   Next sh
+ 
+End Sub
+
+
+
+
+
+------------------------------
+
+--- MODULE: Module6.bas ---
+------------------------------
+Attribute VB_Name = "Module6"
+
+
+------------------------------
+
+--- MODULE: Module1.bas ---
+------------------------------
+Attribute VB_Name = "Module1"
+
+------------------------------
+
+--- MODULE: Module2.bas ---
+------------------------------
+Attribute VB_Name = "Module2"
+
+------------------------------
+
+--- MODULE: Sheet5.cls ---
+------------------------------
+Attribute VB_Name = "Sheet5"
+Attribute VB_Base = "0{00020820-0000-0000-C000-000000000046}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = True
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = True
+Private Sub CommandButton1_Click()
+
+End Sub
+
+------------------------------
+
+--- MODULE: Module42.bas ---
+------------------------------
+Attribute VB_Name = "Module42"
+Sub LastcountPvot()
+   
+ With Sheets("FittingsData").PivotTables("FittingsTable").TableRange1
+    LastcountPvot = .Rows(.Rows.Count).Row
+ End With
+ 
+ End Sub
+
+
+
+
+------------------------------
+
+--- MODULE: Module3.bas ---
+------------------------------
+Attribute VB_Name = "Module3"
+
+------------------------------
+
+--- MODULE: Module4.bas ---
+------------------------------
+Attribute VB_Name = "Module4"
+
+------------------------------
+
+--- MODULE: UserForm1.frm ---
+------------------------------
+Attribute VB_Name = "UserForm1"
+Attribute VB_Base = "0{F5EBDCA0-2875-4B8A-8CFE-7F05D3C4824A}{8848AC1E-F6F3-4DBB-A86E-7F77A58BFB15}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = False
+
+Sub Button6_Click()
+For i = 2 To 100
+       
+    If (Sheets("ALL").Cells(i, 4) Like Sheets("Data").Range("B3")) And (Sheets("ALL").Cells(i, 5) Like Sheets("Data").Range("B3")) Then
+       Sheets("p1").Cells((i + 1), 7) = 2
+     ElseIf (Sheets("ALL").Cells(i, 4)) Like Sheets("Data").Range("B3") Xor (Sheets("ALL").Cells(i, 5)) Like Sheets("Data").Range("B3") Then
+       Sheets("p1").Cells((i + 1), 7) = 1
+       
+      
+   Else
+       Sheets("p1").Cells((i + 1), 7) = 0
+     
+     End If
+Next i
+End Sub
+
+------------------------------
+
+--- MODULE: Module5.bas ---
+------------------------------
+Attribute VB_Name = "Module5"
+
+
+Sub subMultiply()
+
+Dim numbers As Range, multiplier As Range
+Dim a As Range
+Dim c As Integer
+'Setting variables
+Set numbers = Range("A84:A" & Range("A65000").End(xlUp).Row)
+Set multiplier = Range("e84")
+c = 84
+'For each loop
+For Each a In numbers
+Cells(c, 7) = a * multiplier
+c = c + 1
+Next a
+
+End Sub
+
+'------------------ CopyP1 ---------------------------
+Sub CopyP1()
+'Sub se()
+ Dim StartCell As Range
+ Dim LastRow As Long
+ Dim LastCol As Long
+ Dim Lastcount As Integer
+ Dim StartR As Range
+ Dim iRange As Range
+ Dim iCells As Range
+ Dim LastcountPvot As Integer
+
+
+Sheets("all").Select
+Lastcount = Sheets("all").Cells(Rows.Count, 11).End(xlUp).Row
+LastcountPvot = Sheets("all").Cells(Rows.Count, 27).End(xlUp).Row
+Set StartCell = Range("i2")
+'MsgBox (LastCount)
+ 
+Sheets("all").Range(Range("a2"), Cells(Lastcount, "c")).Copy Sheets("p1").Range("b11")
+Sheets("all").Range(StartCell, Cells(Lastcount, "j")).Copy Sheets("p1").Range("k11")
+Sheets("all").Range(Range("h2"), Cells(Lastcount, "h")).Copy Sheets("p1").Range("m11")
+Sheets("P1").Range("m10").Value = "MaterialType"
+Sheets("P1").Range("m:m").EntireColumn.Hidden = True
+
+'Sheets("all").Range(Range("aa4"), Cells(LastCountPvot, "aa")).Copy Sheets("p1").Range("t3")
+'Sheets("p1").Range("T2").Value = "MaterialType"
+
+'------------------- Insert Data ------------------
+'Sub Calcute_Click()
+'-------------------- Range("B2")  Range("B6") ------------------------------------------------
+For i = 2 To Lastcount
+   If (Sheets("ALL").Cells(i, 6) Like Sheets("Data").Range("B2")) And (Sheets("ALL").Cells(i, 7) Like Sheets("Data").Range("B2")) Then
+       Sheets("p1").Cells((i + 9), 10) = 2
+   ElseIf (Sheets("ALL").Cells(i, 6) Like Sheets("Data").Range("B2")) Xor (Sheets("ALL").Cells(i, 7) Like Sheets("Data").Range("B2")) Then
+       Sheets("p1").Cells((i + 9), 10) = 1
+       
+   ElseIf (Sheets("ALL").Cells(i, 6) Like Sheets("Data").Range("B6")) And (Sheets("ALL").Cells(i, 7) Like Sheets("Data").Range("B6")) Then
+       Sheets("p1").Cells((i + 9), 10) = 2
+   ElseIf (Sheets("ALL").Cells(i, 6) Like Sheets("Data").Range("B6")) Xor (Sheets("ALL").Cells(i, 7) Like Sheets("Data").Range("B6")) Then
+       Sheets("p1").Cells((i + 9), 10) = 1
+       
+   Else
+       Sheets("p1").Cells((i + 9), 10) = Null
+     End If
+Next i
+
+For e = 2 To Lastcount
+    If (Sheets("ALL").Cells(e, 4) Like Sheets("Data").Range("B2")) And (Sheets("ALL").Cells(e, 5) Like Sheets("Data").Range("B2")) Then
+       Sheets("p1").Cells((e + 9), 9) = 2
+     ElseIf (Sheets("ALL").Cells(e, 4)) Like Sheets("Data").Range("B2") Xor (Sheets("ALL").Cells(e, 5)) Like Sheets("Data").Range("B2") Then
+       Sheets("p1").Cells((e + 9), 9) = 1
+       
+     ElseIf (Sheets("ALL").Cells(e, 4) Like Sheets("Data").Range("B6")) And (Sheets("ALL").Cells(e, 5) Like Sheets("Data").Range("B6")) Then
+       Sheets("p1").Cells((e + 9), 9) = 2
+     ElseIf (Sheets("ALL").Cells(e, 4)) Like Sheets("Data").Range("B6") Xor (Sheets("ALL").Cells(e, 5)) Like Sheets("Data").Range("B6") Then
+       Sheets("p1").Cells((e + 9), 9) = 1
+       
+   Else
+       Sheets("p1").Cells((e + 9), 9) = Null
+     End If
+Next e
+'----------------------- Range("B3") ------------------------------------------------
+ For d = 2 To Lastcount
+    If (Sheets("ALL").Cells(d, 4) Like Sheets("Data").Range("B3")) And (Sheets("ALL").Cells(d, 5) Like Sheets("Data").Range("B3")) Then
+       Sheets("p1").Cells((d + 9), 7) = 2
+     ElseIf (Sheets("ALL").Cells(d, 4)) Like Sheets("Data").Range("B3") Xor (Sheets("ALL").Cells(d, 5)) Like Sheets("Data").Range("B3") Then
+       Sheets("p1").Cells((d + 9), 7) = 1
+   Else
+       Sheets("p1").Cells((d + 9), 7) = Null
+     End If
+Next d
+
+For h = 2 To Lastcount
+   If (Sheets("ALL").Cells(h, 6) Like Sheets("Data").Range("B3")) And (Sheets("ALL").Cells(h, 7) Like Sheets("Data").Range("B3")) Then
+       Sheets("p1").Cells((h + 9), 8) = 2
+   ElseIf (Sheets("ALL").Cells(h, 6) Like Sheets("Data").Range("B3")) Xor (Sheets("ALL").Cells(h, 7) Like Sheets("Data").Range("B3")) Then
+       Sheets("p1").Cells((h + 9), 8) = 1
+       
+   ElseIf (Sheets("ALL").Cells(h, 6) Like Sheets("Data").Range("B7")) And (Sheets("ALL").Cells(h, 7) Like Sheets("Data").Range("B7")) Then
+       Sheets("p1").Cells((h + 9), 8) = 2
+   ElseIf (Sheets("ALL").Cells(h, 6) Like Sheets("Data").Range("B7")) Xor (Sheets("ALL").Cells(h, 7) Like Sheets("Data").Range("B7")) Then
+       Sheets("p1").Cells((h + 9), 8) = 1
+   Else
+       Sheets("p1").Cells((h + 9), 8) = Null
+     End If
+Next h
+'----------------------- Range("B4") Range("B5") Range("B8")------------------------------------------------
+For f = 2 To Lastcount
+   
+   If (Sheets("ALL").Cells(f, 4) Like Sheets("Data").Range("B4")) And (Sheets("ALL").Cells(f, 5) Like Sheets("Data").Range("B4")) Then
+       Sheets("p1").Cells((f + 9), 5) = 2
+   ElseIf (Sheets("ALL").Cells(f, 4)) Like Sheets("Data").Range("B4") Xor (Sheets("ALL").Cells(f, 5)) Like Sheets("Data").Range("B4") Then
+       Sheets("p1").Cells((f + 9), 5) = 1
+   ElseIf (Sheets("ALL").Cells(f, 4) Like Sheets("Data").Range("B5")) And (Sheets("ALL").Cells(f, 5) Like Sheets("Data").Range("B5")) Then
+       Sheets("p1").Cells((f + 9), 5) = 2
+   ElseIf (Sheets("ALL").Cells(f, 4)) Like Sheets("Data").Range("B5") Xor (Sheets("ALL").Cells(f, 5)) Like Sheets("Data").Range("B5") Then
+       Sheets("p1").Cells((f + 9), 5) = 1
+   ElseIf (Sheets("ALL").Cells(f, 4) Like Sheets("Data").Range("B8")) And (Sheets("ALL").Cells(f, 5) Like Sheets("Data").Range("B8")) Then
+       Sheets("p1").Cells((f + 9), 5) = 2
+   ElseIf (Sheets("ALL").Cells(f, 4)) Like Sheets("Data").Range("B8") Xor (Sheets("ALL").Cells(f, 5)) Like Sheets("Data").Range("B8") Then
+       Sheets("p1").Cells((f + 9), 5) = 1
+       
+       
+   Else
+       Sheets("p1").Cells((f + 9), 5) = Null
+     End If
+Next f
+
+For G = 2 To Lastcount
+   If (Sheets("ALL").Cells(G, 6) Like Sheets("Data").Range("B4")) And (Sheets("ALL").Cells(G, 7) Like Sheets("Data").Range("B4")) Then
+       Sheets("p1").Cells((G + 9), 6) = 2
+   ElseIf (Sheets("ALL").Cells(G, 6) Like Sheets("Data").Range("B4")) Xor (Sheets("ALL").Cells(G, 7) Like Sheets("Data").Range("B4")) Then
+       Sheets("p1").Cells((G + 9), 6) = 1
+   ElseIf (Sheets("ALL").Cells(G, 6) Like Sheets("Data").Range("B5")) And (Sheets("ALL").Cells(G, 7) Like Sheets("Data").Range("B5")) Then
+       Sheets("p1").Cells((G + 9), 6) = 2
+   ElseIf (Sheets("ALL").Cells(G, 6) Like Sheets("Data").Range("B5")) Xor (Sheets("ALL").Cells(G, 7) Like Sheets("Data").Range("B5")) Then
+       Sheets("p1").Cells((G + 9), 6) = 1
+   ElseIf (Sheets("ALL").Cells(G, 6) Like Sheets("Data").Range("B8")) And (Sheets("ALL").Cells(G, 7) Like Sheets("Data").Range("B8")) Then
+       Sheets("p1").Cells((G + 9), 6) = 2
+   ElseIf (Sheets("ALL").Cells(G, 6) Like Sheets("Data").Range("B8")) Xor (Sheets("ALL").Cells(G, 7) Like Sheets("Data").Range("B8")) Then
+       Sheets("p1").Cells((G + 9), 6) = 1
+       
+   Else
+       Sheets("p1").Cells((G + 9), 6) = Null
+     End If
+Next G
+
+'---------------  Borderline ------ Interior.Color  --------------
+
+Sheets("p1").Select
+  LastCount2 = Sheets("p1").Cells(Rows.Count, 2).End(xlUp).Row
+  Set StartB = Cells(11, "a")
+  Set iRange = Sheets("p1").Range(StartB, Cells(LastCount2, "L"))
+  
+  Set iRangeCol = Sheets("p1").Range(StartB, Cells(LastCount2, "k"))
+  Set iRangeDsc = Sheets("p1").Range("L11", Cells(LastCount2, "L"))
+  Set iRangeColK = Sheets("p1").Range("K:K")
+  Set iRangeColEJ = Sheets("p1").Range("E:J")
+  'Set iRangeColT = Sheets("p1").Range("t:t")
+  
+For Each iCells In iRange
+    iCells.BorderAround _
+            LineStyle:=xlContinuous, _
+            Weight:=xlThin
+Next iCells
+  
+
+  
+    With iRange.Font
+        .Name = "B Nazanin"
+        .Size = 12
+        .Bold = True
+        .Underline = xlUnderlineStyleNone
+        .ThemeColor = xlThemeColorLight1
+        .ThemeFont = xlThemeFontNone
+    End With
+    
+     With iRange
+        .HorizontalAlignment = xlCenter
+        .VerticalAlignment = xlCenter
+        .WrapText = False
+    End With
+    
+       With iRangeDsc
+        .HorizontalAlignment = xlRight
+        .VerticalAlignment = xlCenter
+    End With
+    
+        With iRangeDsc.Font
+        .Name = "B Nazanin"
+        .Size = 10
+        .Bold = True
+        .Underline = xlUnderlineStyleNone
+        .ThemeColor = xlThemeColorLight1
+        .ThemeFont = xlThemeFontNone
+    End With
+    
+
+    iRangeDsc.RowHeight = 23
+    
+    Range("A:A").ColumnWidth = 5
+    Range("B:B").ColumnWidth = 7
+    Range("C:C").ColumnWidth = 6
+    Range("D:D").ColumnWidth = 6
+    Range("E:J").ColumnWidth = 5
+    Range("K:k").ColumnWidth = 7
+    'Range("G:G").ColumnWidth = 5
+    'Range("H:H").EntireColumn.Hidden = True
+    'Range("I:I").ColumnWidth = 25
+    Range("L:L").ColumnWidth = 21
+    
+
+
+'End Sub
+  'End Sub
+ '------------------ Row -------------------------
+ ''Sub Add_Row_Number()
+    'Dim Ro As Integer
+    'Dim Lastrow1 As Long
+      'Lastrow1 = Cells(Rows.Count, 2).End(xlUp).Row
+
+      'Sheets("p1").Select
+
+     'For Ro = 11 To Lastrow1
+        'Cells(Ro, 1).Value = Ro - 10
+     'Next Ro
+''End Sub
+
+     Range("A11").Select
+      Lastcount = Sheets("P1").Cells(Rows.Count, 2).End(xlUp).Row
+        ActiveCell.FormulaR1C1 = "=SUBTOTAL(3,R11C2:RC[1])"
+        Selection.AutoFill Destination:=Range(Range("A11"), Cells(Lastcount, "A")), Type:=xlFillDefault
+        
+        For icolor = 11 To LastCount2
+ If (icolor Mod 2) = 0 Then
+  Cells(icolor, 1).Interior.Color = RGB(192, 192, 192)
+  Cells(icolor, 2).Interior.Color = RGB(192, 192, 192)
+  Cells(icolor, 3).Interior.Color = RGB(192, 192, 192)
+  Cells(icolor, 4).Interior.Color = RGB(192, 192, 192)
+  Cells(icolor, 5).Interior.Color = RGB(192, 192, 192)
+  Cells(icolor, 6).Interior.Color = RGB(192, 192, 192)
+  Cells(icolor, 7).Interior.Color = RGB(192, 192, 192)
+  Cells(icolor, 8).Interior.Color = RGB(192, 192, 192)
+  Cells(icolor, 9).Interior.Color = RGB(192, 192, 192)
+  Cells(icolor, 10).Interior.Color = RGB(192, 192, 192)
+  Cells(icolor, 11).Interior.Color = RGB(192, 192, 192)
+  Cells(icolor, 12).Interior.Color = RGB(192, 192, 192)
+End If
+Next icolor
+    
+End Sub
+Sub CopyDataSheet()
+ 
+ Dim StartCell As Range
+ Dim LastRow As Long
+ Dim LastCol As Long
+ Dim Lastcount As Integer
+ Dim LastCount2 As Integer
+ Dim LastCountDataSheet As Integer
+    Dim cell As Range
+ 'MsgBox (LastCount2)
+ Sheets("all").Select
+ 
+ On Error Resume Next
+ 
+ Lastcount = Sheets("all").Cells(Rows.Count, 11).End(xlUp).Row
+ LastCount2 = Sheets("all").Cells(Rows.Count, 8).End(xlUp).Row
+ LastCountDataSheet = Sheets("datasheet").Cells(Rows.Count, 1).End(xlUp).Row
+ 
+  Set StartCell = Cells(Lastcount + 1, "a")
+    
+Sheets("all").Select
+  For X = Lastcount + 1 To LastCount2
+  Sheets("all").Cells(X, "D").Value = (Cells(X, "A").Value * Cells(X, "c").Value) / 100
+ Next X
+ 
+  Sheets("all").Range(StartCell, Cells(LastCount2, "h")).Copy Sheets("DataSheet").Range("a2")
+  
+  Sheets("DataSheet").Select
+  
+  LastCount2 = Sheets("DataSheet").Cells(Rows.Count, 1).End(xlUp).Row
+  Set StartB = Cells(2, "a")
+  Set iRange = Sheets("DataSheet").Range(StartB, Cells(LastCount2, "h"))
+ 
+For Each iCells In iRange
+    iCells.BorderAround _
+            LineStyle:=xlContinuous, _
+            Weight:=xlThin
+Next iCells
+  
+For icolor = 2 To LastCount2
+ If (icolor Mod 2) = 0 Then
+  Cells(icolor, 1).Interior.Color = RGB(192, 192, 192)
+  Cells(icolor, 2).Interior.Color = RGB(192, 192, 192)
+  Cells(icolor, 3).Interior.Color = RGB(192, 192, 192)
+  Cells(icolor, 4).Interior.Color = RGB(192, 192, 192)
+  Cells(icolor, 5).Interior.Color = RGB(192, 192, 192)
+  Cells(icolor, 6).Interior.Color = RGB(192, 192, 192)
+  Cells(icolor, 7).Interior.Color = RGB(192, 192, 192)
+  Cells(icolor, 8).Interior.Color = RGB(192, 192, 192)
+  
+
+ 
+
+'IRange.Interior.Color = 15773696
+End If
+Next icolor
+
+    With iRange.Font
+        .Name = "B Nazanin"
+        .Size = 12
+        .Bold = True
+        .Strikethrough = False
+        .Superscript = False
+        .Subscript = False
+        .OutlineFont = False
+        .Shadow = False
+        .Underline = xlUnderlineStyleNone
+        .ThemeColor = xlThemeColorLight1
+        .ThemeFont = xlThemeFontNone
+    End With
+    
+   'Sheets("DataSheet").Protect Contents:=False
+   'Sheets("DataSheet").Range("a1:h1").Locked = True
+   'Sheets("DataSheet").Range("a1:h1").Protect Contents:=True
+
+  Sheets("DataSheet").Select
+
+'End Sub
+'---------------- InsertPivotTable ---------------------
+
+'Sub InsertPivotTable()
+
+'Declare Variables
+Dim ws As Worksheet
+Dim wb As Workbook
+Dim PC As PivotCache
+Dim PT As PivotTable
+Dim prange As Range
+
+Sheets("DataSheet").Select
+ Lastcount = Sheets("datasheet").Cells(Rows.Count, 1).End(xlUp).Row
+ LastCount2 = Sheets("datasheet").Cells(Rows.Count, 8).End(xlUp).Row
+ 
+  Set StartCell = Cells(1, "a")
+  
+Set ws = Sheets("datasheet")
+Set wb = ThisWorkbook
+
+Set prange = Sheets("datasheet").Range(StartCell, Cells(LastCount2, "h"))
+
+ Set PC = wb.PivotCaches.Create(SourceType:=xlDatabase, SourceData:=prange)
+ Set PT = ws.PivotTables.Add(PivotCache:=PC, TableDestination:=Range("k2"), TableName:="BoreshCalc")
+ 
+  With PT
+  
+ .PivotFields("Material").Orientation = xlRowField
+ '.PivotFields("Edge width 1").Orientation = xlColumnField
+ '.PivotFields("Edge width 2").Orientation = xlPageField
+ .PivotFields("Val").Orientation = xlDataField
+ .DataBodyRange.NumberFormat = "#,##0"
+ .ColumnGrand = False
+ .CompactLayoutRowHeader = "MaterialTyp"
+ End With
+
+'Sub vloookDataSheet()
+Set MyRange = Sheets("Data").Range("F:G")
+Set DataCode = Sheets("Datasheet").Range("k3:k15")
+Set DataDsc = Sheets("Datasheet").Range("n3:n15")
+
+DataDsc.Value = Application.WorksheetFunction.VLookup(DataCode, MyRange, 2, 0)
+
+'Sub Replace()
+For Each ir In Sheets("Datasheet").Columns("N")
+ Sheets("Datasheet").Columns("N").Replace what:="#N/A", Replacement:=Null
+Next ir
+'End Sub
+
+Sheets("datasheet").Select
+  For j = 3 To 13
+  Sheets("datasheet").Cells(j, "o").Value = Round(Cells(j, "L").Value, 0)
+ 
+ Next j
+
+End Sub
+
+Sub VlookNvar()
+
+Set MyRange = Sheets("Datasheet").Range("N:O")
+Set DataCode = Sheets("Navar").Range("f7:f30")
+Set DataDsc = Sheets("Navar").Range("e7:e30")
+
+DataDsc.Value = Application.WorksheetFunction.VLookup(DataCode, MyRange, 2, 0)
+Sheets("Navar").Columns("E").Replace what:="#N/A", Replacement:=Null
+
+End Sub
+
+Sub ClearALL()
+   Dim Lastcount As Integer
+   Dim StartCell As Range
+  Lastcount = Sheets("ALL").Cells(Rows.Count, 1).End(xlUp).Row
+    Set StartCell = Cells(1, "A")
+  For DelAll = 1 To Lastcount
+   Sheets("ALL").Range(StartCell, Cells(Lastcount, "DZ")).ClearContents
+   Sheets("ALL").Range(StartCell, Cells(Lastcount, "DZ")).ClearFormats
+  Next DelAll
+
+ Sheets("ALL").Range("A1").Select
+
+End Sub
+
+
+
+Sub ClearP1()
+  Dim Lastcount As Integer
+  Dim StartCell As Range
+  Lastcount = Sheets("p1").Cells(Rows.Count, 2).End(xlUp).Row
+  Set StartCell = Cells(11, "a")
+ 
+
+ 
+ 
+ On Error Resume Next
+
+    Range("S2").Select
+    Selection.ClearContents
+    ActiveSheet.ShowAllData
+    
+For a = 11 To Lastcount
+ Sheets("p1").Range(StartCell, Cells(Lastcount, "M")).ClearContents
+ Sheets("p1").Range(StartCell, Cells(Lastcount, "M")).ClearFormats
+Next a
+'Sheets("p1").Range("s2").ClearContents
+
+
+End Sub
+
+Sub ClearDataSheet()
+  Dim Lastcount As Integer
+  Dim StartCell As Range
+ Lastcount = Sheets("DataSheet").Cells(Rows.Count, 1).End(xlUp).Row
+ LastCountPv = Sheets("DataSheet").Cells(Rows.Count, 15).End(xlUp).Row
+ Set StartCell = Cells(2, "a")
+ 
+  For Y = 2 To LastCountPv
+   Sheets("DataSheet").Range(StartCell, Cells(LastCountPv, "O")).ClearContents
+   Sheets("DataSheet").Range(StartCell, Cells(LastCountPv, "O")).ClearFormats
+  Next Y
+  
+ For b = 2 To Lastcount
+   Sheets("DataSheet").Range(StartCell, Cells(Lastcount, "O")).ClearContents
+   Sheets("DataSheet").Range(StartCell, Cells(Lastcount, "O")).ClearFormats
+ Next b
+  
+
+End Sub
+
+'--------------------- Copy BarAvorde BoreshKari ---------------------------
+Sub BoreshKari()
+
+
+  Sheets("BoreshKari").Activate
+  ActiveSheet.Range("A7:F30").ClearContents
+  
+Dim StartCell As Range
+Dim LastRow As Long
+Dim LastCol As Long
+Dim Lastcount As Integer
+Dim StartR As Range
+Dim iRange As Range
+Dim iCells As Range
+
+Dim iRangeDsc As Range
+Set iRangeDsc = Sheets("BoreshKari").Range("F:F")
+
+
+Sheets("material").Select
+Lastcount = Sheets("material").Cells(Rows.Count, 9).End(xlUp).Row
+Set StartCell = Range("g7")
+
+Sheets("material").Range(Range("I7"), Cells(Lastcount, "i")).Copy Sheets("BoreshKari").Range("F7")
+Sheets("material").Range(Range("G7"), Cells(Lastcount, "G")).Copy Sheets("BoreshKari").Range("D7")
+
+
+'---------- VlookBoreshKari() ---------------------
+
+Set MyRange = Sheets("BoreshKari").Range("w:x")
+Set DataCode = Sheets("BoreshKari").Range("f7:f30")
+Set DataDsc = Sheets("BoreshKari").Range("b7:b30")
+DataDsc.Value = Application.WorksheetFunction.VLookup(DataCode, MyRange, 2, 0)
+Sheets("BoreshKari").Columns("b").Replace what:="#N/A", Replacement:=Null
+
+'Sheets("BoreshKari").Activate
+'Range("A7:A30").Formula = "=D7*D7"
+'Range("A7:A30").Value = Range("A7:A30").Value
+'MsgBox (LastCount)
+    For i = 7 To Lastcount
+       Sheets("BoreshKari").Cells(i, 1) = Sheets("BoreshKari").Cells(i, 2) * WorksheetFunction.Round(Sheets("BoreshKari").Cells(i, 4), 0)
+    Next i
+    
+  
+ Set MyRange = Sheets("BoreshKari").Range("w:Y")
+ Set DataCode = Sheets("BoreshKari").Range("f7:f30")
+ Set DataDsc = Sheets("BoreshKari").Range("C7:C30")
+ DataDsc.Value = Application.WorksheetFunction.VLookup(DataCode, MyRange, 3, 0)
+ Sheets("BoreshKari").Columns("C").Replace what:="#N/A", Replacement:=Null
+
+'MsgBox (LastCount)
+
+
+    iRangeDsc.ColumnWidth = 28
+    Sheets("BoreshKari").Range("E:E").EntireColumn.Hidden = True
+    Sheets("all").PivotTables("MatTable").RefreshTable
+ 
+ 
+     Set iRange = Sheets("BoreshKari").Range("A7:F30")
+ 
+   For Each iCells In iRange
+            iCells.BorderAround _
+            LineStyle:=xlContinuous, _
+            Weight:=xlThin
+   Next iCells
+
+
+Sheets("BoreshKari").Activate
+
+    Range("A:A").ColumnWidth = 18
+    Range("B:B").ColumnWidth = 15
+    Range("C:C").ColumnWidth = 7
+    Range("D:D").ColumnWidth = 6
+    'Range("E:E").EntireColumn.Hidden = True
+    Range("F:F").ColumnWidth = 32
+    Range("G:G").ColumnWidth = 3
+    'Range("H:H").EntireColumn.Hidden = True
+    'Range("I:I").ColumnWidth = 25
+    'Range("J:J").ColumnWidth = 3
+    
+    
+    Sheets("BoreshKari").Columns("M:T").ColumnWidth = 0.1
+    
+    Sheets("BoreshKari").Range("A31").FormulaR1C1 = "=SUM(R[-24]C:R[-1]C)"
+    Sheets("BoreshKari").Range("A31").NumberFormat = "#,###_-[$ÑíÇá-fa-IR]"
+
+    Sheets("BoreshKari").Activate
+
+End Sub
+
+Sub ClearBoresh()
+
+ Sheets("BoreshKari").Activate
+ ActiveSheet.Range("a7:f30").ClearContents
+
+End Sub
+Sub ClearMaterial()
+
+ Sheets("Material").Activate
+ ActiveSheet.Range("A7:I30").ClearContents
+
+End Sub
+
+'---------------- InsertPivotTable ---------------------
+Sub Material()
+
+
+ Sheets("material").Activate
+  ActiveSheet.Range("A7:I30").ClearContents
+  
+ Dim StartCell As Range
+ Dim LastRow As Long
+ Dim LastCol As Long
+ Dim Lastcount As Integer
+ Dim StartR As Range
+ Dim iRange As Range
+ Dim iCells As Range
+
+ Dim ws As Worksheet
+ Dim wb As Workbook
+ Dim PC As PivotCache
+ Dim PT As PivotTable
+ Dim prange As Range
+ Dim iRangeDsc As Range
+ 
+ Set iRangeDsc = Sheets("material").Range("i:i")
+
+
+Sheets("all").Select
+Sheets("all").Columns("k").Replace what:="m²", Replacement:=""
+
+
+ On Error Resume Next
+
+  Lastcount = Sheets("all").Cells(Rows.Count, 11).End(xlUp).Row
+  Set StartCell = Range("i2")
+   
+   'MsgBox (LastCount)
+'-----------------------------------------------------------------------
+  Sheets("all").Range("aa4:aa27").Copy Destination:=Sheets("Material").Range("i7:i24")
+  Sheets("all").Range("ab4:ab27").Copy Destination:=Sheets("Material").Range("H7:H24")
+ 
+ '----------- vlookUp Column i -------------
+Set MyRange = Sheets("Material").Range("W:Z")
+Set DataCode = Sheets("Material").Range("i7:i30")
+Set DataDsc = Sheets("Material").Range("b7:b30")
+DataDsc.Value = Application.WorksheetFunction.VLookup(DataCode, MyRange, 4, 0)
+Sheets("Material").Columns("b").Replace what:="#N/A", Replacement:=Null
+
+Set MyRange = Sheets("Material").Range("W:Z")
+Set DataCode = Sheets("Material").Range("i7:i30")
+Set DataDsc = Sheets("Material").Range("f7:f30")
+DataDsc.Value = Application.WorksheetFunction.VLookup(DataCode, MyRange, 2, 0)
+Sheets("Material").Columns("f").Replace what:="#N/A", Replacement:=Null
+
+Set MyRange = Sheets("Material").Range("W:Z")
+Set DataCode = Sheets("Material").Range("i7:i30")
+Set DataDsc = Sheets("Material").Range("D7:D30")
+DataDsc.Value = Application.WorksheetFunction.VLookup(DataCode, MyRange, 3, 0)
+Sheets("Material").Columns("D").Replace what:="#N/A", Replacement:=Null
+
+'-------------------------
+
+ Sheets("Material").Select
+    Lastcount = Sheets("Material").Cells(Rows.Count, 9).End(xlUp).Row
+      For i = 7 To Lastcount
+      Sheets("Material").Cells(i, 7) = WorksheetFunction.RoundUp(Sheets("Material").Cells(i, 8) / WorksheetFunction.RoundUp(Sheets("Material").Cells(i, 6), 1), 0)
+      Next i
+      
+ Sheets("Material").Select
+  
+  LastCount2 = Sheets("Material").Cells(Rows.Count, 1).End(xlUp).Row
+  Set StartB = Cells(7, "a")
+  Set iRange = Sheets("Material").Range("A7:I30")
+ 
+For Each iCells In iRange
+            iCells.BorderAround _
+            LineStyle:=xlContinuous, _
+            Weight:=xlThin
+Next iCells
+
+'--------------------- Font Materil -----------------------------
+    With iRange.Font
+        .Name = "B Nazanin"
+        .Size = 11
+        .Bold = True
+        .Strikethrough = False
+        .Superscript = False
+        .Subscript = False
+        .OutlineFont = False
+        .Shadow = False
+        .Underline = xlUnderlineStyleNone
+        .ThemeColor = xlThemeColorLight1
+        .ThemeFont = xlThemeFontNone
+    End With
+    
+    With iRange
+    .HorizontalAlignment = xlGeneral
+    End With
+    
+    Range("A:A").ColumnWidth = 17
+    Range("B:B").ColumnWidth = 13
+    Range("C:C").ColumnWidth = 6
+    Range("D:D").ColumnWidth = 6
+    Range("E:E").ColumnWidth = 6
+    Range("F:F").ColumnWidth = 6
+    Range("G:G").ColumnWidth = 5
+    Range("H:H").EntireColumn.Hidden = True
+    Range("I:I").ColumnWidth = 25
+    Range("J:J").ColumnWidth = 3
+
+  
+    Sheets("Material").Select
+    Lastcount = Sheets("Material").Cells(Rows.Count, 9).End(xlUp).Row
+      For i = 7 To Lastcount
+       Sheets("Material").Cells(i, 1) = Sheets("Material").Cells(i, 2) * WorksheetFunction.Round(Sheets("Material").Cells(i, 7), 0)
+      Next i
+
+
+      Sheets("Material").Range("A31").FormulaR1C1 = "=SUM(R[-24]C:R[-1]C)"
+      Sheets("Material").Range("A31").NumberFormat = "#,###_-[$ÑíÇá-fa-IR]"
+
+
+End Sub
+
+
+Sub AllCalculate()
+
+ Dim StartCell As Range
+ Dim LastRow As Long
+ Dim LastCol As Long
+ Dim Lastcount As Integer
+ Dim LastCount2 As Integer
+ Dim LastcountPvot As Integer
+ Dim StartR As Range
+ Dim iRange As Range
+ Dim iCells As Range
+
+ Dim ws As Worksheet
+ Dim wb As Workbook
+ Dim PC As PivotCache
+ Dim PT As PivotTable
+ Dim prange As Range
+ Dim iRangeWhith As Range
+ Dim RangeTrim As Range
+ 
+ Set iRangeWhith = Sheets("ALL").Range("S:V,Y:Z")
+ iRangeWhith.ColumnWidth = 0.1
+
+ Lastcount = Sheets("all").Cells(Rows.Count, 11).End(xlUp).Row
+ LastCount2 = Sheets("all").Cells(Rows.Count, 8).End(xlUp).Row
+ LastCount3 = Sheets("all").Cells(Rows.Count, 32).End(xlUp).Row
+
+  'MsgBox (lastcount)
+  'MsgBox (LastCount2)
+  'MsgBox (LastCount3)
+  
+ Sheets("all").Select
+ 
+ Sheets("ALL").Range("CC:CD").ClearContents
+ 'Sheets("all").Columns("i").Replace what:="Component#", Replacement:="C"
+ 'Sheets("all").Columns("k").Replace what:="m²", Replacement:=""
+ 
+ '------------------ Plate ---------------------------------------------------
+ '------------------------------------------------------------------------------
+  On Error Resume Next
+ 
+Dim cell As Range
+
+For Each cell In Sheets("ALL").Range("J1:J1000")
+'If InStr(cell.Value, "ÕÝÍå") > 0 Then
+If InStr(cell.Value, Sheets("Data").Range("F4")) > 0 Then
+ 
+cell.Offset(0, 2).Value = Sheets("Data").Range("E4")
+End If
+Next cell
+'--------------------- Cut and Paste Rows ----------------------------
+Dim SelectCells As Range
+Dim xcell As Object
+Dim rngPlate As Range
+
+Set rngPlate = Sheets("ALL").Range("L1:L5000")
+'check each cell in the specific worksheet if the criteria is matching
+ For Each xcell In rngPlate
+
+  If xcell.Value = Sheets("Data").Range("E4") Then
+    If SelectCells Is Nothing Then
+      Set SelectCells = Range(xcell.Address)
+    Else
+      Set SelectCells = Union(SelectCells, Range(xcell.Address))
+    End If
+  End If
+Next
+
+  Range(SelectCells, SelectCells.Offset(0, -11)).Copy Destination:=Sheets("ALL").Range("CW2")
+
+'--------------------- Delete Rows -----------------------------------
+
+Set rngPlateDel = Sheets("ALL").Range("L1:L5000")
+'check each cell in the specific worksheet if the criteria is matching
+ For Each xcell In rngPlateDel
+
+  If xcell.Value = Sheets("Data").Range("E4") Then
+    If SelectCells Is Nothing Then
+      Set SelectCells = Range(xcell.Address)
+    Else
+      Set SelectCells = Union(SelectCells, Range(xcell.Address))
+    End If
+  End If
+Next
+
+'Range(SelectCells, SelectCells.Offset(0, -11)).Select
+Range(SelectCells, SelectCells.Offset(0, -11)).Delete Shift:=xlUp
+
+Sheets("ALL").Range("DD:DD").Copy Destination:=Sheets("ALL").Range("CZ1")
+Sheets("ALL").Range("DE1:DH100").ClearContents
+ '------------------------------------------------------------------------------
+ '------------------------------------------------------------------------------
+ '------------------ Find & Replace (Component#)--------------------------------
+Dim sht As Range
+Dim fnd As Variant
+Dim rplc As Variant
+
+fnd = "Component#"
+rplc = "C"
+
+  Set sht = Sheets("all").Range("I:I")
+  sht.Cells.Replace what:=fnd, Replacement:=rplc, _
+    LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False, _
+    SearchFormat:=False, ReplaceFormat:=False
+
+'------------------ Find & Replace (m²)-------------------
+'Dim sht As Range
+'Dim fnd As Variant
+'Dim rplc As Variant
+
+fnd = "m²"
+rplc = ""
+
+  Set sht = Sheets("all").Range("K:K")
+  sht.Cells.Replace what:=fnd, Replacement:=rplc, _
+    LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False, _
+    SearchFormat:=False, ReplaceFormat:=False
+ '-------------------------------------------------------
+
+ Range("x1").Value = "SumArea"
+ Range("w1").Value = "Material"
+ 'Sheets("all").Range("AD1").Value = "Type"
+ 'Sheets("all").Range("AE1").Value = "Val"
+ Sheets("all").Range("AT1").Value = "Color"
+ Sheets("all").Range("BA1").Value = "(Length*Quantity)"
+ Sheets("all").Range("BB1").Value = "(Length*Width*Quantity)*1.15"
+ Sheets("all").Range("BC1").Value = "((Length*Width*Quantity)*2)*1.15"
+ Sheets("all").Range("CC1").Value = "Material"
+ Sheets("all").Range("CD1").Value = "Total"
+ Sheets("ALL").Range("A1:C1,H1").Copy Destination:=Sheets("ALL").Range("CW1")
+ 
+ Sheets("all").Range(Cells(2, "H"), Cells(Lastcount, "H")).Copy Sheets("all").Range("W2")
+ Sheets("all").Range(Cells(1, "L"), Cells(Lastcount, "L")).Copy Sheets("all").Range("AK1")
+ Sheets("all").Range(Cells(1, "J"), Cells(Lastcount, "J")).Copy Sheets("all").Range("AJ1")
+ Sheets("all").Range(Cells(1, "C"), Cells(Lastcount, "C")).Copy Sheets("all").Range("AL1")
+ 
+ Sheets("all").Range(Cells(1, "H"), Cells(Lastcount, "H")).Copy Sheets("all").Range("AU1")
+ Sheets("all").Range(Cells(1, "J"), Cells(Lastcount, "J")).Copy Sheets("all").Range("AV1")
+ Sheets("all").Range(Cells(1, "L"), Cells(Lastcount, "L")).Copy Sheets("all").Range("AW1")
+ Sheets("all").Range(Cells(1, "A"), Cells(Lastcount, "A")).Copy Sheets("all").Range("AX1")
+ Sheets("all").Range(Cells(1, "B"), Cells(Lastcount, "B")).Copy Sheets("all").Range("AY1")
+ Sheets("all").Range(Cells(1, "C"), Cells(Lastcount, "C")).Copy Sheets("all").Range("AZ1")
+    
+ 'Sheets("all").Columns("AK").Replace what:="CNC-", Replacement:=""
+
+ '---------- Vlook  ---------------------
+
+Set MyRange = Sheets("Data").Range("L:M")
+Set DataCode = Sheets("ALL").Range("AU2:AU1000")
+Set DataDsc = Sheets("ALL").Range("AT2:AT1000")
+DataDsc.Value = Application.WorksheetFunction.VLookup(DataCode, MyRange, 2, 0)
+Sheets("ALL").Columns("AT").Replace what:="#N/A", Replacement:=Null
+
+   'For i = 2 To lastcount
+     'Sheets("FittingsData").Cells(i, 6) = Sheets("FittingsData").Cells(i, 4) * Sheets("FittingsData").Cells(i, 5)
+   'Next i
+    
+'------------------ Find & Replace (CNC-)-------------------
+'Dim sht As Range
+'Dim fnd As Variant
+'Dim rplc As Variant
+
+fnd = "CNC-"
+rplc = ""
+
+  Set sht = Sheets("all").Range("AJ:AJ")
+  sht.Cells.Replace what:=fnd, Replacement:=rplc, _
+    LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False, _
+    SearchFormat:=False, ReplaceFormat:=False
+'-------------------- Trim ----------------------------
+ Set RangeTrim = Sheets("all").Range(Cells(2, "AJ"), Cells(Lastcount, "AJ"))
+ 
+    With Application.WorksheetFunction
+    For Each iCells In RangeTrim
+        iCells.Value = .Trim(iCells.Value)
+    Next iCells
+    End With
+'------------------- Calcute Section 1 --------------------------------
+    For i = 2 To Lastcount
+      Sheets("ALL").Cells(i, 24) = Sheets("ALL").Cells(i, 3) * Sheets("ALL").Cells(i, 11)
+    Next i
+'------------------- Calcute NavarShiarFarsi (AE) ---------------------------------
+    'For i = Lastcount + 1 To LastCount2
+     'Sheets("ALL").Cells(i - Lastcount + 1, 31) = (Sheets("ALL").Cells(i, 1) * Sheets("ALL").Cells(i, 3)) / 100
+    'Next i
+'------------------- Calcute BA (Length*Quantity) * Data.E2  ---------------------------
+
+    For i = 2 To Lastcount
+     'Sheets("ALL").Cells(i, 53) = WorksheetFunction.RoundUp(((Sheets("ALL").Cells(i, 50) * Sheets("ALL").Cells(i, 52))), 0)
+     Sheets("ALL").Cells(i, 53) = ((Sheets("ALL").Cells(i, 50) * Sheets("ALL").Cells(i, 52))) / 100
+    Next i
+'------------------- Calcute BB (Length*Width*Quantity) * Data.E2  ---------------------------
+
+    For i = 2 To Lastcount
+     Sheets("ALL").Cells(i, 54) = _
+     (((Sheets("ALL").Cells(i, 50) * Sheets("ALL").Cells(i, 51) * Sheets("ALL").Cells(i, 52))) * (((Sheets("Data").Range("E2"))) + 1) / 100) / 100
+    Next i
+'------------------- Calcute BC ((Length*Width*Quantity)*2) * Data.E2 -----------------------
+
+    For i = 2 To Lastcount
+     Sheets("ALL").Cells(i, 55) = _
+    ((((Sheets("ALL").Cells(i, 50) * Sheets("ALL").Cells(i, 51) * Sheets("ALL").Cells(i, 52)) * 2) * (((Sheets("Data").Range("E2"))) + 1)) / 100) / 100
+    Next i
+ '-----------------  Pvot Material ----------------------------------------------------------
+ On Error Resume Next
+  Set StartCell = Cells(1, "W")
+  Set ws = Sheets("all")
+  Set wb = ThisWorkbook
+  Set prange = Sheets("all").Range(Range("W1"), Cells(Lastcount, "X"))
+  Set PCMat = wb.PivotCaches.Create(SourceType:=xlDatabase, SourceData:=prange)
+  Set PTMat = ws.PivotTables.Add(PivotCache:=PCMat, TableDestination:=Sheets("all").Range("AA3"), TableName:="MatTable")
+ 
+With PTMat
+ .PivotFields("Material").Orientation = xlRowField
+ '.PivotFields("Quantity").Orientation = xlDataField
+ .PivotFields("SumArea").Orientation = xlDataField
+ '.PivotFields("SumArea").Orientation = xlSum
+ .Function = xlSum
+ .DataBodyRange.NumberFormat = "#,##0"
+ .ColumnGrand = False
+ .CompactLayoutRowHeader = "MatTyp"
+End With
+ 
+ Sheets("all").PivotTables("MatTable").RefreshTable
+
+  '-----------------  Pvot Instance names ------------------------
+ On Error Resume Next
+  Set ws = Sheets("all")
+  Set wb = ThisWorkbook
+  Set prange = Sheets("all").Range(Range("AK1"), Cells(Lastcount, "AL"))
+  Set PCInsName = wb.PivotCaches.Create(SourceType:=xlDatabase, SourceData:=prange)
+  Set PTInsName = ws.PivotTables.Add(PivotCache:=PCInsName, TableDestination:=Sheets("all").Range("AM3"), TableName:="InsTable")
+ 
+With PTInsName
+ .PivotFields("Description").Orientation = xlRowField
+ .PivotFields("Quantity").Orientation = xlDataField
+ .PivotFields("Sum of Quantity2").Orientation = xlHidden
+ '.PivotFields("Count").Orientation = xlDataField
+ '.PivotFields("SumArea").Orientation = xlSum
+ '.Function = xlSum
+ .DataBodyRange.NumberFormat = "#,##0"
+ .ColumnGrand = False
+ .CompactLayoutRowHeader = "InsTyp"
+End With
+ 
+ Sheets("all").PivotTables("InsTable").RefreshTable
+
+  '-----------------  Pvot Instance names CNC------------------------
+ On Error Resume Next
+ 
+ 'Sheets("all").PivotTables("MatTable").RefreshTable
+ 
+  Set StartCell = Cells(1, "C")
+  Set ws = Sheets("all")
+  Set wb = ThisWorkbook
+  Set prange = Sheets("all").Range(Range("C1"), Cells(Lastcount, "J"))
+  Set PCCNC = wb.PivotCaches.Create(SourceType:=xlDatabase, SourceData:=prange)
+  Set PTCNC = ws.PivotTables.Add(PivotCache:=PCCNC, TableDestination:=Sheets("all").Range("AQ3"), TableName:="InsCNCTable")
+ 
+With PTCNC
+ .PivotFields("Instance names").Orientation = xlRowField
+ .PivotFields("Quantity").Orientation = xlDataField
+ '.PivotFields("Count").Orientation = xlDataField
+ '.PivotFields("SumArea").Orientation = xlSum
+ '.Function = xlSum
+ .DataBodyRange.NumberFormat = "#,##0"
+ .ColumnGrand = False
+ .CompactLayoutRowHeader = "InsCNCTyp"
+End With
+
+ '---------------------- Filter "CNC" on Pvot ----------------------------------------
+       Sheets("ALL").PivotTables("InsCNCTable").PivotFields("Instance names").PivotFilters.Add2 Type:=xlCaptionContains, Value1:="CNC"
+ '-------------------------------------------------------------------------------
+       Sheets("all").PivotTables("InsCNCTable").RefreshTable
+
+ '-----------------  Pvot Description 555 ------------------------
+ On Error Resume Next
+  Set ws = Sheets("all")
+  Set wb = ThisWorkbook
+  Set prange = Sheets("all").Range(Range("AT1"), Cells(Lastcount, "BC"))
+  Set PC555 = wb.PivotCaches.Create(SourceType:=xlDatabase, SourceData:=prange)
+  Set PT555 = ws.PivotTables.Add(PivotCache:=PC555, TableDestination:=Sheets("all").Range("BH5"), TableName:="Ins555Table")
+ 
+    With PT555
+      .PivotFields("Material").Orientation = xlRowField
+      .PivotFields("Instance Names").Orientation = xlRowField
+      .PivotFields("Description").Orientation = xlRowField
+      .PivotFields("(Length*Quantity)").Orientation = xlDataField
+
+      .ColumnGrand = False
+      .MergeLabels = True
+      .DataBodyRange.NumberFormat = "#,##0"
+      .CompactLayoutRowHeader = "Ins555Typ"
+      .DataBodyRange.NumberFormat = "#,##0"
+      .ShowDrillIndicators = True
+      .ShowDetail = True
+    End With
+ 
+ '---------------------- Filter Description Value=555 ---------------------------------------
+     Sheets("ALL").PivotTables("Ins555Table").PivotFields("Description").PivotFilters.Add2 Type:=xlCaptionContains, Value1:="555"
+ '-------------------------------------------------------------------------------------------
+        
+    With ActiveSheet.PivotTables("Ins555Table")
+        .InGridDropZones = True
+        .RowAxisLayout xlTabularRow
+    End With
+ '---------------------------------------------------------
+    With ActiveSheet.PivotTables("Ins555Table").PivotFields("Color")
+        .Orientation = xlPageField
+        .Position = 1
+    End With
+    ActiveSheet.PivotTables("Ins555Table").PivotFields("Color").CurrentPage = _
+        "(All)"
+    With ActiveSheet.PivotTables("Ins555Table").PivotFields("Color")
+        .PivotItems("(blank)").Visible = False
+    End With
+        ActiveSheet.PivotTables("Ins555Table").PivotFields("Color").EnableMultiplePageItems = True
+        ActiveSheet.PivotTables("Ins555Table").PivotFields("Material").ShowDetail = True
+        
+'------------- Remove Subtotal--------------------------
+    With ActiveSheet.PivotTables("Ins555Table").PivotFields("Instance names")
+        .Subtotals(1) = False
+    End With
+    '-------------------------------------------------------
+    
+    Sheets("ALL").PivotTables("Ins555Table").PivotFields("Material").ShowDetail = False
+    
+    Sheets("ALL").PivotTables("Ins555Table").RowGrand = True
+    Sheets("All").PivotTables("Ins555Table").RefreshTable
+ '-----------------  Pvot True,Description Code Ok ------------------------
+ On Error Resume Next
+  Set ws = Sheets("ALL")
+  Set wb = ThisWorkbook
+  Set prange = Sheets("all").Range(Range("AT1"), Cells(Lastcount, "BC"))
+  Set PCCode = wb.PivotCaches.Create(SourceType:=xlDatabase, SourceData:=prange)
+  Set PTCode = ws.PivotTables.Add(PivotCache:=PCCode, TableDestination:=Sheets("all").Range("BO5"), TableName:="InsCodeTable")
+ 
+  With PTCode
+        .PivotFields("Material").Orientation = xlRowField
+        .PivotFields("Instance names").Orientation = xlRowField
+        .PivotFields("Description").Orientation = xlRowField
+        .PivotFields("((Length*Width*Quantity)*2)*1.15").Orientation = xlDataField
+        
+        .ColumnGrand = False
+        .MergeLabels = True
+        .DataBodyRange.NumberFormat = "#,##0"
+        .CompactLayoutRowHeader = "InsCodeTable"
+        .DataBodyRange.NumberFormat = "#,##0"
+        .ShowDrillIndicators = True
+        .ShowDetail = True
+    
+  End With
+ 
+     '---------------------- Filter Description Between Value1 1 to 554 ---------------------------------------
+    Sheets("ALL").PivotTables("InsCodeTable").PivotFields("Description").PivotFilters.Add2 Type:=xlCaptionIsBetween, Value1:="1", Value2:="554"
+        
+      '------------- Filter on Color (True) InsCodeTable------------------------------------------------
+    With ActiveSheet.PivotTables("InsCodeTable").PivotFields("Color")
+        .Orientation = xlPageField
+        .Position = 1
+    End With
+       ActiveSheet.PivotTables("InsCodeTable").PivotFields("Color").CurrentPage = "(All)"
+    With ActiveSheet.PivotTables("InsCodeTable").PivotFields("Color")
+        .PivotItems("(blank)").Visible = False
+    End With
+       ActiveSheet.PivotTables("InsCodeTable").PivotFields("Color").EnableMultiplePageItems = True
+        
+ 
+    
+    ActiveSheet.PivotTables("InsCodeTable").PivotFields("Instance names"). _
+         Subtotals = Array(False, False, False, False, False, False, False, False, False, False, False, False)
+         
+         
+    With ActiveSheet.PivotTables("InsCodeTable")
+      .InGridDropZones = True
+      .RowAxisLayout xlTabularRow
+    End With
+    ActiveSheet.PivotTables("InsCodeTable").PivotFields("Material").ShowDetail = True
+    
+    '------------- Remove Subtotal--------------------------
+    
+    With Sheets("ALL").PivotTables("InCodeTable").PivotFields("Instance names")
+        .Subtotals(1) = False
+    End With
+    
+    '----------------------------------------------------------------
+    Sheets("ALL").PivotTables("InsCodeTable").PivotFields("Material").ShowDetail = False
+    
+    Sheets("ALL").PivotTables("InsCodeTable").RowGrand = True
+    Sheets("ALL").PivotTables("InsCodeTable").RefreshTable
+ 
+    '-----------------  Pvot True,Description NULL Code ------------------------
+ On Error Resume Next
+  Set ws = Sheets("all")
+  Set wb = ThisWorkbook
+  Set prange = Sheets("all").Range(Range("AT1"), Cells(Lastcount, "BC"))
+  Set PCNoCode = wb.PivotCaches.Create(SourceType:=xlDatabase, SourceData:=prange)
+  Set PTNoCode = ws.PivotTables.Add(PivotCache:=PCNoCode, TableDestination:=Sheets("all").Range("BW5"), TableName:="InsNoCodeTable")
+ 
+  With PTNoCode
+    .PivotFields("Material").Orientation = xlRowField
+    .PivotFields("Instance Names").Orientation = xlRowField
+    .PivotFields("Description").Orientation = xlRowField
+    
+    .PivotFields("(Length*Width*Quantity)*1.15").Orientation = xlDataField
+    
+    .ColumnGrand = False
+    .MergeLabels = True
+    .DataBodyRange.NumberFormat = "#,##0"
+    .CompactLayoutRowHeader = "InsNoCodeTable"
+    .DataBodyRange.NumberFormat = "#,##0"
+    .ShowDetail = True
+    
+  End With
+
+        
+   Sheets("ALL").PivotTables("InsNoCodeTable").RowGrand = True
+ 
+      '------------- Filter on Description (Blank) InsNoCodeTable-----------------
+    Sheets("ALL").PivotTables("InsNoCodeTable").PivotFields("Description").PivotFilters.Add2 Type:=xlCaptionEquals, Value1:=""
+        
+      '------------- Filter on Color (True) InsNoCodeTable------------------------
+With ActiveSheet.PivotTables("InsNoCodeTable").PivotFields("Color")
+        .Orientation = xlPageField
+        .Position = 1
+    End With
+    ActiveSheet.PivotTables("InsNoCodeTable").PivotFields("Color").CurrentPage = _
+        "(All)"
+    With ActiveSheet.PivotTables("InsNoCodeTable").PivotFields("Color")
+        .PivotItems("(blank)").Visible = False
+    End With
+        ActiveSheet.PivotTables("InsNoCodeTable").PivotFields("Color").EnableMultiplePageItems = True
+        ActiveSheet.PivotTables("InsNoCodeTable").PivotFields("Material").ShowDetail = True
+        
+    '--------------- Remove Subtotal--------------------------
+    
+    With ActiveSheet.PivotTables("InsNoCodeTable").PivotFields("Instance names")
+        .Subtotals(1) = False
+    End With
+    '--------------------------------------------------------
+
+    With ActiveSheet.PivotTables("InsNoCodeTable")
+      .InGridDropZones = True
+      .RowAxisLayout xlTabularRow
+    End With
+    
+    Sheets("ALL").PivotTables("InsNoCodeTable").PivotFields("Material").ShowDetail = False
+    Sheets("ALL").PivotTables("InsNoCodeTable").RowGrand = True
+    
+    Sheets("all").PivotTables("InsNoCodeTable").RefreshTable
+    
+    With Range("BI:BI,BP:BP,BX:BX")
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        '.MergeCells = False
+    End With
+  
+ '---------------------- LastCount in Pvot("InsCodeTable") ------------------------------
+ 
+   With Sheets("ALL").PivotTables("InsCodeTable").TableRange1
+    LastcountPvot = .Rows(.Rows.Count).Row
+   End With
+   
+   Sheets("ALL").Range(Cells(7, "BO"), Cells(LastcountPvot, "BO")).Copy Destination:=Sheets("ALL").Range("CC2")
+   Sheets("ALL").Range(Cells(7, "BR"), Cells(LastcountPvot, "BR")).Copy Destination:=Sheets("ALL").Range("CD2")
+ 
+  '---------------------- LastCount in Pvot("InsNoCodeTable") ------------------------------
+  
+      Dim LastrowCC As Integer
+  LastrowCC = Sheets("ALL").Cells(Rows.Count, 81).End(xlUp).Row
+  
+   With Sheets("ALL").PivotTables("InsNoCodeTable").TableRange1
+    LastcountPvot = .Rows(.Rows.Count).Row
+   End With
+   
+    Sheets("ALL").Range(Cells(7, "BW"), Cells(LastcountPvot, "BW")).Copy Destination:=Sheets("ALL").Cells(LastrowCC + 1, "CC")
+    Sheets("ALL").Range(Cells(7, "BZ"), Cells(LastcountPvot, "BZ")).Copy Destination:=Sheets("ALL").Cells(LastrowCC + 1, "CD")
+   
+ '-----------------------------------------------------------------------
+ 
+ Dim lastcountCC As Integer
+ lastcountCC = Sheets("ALL").Cells(Rows.Count, 81).End(xlUp).Row
+ '-----------------  Pvot Instance names ------------------------
+ 
+ Sheets("ALL").Range("CH:CJ").ClearContents
+
+ 
+ On Error Resume Next
+  Set ws = Sheets("ALL")
+  Set wb = ThisWorkbook
+  Set prange = Sheets("ALL").Range(Range("CC1"), Cells(lastcountCC, "CD"))
+  Set PCInsName = wb.PivotCaches.Create(SourceType:=xlDatabase, SourceData:=prange)
+  Set PTInsName = ws.PivotTables.Add(PivotCache:=PCInsName, TableDestination:=Sheets("all").Range("CH5"), TableName:="InsAllTable")
+ 
+With PTInsName
+ .PivotFields("Material").Orientation = xlRowField
+ .PivotFields("Total").Orientation = xlDataField
+ .DataBodyRange.NumberFormat = "#,##0"
+ .ColumnGrand = False
+ 
+End With
+ 
+ Sheets("all").PivotTables("InsAllTable").RefreshTable
+ 
+  '---------------------- LastCount in Pvot ------------------------------
+   With Sheets("ALL").PivotTables("InsAllTable").TableRange1
+    LastcountPvot = .Rows(.Rows.Count).Row
+   End With
+ '-----------------------------------------------------------------------
+    Sheets("ALL").Range(Cells(6, "CH"), Cells(LastcountPvot, "CH")).Copy Destination:=Sheets("Painting").Range("F7")
+    Sheets("ALL").Range(Cells(6, "CI"), Cells(LastcountPvot, "CI")).Copy Destination:=Sheets("Fittings").Range("C7")
+    
+    
+    '--------------------------------------------------------------------
+   Dim rng As Range
+Set rng = Sheets("All").Range("CH6:CH15")
+     For Each i In rng
+       If i > 0 Then
+         i.Offset(0, 2) = Sheets("Data").Range("E5")
+       End If
+     Next i
+     
+     
+  'Dim rng As Range
+Set rng = Sheets("All").Range("BH6:BH15")
+     For Each i In rng
+       If i > 0 Then
+         i.Offset(0, 2) = Sheets("Data").Range("E6")
+       End If
+     Next i
+ '----------------------------------------------------------------------------
+    
+     'Sheets("all").Range(Cells(2, "h"), Cells(Lastcount, "h")).Copy Sheets("all").Range("w2")
+     'Sheets("all").Range(Cells(Lastcount + 1, "h"), Cells(LastCount2, "h")).Copy Sheets("all").Range("AD2")
+ 
+ '-------------------- Plate  Plate  Plate  Plate ----------------------------
+'Dim Lastcount As Integer
+'Dim LastcountPvot As Integer
+
+Sheets("ALL").Range("DA1").Value = "Length - raw*Quantity"
+Sheets("ALL").Range("DB1").Value = "Fee"
+Sheets("ALL").Range("DC1").Value = "Val"
+
+ Lastcount = Sheets("ALL").Cells(Rows.Count, 104).End(xlUp).Row
+    For i = 2 To Lastcount
+       Sheets("ALL").Cells(i, 105) = Sheets("ALL").Cells(i, 101) * WorksheetFunction.Round(Sheets("ALL").Cells(i, 103), 0)
+    Next i
+    
+   'Dim cell As Range
+
+  For Each cell In Sheets("ALL").Range("CZ1:CZ100")
+   If InStr(cell.Value, Sheets("Data").Range("F7")) > 0 Then
+    cell.Offset(0, 2).Value = Sheets("Data").Range("E7")
+   End If
+  Next cell
+  
+
+     For i = 2 To Cells(Rows.Count, 104).End(xlUp).Row Step 1
+        myVar = Cells(i, "DB")
+      If myVar > 0 Then
+        Cells(i, "DC") = Sheets("ALL").Cells(i, 105) / Sheets("ALL").Cells(i, 106)
+      Else
+        Cells(i, "DC") = Cells(i, "DA")
+       End If
+   Next i
+   
+     '-----------------  Pvot PlateTable ------------------------
+ On Error Resume Next
+  Set ws = Sheets("all")
+  Set wb = ThisWorkbook
+  Set prange = Sheets("ALL").Range(Range("CW1"), Cells(Lastcount, "DC"))
+  Set PCPL = wb.PivotCaches.Create(SourceType:=xlDatabase, SourceData:=prange)
+  Set PTPL = ws.PivotTables.Add(PivotCache:=PCPL, TableDestination:=Sheets("ALL").Range("DF5"), TableName:="PlateTable")
+ 
+    With PTPL
+      .PivotFields("Material").Orientation = xlRowField
+      .PivotFields("Val").Orientation = xlDataField
+
+      .ColumnGrand = False
+      .MergeLabels = True
+      .DataBodyRange.NumberFormat = "#,##0"
+      .CompactLayoutRowHeader = "PlateType"
+      .DataBodyRange.NumberFormat = "#,##0"
+      .ShowDrillIndicators = True
+      .ShowDetail = True
+    End With
+    
+     Sheets("all").PivotTables("PlateTable").RefreshTable
+     
+     Sheets("ALL").Range("A1").Select
+ End Sub
+ 
+ Sub Copyyyy()
+
+  Dim LastrowCC As Integer
+  
+  LastrowCC = Sheets("ALL").Cells(Rows.Count, 81).End(xlUp).Row
+  
+  '---------------------- LastCount in Pvot("InsNoCodeTable") ------------------------------
+   With Sheets("ALL").PivotTables("InsNoCodeTable").TableRange1
+    LastcountPvot = .Rows(.Rows.Count).Row
+   End With
+   
+    Sheets("ALL").Range(Cells(7, "BW"), Cells(LastcountPvot, "BW")).Copy Destination:=Sheets("ALL").Cells(LastrowCC + 1, "CC")
+    Sheets("ALL").Range(Cells(7, "BZ"), Cells(LastcountPvot, "BZ")).Copy Destination:=Sheets("ALL").Cells(LastrowCC + 1, "CD")
+   
+ End Sub
+ 
+ Sub Fittings()
+ 
+ Dim LastcountPvot As Integer
+  Sheets("Fittings").Activate
+  ActiveSheet.Range("A7:E30").ClearContents
+ 
+ Sheets("FittingsData").Range("M:N").ClearContents
+ Sheets("FittingsData").Range("D1").Value = "QtyFittings"
+ Sheets("FittingsData").Range("E1").Value = "QtyProj"
+ Sheets("FittingsData").Range("F1").Value = "Qty"
+ 
+ 
+  Sheets("FittingsData").Select
+  Lastcount = Sheets("FittingsData").Cells(Rows.Count, 1).End(xlUp).Row
+ 
+ '---------- VlookFittings ---------------------
+
+Set MyRange = Sheets("ALL").Range("AM:AN")
+Set DataCode = Sheets("FittingsData").Range("A2:A1000")
+Set DataDsc = Sheets("FittingsData").Range("E2:E1000")
+DataDsc.Value = Application.WorksheetFunction.VLookup(DataCode, MyRange, 2, 0)
+Sheets("FittingsData").Columns("E").Replace what:="#N/A", Replacement:=Null
+
+   For i = 2 To Lastcount
+     Sheets("FittingsData").Cells(i, 6) = Sheets("FittingsData").Cells(i, 4) * Sheets("FittingsData").Cells(i, 5)
+   Next i
+   
+
+'----------  Pvot Fittings ---------------------
+
+     On Error Resume Next
+  Set StartCell = Cells(1, "C")
+  Set ws = Sheets("FittingsData")
+  Set wb = ThisWorkbook
+  Set prange = Sheets("FittingsData").Range(Range("C1"), Cells(Lastcount, "F"))
+  Set PC = wb.PivotCaches.Create(SourceType:=xlDatabase, SourceData:=prange)
+  'Sheets("FittingsData").Select
+  Set PT = ws.PivotTables.Add(PivotCache:=PC, TableDestination:=Sheets("FittingsData").Range("M4"), TableName:="FittingsTable")
+ 
+ 
+With PT
+ .PivotFields("Fittings").Orientation = xlRowField
+ .PivotFields("Qty").Orientation = xlDataField
+ '.PivotFields("Count").Orientation = xlDataField
+ '.PivotFields("SumArea").Orientation = xlSum
+ '.Function = xlSum
+ .DataBodyRange.NumberFormat = "#,##0"
+ .ColumnGrand = True
+ .CompactLayoutRowHeader = "Type"
+End With
+
+Range("M4").Select
+    With ActiveSheet.PivotTables("FittingsTable").PivotFields("Qty")
+        .Orientation = xlPageField
+        .Position = 1
+    End With
+    ActiveSheet.PivotTables("FittingsTable").PivotFields("Qty").CurrentPage = _
+        "(All)"
+    With ActiveSheet.PivotTables("FittingsTable").PivotFields("Qty")
+        .PivotItems("0").Visible = False
+    End With
+    ActiveSheet.PivotTables("FittingsTable").PivotFields("Qty"). _
+        EnableMultiplePageItems = True
+        
+ 
+    Sheets("FittingsData").PivotTables("FittingsTable").RefreshTable
+    
+ '---------------------- LastCount in Pvot ------------------------------
+   With Sheets("FittingsData").PivotTables("FittingsTable").TableRange1
+    LastcountPvot = .Rows(.Rows.Count).Row
+   End With
+ '-----------------------------------------------------------------------
+    Sheets("FittingsData").Range(Cells(5, "M"), Cells(LastcountPvot - 1, "M")).Copy Destination:=Sheets("Fittings").Range("E7")
+    Sheets("FittingsData").Range(Cells(5, "N"), Cells(LastcountPvot - 1, "N")).Copy Destination:=Sheets("Fittings").Range("D7")
+    
+    Sheets("Fittings").Select
+    Set MyRange = Sheets("Fittings").Range("W:X")
+    Set DataCode = Sheets("Fittings").Range("E7:E30")
+    Set DataDsc = Sheets("Fittings").Range("b7:b30")
+    DataDsc.Value = Application.WorksheetFunction.VLookup(DataCode, MyRange, 2, 0)
+    Sheets("Fittings").Columns("b").Replace what:="#N/A", Replacement:=Null
+
+'---------- VlookFittings Unit -----------------------------------------
+    Sheets("Fittings").Select
+    Set MyRange = Sheets("Fittings").Range("W:Y")
+    Set DataCode = Sheets("Fittings").Range("E7:E30")
+    Set DataDsc = Sheets("Fittings").Range("C7:C30")
+    DataDsc.Value = Application.WorksheetFunction.VLookup(DataCode, MyRange, 3, 0)
+    Sheets("Fittings").Columns("C").Replace what:="#N/A", Replacement:=Null
+'--------------------------------------------------------------------------
+    Sheets("Fittings").Select
+  
+  LastCount2 = Sheets("Fittings").Cells(Rows.Count, 1).End(xlUp).Row
+    Set StartB = Cells(7, "a")
+    Set iRange = Sheets("Fittings").Range("A7:E30")
+    Set iRangeBorder = Sheets("Fittings").Range("A7:E30")
+ 
+    For Each iCells In iRange
+     iCells.BorderAround _
+            LineStyle:=xlContinuous, _
+            Weight:=xlThin
+    Next iCells
+
+'--------------------- Font -----------------------------
+    With iRange.Font
+        .Name = "B Nazanin"
+        .Size = 12
+        .Bold = True
+        .Strikethrough = False
+        .Superscript = False
+        .Subscript = False
+        .OutlineFont = False
+        .Shadow = False
+        .Underline = xlUnderlineStyleNone
+        .ThemeColor = xlThemeColorLight1
+        .ThemeFont = xlThemeFontNone
+    End With
+    
+    With iRange
+    .HorizontalAlignment = xlGeneral
+    End With
+    
+    iRangeDsc.ColumnWidth = 28
+    
+    
+    Lastcount = Sheets("Fittings").Cells(Rows.Count, 5).End(xlUp).Row
+      For i = 7 To Lastcount
+      Sheets("Fittings").Cells(i, 1) = Sheets("Fittings").Cells(i, 2) * Sheets("Fittings").Cells(i, 4)
+      Next i
+    
+    Sheets("FittingsData").Columns("E:F").ColumnWidth = 0.1
+    
+   'Dim lastrow As Integer
+     'lastrow = Sheets("FittingsData").Cells(Rows.Count, 6).End(xlUp).Row
+     'Set Rng = Sheets("FittingsData").Range("F2", Cells(lastrow, "F"))
+
+    'For Each iCell In Rng
+      'If iCell.Value = 0 Then
+      'iCell.Value = ""
+      'End If
+    'Next iCell
+    
+    Range("A:A").ColumnWidth = 20
+    Range("B:B").ColumnWidth = 15
+    Range("C:C").ColumnWidth = 7
+    Range("D:D").ColumnWidth = 6
+    Range("E:E").ColumnWidth = 33
+    Range("F:F").ColumnWidth = 3
+    'Range("G:G").ColumnWidth = 5
+    'Range("H:H").EntireColumn.Hidden = True
+    'Range("I:I").ColumnWidth = 25
+    'Range("J:J").ColumnWidth = 3
+
+      Sheets("Fittings").Range("A31").FormulaR1C1 = "=SUM(R[-24]C:R[-1]C)"
+      Sheets("Fittings").Range("A31").NumberFormat = "#,###_-[$ÑíÇá-fa-IR]"
+
+  
+ End Sub
+
+'----------------  Print Sheets ---------------------
+
+Sub PrintSheets()
+    Dim i As Long, c As Long
+    Dim SheetArray() As String
+      
+       On Error GoTo ErrMsg
+    
+   With ActiveSheet.ListBoxSh
+       For i = 0 To .ListCount - 1
+          If .Selected(i) Then
+       
+              ReDim Preserve SheetArray(c)
+              SheetArray(c) = .List(i)
+              c = c + 1
+        
+          End If
+       Next i
+   End With
+    Sheets(SheetArray()).PrintPreview
+Exit Sub
+
+ErrMsg:
+    MsgBox ("Please choose at least one item"), , "Error"
+
+End Sub
+
+ '---------------- Insert_row() -----------------------
+'Sub Select_Insert_row()
+    'Dim MyRange As Range
+    'Set MyRange = Sheets("all").Rows("84:84")
+      'MyRange.Select
+    'Selection.Insert Shift:=xlDown, CopyOrigin:=xlFormatFromLeftOrAbove
+'End Sub
+
+ '-------------------------------------------------------------
+ Sub ExampleForEach()
+
+  Dim LastRow As Long
+  Dim rng As Range
+  LastRow = Sheets("all").Cells(Rows.Count, 3).End(xlUp).Row
+ Set rng = Sheets("all").Range(Range("C3"), Cells(LastRow, 3))
+
+ 'MsgBox (lastrow)
+ 'rng.Select
+  'Worksheets("all").Activate
+  'Sheets("all").Range(Range("C3"), Cells(lastrow, 3)).Select
+ 'Range("C3:C7").Select
+ 'Range("C3", "C7").Select
+ 'ActiveSheet.UsedRange.Select
+ 'Range("C3").End(xlDown).Select
+
+ 
+     For Each i In rng
+       If i Like Range("A2") Then
+         i.Offset(0, 1) = Range("A2").Offset(0, 1)
+       ElseIf i Like Range("A3") Then
+         i.Offset(0, 1) = Range("A3").Offset(0, 1)
+       End If
+     Next i
+     
+  End Sub
+
+
+Sub CNC()
+
+  Dim Lastcount As Integer
+  Dim iRangeDsc As Range
+  Dim iRange As Range
+  
+  
+
+  Set iRangeDsc = Sheets("CNC").Range("E:E")
+  Set iRange = Sheets("CNC").Range("A7:E30")
+  
+  Sheets("CNC").Activate
+  ActiveSheet.Range("A7:E30").ClearContents
+  
+
+Sheets("all").Range("AQ4:AQ27").Copy Destination:=Sheets("CNC").Range("E7:E24")
+Sheets("all").Range("AR4:AR27").Copy Destination:=Sheets("CNC").Range("D7:D24")
+
+'---------- VlookCNC() ---------------------
+
+Set MyRange = Sheets("CNC").Range("W:X")
+Set DataCode = Sheets("CNC").Range("E7:E30")
+Set DataDsc = Sheets("CNC").Range("B7:B30")
+DataDsc.Value = Application.WorksheetFunction.VLookup(DataCode, MyRange, 2, 0)
+Sheets("CNC").Columns("b").Replace what:="#N/A", Replacement:=Null
+
+    Lastcount = Sheets("CNC").Cells(Rows.Count, 5).End(xlUp).Row
+    For i = 7 To Lastcount
+       Sheets("CNC").Cells(i, 1) = Sheets("CNC").Cells(i, 2) * WorksheetFunction.Round(Sheets("CNC").Cells(i, 4), 0)
+    Next i
+    
+Set MyRange = Sheets("CNC").Range("W:Y")
+Set DataCode = Sheets("CNC").Range("E7:E30")
+Set DataDsc = Sheets("CNC").Range("C7:C30")
+DataDsc.Value = Application.WorksheetFunction.VLookup(DataCode, MyRange, 3, 0)
+Sheets("CNC").Columns("C").Replace what:="#N/A", Replacement:=Null
+
+   
+    iRangeDsc.ColumnWidth = 28
+    
+    With iRange.Font
+        .Name = "B Nazanin"
+        .Size = 12
+        .Bold = True
+        .Strikethrough = False
+        .Superscript = False
+        .Subscript = False
+        .OutlineFont = False
+        .Shadow = False
+        .Underline = xlUnderlineStyleNone
+        .ThemeColor = xlThemeColorLight1
+        .ThemeFont = xlThemeFontNone
+    End With
+    
+    With iRange
+    .HorizontalAlignment = xlRight
+    End With
+
+ For Each iCells In iRange
+            iCells.BorderAround _
+            LineStyle:=xlContinuous, _
+            Weight:=xlThin
+ Next iCells
+
+  Sheets("CNC").Range("A7:A30").Replace 0, "", 1
+
+    Range("A:A").ColumnWidth = 19
+    Range("B:B").ColumnWidth = 15
+    Range("C:C").ColumnWidth = 6
+    Range("D:D").ColumnWidth = 6
+    Range("E:E").ColumnWidth = 32
+    Range("F:F").ColumnWidth = 3
+    'Range("G:G").ColumnWidth = 5
+    'Range("H:H").EntireColumn.Hidden = True
+    'Range("I:I").ColumnWidth = 25
+    'Range("J:J").ColumnWidth = 3
+
+  
+    Sheets("CNC").Range("A31").FormulaR1C1 = "=SUM(R[-24]C:R[-1]C)"
+    Sheets("CNC").Range("A31").NumberFormat = "#,###_-[$ÑíÇá-fa-IR]"
+
+  
+End Sub
+
+Sub ClearPainting()
+
+Sheets("Painting").Range("A7:F16").ClearContents
+Sheets("Painting").Range("A21:F30").ClearContents
+
+End Sub
+
+Sub Painting1()
+ 
+   Dim Lastcount As Integer
+   Dim LastcountPvot As Integer
+   Dim LastRowSec1 As Integer
+   Dim LastRowSec2 As Integer
+   Dim rng As Range
+
+   With Sheets("Painting").Range("F7:F16")
+    LastRowSec1 = .Rows(.Rows.Count).End(xlUp).Row
+   End With
+   
+   With Sheets("Painting").Range("F21:F30")
+    LastRowSec2 = .Rows(.Rows.Count).End(xlUp).Row
+   End With
+   
+ Sheets("ALL").Select
+  '---------------------- LastCount in Pvot("InsAllTable")------------------------------
+   With Sheets("ALL").PivotTables("InsAllTable").TableRange1
+    LastcountPvot = .Rows(.Rows.Count).Row
+   End With
+
+ '--------------------------------------------------------------------------------------
+    Sheets("ALL").Range(Cells(6, "CH"), Cells(LastcountPvot, "CH")).Copy Destination:=Sheets("Painting").Cells(LastRowSec1 + 1, "F")
+    Sheets("ALL").Range(Cells(6, "CI"), Cells(LastcountPvot, "CI")).Copy Destination:=Sheets("Painting").Cells(LastRowSec1 + 1, "C")
+    Sheets("ALL").Range(Cells(6, "CJ"), Cells(LastcountPvot, "CJ")).Copy Destination:=Sheets("Painting").Cells(LastRowSec1 + 1, "E")
+    Sheets("ALL").Range(Cells(6, "CH"), Cells(LastcountPvot, "CH")).Copy Destination:=Sheets("Painting").Cells(LastRowSec2 + 1, "F")
+    Sheets("ALL").Range(Cells(6, "CI"), Cells(LastcountPvot, "CI")).Copy Destination:=Sheets("Painting").Cells(LastRowSec2 + 1, "C")
+    Sheets("ALL").Range(Cells(6, "CJ"), Cells(LastcountPvot, "CJ")).Copy Destination:=Sheets("Painting").Cells(LastRowSec2 + 1, "E")
+'--------------------------------------------------------------------------------------
+
+   Dim iRange As Range
+ 
+  Set iRange = Sheets("Painting").Range("A7:F16,A21:F30")
+ 
+    With iRange.Font
+        .Name = "B Nazanin"
+        .Size = 12
+        .Bold = True
+        .Underline = xlUnderlineStyleNone
+        .ThemeColor = xlThemeColorLight1
+        .ThemeFont = xlThemeFontNone
+    End With
+    
+    With iRange
+    .HorizontalAlignment = xlRight
+    End With
+
+   With iRange.Borders
+        .LineStyle = xlContinuous
+        .Color = vbBlack
+        .Weight = xlThin
+    End With
+  'Sheets("CNC").Range("A7:A30").Replace 0, "", 1
+  Sheets("Painting").Activate
+
+    Range("C7").Value = Round(Range("C7").Value, 0)
+    Range("C8").Value = Round(Range("C8").Value, 0)
+    Range("C9").Value = Round(Range("C9").Value, 0)
+    Range("C10").Value = Round(Range("C10").Value, 0)
+    Range("C11").Value = Round(Range("C11").Value, 0)
+    Range("C12").Value = Round(Range("C12").Value, 0)
+    Range("C13").Value = Round(Range("C13").Value, 0)
+    Range("C14").Value = Round(Range("C14").Value, 0)
+    Range("C15").Value = Round(Range("C15").Value, 0)
+    Range("C16").Value = Round(Range("C16").Value, 0)
+    Range("C21").Value = Round(Range("C21").Value, 0)
+    Range("C22").Value = Round(Range("C22").Value, 0)
+    Range("C23").Value = Round(Range("C23").Value, 0)
+    Range("C24").Value = Round(Range("C24").Value, 0)
+    Range("C25").Value = Round(Range("C25").Value, 0)
+    Range("C26").Value = Round(Range("C26").Value, 0)
+    Range("C27").Value = Round(Range("C27").Value, 0)
+    Range("C28").Value = Round(Range("C28").Value, 0)
+    Range("C29").Value = Round(Range("C29").Value, 0)
+    Range("C30").Value = Round(Range("C30").Value, 0)
+       
+         Sheets("Painting").Range("C7:C16,C21:C30").Replace 0, "", 1
+         
+    Range("A:A").ColumnWidth = 19
+    Range("B:B").ColumnWidth = 14
+    Range("C:C").ColumnWidth = 8
+    Range("D:D").ColumnWidth = 9
+    Range("E:E").ColumnWidth = 8
+    Range("F:F").ColumnWidth = 28
+    Range("G:G").ColumnWidth = 3
+    
+    Range("Q:U").ColumnWidth = 0.1
+    
+    Sheets("Painting").Range("A17").FormulaR1C1 = "=SUM(R[-10]C:R[-1]C)"
+    Sheets("Painting").Range("A17").NumberFormat = "#,###_-[$ÑíÇá-fa-IR]"
+
+   Set rngOrtan = Range("F7:F16")
+    For Each i In rngOrtan
+       If i <> "" Then
+         i.Offset(0, -4) = Range("X2")
+       End If
+     Next i
+     
+     
+        Set rngEster = Range("F21:F30")
+    For Each i In rngEster
+       If i <> "" Then
+         i.Offset(0, -4) = Range("X3")
+       End If
+     Next i
+     
+  
+   With Sheets("Painting").Range("F7:F16")
+    LastRowSec1 = .Rows(.Rows.Count).End(xlUp).Row
+   End With
+   
+      For i = 7 To LastRowSec1
+      Sheets("Painting").Cells(i, 1) = Sheets("Painting").Cells(i, 2) * Sheets("Painting").Cells(i, 3)
+      Next i
+      
+   With Sheets("Painting").Range("F21:F30")
+    LastRowSec2 = .Rows(.Rows.Count).End(xlUp).Row
+   End With
+   
+      For i = 21 To LastRowSec2
+      Sheets("Painting").Cells(i, 1) = Sheets("Painting").Cells(i, 2) * Sheets("Painting").Cells(i, 3)
+      Next i
+      
+      Sheets("Painting").Select
+End Sub
+
+Sub Painting2()
+
+   Dim LastcountPvot As Integer
+   Dim LastRowSec1 As Integer
+   Dim LastRowSec2 As Integer
+
+   With Sheets("Painting").Range("F7:F16")
+    LastRowSec1 = .Rows(.Rows.Count).End(xlUp).Row
+   End With
+   
+   With Sheets("Painting").Range("F21:F30")
+    LastRowSec2 = .Rows(.Rows.Count).End(xlUp).Row
+   End With
+   
+   
+ Sheets("ALL").Select
+    
+ '---------------------- LastCount in Pvot("Ins555Table")------------------------------
+   With Sheets("ALL").PivotTables("Ins555Table").TableRange1
+    LastcountPvot = .Rows(.Rows.Count).Row
+   End With
+ '-----------------------------------------------------------------------
+ 
+    Sheets("ALL").Range(Cells(7, "BH"), Cells(LastcountPvot, "BH")).Copy Destination:=Sheets("Painting").Cells(LastRowSec1 + 1, "F")
+    Sheets("ALL").Range(Cells(7, "BK"), Cells(LastcountPvot, "BK")).Copy Destination:=Sheets("Painting").Cells(LastRowSec1 + 1, "C")
+    Sheets("ALL").Range(Cells(7, "BL"), Cells(LastcountPvot, "BL")).Copy Destination:=Sheets("Painting").Cells(LastRowSec1 + 1, "E")
+    Sheets("ALL").Range(Cells(7, "BH"), Cells(LastcountPvot, "BH")).Copy Destination:=Sheets("Painting").Cells(LastRowSec2 + 1, "F")
+    Sheets("ALL").Range(Cells(7, "BK"), Cells(LastcountPvot, "BK")).Copy Destination:=Sheets("Painting").Cells(LastRowSec2 + 1, "C")
+    Sheets("ALL").Range(Cells(7, "BL"), Cells(LastcountPvot, "BL")).Copy Destination:=Sheets("Painting").Cells(LastRowSec2 + 1, "E")
+  '--------------------------------------------------------------------
+
+
+   Dim iRange As Range
+
+  Set iRange = Sheets("Painting").Range("A7:F16,A21:F30")
+  
+    With iRange.Font
+        .Name = "B Nazanin"
+        .Size = 12
+        .Bold = True
+        .Underline = xlUnderlineStyleNone
+        .ThemeColor = xlThemeColorLight1
+        .ThemeFont = xlThemeFontNone
+    End With
+    
+    With iRange
+    .HorizontalAlignment = xlRight
+    End With
+    
+    With iRange.Borders
+        .LineStyle = xlContinuous
+        .Color = vbBlack
+        .Weight = xlThin
+    End With
+
+  Sheets("Painting").Activate
+  
+    Range("C7").Value = Round(Range("C7").Value, 0)
+    Range("C8").Value = Round(Range("C8").Value, 0)
+    Range("C9").Value = Round(Range("C9").Value, 0)
+    Range("C10").Value = Round(Range("C10").Value, 0)
+    Range("C11").Value = Round(Range("C11").Value, 0)
+    Range("C12").Value = Round(Range("C12").Value, 0)
+    Range("C13").Value = Round(Range("C13").Value, 0)
+    Range("C14").Value = Round(Range("C14").Value, 0)
+    Range("C15").Value = Round(Range("C15").Value, 0)
+    Range("C16").Value = Round(Range("C16").Value, 0)
+    Range("C21").Value = Round(Range("C21").Value, 0)
+    Range("C22").Value = Round(Range("C22").Value, 0)
+    Range("C23").Value = Round(Range("C23").Value, 0)
+    Range("C24").Value = Round(Range("C24").Value, 0)
+    Range("C25").Value = Round(Range("C25").Value, 0)
+    Range("C26").Value = Round(Range("C26").Value, 0)
+    Range("C27").Value = Round(Range("C27").Value, 0)
+    Range("C28").Value = Round(Range("C28").Value, 0)
+    Range("C29").Value = Round(Range("C29").Value, 0)
+    Range("C30").Value = Round(Range("C30").Value, 0)
+    
+       Sheets("Painting").Range("C7:C16,C21:C30").Replace 0, "", 1
+       
+    Range("A:A").ColumnWidth = 19
+    Range("B:B").ColumnWidth = 14
+    Range("C:C").ColumnWidth = 8
+    Range("D:D").ColumnWidth = 9
+    Range("E:E").ColumnWidth = 8
+    Range("F:F").ColumnWidth = 28
+    Range("G:G").ColumnWidth = 3
+    
+    Range("Q:U").ColumnWidth = 0.1
+      
+    Sheets("Painting").Range("A31").FormulaR1C1 = "=SUM(R[-10]C:R[-1]C)"
+    Sheets("Painting").Range("A31").NumberFormat = "#,###_-[$ÑíÇá-fa-IR]"
+
+
+   Set rngOrtan = Range("F7:F16")
+    For Each i In rngOrtan
+       If i <> "" Then
+         i.Offset(0, -4) = Range("X2")
+       End If
+     Next i
+     
+     
+        Set rngEster = Range("F21:F30")
+    For Each i In rngEster
+       If i <> "" Then
+         i.Offset(0, -4) = Range("X3")
+       End If
+     Next i
+     
+        With Sheets("Painting").Range("F7:F16")
+    LastRowSec1 = .Rows(.Rows.Count).End(xlUp).Row
+   End With
+   
+      For i = 7 To LastRowSec1
+      Sheets("Painting").Cells(i, 1) = Sheets("Painting").Cells(i, 2) * Sheets("Painting").Cells(i, 3)
+      Next i
+      
+   With Sheets("Painting").Range("F21:F30")
+    LastRowSec2 = .Rows(.Rows.Count).End(xlUp).Row
+   End With
+   
+      For i = 21 To LastRowSec2
+      Sheets("Painting").Cells(i, 1) = Sheets("Painting").Cells(i, 2) * Sheets("Painting").Cells(i, 3)
+      Next i
+      
+      Sheets("Painting").Select
+End Sub
+
+  Sub Plate()
+  Dim Lastcount As Integer
+  Dim LastcountPvot As Integer
+  Dim iRangeDsc As Range
+  Dim iRange As Range
+  
+  Set iRangeDsc = Sheets("Plate").Range("E:E")
+  Set iRange = Sheets("Plate").Range("A7:E30")
+  
+  Sheets("Plate").Range("A7:E30").ClearContents
+  
+  Sheets("ALL").Activate
+  
+      '---------------------- LastCount in Pvot ------------------------------
+   With Sheets("ALL").PivotTables("PlateTable").TableRange1
+    LastcountPvot = .Rows(.Rows.Count).Row
+   End With
+ '-----------------------------------------------------------------------
+    Sheets("ALL").Range(Cells(6, "DF"), Cells(LastcountPvot, "DF")).Copy Destination:=Sheets("Plate").Range("E7")
+    Sheets("ALL").Range(Cells(6, "DG"), Cells(LastcountPvot, "DG")).Copy Destination:=Sheets("Plate").Range("D7")
+    
+  Sheets("Plate").Activate
+  
+ '---------- VlookPlate -----------------------------------------
+    Set MyRange = Sheets("Plate").Range("W:X")
+    Set DataCode = Sheets("Plate").Range("E7:E30")
+    Set DataDsc = Sheets("Plate").Range("b7:b30")
+    DataDsc.Value = Application.WorksheetFunction.VLookup(DataCode, MyRange, 2, 0)
+    Sheets("Plate").Columns("b").Replace what:="#N/A", Replacement:=Null
+
+Lastcount = Sheets("Plate").Cells(Rows.Count, 5).End(xlUp).Row
+      For i = 7 To Lastcount
+      Sheets("Plate").Cells(i, 1) = Sheets("Plate").Cells(i, 2) * Sheets("Plate").Cells(i, 4)
+      Next i
+      
+'---------- VlookPlate Unit -----------------------------------------
+    
+    Set MyRange = Sheets("Plate").Range("W:Y")
+    Set DataCode = Sheets("Plate").Range("E7:E30")
+    Set DataDsc = Sheets("Plate").Range("C7:C30")
+    DataDsc.Value = Application.WorksheetFunction.VLookup(DataCode, MyRange, 3, 0)
+    Sheets("Plate").Columns("C").Replace what:="#N/A", Replacement:=Null
+'--------------------------------------------------------------------------
+      iRangeDsc.ColumnWidth = 28
+    
+    With iRange.Font
+        .Name = "B Nazanin"
+        .Size = 12
+        .Bold = True
+        .Strikethrough = False
+        .Superscript = False
+        .Subscript = False
+        .OutlineFont = False
+        .Shadow = False
+        .Underline = xlUnderlineStyleNone
+        .ThemeColor = xlThemeColorLight1
+        .ThemeFont = xlThemeFontNone
+    End With
+    
+    With iRange
+    .HorizontalAlignment = xlRight
+    End With
+
+ For Each iCells In iRange
+            iCells.BorderAround _
+            LineStyle:=xlContinuous, _
+            Weight:=xlThin
+ Next iCells
+
+  Sheets("Plate").Range("A7:A30").Replace 0, "", 1
+
+
+    Range("A:A").ColumnWidth = 22
+    Range("B:B").ColumnWidth = 15
+    Range("C:C").ColumnWidth = 8
+    Range("D:D").ColumnWidth = 6
+    Range("E:E").ColumnWidth = 28
+    Range("F:F").ColumnWidth = 3
+    
+    Range("Q:U").ColumnWidth = 0.1
+  
+    Sheets("Plate").Range("A31").FormulaR1C1 = "=SUM(R[-24]C:R[-1]C)"
+    Sheets("Plate").Range("A31").NumberFormat = "#,###_-[$ÑíÇá-fa-IR]"
+
+End Sub
+
+Sub Foreachh()
+
+Dim rng As Range
+
+Set rng = Sheets("Painting").Range("F7:F16,F21:F30")
+
+     For Each i In rng
+       If i > 0 Then
+         i.Offset(0, -1) = "999"
+       End If
+     Next i
+
+End Sub
+
+Sub Safhe()
+   Dim ws As Worksheet
+    Dim lRow As Long
+    Dim strSearch As String
+    Dim i As Integer
+    Dim myVar As Variant
+    '~~> Set this to the relevant worksheet
+  
+    On Error Resume Next
+  Set ws = ThisWorkbook.Worksheets("ALL")
+    '~~> Search Text
+   'strSearch = "????"
+    strSearch = Sheets("Data").Range("F4")
+    'strSearch = "ÕÝÍå"
+      With ws
+        '~~> Remove any filters
+        .AutoFilterMode = False
+
+          lRow = .Range("J" & .Rows.Count).End(xlUp).Row
+     
+           With .Range("J1:J" & lRow)
+             .AutoFilter field:=1, Criteria1:="=*" & strSearch & "*"
+             .Offset(1, 2) = "Plate"
+             '.SpecialCells(xlCellTypeVisible).Delete
+           End With
+        '~~> Remove any filters
+       .AutoFilterMode = False
+      End With
+End Sub
+
+Sub Find_String_in_Range()
+
+ On Error Resume Next
+ 
+Dim cell As Range
+
+For Each cell In Sheets("ALL").Range("J1:J1000")
+'If InStr(cell.Value, "ÕÝÍå") > 0 Then
+If InStr(cell.Value, Sheets("Data").Range("F4")) > 0 Then
+ 
+cell.Offset(0, 2).Value = Sheets("Data").Range("E4")
+End If
+Next cell
+'--------------------- Cut and Paste Rows ----------------------------
+Dim SelectCells As Range
+Dim xcell As Object
+Dim rng As Range
+
+Set rng = Sheets("ALL").Range("L1:L5000")
+'check each cell in the specific worksheet if the criteria is matching
+ For Each xcell In rng
+
+  If xcell.Value = Sheets("Data").Range("E4") Then
+    If SelectCells Is Nothing Then
+      Set SelectCells = Range(xcell.Address)
+    Else
+      Set SelectCells = Union(SelectCells, Range(xcell.Address))
+    End If
+  End If
+Next
+
+  Range(SelectCells, SelectCells.Offset(0, -11)).Copy Destination:=Sheets("ALL").Range("CW2")
+
+'--------------------- Delete Rows -----------------------------------
+
+Set rng = Sheets("ALL").Range("L1:L5000")
+'check each cell in the specific worksheet if the criteria is matching
+ For Each xcell In rng
+
+  If xcell.Value = Sheets("Data").Range("E4") Then
+    If SelectCells Is Nothing Then
+      Set SelectCells = Range(xcell.Address)
+    Else
+      Set SelectCells = Union(SelectCells, Range(xcell.Address))
+    End If
+  End If
+Next
+
+'Range(SelectCells, SelectCells.Offset(0, -11)).Select
+Range(SelectCells, SelectCells.Offset(0, -11)).Delete Shift:=xlUp
+
+Sheets("ALL").Range("DD:DD").Cut Destination:=Sheets("ALL").Range("CZ1")
+Sheets("ALL").Range("DE1:DH100").ClearContents
+
+End Sub
+
+
+
+
+------------------------------
+
+--- MODULE: UserForm2.frm ---
+------------------------------
+Attribute VB_Name = "UserForm2"
+Attribute VB_Base = "0{5C605863-B5A9-40FE-9CE7-82AF1EB246C6}{8A154565-485D-4E0D-BE77-2B918C1E0320}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = False
+
+------------------------------
+
+--- MODULE: Module7.bas ---
+------------------------------
+Attribute VB_Name = "Module7"
+
+------------------------------
+
+--- MODULE: Module8.bas ---
+------------------------------
+Attribute VB_Name = "Module8"
+Private Sub ListBox1_Click()
+With ListBox1
+.Font.Size = 20
+End With
+End Sub
+
+------------------------------
+
+--- MODULE: Module9.bas ---
+------------------------------
+Attribute VB_Name = "Module9"
+
+
+Private Sub Worksheet_SelectionChange(ByVal Target As Range)
+
+Dim KeyCells As Range
+Set KeyCells = Range("TypeData")
+    If Not Application.Intersect(KeyCells, Range("f7")) _
+           Is Nothing Then
+
+ActiveWindow.Zoom = 100
+
+End If
+
+End Sub
+
+
+
+------------------------------
+
+--- MODULE: Module17.bas ---
+------------------------------
+Attribute VB_Name = "Module17"
+
+------------------------------
+
+--- MODULE: Module10.bas ---
+------------------------------
+Attribute VB_Name = "Module10"
+
+
+------------------------------
+
+--- MODULE: Module11.bas ---
+------------------------------
+Attribute VB_Name = "Module11"
+
+------------------------------
+
+--- MODULE: Module12.bas ---
+------------------------------
+Attribute VB_Name = "Module12"
+
+------------------------------
+
+--- MODULE: Module13.bas ---
+------------------------------
+Attribute VB_Name = "Module13"
+
+------------------------------
+
+--- MODULE: Module14.bas ---
+------------------------------
+Attribute VB_Name = "Module14"
+
+------------------------------
+
+--- MODULE: Module15.bas ---
+------------------------------
+Attribute VB_Name = "Module15"
+
+
+
+
+
+
+------------------------------
+
+--- MODULE: Module16.bas ---
+------------------------------
+Attribute VB_Name = "Module16"
+
+------------------------------
+
+--- MODULE: Module19.bas ---
+------------------------------
+Attribute VB_Name = "Module19"
+
+------------------------------
+
+--- MODULE: Sheet6.cls ---
+------------------------------
+Attribute VB_Name = "Sheet6"
+Attribute VB_Base = "0{00020820-0000-0000-C000-000000000046}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = True
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = True
+
+
+Private Sub Worksheet_Change(ByVal Target As Range)
+
+If Target.Column = 9 Then
+
+'----------- vlookUp Column i -------------
+Set MyRange = Sheets("Data").Range("N:Q")
+Set DataCode = Sheets("Material").Range("i7:i30")
+Set DataDsc = Sheets("Material").Range("b7:b30")
+DataDsc.Value = Application.WorksheetFunction.VLookup(DataCode, MyRange, 2, 0)
+Sheets("Material").Columns("b").Replace what:="#N/A", Replacement:=Null
+
+Set MyRange = Sheets("Data").Range("N:Q")
+Set DataCode = Sheets("Material").Range("i7:i30")
+Set DataDsc = Sheets("Material").Range("f7:f30")
+DataDsc.Value = Application.WorksheetFunction.VLookup(DataCode, MyRange, 3, 0)
+Sheets("Material").Columns("f").Replace what:="#N/A", Replacement:=Null
+
+Set MyRange = Sheets("Data").Range("N:Q")
+Set DataCode = Sheets("Material").Range("i7:i30")
+Set DataDsc = Sheets("Material").Range("D7:D30")
+DataDsc.Value = Application.WorksheetFunction.VLookup(DataCode, MyRange, 4, 0)
+Sheets("Material").Columns("D").Replace what:="#N/A", Replacement:=Null
+
+Range("a7:a30").Formula = "=g7*b7"
+Range("a7:a30").Value = Range("a7:a30").Value
+Range("a7:a30").Replace 0, "", 1
+
+Range("E7:E30").Formula = "=g7*F7"
+Range("e7:e30").Value = Range("e7:e30").Value
+Range("E7:E30").Replace 0, "", 1
+
+Range("c7:c30").Formula = "=g7*d7"
+Range("c7:c30").Value = Range("c7:c30").Value
+Range("c7:c30").Replace 0, "", 1
+'Target.Offset(0, -7) = 555
+'End If
+
+'Sheets("Material").Range("i7:i30").Copy Destination:=Sheets("BoreshKari").Range("f7:f30")
+'Sheets("Material").Range("g7:g30").Copy Destination:=Sheets("BoreshKari").Range("d7:d30")
+'Sheets("Material").Range("h7:h30").Copy Destination:=Sheets("BoreshKari").Range("e7:e30")
+
+
+
+
+ElseIf Target.Column = 7 Then
+
+Range("a7:a30").Formula = "=g7*b7"
+Range("a7:a30").Value = Range("a7:a30").Value
+Range("a7:a30").Replace 0, "", 1
+
+Range("E7:E30").Formula = "=g7*F7"
+Range("e7:e30").Value = Range("e7:e30").Value
+Range("E7:E30").Replace 0, "", 1
+
+Range("c7:c30").Formula = "=g7*d7"
+Range("c7:c30").Value = Range("c7:c30").Value
+Range("c7:c30").Replace 0, "", 1
+
+'Sheets("Material").Range("g7:g30").Copy Destination:=Sheets("BoreshKari").Range("d7:d30")
+
+'ElseIf Target.Column = 1 Then
+'Sheets("Material").Range("a7:a30").Copy Destination:=Sheets("BoreshKari").Range("a7:a30")
+
+'ElseIf Target.Column = 2 Then
+'Sheets("Material").Range("b7:b30").Copy Destination:=Sheets("BoreshKari").Range("b7:b30")
+
+'ElseIf Target.Column = 8 Then
+'Sheets("Material").Range("h7:h30").Copy Destination:=Sheets("BoreshKari").Range("e7:e30")
+
+End If
+End Sub
+
+
+
+------------------------------
+
+--- MODULE: Sheet8.cls ---
+------------------------------
+Attribute VB_Name = "Sheet8"
+Attribute VB_Base = "0{00020820-0000-0000-C000-000000000046}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = True
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = True
+Private Sub Worksheet_Activate()
+
+'Sheets("Material").Range("i7:i30").Copy Destination:=Sheets("BoreshKari").Range("f7:f30")
+
+'Sheets("Material").Range("g7:g30").Copy Destination:=Sheets("BoreshKari").Range("d7:d30")
+
+
+End Sub
+
+Private Sub Worksheet_Change(ByVal Target As Range)
+
+End Sub
+
+------------------------------
+
+--- MODULE: Sheet9.cls ---
+------------------------------
+Attribute VB_Name = "Sheet9"
+Attribute VB_Base = "0{00020820-0000-0000-C000-000000000046}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = True
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = True
+
+------------------------------
+
+--- MODULE: Sheet10.cls ---
+------------------------------
+Attribute VB_Name = "Sheet10"
+Attribute VB_Base = "0{00020820-0000-0000-C000-000000000046}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = True
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = True
+Private Sub CommandButton1_Click()
+ Lastcount = Sheets("FittingsData").Cells(Rows.Count, 1).End(xlUp).Row
+ 
+ '---------- VlookFittings ---------------------
+
+Set MyRange = Sheets("ALL").Range("AM:AN")
+Set DataCode = Sheets("FittingsData").Range("A2:A1000")
+Set DataDsc = Sheets("FittingsData").Range("D2:D1000")
+DataDsc.Value = Application.WorksheetFunction.VLookup(DataCode, MyRange, 2, 0)
+Sheets("FittingsData").Columns("D").Replace what:="#N/A", Replacement:=Null
+
+   For i = 2 To Lastcount
+     Sheets("FittingsData").Cells(i, 5) = Sheets("FittingsData").Cells(i, 3) * Sheets("FittingsData").Cells(i, 4)
+   Next i
+    
+    
+     On Error Resume Next
+  Set StartCell = Cells(1, "B")
+  Set ws = Sheets("FittingsData")
+  Set wb = ThisWorkbook
+  Set prange = Sheets("FittingsData").Range(Range("B1"), Cells(Lastcount, "E"))
+  Set PC = wb.PivotCaches.Create(SourceType:=xlDatabase, SourceData:=prange)
+  'Sheets("FittingsData").Select
+  Set PT = ws.PivotTables.Add(PivotCache:=PC, TableDestination:=Sheets("FittingsData").Range("M4"), TableName:="FittingsTable")
+ 
+ 
+With PT
+ .PivotFields("Fittings").Orientation = xlRowField
+ .PivotFields("Qty").Orientation = xlDataField
+ '.PivotFields("Count").Orientation = xlDataField
+ '.PivotFields("SumArea").Orientation = xlSum
+ '.Function = xlSum
+ .DataBodyRange.NumberFormat = "#,##0"
+ .ColumnGrand = False
+ .CompactLayoutRowHeader = "Type"
+End With
+ 
+ Sheets("FittingsData").PivotTables("FittingsTable").RefreshTable
+ End Sub
+
+
+------------------------------
+
+--- MODULE: Module43.bas ---
+------------------------------
+Attribute VB_Name = "Module43"
+
+------------------------------
+
+--- MODULE: Sheet12.cls ---
+------------------------------
+Attribute VB_Name = "Sheet12"
+Attribute VB_Base = "0{00020820-0000-0000-C000-000000000046}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = True
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = True
+
+------------------------------
+
+--- MODULE: Sheet13.cls ---
+------------------------------
+Attribute VB_Name = "Sheet13"
+Attribute VB_Base = "0{00020820-0000-0000-C000-000000000046}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = True
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = True
+
+------------------------------
+
+--- MODULE: Sheet14.cls ---
+------------------------------
+Attribute VB_Name = "Sheet14"
+Attribute VB_Base = "0{00020820-0000-0000-C000-000000000046}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = True
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = True
+
+------------------------------
+
+--- MODULE: Sheet16.cls ---
+------------------------------
+Attribute VB_Name = "Sheet16"
+Attribute VB_Base = "0{00020820-0000-0000-C000-000000000046}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = True
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = True
+
+------------------------------
+
+--- MODULE: Module18.bas ---
+------------------------------
+Attribute VB_Name = "Module18"
+
+------------------------------
+
+--- MODULE: Sheet1.cls ---
+------------------------------
+Attribute VB_Name = "Sheet1"
+Attribute VB_Base = "0{00020820-0000-0000-C000-000000000046}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = True
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = True
+
+------------------------------
+
+--- MODULE: Sheet4.cls ---
+------------------------------
+Attribute VB_Name = "Sheet4"
+Attribute VB_Base = "0{00020820-0000-0000-C000-000000000046}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = True
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = True
+
+
+Private Sub Worksheet_Activate()
+
+End Sub
+
+Private Sub Worksheet_Change(ByVal Target As Range)
+
+    Dim KeyCells As Range
+    Set KeyCells = Range("s2:s2")
+
+If Not Application.Intersect(KeyCells, Range(Target.Address)) _
+           Is Nothing Then
+
+        Sheets("p1").Range("a3").Value = Sheets("p1").Range("s2").Value
+End If
+End Sub
+
+
+
+
+
+------------------------------
+
+--- MODULE: Module20.bas ---
+------------------------------
+Attribute VB_Name = "Module20"
+
+------------------------------
+
+--- MODULE: Module22.bas ---
+------------------------------
+Attribute VB_Name = "Module22"
+
+------------------------------
+
+--- MODULE: Module21.bas ---
+------------------------------
+Attribute VB_Name = "Module21"
+Sub AnalyzColor()
+
+
+Dim MyRange As Range
+Set MyRange = Sheets("all").Range("k2:k39")
+Sheets("AnalyzColor").Range("c7").Value = WorksheetFunction.Sum(MyRange)
+
+
+
+
+End Sub
+
+------------------------------
+
+--- MODULE: Module44.bas ---
+------------------------------
+Attribute VB_Name = "Module44"
+
+------------------------------
+
+--- MODULE: Module23.bas ---
+------------------------------
+Attribute VB_Name = "Module23"
+
+------------------------------
+
+--- MODULE: Module24.bas ---
+------------------------------
+Attribute VB_Name = "Module24"
+Sub FilterMaterial()
+Attribute FilterMaterial.VB_ProcData.VB_Invoke_Func = " \n14"
+
+On Error Resume Next
+
+    Application.CutCopyMode = False
+    Application.CutCopyMode = False
+    Range("A10:M1000").AdvancedFilter Action:=xlFilterInPlace, CriteriaRange:= _
+    Range("P1!Criteria"), Unique:=False
+
+     
+End Sub
+Sub RemoveFilterMaterial()
+Attribute RemoveFilterMaterial.VB_ProcData.VB_Invoke_Func = " \n14"
+
+On Error Resume Next
+
+    Range("S2").Select
+    Selection.ClearContents
+    ActiveSheet.ShowAllData
+    
+End Sub
+
+------------------------------
+
+--- MODULE: Module25.bas ---
+------------------------------
+Attribute VB_Name = "Module25"
+
+------------------------------
+
+--- MODULE: Module26.bas ---
+------------------------------
+Attribute VB_Name = "Module26"
+Sub rowinsert()
+Attribute rowinsert.VB_ProcData.VB_Invoke_Func = " \n14"
+'
+' rowinsert Macro
+'
+
+'
+    Rows("84:84").Select
+    Selection.Insert Shift:=xlDown, CopyOrigin:=xlFormatFromLeftOrAbove
+End Sub
+
+------------------------------
+
+--- MODULE: Module27.bas ---
+------------------------------
+Attribute VB_Name = "Module27"
+Sub NavarShiarFarsi()
+
+Sheets("ALL").Select
+
+   Dim LastcountALL As Integer
+   Dim LastCountALL2 As Integer
+ 
+   LastcountALL = Sheets("all").Cells(Rows.Count, 11).End(xlUp).Row
+   LastCountALL2 = Sheets("all").Cells(Rows.Count, 8).End(xlUp).Row
+
+     Sheets("all").Range("AD1").Value = "Type"
+     Sheets("all").Range("AE1").Value = "Val"
+     Sheets("all").Range(Cells(2, "h"), Cells(LastcountALL, "h")).Copy Sheets("all").Range("w2")
+     Sheets("all").Range(Cells(LastcountALL + 1, "h"), Cells(LastCountALL2, "h")).Copy Sheets("all").Range("AD2")
+     
+     '------------------- Calcute NavarShiarFarsi (AE) ---------------------------------
+    For G = LastcountALL + 1 To LastCountALL2
+     Sheets("ALL").Cells(G - LastcountALL + 1, 31) = (Sheets("ALL").Cells(G, 1) * Sheets("ALL").Cells(G, 3)) / 100
+    Next G
+     '----------------------------------------------------------------------------------
+ Sheets("NavarShiarFarsi").Activate
+  ActiveSheet.Range("A7:E30").ClearContents
+  ActiveSheet.Range("H:I").ClearContents
+  
+  Dim LastCount3 As Integer
+  Dim LastCountClear As Integer
+  Dim StartCell As Range
+    LastCountClear = Sheets("NavarShiarFarsi").Cells(Rows.Count, 16).End(xlUp).Row
+    Set StartCell = Cells(6, "m")
+ For DelAll = 6 To LastCountClear
+   Sheets("NavarShiarFarsi").Range(StartCell, Cells(LastCountClear, "r")).ClearContents
+   Sheets("NavarShiarFarsi").Range(StartCell, Cells(LastCountClear, "r")).ClearFormats
+ Next DelAll
+ LastCount3 = Sheets("all").Cells(Rows.Count, 31).End(xlUp).Row
+
+  '-----------------  Pvot NavarShiar ------------------------
+
+Sheets("all").Select
+On Error Resume Next
+ 
+  Set StartCell = Cells(1, "AD")
+  Set wss = Sheets("ALL")
+  Set wbb = ThisWorkbook
+
+  Set prange = Sheets("all").Range(Range("AD1"), Cells(LastCount3, "AE"))
+  Set PCc = wbb.PivotCaches.Create(SourceType:=xlDatabase, SourceData:=prange)
+  'prange.Select
+  Set PTt = wss.PivotTables.Add(PivotCache:=PCc, TableDestination:=Range("AG5"), TableName:="NTable")
+    
+With PTt
+ .PivotFields("Type").Orientation = xlRowField
+ '.PivotFields("Quantity").Orientation = xlDataField
+ .PivotFields("Val").Orientation = xlDataField
+ '.PivotFields("SumArea").Orientation = xlSum
+ .Function = xlSum
+ .DataBodyRange.NumberFormat = "#,##0"
+ .ColumnGrand = False
+ .CompactLayoutRowHeader = "Type"
+End With
+ 
+Sheets("all").PivotTables("NTable").RefreshTable
+
+
+   Dim Lastcount As Integer
+
+  'Set StartB = Cells(7, "e")
+  Set iRange = Sheets("NavarShiarFarsi").Range("E7:E30")
+  Set iRangeSize = Sheets("NavarShiarFarsi").Range("D:D")
+  Set iRangeBorder = Sheets("NavarShiarFarsi").Range("A7:E30")
+  
+   
+ Sheets("all").Select
+   Lastcount = Sheets("all").Cells(Rows.Count, 33).End(xlUp).Row
+
+ Sheets("all").Range(Cells(6, "AG"), Cells(Lastcount, "AG")).Copy Sheets("NavarShiarFarsi").Range("E7")
+ Sheets("all").Range(Cells(6, "AH"), Cells(Lastcount, "AH")).Copy Sheets("NavarShiarFarsi").Range("I7")
+
+ Sheets("NavarShiarFarsi").Select
+    
+    With iRange.Font
+        .Name = "B Nazanin"
+        .Size = 11
+        .Bold = True
+        .Underline = xlUnderlineStyleNone
+        .ThemeColor = xlThemeColorLight1
+        .ThemeFont = xlThemeFontNone
+    End With
+    
+    With iRange
+        .HorizontalAlignment = xlRight
+        '.VerticalAlignment = xlRight
+        .WrapText = False
+    End With
+    
+    For Each iCells In iRangeBorder
+      iCells.BorderAround _
+            LineStyle:=xlContinuous, _
+            Weight:=xlThin
+    Next iCells
+    
+
+    Range("A:A").ColumnWidth = 19
+    Range("B:B").ColumnWidth = 15
+    Range("C:C").ColumnWidth = 7
+    Range("D:D").ColumnWidth = 6
+    Range("E:E").ColumnWidth = 33
+    Range("F:F").ColumnWidth = 3
+    'Range("G:G").ColumnWidth = 5
+    'Range("H:H").EntireColumn.Hidden = True
+    'Range("I:I").ColumnWidth = 25
+    'Range("J:J").ColumnWidth = 3
+    
+    
+'-------------------- Search "äæÇÑ" -----------------------
+
+        'Dim ws As Worksheet
+        'Dim lRow As Long
+        'Dim strSearch As String
+        'Dim Search As Range
+        'Dim i As Integer
+        'Dim myVar As Variant
+       ' '~~> Set this to the relevant worksheet
+      
+      'Set ws = ThisWorkbook.Worksheets("NavarShiarFarsi")
+        ''~~> Search Text
+       'strSearch = "äæÇÑ"
+       
+        'With ws
+            ''~~> Remove any filters
+            '.AutoFilterMode = False
+    
+            'lRow = .Range("E" & .Rows.Count).End(xlUp).Row - 1
+         
+            'With .Range("E7:E" & lRow)
+                 '.AutoFilter Field:=1, Criteria1:="=*" & strSearch & "*"
+                ''.Offset(1, 0).SpecialCells(xlCellTypeVisible).EntireRow.Delete
+                 '.Offset(1, 3).SpecialCells(xlCellTypeVisible) = Range("K3")
+           ' End With
+            ''~~> Remove any filters
+            '.AutoFilterMode = False
+      '  End With
+      
+'---------------------- Search String ---------------------------
+    Dim ws As Worksheet
+    Dim lRow As Long
+    Dim strSearch As String
+    Dim i As Integer
+    Dim myVar As Variant
+    '~~> Set this to the relevant worksheet
+    
+    On Error Resume Next
+  Set ws = ThisWorkbook.Worksheets("NavarShiarFarsi")
+    '~~> Search Text
+   'strSearch = "????"
+    strSearch = Sheets("Data").Range("F3")
+      With ws
+        '~~> Remove any filters
+        .AutoFilterMode = False
+
+          lRow = .Range("E" & .Rows.Count).End(xlUp).Row - 1
+     
+           With .Range("E7:E" & lRow)
+             .AutoFilter field:=1, Criteria1:="=*" & strSearch & "*"
+             .Offset(1, 3).SpecialCells(xlCellTypeVisible) = Sheets("Data").Range("F3").Offset(0, -1)
+           End With
+        '~~> Remove any filters
+       .AutoFilterMode = False
+      End With
+    '-------------------------------------------------------------
+    
+    For i = 7 To Cells(Rows.Count, 5).End(xlUp).Row Step 1
+        myVar = Cells(i, "H")
+    If myVar = Sheets("Data").Range("E3") Then
+        Cells(i, "H") = (Sheets("Data").Range("E3") + 1)
+    Else
+        Cells(i, "H") = 1
+    End If
+   Next i
+
+    '------------------- Calculate Section 2 -----------------------
+   Dim LastCount15 As Integer
+    LastCount15 = Sheets("NavarShiarFarsi").Cells(Rows.Count, 5).End(xlUp).Row
+   For i = 7 To LastCount15
+    Sheets("NavarShiarFarsi").Cells(i, 4) = WorksheetFunction.RoundUp(Sheets("NavarShiarFarsi").Cells(i, 8) * Sheets("NavarShiarFarsi").Cells(i, 9), 0)
+   Next i
+
+    Dim MyRange As Range
+   Set MyRange = Sheets("NavarShiarFarsi").Range("D7:D30")
+    For Each cell In MyRange
+        cell.Value = WorksheetFunction.Round(cell.Value, 0)
+    Next cell
+    
+    Set MyRange = Sheets("NavarShiarFarsi").Range("w:x")
+    Set DataCode = Sheets("NavarShiarFarsi").Range("E7:E30")
+    Set DataDsc = Sheets("NavarShiarFarsi").Range("b7:b30")
+    DataDsc.Value = Application.WorksheetFunction.VLookup(DataCode, MyRange, 2, 0)
+    Sheets("NavarShiarFarsi").Columns("b").Replace what:="#N/A", Replacement:=Null
+
+'MsgBox (LastCount)
+ Lastcount = Sheets("NavarShiarFarsi").Cells(Rows.Count, 5).End(xlUp).Row
+
+    For i = 7 To Lastcount
+       Sheets("NavarShiarFarsi").Cells(i, 1) = Sheets("NavarShiarFarsi").Cells(i, 2) * WorksheetFunction.Round(Sheets("NavarShiarFarsi").Cells(i, 4), 0)
+    Next i
+    
+     For i = Lastcount + 1 To 10000
+      Sheets("NavarShiarFarsi").Cells(i, 4).Replace what:="0", Replacement:=Null
+    Next i
+    Sheets("NavarShiarFarsi").Columns("H:I").ColumnWidth = 0.1
+    Sheets("NavarShiarFarsi").Columns("M:T").ColumnWidth = 0.1
+    
+
+   
+    Set MyRange = Sheets("NavarShiarFarsi").Range("W:Y")
+    Set DataCode = Sheets("NavarShiarFarsi").Range("E7:E30")
+    Set DataDsc = Sheets("NavarShiarFarsi").Range("C7:C30")
+    DataDsc.Value = Application.WorksheetFunction.VLookup(DataCode, MyRange, 3, 0)
+    Sheets("NavarShiarFarsi").Columns("C").Replace what:="#N/A", Replacement:=Null
+    
+      Sheets("NavarShiarFarsi").Range("A31").FormulaR1C1 = "=SUM(R[-24]C:R[-1]C)"
+      Sheets("NavarShiarFarsi").Range("A31").NumberFormat = "#,###_-[$ÑíÇá-fa-IR]"
+
+    
+   
+End Sub
+
+Sub SelecteRow()
+Attribute SelecteRow.VB_ProcData.VB_Invoke_Func = " \n14"
+
+   Dim eRow As Integer
+   eRow = Sheets("NavarShiarFarsi").Cells(7, 7).Offset(1, 0).End(xlUp).Row
+
+   MsgBox (eRow)
+End Sub
+Sub testFind()
+
+Dim Lastcount As Integer
+Dim StartR As Range
+ Dim iRange As Range
+ Dim iCells As Range
+  Dim m_rnFind As String
+ 
+   
+       
+Sheets("all").Select
+Lastcount = Sheets("all").Cells(Rows.Count, 35).End(xlUp).Row
+
+
+With Sheets("all").Range("Am:Am")
+
+
+Set rng = .Find(what:="aaaa")
+For i = 4 To Lastcount
+   If Not m_rnFind Is Nothing Then
+    Sheets("ALL").Cells(i, 37) = 10
+     End If
+Next i
+End Sub
+
+
+------------------------------
+
+--- MODULE: Module28.bas ---
+------------------------------
+Attribute VB_Name = "Module28"
+
+
+
+Sub FindReplaceValue()
+    
+    Dim c As Range
+    Dim firstAddress As String
+
+    With Sheets("NavarShiarFarsi").Range("n:n")
+        Set c = .Find(what:="0.1", LookIn:=xlValues)
+        If Not c Is Nothing Then
+            firstAddress = c.Address
+            Do
+                c.Value = 5
+                Set c = .FindNext(c)
+            Loop While Not c Is Nothing
+        End If
+    End With
+    
+End Sub
+
+Sub Hide_Columns()
+
+    'Excel objects.
+ 
+    Dim m_wsSheet As Worksheet
+    Dim m_rnCheck As Range
+    Dim m_rnFind As Range
+    Dim m_stAddress As String
+
+    'Initialize the Excel objects.
+    Set m_wbBook = ThisWorkbook
+    Set m_wsSheet = m_wbBook.Sheets("all")
+    
+    'Search the four columns for any constants.
+    Set m_rnCheck = m_wsSheet.Range("ai:ai").SpecialCells(xlCellTypeConstants)
+    For i = 1 To 10
+    'Retrieve all columns that contain an X. If there is at least one, begin the DO/WHILE loop.
+    With m_rnCheck
+        Set m_rnFind = .Find(what:="äæÇÑ")
+        If Not m_rnFind Is Nothing Then
+            m_stAddress = m_rnFind.Address
+             
+            'Hide the column, and then find the next X.
+            Do
+                Sheets("all").Cells(i, 40).Value = "0.3"
+                'm_rnFind.EntireColumn.Hidden = True
+                Set m_rnFind = .FindNext(m_rnFind)
+            Loop While Not m_rnFind Is Nothing And m_rnFind.Address <> m_stAddress
+        End If
+    End With
+Next i
+End Sub
+
+Sub Sample()
+    Dim ws As Worksheet
+    Dim lRow As Long
+    Dim strSearch As String
+   
+       Dim i As Integer
+Dim myVar As Variant
+    '~~> Set this to the relevant worksheet
+  
+  Set ws = ThisWorkbook.Worksheets("NavarShiarFarsi")
+    '~~> Search Text
+   strSearch = "äæÇÑ"
+    With ws
+        '~~> Remove any filters
+        .AutoFilterMode = False
+
+        lRow = .Range("p" & .Rows.Count).End(xlUp).Row - 1
+     
+        With .Range("p7:p" & lRow)
+            .AutoFilter field:=1, Criteria1:="=*" & strSearch & "*"
+            '.Offset(1, 0).SpecialCells(xlCellTypeVisible).EntireRow.Delete
+            '.Offset(1, -2).SpecialCells(xlCellTypeVisible) = 5 * Range("k2")
+             .Offset(1, 2).SpecialCells(xlCellTypeVisible) = Range("P4")
+        End With
+        '~~> Remove any filters
+        .AutoFilterMode = False
+    End With
+    
+    '-------------------------------------------------------------
+    
+    For i = 7 To Cells(Rows.Count, 15).End(xlUp).Row Step 1
+         myVar = Cells(i, "r")
+      If myVar = Range("P4") Then
+        Cells(i, "n") = Range("p4")
+      Else
+        Cells(i, "n") = 1
+      End If
+   Next i
+
+    '------------------- Calcute Section 2 -----------------------
+ Dim Lastcount As Integer
+   Lastcount = Sheets("NavarShiarFarsi").Cells(Rows.Count, 15).End(xlUp).Row
+  For i = 7 To Lastcount
+   Sheets("NavarShiarFarsi").Cells(i, 13) = Sheets("NavarShiarFarsi").Cells(i, 14) * Sheets("NavarShiarFarsi").Cells(i, 15)
+  Next i
+
+End Sub
+Sub matching()
+
+Dim i As Integer
+Dim myVar As Variant
+
+For i = 7 To Cells(Rows.Count, 15).End(xlUp).Row Step 1
+
+myVar = Cells(i, "r")
+
+If myVar = Range("P4") Then
+Cells(i, "n") = Range("p4")
+Else
+Cells(i, "n") = 1
+End If
+Next i
+
+End Sub
+
+
+ 
+
+
+
+
+------------------------------
+
+--- MODULE: Module29.bas ---
+------------------------------
+Attribute VB_Name = "Module29"
+
+------------------------------
+
+--- MODULE: Module30.bas ---
+------------------------------
+Attribute VB_Name = "Module30"
+
+------------------------------
+
+--- MODULE: Module31.bas ---
+------------------------------
+Attribute VB_Name = "Module31"
+
+------------------------------
+
+--- MODULE: Sheet18.cls ---
+------------------------------
+Attribute VB_Name = "Sheet18"
+Attribute VB_Base = "0{00020820-0000-0000-C000-000000000046}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = True
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = True
+Private Sub Worksheet_SelectionChange(ByVal Target As Range)
+
+End Sub
+
+------------------------------
+
+--- MODULE: Module32.bas ---
+------------------------------
+Attribute VB_Name = "Module32"
+
+------------------------------
+
+--- MODULE: Module33.bas ---
+------------------------------
+Attribute VB_Name = "Module33"
+
+------------------------------
+
+--- MODULE: Module34.bas ---
+------------------------------
+Attribute VB_Name = "Module34"
+
+------------------------------
+
+--- MODULE: Module35.bas ---
+------------------------------
+Attribute VB_Name = "Module35"
+
+------------------------------
+
+--- MODULE: Module36.bas ---
+------------------------------
+Attribute VB_Name = "Module36"
+
+------------------------------
+
+--- MODULE: Module37.bas ---
+------------------------------
+Attribute VB_Name = "Module37"
+
+------------------------------
+
+--- MODULE: Sheet19.cls ---
+------------------------------
+Attribute VB_Name = "Sheet19"
+Attribute VB_Base = "0{00020820-0000-0000-C000-000000000046}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = True
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = True
+
+------------------------------
+
+--- MODULE: Module38.bas ---
+------------------------------
+Attribute VB_Name = "Module38"
+
+------------------------------
+
+--- MODULE: Module39.bas ---
+------------------------------
+Attribute VB_Name = "Module39"
+
+------------------------------
+
+--- MODULE: Module40.bas ---
+------------------------------
+Attribute VB_Name = "Module40"
+
+------------------------------
+
+--- MODULE: Module41.bas ---
+------------------------------
+Attribute VB_Name = "Module41"
+
+------------------------------
+
+--- MODULE: Sheet3.cls ---
+------------------------------
+Attribute VB_Name = "Sheet3"
+Attribute VB_Base = "0{00020820-0000-0000-C000-000000000046}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = True
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = True
+
+------------------------------
+
+--- MODULE: Sheet7.cls ---
+------------------------------
+Attribute VB_Name = "Sheet7"
+Attribute VB_Base = "0{00020820-0000-0000-C000-000000000046}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = True
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = True
+
+------------------------------
+
+--- MODULE: Sheet11.cls ---
+------------------------------
+Attribute VB_Name = "Sheet11"
+Attribute VB_Base = "0{00020820-0000-0000-C000-000000000046}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = True
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = True
+
+------------------------------
+
+--- MODULE: UserForm3.frm ---
+------------------------------
+Attribute VB_Name = "UserForm3"
+Attribute VB_Base = "0{25372C7E-2C35-489F-90F0-04D644DCEE5E}{ADB117C0-4C2F-4D99-B0E6-6ED96D584BA7}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = False
+
+------------------------------
+
+--- MODULE: Module46.bas ---
+------------------------------
+Attribute VB_Name = "Module46"
+Option Explicit
+Global AlphaNumeric1(0 To 19) As String
+Global AlphaNumeric2(1 To 9) As String
+Global AlphaNumeric3(1 To 9) As String
+Function Faradars(Number As String) As String
+
+Dim IsNegative As String
+Dim DotPosition As Integer
+Dim IntegerSegment As String
+Dim DecimalSegment As String
+Dim DotTxt, DecimalTxt As String
+
+If Val(Number) >= 0 Then IsNegative = "" Else IsNegative = ChrW(1605) & ChrW(1606) & ChrW(1601) & ChrW(1740) & " "
+DotPosition = InStr(1, Number, ".")
+
+If Not (DotPosition) = 0 Then
+    IntegerSegment = Left(Abs(Number), DotPosition - 1)
+    DecimalSegment = Left(Right(Number, Len(Number) - DotPosition), 5)
+    
+If Val(IntegerSegment) <> 0 Then DotTxt = _
+" " & ChrW(1605) & ChrW(1605) & ChrW(1740) & ChrW(1586) & " " _
+Else DotTxt = ""
+
+Select Case Len(DecimalSegment)
+
+    Case 1
+        DecimalTxt = " " & ChrW(1583) & ChrW(1607) & ChrW(1605)
+    Case 2
+        DecimalTxt = " " & ChrW(1589) & ChrW(1583) & ChrW(1605)
+    Case 3
+        DecimalTxt = " " & ChrW(1607) & ChrW(1586) & ChrW(1575) & ChrW(1585) & ChrW(1605)
+    Case 4
+        DecimalTxt = " " & ChrW(1583) & ChrW(1607) & " " & ChrW(1607) & ChrW(1586) & ChrW(1575) & ChrW(1585) & ChrW(1605)
+    Case 5
+        DecimalTxt = " " & ChrW(1589) & ChrW(1583) & " " & ChrW(1607) & ChrW(1586) & ChrW(1575) & ChrW(1585) & ChrW(1605)
+        
+End Select
+
+    
+   Faradars = IsNegative & Horof(IntegerSegment) & DotTxt & Horof(DecimalSegment) & DecimalTxt
+   
+    
+Exit Function
+
+End If
+    
+    
+    
+Faradars = WorksheetFunction.Trim(IsNegative & Horof(Abs(Number)))
+
+
+End Function
+
+Sub alphaset()
+   Dim i%
+   AlphaNumeric1(0) = ChrW(1589) & ChrW(1601) & ChrW(1585)
+   AlphaNumeric1(1) = ChrW(1740) & ChrW(1705)
+   AlphaNumeric1(2) = ChrW(1583) & ChrW(1608)
+   AlphaNumeric1(3) = ChrW(1587) & ChrW(1607)
+   AlphaNumeric1(4) = ChrW(1670) & ChrW(1607) & ChrW(1575) & ChrW(1585)
+   AlphaNumeric1(5) = ChrW(1662) & ChrW(1606) & ChrW(1580)
+   AlphaNumeric1(6) = ChrW(1588) & ChrW(1588)
+   AlphaNumeric1(7) = ChrW(1607) & ChrW(1601) & ChrW(1578)
+   AlphaNumeric1(8) = ChrW(1607) & ChrW(1588) & ChrW(1578)
+   AlphaNumeric1(9) = ChrW(1606) & ChrW(1607)
+   AlphaNumeric1(10) = ChrW(1583) & ChrW(1607)
+   AlphaNumeric1(11) = ChrW(1740) & ChrW(1575) & ChrW(1586) & ChrW(1583) & ChrW(1607)
+   AlphaNumeric1(12) = ChrW(1583) & ChrW(1608) & ChrW(1575) & ChrW(1586) & ChrW(1583) & ChrW(1607)
+   AlphaNumeric1(13) = ChrW(1587) & ChrW(1740) & ChrW(1586) & ChrW(1583) & ChrW(1607)
+   AlphaNumeric1(14) = ChrW(1670) & ChrW(1607) & ChrW(1575) & ChrW(1585) & ChrW(1583) & ChrW(1607)
+   AlphaNumeric1(15) = ChrW(1662) & ChrW(1575) & ChrW(1606) & ChrW(1586) & ChrW(1583) & ChrW(1607)
+   AlphaNumeric1(16) = ChrW(1588) & ChrW(1575) & ChrW(1606) & ChrW(1586) & ChrW(1583) & ChrW(1607)
+   AlphaNumeric1(17) = ChrW(1607) & ChrW(1601) & ChrW(1583) & ChrW(1607)
+   AlphaNumeric1(18) = ChrW(1607) & ChrW(1740) & ChrW(1580) & ChrW(1583) & ChrW(1607)
+   AlphaNumeric1(19) = ChrW(1606) & ChrW(1608) & ChrW(1586) & ChrW(1583) & ChrW(1607)
+
+   
+   
+   AlphaNumeric2(1) = ChrW(1583) & ChrW(1607)
+   AlphaNumeric2(2) = ChrW(1576) & ChrW(1740) & ChrW(1587) & ChrW(1578)
+   AlphaNumeric2(3) = ChrW(1587) & ChrW(1740)
+   AlphaNumeric2(4) = ChrW(1670) & ChrW(1607) & ChrW(1604)
+   AlphaNumeric2(5) = ChrW(1662) & ChrW(1606) & ChrW(1580) & ChrW(1575) & ChrW(1607)
+   AlphaNumeric2(6) = ChrW(1588) & ChrW(1589) & ChrW(1578)
+   AlphaNumeric2(7) = ChrW(1607) & ChrW(1601) & ChrW(1578) & ChrW(1575) & ChrW(1583)
+   AlphaNumeric2(8) = ChrW(1607) & ChrW(1588) & ChrW(1578) & ChrW(1575) & ChrW(1583)
+   AlphaNumeric2(9) = ChrW(1606) & ChrW(1608) & ChrW(1583)
+   
+   AlphaNumeric3(1) = ChrW(1740) & ChrW(1705) & ChrW(1589) & ChrW(1583)
+   AlphaNumeric3(2) = ChrW(1583) & ChrW(1608) & ChrW(1740) & ChrW(1587) & ChrW(1578)
+   AlphaNumeric3(3) = ChrW(1587) & ChrW(1740) & ChrW(1589) & ChrW(1583)
+   AlphaNumeric3(4) = ChrW(1670) & ChrW(1607) & ChrW(1575) & ChrW(1585) & ChrW(1589) & ChrW(1583)
+   AlphaNumeric3(5) = ChrW(1662) & ChrW(1575) & ChrW(1606) & ChrW(1589) & ChrW(1583)
+   AlphaNumeric3(6) = ChrW(1588) & ChrW(1588) & ChrW(1589) & ChrW(1583)
+   AlphaNumeric3(7) = ChrW(1607) & ChrW(1601) & ChrW(1578) & ChrW(1589) & ChrW(1583)
+   AlphaNumeric3(8) = ChrW(1607) & ChrW(1588) & ChrW(1578) & ChrW(1589) & ChrW(1583)
+   AlphaNumeric3(9) = ChrW(1606) & ChrW(1607) & ChrW(1589) & ChrW(1583)
+    
+   
+End Sub
+
+
+Function Horof(Number As String) As String
+
+   alphaset
+   
+    Dim No As Currency, N As String
+    
+    On Error GoTo Horoferror
+    
+    No = CCur(Number)
+    N = CStr(No)
+    
+    Select Case Len(N)
+        Case 1 To 3:
+                If N < 20 Then
+                    Horof = AlphaNumeric1(N)
+                ElseIf N < 100 Then
+                    If N Mod 10 = 0 Then
+                        Horof = AlphaNumeric2(N \ 10)
+                    Else
+                        Horof = AlphaNumeric2(N \ 10) & " " & ChrW(1608) & " " & Horof(N Mod 10)
+                    End If
+                ElseIf N < 1000 Then
+                    If N Mod 100 = 0 Then
+                        Horof = AlphaNumeric3(N \ 100)
+                    Else
+                        Horof = AlphaNumeric3(N \ 100) & " " & ChrW(1608) & " " & Horof(N Mod 100)
+                    End If
+                        
+                End If
+        Case 4 To 6:
+                If (Right(N, 3)) = 0 Then
+                   Horof = Horof(Left(N, Len(N) - 3)) & " " & ChrW(1607) & ChrW(1586) & ChrW(1575) & ChrW(1585) & " "
+                Else
+                    Horof = Horof(Left(N, Len(N) - 3)) & " " & ChrW(1607) & ChrW(1586) & ChrW(1575) & ChrW(1585) & " " & ChrW(1608) & " " & Horof(Right(N, 3))
+                End If
+        Case 7 To 9:
+                If (Right(N, 6)) = 0 Then
+                   Horof = Horof(Left(N, Len(N) - 6)) & " " & ChrW(1605) & ChrW(1740) & ChrW(1604) & ChrW(1740) & ChrW(1608) & ChrW(1606) & " "
+                Else
+                    Horof = Horof(Left(N, Len(N) - 6)) & " " & ChrW(1605) & ChrW(1740) & ChrW(1604) & ChrW(1740) & ChrW(1608) & ChrW(1606) & " " & ChrW(1608) & " " & Horof(Right(N, 6))
+                End If
+        Case Else:
+                If (Right(N, 9)) = 0 Then
+                   Horof = Horof(Left(N, Len(N) - 9)) & " " & ChrW(1605) & ChrW(1740) & ChrW(1604) & ChrW(1740) & ChrW(1575) & ChrW(1585) & ChrW(1583) & " "
+                Else
+                    Horof = Horof(Left(N, Len(N) - 9)) & " " & ChrW(1605) & ChrW(1740) & ChrW(1604) & ChrW(1740) & ChrW(1575) & ChrW(1585) & ChrW(1583) & " " & ChrW(1608) & " " & Horof(Right(N, 9))
+                End If
+            
+    End Select
+    
+    Exit Function
+Horoferror:
+    Horof = "#Error"
+End Function
+
+
+------------------------------
+
+
+========================================
+SECTION 2: EXCEL FORMULAS
+========================================
+
+--- SHEET: Print ---
+(No formulas found in this sheet)
+
+--- SHEET: Data ---
+(No formulas found in this sheet)
+
+--- SHEET: FittingsData ---
+(No formulas found in this sheet)
+
+--- SHEET: All ---
+(No formulas found in this sheet)
+
+--- SHEET: P1 ---
+Cell A1: =Material!A1
+Cell I1: =Material!E1
+
+--- SHEET: Material ---
+Cell A1: =CONCATENATE(Data!$D$3,Data!$C$3)
+Cell E1: =CONCATENATE(Data!$D$2,Data!$C$2)
+Cell A31: =SUM(A7:A30)
+Cell C31: =SUM(C7:C30)
+Cell E31: =SUM(E7:E30)
+Cell G31: =SUM(G7:G30)
+
+--- SHEET: BoreshKari ---
+Cell A1: =CONCATENATE(Data!$D$3,Data!$C$3)
+Cell C1: =CONCATENATE(Data!$D$2,Data!$C$2)
+Cell A31: =SUM(A7:A30)
+
+--- SHEET: CNC ---
+Cell A1: =CONCATENATE(Data!$D$3,Data!$C$3)
+Cell D1: =CONCATENATE(Data!$D$2,Data!$C$2)
+Cell A31: =SUM(A7:A30)
+
+--- SHEET: NavarShiarFarsi ---
+Cell A1: =CONCATENATE(Data!$D$3,Data!$C$3)
+Cell D1: =CONCATENATE(Data!$D$2,Data!$C$2)
+Cell A31: =SUM(A7:A30)
+
+--- SHEET: Fittings ---
+Cell A1: =CONCATENATE(Data!$D$3,Data!$C$3)
+Cell D1: =CONCATENATE(Data!$D$2,Data!$C$2)
+Cell A31: =SUM(A7:A30)
+
+--- SHEET: Painting ---
+Cell A1: =Fittings!A1
+Cell E1: =CONCATENATE(Data!$C$12,Data!$B$12)
+Cell F1: =CONCATENATE(Data!$D$2,Data!$C$2)
+Cell A17: =SUM(A7:A16)
+Cell A31: =SUM(A21:A30)
+
+--- SHEET: Plate ---
+Cell A1: =CONCATENATE(Data!$D$3,Data!$C$3)
+Cell C1: =CONCATENATE(Data!$D$2,Data!$C$2)
+Cell A31: =SUM(A7:A30)
+
+--- SHEET: WoodTools ---
+Cell A1: =Plate!A1
+Cell E1: =Plate!C1
+
+--- SHEET: روکش مالی ---
+Cell A1: =WoodTools!A1
+Cell B1: =WoodTools!E1
+Cell A7: =Material!A31
+Cell A8: =BoreshKari!A31
+Cell A9: =NavarShiarFarsi!A31
+Cell A10: =CNC!A31
+Cell A11: =Fittings!A31
+Cell A12: =Painting!A31
+Cell A13: =WoodTools!A28
+Cell A14: =Plate!A31
+Cell A27: =SUM(A7:A26)*0.25
+Cell A28: =SUM(A7:A26)*0.04
+Cell A29: =SUM(A7:A26)*0.02
+Cell A30: =SUM(A7:A26)*0.02
+Cell A31: =SUM(A7:A26)*0.025
+Cell A32: =SUM(A7:A26)+((SUM(A27:A31)))
+Cell A33: =A32+(A32*0.22)
+
+--- SHEET: قرار داد ---
+Cell A1: =Plate!A1
+Cell J1: =A1
+Cell W2: =Data!C2
+Cell W6: ='روکش مالی'!A33
+Cell A8: =W3
+Cell F8: =W2
+Cell G9: =W4
+Cell F12: =W5
+Cell B16: =W6
+Cell O26: =W2
+
+--- SHEET: مالی ---
+Cell A5: =B5
+Cell B5: ='روکش مالی'!A34
+Cell A20: =A19
+
+--- SHEET: هزینه پروژه-جاری ---
+(No formulas found in this sheet)
+
+--- SHEET: برشکاری ---
+Cell M18: =M8-L8-J8-H8-F8-D8-B8
+Cell M19: =M9-L9-J9-H9-F9-D9-B9
+Cell M20: =M10-L10-J10-H10-F10-D10-B10
+Cell M21: =M11-L11-J11-H11-F11-D11-B11
+Cell M22: =M12-L12-J12-H12-F12-D12-B12
+Cell M23: =M13-L13-J13-H13-F13-D13-B13

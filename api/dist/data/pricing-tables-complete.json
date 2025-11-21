@@ -1,0 +1,366 @@
+{
+  "materials": [
+    {
+      "code": "MAT-1",
+      "name": "ام دی اف 16 میل - سفید",
+      "unit": "95",
+      "unitPrice": 6.1
+    },
+    {
+      "code": "MAT-2",
+      "name": "ام دی اف 8 میل - سفید",
+      "unit": "65",
+      "unitPrice": 3.4
+    },
+    {
+      "code": "MAT-3",
+      "name": "ام دی اف 3 میل -سفید",
+      "unit": "20",
+      "unitPrice": 5.0
+    },
+    {
+      "code": "MAT-4",
+      "name": "پی وی سی 16 میل - سفید",
+      "unit": "45",
+      "unitPrice": 3.0
+    },
+    {
+      "code": "MAT-5",
+      "name": "پی وی سی 3 میل - سفید",
+      "unit": "20",
+      "unitPrice": 2.8
+    },
+    {
+      "code": "MAT-6",
+      "name": "ام دی اف 16 میل -روکش چوب",
+      "unit": "75",
+      "unitPrice": 3.0
+    },
+    {
+      "code": "MAT-7",
+      "name": "ام دی اف 16 میل -روکش ملامین موج دار",
+      "unit": "95",
+      "unitPrice": 6.1
+    },
+    {
+      "code": "MAT-8",
+      "name": "ام دی اف 16 میل -روکش ملامین ساده",
+      "unit": "95",
+      "unitPrice": 6.1
+    },
+    {
+      "code": "MAT-9",
+      "name": "ام دی اف 16 میل -خام یکرو سفید",
+      "unit": "95",
+      "unitPrice": 6.1
+    },
+    {
+      "code": "MAT-10",
+      "name": "ام دی اف 16 میل -خام",
+      "unit": "95",
+      "unitPrice": 6.1
+    },
+    {
+      "code": "MAT-11",
+      "name": "ام دی اف 16 میل - موج دار طرح چوب",
+      "unit": "95",
+      "unitPrice": 6.0
+    },
+    {
+      "code": "MAT-12",
+      "name": "ام دی اف 16 میل - های گلاس سفید",
+      "unit": "75",
+      "unitPrice": 3.0
+    },
+    {
+      "code": "MAT-13",
+      "name": "ام دی اف 16 میل -ذغالی",
+      "unit": "95",
+      "unitPrice": 6.0
+    }
+  ],
+  "fittings": [
+    {
+      "code": "FITTING-1",
+      "name": "لولا گازور -آرام بند",
+      "unit": "عدد",
+      "unitPrice": 200000.0
+    },
+    {
+      "code": "FITTING-2",
+      "name": "لولا گازور - ساده",
+      "unit": "عدد",
+      "unitPrice": 150000.0
+    },
+    {
+      "code": "FITTING-3",
+      "name": "ریل ساچمه ای 50",
+      "unit": "جفت",
+      "unitPrice": 700000.0
+    },
+    {
+      "code": "FITTING-4",
+      "name": "ریل ساچمه ای 45",
+      "unit": "جفت",
+      "unitPrice": 600000.0
+    },
+    {
+      "code": "FITTING-5",
+      "name": "ریل ساچمه ای 40",
+      "unit": "جفت",
+      "unitPrice": 550000.0
+    },
+    {
+      "code": "FITTING-6",
+      "name": "ریل ساچمه ای 35",
+      "unit": "جفت",
+      "unitPrice": 500000.0
+    },
+    {
+      "code": "FITTING-7",
+      "name": "ریل ساچمه ای 30",
+      "unit": "جفت",
+      "unitPrice": 450000.0
+    },
+    {
+      "code": "FITTING-8",
+      "name": "ریل ساچمه ای 25",
+      "unit": "جفت",
+      "unitPrice": 400000.0
+    },
+    {
+      "code": "FITTING-9",
+      "name": "جک 120",
+      "unit": "عدد",
+      "unitPrice": 250000.0
+    },
+    {
+      "code": "FITTING-10",
+      "name": "دستکیره کابینت",
+      "unit": "عدد",
+      "unitPrice": 450000.0
+    },
+    {
+      "code": "FITTING-11",
+      "name": "دستگیره کمد",
+      "unit": "عدد",
+      "unitPrice": 350000.0
+    },
+    {
+      "code": "FITTING-12",
+      "name": "جا آویز لباس",
+      "unit": "عدد",
+      "unitPrice": 200000.0
+    },
+    {
+      "code": "FITTING-13",
+      "name": "آبچکان",
+      "unit": "عدد",
+      "unitPrice": 1500000.0
+    },
+    {
+      "code": "FITTING-14",
+      "name": "لولا تخت پروانه ای",
+      "unit": "عدد",
+      "unitPrice": 600000.0
+    },
+    {
+      "code": "FITTING-15",
+      "name": "دستیگره اتاقی",
+      "unit": "عدد",
+      "unitPrice": 3500000.0
+    },
+    {
+      "code": "FITTING-16",
+      "name": "دستگیره سرویسی",
+      "unit": "عدد",
+      "unitPrice": 3500000.0
+    },
+    {
+      "code": "FITTING-17",
+      "name": "مکانیزم قفل اتاقی",
+      "unit": "عدد",
+      "unitPrice": 1200000.0
+    },
+    {
+      "code": "FITTING-18",
+      "name": "مکانیزم قفل سرویسی",
+      "unit": "عدد",
+      "unitPrice": 1200000.0
+    },
+    {
+      "code": "FITTING-19",
+      "name": "پایه 14 سانتی",
+      "unit": "عدد",
+      "unitPrice": 120000.0
+    },
+    {
+      "code": "FITTING-20",
+      "name": "پایه 10 سانتی",
+      "unit": "عدد",
+      "unitPrice": 100000.0
+    },
+    {
+      "code": "FITTING-21",
+      "name": "پایه 7 سانتی",
+      "unit": "عدد",
+      "unitPrice": 80000.0
+    }
+  ],
+  "edgeBanding": [
+    {
+      "code": "EB-1",
+      "name": "شیار کاری",
+      "unit": "متر",
+      "pricePerMeter": 85000.0
+    },
+    {
+      "code": "EB-2",
+      "name": "فارسی کاری",
+      "unit": "متر",
+      "pricePerMeter": 85000.0
+    },
+    {
+      "code": "EB-3",
+      "name": "نوار کاری -روکش چوب",
+      "unit": "متر",
+      "pricePerMeter": 150000.0
+    },
+    {
+      "code": "EB-4",
+      "name": "نوار کاری پی وی سی -1میل -همرنگ",
+      "unit": "متر",
+      "pricePerMeter": 110000.0
+    },
+    {
+      "code": "EB-5",
+      "name": "شیار",
+      "unit": "متر",
+      "pricePerMeter": 85000.0
+    },
+    {
+      "code": "EB-6",
+      "name": "فارسی",
+      "unit": "متر",
+      "pricePerMeter": 85000.0
+    },
+    {
+      "code": "EB-7",
+      "name": "نوار همرنگ",
+      "unit": "متر",
+      "pricePerMeter": 110000.0
+    }
+  ],
+  "cncOperations": [
+    {
+      "code": "CNC-1",
+      "name": "CNC- درب کابینت",
+      "unit": "عدد",
+      "unitPrice": 500000.0
+    },
+    {
+      "code": "CNC-2",
+      "name": "CNC- درب کابینت آبچکان",
+      "unit": "عدد",
+      "unitPrice": 500000.0
+    },
+    {
+      "code": "CNC-3",
+      "name": "CNC-درب کابینت ایستاده",
+      "unit": "عدد",
+      "unitPrice": 500000.0
+    },
+    {
+      "code": "CNC-4",
+      "name": "CNC-درب کابینت جک دار",
+      "unit": "عدد",
+      "unitPrice": 500000.0
+    },
+    {
+      "code": "CNC-5",
+      "name": "CNC-درب کشو 50",
+      "unit": "عدد",
+      "unitPrice": 500000.0
+    },
+    {
+      "code": "CNC-6",
+      "name": "CNC-ستون بلند",
+      "unit": "عدد",
+      "unitPrice": 300000.0
+    },
+    {
+      "code": "CNC-7",
+      "name": "CNC-ستون کوتاه",
+      "unit": "عدد",
+      "unitPrice": 200000.0
+    },
+    {
+      "code": "CNC-8",
+      "name": "CNC-نمای هود",
+      "unit": "عدد",
+      "unitPrice": 800000.0
+    },
+    {
+      "code": "CNC-9",
+      "name": "CNC-درب کشو 50",
+      "unit": "عدد",
+      "unitPrice": 500000.0
+    },
+    {
+      "code": "CNC-10",
+      "name": "cnc - ستون",
+      "unit": "عدد",
+      "unitPrice": 500000.0
+    },
+    {
+      "code": "CNC-11",
+      "name": "cnc - ستون هود",
+      "unit": "عدد",
+      "unitPrice": 500000.0
+    },
+    {
+      "code": "CNC-12",
+      "name": "cnc - نمای هود",
+      "unit": "عدد",
+      "unitPrice": 500000.0
+    },
+    {
+      "code": "CNC-13",
+      "name": "CNC- ستون",
+      "unit": "عدد",
+      "unitPrice": 500000.0
+    },
+    {
+      "code": "CNC-14",
+      "name": "CNC- نما جزیره",
+      "unit": "عدد",
+      "unitPrice": 1000000.0
+    },
+    {
+      "code": "CNC-15",
+      "name": "CNC-پهلو جزیره",
+      "unit": "عدد",
+      "unitPrice": 500000.0
+    },
+    {
+      "code": "CNC-16",
+      "name": "cnc-درب کابینت",
+      "unit": "عدد",
+      "unitPrice": 500000.0
+    },
+    {
+      "code": "CNC-17",
+      "name": "CNC-نمای یونیت هود",
+      "unit": "عدد",
+      "unitPrice": 500000.0
+    }
+  ],
+  "pricingConfig": {
+    "laborCostPerHour": 500000,
+    "overheadPercentage": 25,
+    "profitMarginPercentage": 20,
+    "wastagePercentage": 5,
+    "cncSetupCost": 1000000,
+    "edgeBandingSetupCost": 500000
+  }
+}

@@ -1,0 +1,352 @@
+{
+  "materials": [
+    {
+      "code": "MAT-1",
+      "description": "ام دی اف 16 میل - سفید",
+      "unit": "متر مربع",
+      "unitPrice": 22000000.0,
+      "category": "Panel",
+      "persianNames": [
+        "ام دی اف 16 میل - سفید"
+      ],
+      "isActive": true
+    },
+    {
+      "code": "MAT-2",
+      "description": "ام دی اف 8 میل - سفید",
+      "unit": "متر مربع",
+      "unitPrice": 9000000.0,
+      "category": "Panel",
+      "persianNames": [
+        "ام دی اف 8 میل - سفید"
+      ],
+      "isActive": true
+    },
+    {
+      "code": "MAT-3",
+      "description": "ام دی اف 3 میل -سفید",
+      "unit": "متر مربع",
+      "unitPrice": 3500000.0,
+      "category": "Panel",
+      "persianNames": [
+        "ام دی اف 3 میل -سفید"
+      ],
+      "isActive": true
+    },
+    {
+      "code": "MAT-4",
+      "description": "پی وی سی 16 میل - سفید",
+      "unit": "متر مربع",
+      "unitPrice": 17000000.0,
+      "category": "Panel",
+      "persianNames": [
+        "پی وی سی 16 میل - سفید"
+      ],
+      "isActive": true
+    },
+    {
+      "code": "MAT-5",
+      "description": "پی وی سی 3 میل - سفید",
+      "unit": "متر مربع",
+      "unitPrice": 5500000.0,
+      "category": "Panel",
+      "persianNames": [
+        "پی وی سی 3 میل - سفید"
+      ],
+      "isActive": true
+    },
+    {
+      "code": "MAT-6",
+      "description": "ام دی اف 16 میل -روکش چوب",
+      "unit": "متر مربع",
+      "unitPrice": 19000000.0,
+      "category": "Panel",
+      "persianNames": [
+        "ام دی اف 16 میل -روکش چوب"
+      ],
+      "isActive": true
+    },
+    {
+      "code": "MAT-7",
+      "description": "ام دی اف 16 میل -روکش ملامین موج دار",
+      "unit": "متر مربع",
+      "unitPrice": 14000000.0,
+      "category": "Panel",
+      "persianNames": [
+        "ام دی اف 16 میل -روکش ملامین موج دار"
+      ],
+      "isActive": true
+    },
+    {
+      "code": "MAT-8",
+      "description": "ام دی اف 16 میل -روکش ملامین ساده",
+      "unit": "متر مربع",
+      "unitPrice": 14000000.0,
+      "category": "Panel",
+      "persianNames": [
+        "ام دی اف 16 میل -روکش ملامین ساده"
+      ],
+      "isActive": true
+    },
+    {
+      "code": "MAT-9",
+      "description": "ام دی اف 16 میل -خام یکرو سفید",
+      "unit": "متر مربع",
+      "unitPrice": 14000000.0,
+      "category": "Panel",
+      "persianNames": [
+        "ام دی اف 16 میل -خام یکرو سفید"
+      ],
+      "isActive": true
+    },
+    {
+      "code": "MAT-10",
+      "description": "هایگلاس 16 میل - ساده",
+      "unit": "متر مربع",
+      "unitPrice": 17000000.0,
+      "category": "Panel",
+      "persianNames": [
+        "هایگلاس 16 میل - ساده"
+      ],
+      "isActive": true
+    },
+    {
+      "code": "MAT-11",
+      "description": "ام دی اف 16 میل -خام",
+      "unit": "متر مربع",
+      "unitPrice": 21000000.0,
+      "category": "Panel",
+      "persianNames": [
+        "ام دی اف 16 میل -خام"
+      ],
+      "isActive": true
+    },
+    {
+      "code": "MAT-12",
+      "description": "هایگلاس 16 میل -سفید",
+      "unit": "متر مربع",
+      "unitPrice": 17000000.0,
+      "category": "Panel",
+      "persianNames": [
+        "هایگلاس 16 میل -سفید"
+      ],
+      "isActive": true
+    },
+    {
+      "code": "MAT-13",
+      "description": "هایگلاس 16 میل ذغالی",
+      "unit": "متر مربع",
+      "unitPrice": 17000000.0,
+      "category": "Panel",
+      "persianNames": [
+        "هایگلاس 16 میل ذغالی"
+      ],
+      "isActive": true
+    },
+    {
+      "code": "MAT-14",
+      "description": "ام دی اف 16 میل - موج دار طرح چوب",
+      "unit": "متر مربع",
+      "unitPrice": 24000000.0,
+      "category": "Panel",
+      "persianNames": [
+        "ام دی اف 16 میل - موج دار طرح چوب"
+      ],
+      "isActive": true
+    },
+    {
+      "code": "MAT-15",
+      "description": "ام دی اف 16 میل - های گلاس سفید",
+      "unit": "متر مربع",
+      "unitPrice": 24000000.0,
+      "category": "Panel",
+      "persianNames": [
+        "ام دی اف 16 میل - های گلاس سفید"
+      ],
+      "isActive": true
+    },
+    {
+      "code": "MAT-16",
+      "description": "ام دی اف 16 میل -ذغالی",
+      "unit": "متر مربع",
+      "unitPrice": 24000000.0,
+      "category": "Panel",
+      "persianNames": [
+        "ام دی اف 16 میل -ذغالی"
+      ],
+      "isActive": true
+    }
+  ],
+  "edgeBanding": [
+    {
+      "code": "EB-1",
+      "description": "شیار کاری",
+      "unit": "متر",
+      "unitPrice": 85000.0,
+      "isActive": true
+    },
+    {
+      "code": "EB-2",
+      "description": "فارسی کاری",
+      "unit": "متر",
+      "unitPrice": 85000.0,
+      "isActive": true
+    },
+    {
+      "code": "EB-3",
+      "description": "نوار کاری -روکش چوب",
+      "unit": "متر",
+      "unitPrice": 150000.0,
+      "isActive": true
+    },
+    {
+      "code": "EB-4",
+      "description": "نوار کاری پی وی سی -1میل -همرنگ",
+      "unit": "متر",
+      "unitPrice": 110000.0,
+      "isActive": true
+    },
+    {
+      "code": "EB-5",
+      "description": "شیار",
+      "unit": "متر",
+      "unitPrice": 85000.0,
+      "isActive": true
+    },
+    {
+      "code": "EB-6",
+      "description": "فارسی",
+      "unit": "متر",
+      "unitPrice": 85000.0,
+      "isActive": true
+    },
+    {
+      "code": "EB-7",
+      "description": "نوار همرنگ",
+      "unit": "متر",
+      "unitPrice": 110000.0,
+      "isActive": true
+    }
+  ],
+  "cncOperations": [
+    {
+      "code": "CNC-1",
+      "description": "CNC- درب کابینت",
+      "unit": "عدد",
+      "unitPrice": 500000.0,
+      "isActive": true
+    },
+    {
+      "code": "CNC-2",
+      "description": "CNC- درب کابینت آبچکان",
+      "unit": "عدد",
+      "unitPrice": 500000.0,
+      "isActive": true
+    },
+    {
+      "code": "CNC-3",
+      "description": "CNC-درب کابینت ایستاده",
+      "unit": "عدد",
+      "unitPrice": 500000.0,
+      "isActive": true
+    },
+    {
+      "code": "CNC-4",
+      "description": "CNC-درب کابینت جک دار",
+      "unit": "عدد",
+      "unitPrice": 500000.0,
+      "isActive": true
+    },
+    {
+      "code": "CNC-5",
+      "description": "CNC-درب کشو 50",
+      "unit": "عدد",
+      "unitPrice": 500000.0,
+      "isActive": true
+    },
+    {
+      "code": "CNC-6",
+      "description": "CNC-ستون بلند",
+      "unit": "عدد",
+      "unitPrice": 300000.0,
+      "isActive": true
+    },
+    {
+      "code": "CNC-7",
+      "description": "CNC-ستون کوتاه",
+      "unit": "عدد",
+      "unitPrice": 200000.0,
+      "isActive": true
+    },
+    {
+      "code": "CNC-8",
+      "description": "CNC-نمای هود",
+      "unit": "عدد",
+      "unitPrice": 800000.0,
+      "isActive": true
+    },
+    {
+      "code": "CNC-9",
+      "description": "CNC-درب کشو 50",
+      "unit": "عدد",
+      "unitPrice": 500000.0,
+      "isActive": true
+    },
+    {
+      "code": "CNC-10",
+      "description": "cnc - ستون",
+      "unit": "عدد",
+      "unitPrice": 500000.0,
+      "isActive": true
+    },
+    {
+      "code": "CNC-11",
+      "description": "cnc - ستون هود",
+      "unit": "عدد",
+      "unitPrice": 500000.0,
+      "isActive": true
+    },
+    {
+      "code": "CNC-12",
+      "description": "cnc - نمای هود",
+      "unit": "عدد",
+      "unitPrice": 500000.0,
+      "isActive": true
+    },
+    {
+      "code": "CNC-13",
+      "description": "CNC- ستون",
+      "unit": "عدد",
+      "unitPrice": 500000.0,
+      "isActive": true
+    },
+    {
+      "code": "CNC-14",
+      "description": "CNC- نما جزیره",
+      "unit": "عدد",
+      "unitPrice": 1000000.0,
+      "isActive": true
+    },
+    {
+      "code": "CNC-15",
+      "description": "CNC-پهلو جزیره",
+      "unit": "عدد",
+      "unitPrice": 500000.0,
+      "isActive": true
+    },
+    {
+      "code": "CNC-16",
+      "description": "cnc-درب کابینت",
+      "unit": "عدد",
+      "unitPrice": 500000.0,
+      "isActive": true
+    },
+    {
+      "code": "CNC-17",
+      "description": "CNC-نمای یونیت هود",
+      "unit": "عدد",
+      "unitPrice": 500000.0,
+      "isActive": true
+    }
+  ]
+}

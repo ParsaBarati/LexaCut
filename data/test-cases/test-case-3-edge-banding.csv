@@ -1,0 +1,5 @@
+Length - raw,Width - raw,Quantity,Edge Length 1,Edge Length 2,Edge Width 1,Edge Width 2,Material name,Designation,Instance names,Area - final,Description
+60.0,20.0,1,PVC,PVC,,,ام دی اف,Component#1,,0.12 m²,Panel with 2 edges
+80.0,30.0,1,,PVC,PVC,,ملامین,Component#2,,0.24 m²,Panel with 2 edges
+50.0,40.0,2,PVC,PVC,PVC,PVC,ام دی اف,Component#3,,0.20 m²,Panel with 4 edges
+100.0,50.0,1,PVC,,,,تخته,Component#4,,0.50 m²,Panel with 1 edge

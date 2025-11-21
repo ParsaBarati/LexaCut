@@ -1,0 +1,76 @@
+{% extends 'tabs/base-tab.twig' %}
+
+{% block headerHeadingInner %}<i class="ladb-lexacut-icon-estimate"></i> {{ parent() }}{% endblock %}
+
+{% block headerToolsInner %}
+    {{ parent() }}
+    <button id="ladb_btn_calculate_cost" class="btn btn-primary">
+        <i class="ladb-lexacut-icon-estimate"></i>
+        <span>{{ 'tab.costanalysis.calculate'|i18next }}</span>
+    </button>
+    &nbsp;
+    <button class="btn btn-default" data-help-page="costanalysis"><i class="ladb-lexacut-icon-help"></i></button>
+{% endblock %}
+
+{% block containerInner %}
+    <div class="row">
+        <div class="col-xs-12">
+            
+            {# Cost Analysis Instructions #}
+            <div class="alert alert-info">
+                <div class="media">
+                    <div class="media-left"><i class="ladb-lexacut-icon-info" style="font-size: 150%;"></i></div>
+                    <div class="media-body">
+                        <p>{{ 'tab.costanalysis.instructions'|i18next }}</p>
+                        <ol>
+                            <li>{{ 'tab.costanalysis.step1'|i18next }}</li>
+                            <li>{{ 'tab.costanalysis.step2'|i18next }}</li>
+                            <li>{{ 'tab.costanalysis.step3'|i18next }}</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            {# Project Information Form #}
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <strong>{{ 'tab.costanalysis.project_info'|i18next }}</strong>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label for="ladb_project_name">{{ 'tab.costanalysis.project_name'|i18next }}</label>
+                        <input type="text" class="form-control" id="ladb_project_name" placeholder="{{ 'tab.costanalysis.project_name_placeholder'|i18next }}" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="ladb_client_name">{{ 'tab.costanalysis.client_name'|i18next }}</label>
+                        <input type="text" class="form-control" id="ladb_client_name" placeholder="{{ 'tab.costanalysis.client_name_placeholder'|i18next }}" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="ladb_waste_percentage">{{ 'tab.costanalysis.waste_percentage'|i18next }}</label>
+                        <input type="number" class="form-control" id="ladb_waste_percentage" step="0.01" min="0" max="1" value="0.15">
+                        <small class="text-muted">{{ 'tab.costanalysis.waste_percentage_help'|i18next }}</small>
+                    </div>
+                </div>
+            </div>
+
+            {# Loading Message #}
+            <div id="ladb_loading_message" class="alert alert-warning" style="display: none;">
+                <div class="media">
+                    <div class="media-left"><i class="ladb-lexacut-icon-hour-glass" style="font-size: 150%;"></i></div>
+                    <div class="media-body">
+                        <strong>{{ 'tab.costanalysis.calculating'|i18next }}</strong><br>
+                        {{ 'tab.costanalysis.please_wait'|i18next }}
+                    </div>
+                </div>
+            </div>
+
+            {# Error Message #}
+            <div id="ladb_error_message" class="alert alert-danger" style="display: none;"></div>
+
+            {# Results Container #}
+            <div id="ladb_cost_analysis_results"></div>
+
+        </div>
+    </div>
+{% endblock %}
+

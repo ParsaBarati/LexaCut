@@ -20,7 +20,7 @@ module Ladb
 
       # Create extension
       ex = SketchupExtension.new('LexaCut', File.join(PLUGIN_DIR, 'ruby', 'main'))
-      ex.version     = "7.0.1"  ## LexaCut Modern UI Edition
+      ex.version     = "8.0.14"  ## LexaCut Modern UI Edition
       ex.copyright   = "2016-#{Date.today.year} - GNU GPLv3"  ## /!\ Auto-generated line, do not edit ##
       ex.creator     = 'LexaPlus (based on OpenCutList by L\'Air du Bois)'
 

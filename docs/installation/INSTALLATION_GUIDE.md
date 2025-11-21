@@ -171,7 +171,7 @@ Launch SketchUp 2017 or newer
 - Release Date: October 25, 2025
 
 **Based on OpenCutList**
-- Original Project: L'Air du Bois (lairdubois.fr)
+- Original Project: Lexaplus & Renzo Group (lairdubois.fr)
 - License: GNU GPLv3
 - OpenCutList Version: 7.0.1
 

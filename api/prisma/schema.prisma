@@ -1,0 +1,81 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Material {
+  id            String   @id @default(uuid())
+  code          String   @unique
+  description   String
+  unit          String
+  unitPrice     Float
+  category      String
+  persianNames  String[] // Array of Persian names
+  isActive      Boolean  @default(true)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@map("materials")
+}
+
+model EdgeBanding {
+  id          String   @id @default(uuid())
+  code        String   @unique
+  description String
+  unit        String
+  unitPrice   Float
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("edge_banding")
+}
+
+model CNCOperation {
+  id          String   @id @default(uuid())
+  code        String   @unique
+  description String
+  unit        String
+  unitPrice   Float
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("cnc_operations")
+}
+
+model Fitting {
+  id             String   @id @default(uuid())
+  code           String   @unique
+  name           String
+  unit           String
+  unitPrice      Float
+  qtyPerFitting  Int      @default(1)
+  isActive       Boolean  @default(true)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@map("fittings")
+}
+
+model PricingConfig {
+  id            String   @id @default(uuid())
+  name          String   @unique
+  overhead1     Float    @default(0.25)
+  overhead2     Float    @default(0.04)
+  overhead3     Float    @default(0.02)
+  overhead4     Float    @default(0.02)
+  contingency   Float    @default(0.025)
+  profitMargin  Float    @default(0.22)
+  isActive      Boolean  @default(true)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@map("pricing_configs")
+}

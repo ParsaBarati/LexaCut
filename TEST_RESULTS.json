@@ -1,0 +1,906 @@
+[
+  {
+    "filename": "test-case-1-single-material.csv",
+    "name": "Single Material, No Edges",
+    "status": "PASSED",
+    "checks": [
+      {
+        "category": "Material Cost",
+        "expected": 15000,
+        "actual": 15000,
+        "pass": true,
+        "difference": 0
+      },
+      {
+        "category": "Material Area",
+        "expected": 0.12,
+        "actual": 0.12,
+        "pass": true,
+        "difference": 0
+      },
+      {
+        "category": "Subtotal",
+        "expected": 15000,
+        "actual": 15000,
+        "pass": true,
+        "difference": 0
+      },
+      {
+        "category": "Final Price",
+        "expected": 24797,
+        "actual": 24796.5,
+        "pass": true,
+        "difference": -0.5
+      }
+    ],
+    "result": {
+      "project": {},
+      "costs": {
+        "material": {
+          "category": "Material",
+          "totalCost": 15000,
+          "totalArea": 0.12,
+          "totalQuantity": 1,
+          "items": [
+            {
+              "cost": 15000,
+              "description": "MDF 18mm",
+              "unit": "m²",
+              "quantity": 0.12,
+              "code": "ام دی اف"
+            }
+          ]
+        },
+        "boreshKari": {
+          "category": "BoreshKari",
+          "items": [],
+          "totalCost": 0
+        },
+        "cnc": {
+          "category": "CNC",
+          "items": [],
+          "totalCost": 0
+        },
+        "navarShiar": {
+          "category": "NavarShiar",
+          "items": [],
+          "totalCost": 0
+        },
+        "fittings": {
+          "category": "Fittings",
+          "items": [],
+          "totalCost": 0
+        },
+        "painting": {
+          "category": "Painting",
+          "items": [],
+          "totalCost": 0
+        },
+        "plate": {
+          "category": "Plate",
+          "items": [],
+          "totalCost": 0
+        },
+        "woodTools": {
+          "category": "WoodTools",
+          "items": [],
+          "totalCost": 0
+        }
+      },
+      "financialSummary": {
+        "subtotal": 15000,
+        "breakdown": {
+          "material": 15000,
+          "boreshKari": 0,
+          "navarShiar": 0,
+          "cnc": 0,
+          "fittings": 0,
+          "painting": 0,
+          "woodTools": 0,
+          "plate": 0
+        },
+        "overheads": {
+          "overhead1": 3750,
+          "overhead2": 600,
+          "overhead3": 300,
+          "overhead4": 300,
+          "contingency": 375,
+          "totalOverheads": 5325
+        },
+        "totalWithOverheads": 20325,
+        "finalPrice": 24796.5,
+        "profitAmount": 4471.5,
+        "profitPercentage": 0.22
+      },
+      "calculatedAt": "2025-11-21T07:59:33.866Z",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "filename": "test-case-2-multiple-materials.csv",
+    "name": "Multiple Materials",
+    "status": "PASSED",
+    "checks": [
+      {
+        "category": "Material Cost",
+        "expected": 121800,
+        "actual": 121800,
+        "pass": true,
+        "difference": 0
+      },
+      {
+        "category": "Material Area",
+        "expected": 1.08,
+        "actual": 1.08,
+        "pass": true,
+        "difference": 0
+      },
+      {
+        "category": "Subtotal",
+        "expected": 121800,
+        "actual": 121800,
+        "pass": true,
+        "difference": 0
+      },
+      {
+        "category": "Final Price",
+        "expected": 201348,
+        "actual": 201347.58000000002,
+        "pass": true,
+        "difference": -0.41999999998370185
+      }
+    ],
+    "result": {
+      "project": {},
+      "costs": {
+        "material": {
+          "category": "Material",
+          "totalCost": 121800,
+          "totalArea": 1.08,
+          "totalQuantity": 3,
+          "items": [
+            {
+              "cost": 30000,
+              "description": "MDF 18mm",
+              "unit": "m²",
+              "quantity": 0.24,
+              "code": "ام دی اف"
+            },
+            {
+              "cost": 34800,
+              "description": "Melamine White 18mm",
+              "unit": "m²",
+              "quantity": 0.24,
+              "code": "ملامین"
+            },
+            {
+              "cost": 57000,
+              "description": "Particle Board 18mm",
+              "unit": "m²",
+              "quantity": 0.6000000000000001,
+              "code": "نئوپان"
+            }
+          ]
+        },
+        "boreshKari": {
+          "category": "BoreshKari",
+          "items": [],
+          "totalCost": 0
+        },
+        "cnc": {
+          "category": "CNC",
+          "items": [],
+          "totalCost": 0
+        },
+        "navarShiar": {
+          "category": "NavarShiar",
+          "items": [],
+          "totalCost": 0
+        },
+        "fittings": {
+          "category": "Fittings",
+          "items": [],
+          "totalCost": 0
+        },
+        "painting": {
+          "category": "Painting",
+          "items": [],
+          "totalCost": 0
+        },
+        "plate": {
+          "category": "Plate",
+          "items": [],
+          "totalCost": 0
+        },
+        "woodTools": {
+          "category": "WoodTools",
+          "items": [],
+          "totalCost": 0
+        }
+      },
+      "financialSummary": {
+        "subtotal": 121800,
+        "breakdown": {
+          "material": 121800,
+          "boreshKari": 0,
+          "navarShiar": 0,
+          "cnc": 0,
+          "fittings": 0,
+          "painting": 0,
+          "woodTools": 0,
+          "plate": 0
+        },
+        "overheads": {
+          "overhead1": 30450,
+          "overhead2": 4872,
+          "overhead3": 2436,
+          "overhead4": 2436,
+          "contingency": 3045,
+          "totalOverheads": 43239
+        },
+        "totalWithOverheads": 165039,
+        "finalPrice": 201347.58000000002,
+        "profitAmount": 36308.58,
+        "profitPercentage": 0.22
+      },
+      "calculatedAt": "2025-11-21T07:59:33.892Z",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "filename": "test-case-3-edge-banding.csv",
+    "name": "Edge Banding Scenarios",
+    "status": "PASSED",
+    "checks": [
+      {
+        "category": "Material Cost",
+        "expected": 189800,
+        "actual": 189800,
+        "pass": true,
+        "difference": 0
+      },
+      {
+        "category": "NavarShiar Cost",
+        "expected": 43750,
+        "actual": 43750,
+        "pass": true,
+        "difference": 0
+      },
+      {
+        "category": "Subtotal",
+        "expected": 233550,
+        "actual": 233550,
+        "pass": true,
+        "difference": 0
+      },
+      {
+        "category": "Final Price",
+        "expected": 386081,
+        "actual": 386081.505,
+        "pass": true,
+        "difference": 0.5050000000046566
+      }
+    ],
+    "result": {
+      "project": {},
+      "costs": {
+        "material": {
+          "category": "Material",
+          "totalCost": 189800,
+          "totalArea": 1.26,
+          "totalQuantity": 4,
+          "items": [
+            {
+              "cost": 65000,
+              "description": "MDF 18mm",
+              "unit": "m²",
+              "quantity": 0.52,
+              "code": "ام دی اف"
+            },
+            {
+              "cost": 34800,
+              "description": "Melamine White 18mm",
+              "unit": "m²",
+              "quantity": 0.24,
+              "code": "ملامین"
+            },
+            {
+              "cost": 90000,
+              "description": "Plywood 12mm",
+              "unit": "m²",
+              "quantity": 0.5,
+              "code": "تخته"
+            }
+          ]
+        },
+        "boreshKari": {
+          "category": "BoreshKari",
+          "items": [],
+          "totalCost": 0
+        },
+        "cnc": {
+          "category": "CNC",
+          "items": [],
+          "totalCost": 0
+        },
+        "navarShiar": {
+          "category": "NavarShiar",
+          "items": [
+            {
+              "cost": 5600,
+              "description": "Edge Banding - Panel with 2 edges",
+              "unit": "m",
+              "quantity": 1.6,
+              "code": "ام دی اف"
+            },
+            {
+              "cost": 7700,
+              "description": "Edge Banding - Panel with 2 edges",
+              "unit": "m",
+              "quantity": 2.2,
+              "code": "ملامین"
+            },
+            {
+              "cost": 25200,
+              "description": "Edge Banding - Panel with 4 edges",
+              "unit": "m",
+              "quantity": 7.2,
+              "code": "ام دی اف"
+            },
+            {
+              "cost": 5250,
+              "description": "Edge Banding - Panel with 1 edge",
+              "unit": "m",
+              "quantity": 1.5,
+              "code": "تخته"
+            }
+          ],
+          "totalCost": 43750
+        },
+        "fittings": {
+          "category": "Fittings",
+          "items": [],
+          "totalCost": 0
+        },
+        "painting": {
+          "category": "Painting",
+          "items": [],
+          "totalCost": 0
+        },
+        "plate": {
+          "category": "Plate",
+          "items": [],
+          "totalCost": 0
+        },
+        "woodTools": {
+          "category": "WoodTools",
+          "items": [],
+          "totalCost": 0
+        }
+      },
+      "financialSummary": {
+        "subtotal": 233550,
+        "breakdown": {
+          "material": 189800,
+          "boreshKari": 0,
+          "navarShiar": 43750,
+          "cnc": 0,
+          "fittings": 0,
+          "painting": 0,
+          "woodTools": 0,
+          "plate": 0
+        },
+        "overheads": {
+          "overhead1": 58387.5,
+          "overhead2": 9342,
+          "overhead3": 4671,
+          "overhead4": 4671,
+          "contingency": 5838.75,
+          "totalOverheads": 82910.25
+        },
+        "totalWithOverheads": 316460.25,
+        "finalPrice": 386081.505,
+        "profitAmount": 69621.255,
+        "profitPercentage": 0.22
+      },
+      "calculatedAt": "2025-11-21T07:59:33.896Z",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "filename": "test-case-4-cnc-components.csv",
+    "name": "CNC Components",
+    "status": "PASSED",
+    "checks": [
+      {
+        "category": "Material Cost",
+        "expected": 139600,
+        "actual": 139600,
+        "pass": true,
+        "difference": 0
+      },
+      {
+        "category": "NavarShiar Cost",
+        "expected": 15400,
+        "actual": 15400,
+        "pass": true,
+        "difference": 0
+      },
+      {
+        "category": "CNC Cost",
+        "expected": 39000,
+        "actual": 39000,
+        "pass": true,
+        "difference": 0
+      },
+      {
+        "category": "Subtotal",
+        "expected": 194000,
+        "actual": 194000,
+        "pass": true,
+        "difference": 0
+      },
+      {
+        "category": "Final Price",
+        "expected": 320701,
+        "actual": 320701.4,
+        "pass": true,
+        "difference": 0.40000000002328306
+      }
+    ],
+    "result": {
+      "project": {},
+      "costs": {
+        "material": {
+          "category": "Material",
+          "totalCost": 139600,
+          "totalArea": 1.04,
+          "totalQuantity": 3,
+          "items": [
+            {
+              "cost": 70000,
+              "description": "MDF 18mm",
+              "unit": "m²",
+              "quantity": 0.56,
+              "code": "ام دی اف"
+            },
+            {
+              "cost": 69600,
+              "description": "Melamine White 18mm",
+              "unit": "m²",
+              "quantity": 0.48,
+              "code": "ملامین"
+            }
+          ]
+        },
+        "boreshKari": {
+          "category": "BoreshKari",
+          "items": [],
+          "totalCost": 0
+        },
+        "cnc": {
+          "category": "CNC",
+          "items": [
+            {
+              "cost": 15000,
+              "description": "CNC - CNC Drilled Panel",
+              "unit": "piece",
+              "quantity": 3,
+              "code": "DRILL"
+            },
+            {
+              "cost": 24000,
+              "description": "CNC - CNC Routed Panel",
+              "unit": "piece",
+              "quantity": 2,
+              "code": "ROUTE"
+            }
+          ],
+          "totalCost": 39000
+        },
+        "navarShiar": {
+          "category": "NavarShiar",
+          "items": [
+            {
+              "cost": 15400,
+              "description": "Edge Banding - CNC Routed Panel",
+              "unit": "m",
+              "quantity": 4.4,
+              "code": "ملامین"
+            }
+          ],
+          "totalCost": 15400
+        },
+        "fittings": {
+          "category": "Fittings",
+          "items": [],
+          "totalCost": 0
+        },
+        "painting": {
+          "category": "Painting",
+          "items": [],
+          "totalCost": 0
+        },
+        "plate": {
+          "category": "Plate",
+          "items": [],
+          "totalCost": 0
+        },
+        "woodTools": {
+          "category": "WoodTools",
+          "items": [],
+          "totalCost": 0
+        }
+      },
+      "financialSummary": {
+        "subtotal": 194000,
+        "breakdown": {
+          "material": 139600,
+          "boreshKari": 0,
+          "navarShiar": 15400,
+          "cnc": 39000,
+          "fittings": 0,
+          "painting": 0,
+          "woodTools": 0,
+          "plate": 0
+        },
+        "overheads": {
+          "overhead1": 48500,
+          "overhead2": 7760,
+          "overhead3": 3880,
+          "overhead4": 3880,
+          "contingency": 4850,
+          "totalOverheads": 68870
+        },
+        "totalWithOverheads": 262870,
+        "finalPrice": 320701.4,
+        "profitAmount": 57831.4,
+        "profitPercentage": 0.22
+      },
+      "calculatedAt": "2025-11-21T07:59:33.900Z",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "filename": "test-case-5-complex.csv",
+    "name": "Complex Multi-Scenario",
+    "status": "PASSED",
+    "checks": [
+      {
+        "category": "Material Cost",
+        "expected": 460600,
+        "actual": 460600,
+        "pass": true,
+        "difference": 0
+      },
+      {
+        "category": "NavarShiar Cost",
+        "expected": 93800,
+        "actual": 93800,
+        "pass": true,
+        "difference": 0
+      },
+      {
+        "category": "CNC Cost",
+        "expected": 54000,
+        "actual": 54000,
+        "pass": true,
+        "difference": 0
+      },
+      {
+        "category": "Subtotal",
+        "expected": 608400,
+        "actual": 608400,
+        "pass": true,
+        "difference": 0
+      },
+      {
+        "category": "Final Price",
+        "expected": 1005746,
+        "actual": 1005746.04,
+        "pass": true,
+        "difference": 0.0400000000372529
+      }
+    ],
+    "result": {
+      "project": {},
+      "costs": {
+        "material": {
+          "category": "Material",
+          "totalCost": 460600,
+          "totalArea": 3.58,
+          "totalQuantity": 5,
+          "items": [
+            {
+              "cost": 225000,
+              "description": "MDF 18mm",
+              "unit": "m²",
+              "quantity": 1.7999999999999998,
+              "code": "ام دی اف"
+            },
+            {
+              "cost": 69600,
+              "description": "Melamine White 18mm",
+              "unit": "m²",
+              "quantity": 0.48,
+              "code": "ملامین"
+            },
+            {
+              "cost": 76000,
+              "description": "Particle Board 18mm",
+              "unit": "m²",
+              "quantity": 0.8,
+              "code": "نئوپان"
+            },
+            {
+              "cost": 90000,
+              "description": "Plywood 12mm",
+              "unit": "m²",
+              "quantity": 0.5,
+              "code": "تخته"
+            }
+          ]
+        },
+        "boreshKari": {
+          "category": "BoreshKari",
+          "items": [],
+          "totalCost": 0
+        },
+        "cnc": {
+          "category": "CNC",
+          "items": [
+            {
+              "cost": 15000,
+              "description": "CNC - Cabinet Door",
+              "unit": "piece",
+              "quantity": 3,
+              "code": "DRILL"
+            },
+            {
+              "cost": 24000,
+              "description": "CNC - Drawer Front",
+              "unit": "piece",
+              "quantity": 2,
+              "code": "ROUTE"
+            },
+            {
+              "cost": 15000,
+              "description": "CNC - Top Panel",
+              "unit": "piece",
+              "quantity": 1,
+              "code": "COMPLEX"
+            }
+          ],
+          "totalCost": 54000
+        },
+        "navarShiar": {
+          "category": "NavarShiar",
+          "items": [
+            {
+              "cost": 16800,
+              "description": "Edge Banding - Cabinet Door",
+              "unit": "m",
+              "quantity": 4.800000000000001,
+              "code": "ام دی اف"
+            },
+            {
+              "cost": 30800,
+              "description": "Edge Banding - Drawer Front",
+              "unit": "m",
+              "quantity": 8.8,
+              "code": "ملامین"
+            },
+            {
+              "cost": 25200,
+              "description": "Edge Banding - Shelf",
+              "unit": "m",
+              "quantity": 7.2,
+              "code": "نئوپان"
+            },
+            {
+              "cost": 21000,
+              "description": "Edge Banding - Top Panel",
+              "unit": "m",
+              "quantity": 6,
+              "code": "تخته"
+            }
+          ],
+          "totalCost": 93800
+        },
+        "fittings": {
+          "category": "Fittings",
+          "items": [],
+          "totalCost": 0
+        },
+        "painting": {
+          "category": "Painting",
+          "items": [],
+          "totalCost": 0
+        },
+        "plate": {
+          "category": "Plate",
+          "items": [],
+          "totalCost": 0
+        },
+        "woodTools": {
+          "category": "WoodTools",
+          "items": [],
+          "totalCost": 0
+        }
+      },
+      "financialSummary": {
+        "subtotal": 608400,
+        "breakdown": {
+          "material": 460600,
+          "boreshKari": 0,
+          "navarShiar": 93800,
+          "cnc": 54000,
+          "fittings": 0,
+          "painting": 0,
+          "woodTools": 0,
+          "plate": 0
+        },
+        "overheads": {
+          "overhead1": 152100,
+          "overhead2": 24336,
+          "overhead3": 12168,
+          "overhead4": 12168,
+          "contingency": 15210,
+          "totalOverheads": 215982
+        },
+        "totalWithOverheads": 824382,
+        "finalPrice": 1005746.04,
+        "profitAmount": 181364.04,
+        "profitPercentage": 0.22
+      },
+      "calculatedAt": "2025-11-21T07:59:33.903Z",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "filename": "test-case-6-edge-cases.csv",
+    "name": "Edge Cases",
+    "status": "PASSED",
+    "checks": [
+      {
+        "category": "Material Cost",
+        "expected": 654500,
+        "actual": 654500,
+        "pass": true,
+        "difference": 0
+      },
+      {
+        "category": "NavarShiar Cost",
+        "expected": 210000,
+        "actual": 210000,
+        "pass": true,
+        "difference": 0
+      },
+      {
+        "category": "Subtotal",
+        "expected": 864500,
+        "actual": 864500,
+        "pass": true,
+        "difference": 0
+      },
+      {
+        "category": "Final Price",
+        "expected": 1429105,
+        "actual": 1429104.95,
+        "pass": true,
+        "difference": -0.05000000004656613
+      }
+    ],
+    "result": {
+      "project": {},
+      "costs": {
+        "material": {
+          "category": "Material",
+          "totalCost": 654500,
+          "totalArea": 5.22,
+          "totalQuantity": 4,
+          "items": [
+            {
+              "cost": 0,
+              "description": "MDF 18mm",
+              "unit": "m²",
+              "quantity": 0,
+              "code": ""
+            },
+            {
+              "cost": 625000,
+              "description": "MDF 18mm",
+              "unit": "m²",
+              "quantity": 5,
+              "code": "ام دی اف"
+            },
+            {
+              "cost": 14500,
+              "description": "Melamine White 18mm",
+              "unit": "m²",
+              "quantity": 0.1,
+              "code": "ملامین"
+            },
+            {
+              "cost": 15000,
+              "description": "MDF 18mm",
+              "unit": "m²",
+              "quantity": 0.12,
+              "code": "Unknown Material"
+            }
+          ]
+        },
+        "boreshKari": {
+          "category": "BoreshKari",
+          "items": [],
+          "totalCost": 0
+        },
+        "cnc": {
+          "category": "CNC",
+          "items": [],
+          "totalCost": 0
+        },
+        "navarShiar": {
+          "category": "NavarShiar",
+          "items": [
+            {
+              "cost": 210000,
+              "description": "Edge Banding - Very Large Panel",
+              "unit": "m",
+              "quantity": 60,
+              "code": "ام دی اف"
+            }
+          ],
+          "totalCost": 210000
+        },
+        "fittings": {
+          "category": "Fittings",
+          "items": [],
+          "totalCost": 0
+        },
+        "painting": {
+          "category": "Painting",
+          "items": [],
+          "totalCost": 0
+        },
+        "plate": {
+          "category": "Plate",
+          "items": [],
+          "totalCost": 0
+        },
+        "woodTools": {
+          "category": "WoodTools",
+          "items": [],
+          "totalCost": 0
+        }
+      },
+      "financialSummary": {
+        "subtotal": 864500,
+        "breakdown": {
+          "material": 654500,
+          "boreshKari": 0,
+          "navarShiar": 210000,
+          "cnc": 0,
+          "fittings": 0,
+          "painting": 0,
+          "woodTools": 0,
+          "plate": 0
+        },
+        "overheads": {
+          "overhead1": 216125,
+          "overhead2": 34580,
+          "overhead3": 17290,
+          "overhead4": 17290,
+          "contingency": 21612.5,
+          "totalOverheads": 306897.5
+        },
+        "totalWithOverheads": 1171397.5,
+        "finalPrice": 1429104.95,
+        "profitAmount": 257707.45,
+        "profitPercentage": 0.22
+      },
+      "calculatedAt": "2025-11-21T07:59:33.907Z",
+      "version": "1.0.0"
+    }
+  }
+]

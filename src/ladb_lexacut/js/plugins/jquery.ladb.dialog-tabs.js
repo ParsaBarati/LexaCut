@@ -54,6 +54,12 @@
                 sponsorAd: true
             },
             {
+                name: 'costanalysis',
+                bar: 'leftbar',
+                icon: 'ladb-lexacut-icon-estimate',
+                sponsorAd: false
+            },
+            {
                 name: 'outliner',
                 bar: 'leftbar',
                 icon: 'ladb-lexacut-icon-outliner',

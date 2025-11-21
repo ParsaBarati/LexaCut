@@ -17,6 +17,7 @@ module Ladb::LexaCut
   require_relative 'controller/outliner_controller'
   require_relative 'controller/importer_controller'
   require_relative 'controller/settings_controller'
+  require_relative 'controller/cost_analysis_controller'
   require_relative 'utils/dimension_utils'
   require_relative 'utils/path_utils'
   require_relative 'utils/hash_utils'
@@ -97,7 +98,7 @@ module Ladb::LexaCut
     DOCS_URL = 'https://www.lairdubois.fr/opencutlist/docs'
     DOCS_DEV_URL = 'https://www.lairdubois.fr/opencutlist/docs-dev'
 
-    TABS_STRIPPED_NAMES = %w[materials cutlist outliner importer]
+    TABS_STRIPPED_NAMES = %w[materials cutlist costanalysis outliner importer]
     SMART_TOOLS_STRIPPED_NAMES = %w[draw handle paint axes export]
 
     # -----
@@ -784,6 +785,10 @@ module Ladb::LexaCut
       @app_observer ||= AppObserver.new
     end
 
+    def get_controller(tab_name)
+      @controllers.find { |controller| controller.instance_variable_get(:@tab_name) == tab_name }
+    end
+
     # -----
 
     def setup
@@ -951,6 +956,7 @@ module Ladb::LexaCut
         @controllers.push(OutlinerController.new)
         @controllers.push(ImporterController.new)
         @controllers.push(SettingsController.new)
+        @controllers.push(CostAnalysisController.new) if COST_API_ENABLED
 
         # -- Commands --
 

@@ -1,0 +1,172 @@
+{
+  "fittings": [
+    {
+      "code": "FITTING-1",
+      "name": "لولا گازور -آرام بند",
+      "unit": "عدد",
+      "unitPrice": 200000.0,
+      "qtyPerFitting": 1,
+      "isActive": true
+    },
+    {
+      "code": "FITTING-2",
+      "name": "لولا گازور - ساده",
+      "unit": "عدد",
+      "unitPrice": 150000.0,
+      "qtyPerFitting": 1,
+      "isActive": true
+    },
+    {
+      "code": "FITTING-3",
+      "name": "ریل ساچمه ای 50",
+      "unit": "جفت",
+      "unitPrice": 700000.0,
+      "qtyPerFitting": 1,
+      "isActive": true
+    },
+    {
+      "code": "FITTING-4",
+      "name": "ریل ساچمه ای 45",
+      "unit": "جفت",
+      "unitPrice": 600000.0,
+      "qtyPerFitting": 1,
+      "isActive": true
+    },
+    {
+      "code": "FITTING-5",
+      "name": "ریل ساچمه ای 40",
+      "unit": "جفت",
+      "unitPrice": 550000.0,
+      "qtyPerFitting": 1,
+      "isActive": true
+    },
+    {
+      "code": "FITTING-6",
+      "name": "ریل ساچمه ای 35",
+      "unit": "جفت",
+      "unitPrice": 500000.0,
+      "qtyPerFitting": 1,
+      "isActive": true
+    },
+    {
+      "code": "FITTING-7",
+      "name": "ریل ساچمه ای 30",
+      "unit": "جفت",
+      "unitPrice": 450000.0,
+      "qtyPerFitting": 1,
+      "isActive": true
+    },
+    {
+      "code": "FITTING-8",
+      "name": "ریل ساچمه ای 25",
+      "unit": "جفت",
+      "unitPrice": 400000.0,
+      "qtyPerFitting": 1,
+      "isActive": true
+    },
+    {
+      "code": "FITTING-9",
+      "name": "جک 120",
+      "unit": "عدد",
+      "unitPrice": 250000.0,
+      "qtyPerFitting": 1,
+      "isActive": true
+    },
+    {
+      "code": "FITTING-10",
+      "name": "دستکیره کابینت",
+      "unit": "عدد",
+      "unitPrice": 450000.0,
+      "qtyPerFitting": 1,
+      "isActive": true
+    },
+    {
+      "code": "FITTING-11",
+      "name": "دستگیره کمد",
+      "unit": "عدد",
+      "unitPrice": 350000.0,
+      "qtyPerFitting": 1,
+      "isActive": true
+    },
+    {
+      "code": "FITTING-12",
+      "name": "جا آویز لباس",
+      "unit": "عدد",
+      "unitPrice": 200000.0,
+      "qtyPerFitting": 1,
+      "isActive": true
+    },
+    {
+      "code": "FITTING-13",
+      "name": "آبچکان",
+      "unit": "عدد",
+      "unitPrice": 1500000.0,
+      "qtyPerFitting": 1,
+      "isActive": true
+    },
+    {
+      "code": "FITTING-14",
+      "name": "لولا تخت پروانه ای",
+      "unit": "عدد",
+      "unitPrice": 600000.0,
+      "qtyPerFitting": 1,
+      "isActive": true
+    },
+    {
+      "code": "FITTING-15",
+      "name": "دستیگره اتاقی",
+      "unit": "عدد",
+      "unitPrice": 3500000.0,
+      "qtyPerFitting": 1,
+      "isActive": true
+    },
+    {
+      "code": "FITTING-16",
+      "name": "دستگیره سرویسی",
+      "unit": "عدد",
+      "unitPrice": 3500000.0,
+      "qtyPerFitting": 1,
+      "isActive": true
+    },
+    {
+      "code": "FITTING-17",
+      "name": "مکانیزم قفل اتاقی",
+      "unit": "عدد",
+      "unitPrice": 1200000.0,
+      "qtyPerFitting": 1,
+      "isActive": true
+    },
+    {
+      "code": "FITTING-18",
+      "name": "مکانیزم قفل سرویسی",
+      "unit": "عدد",
+      "unitPrice": 1200000.0,
+      "qtyPerFitting": 1,
+      "isActive": true
+    },
+    {
+      "code": "FITTING-19",
+      "name": "پایه 14 سانتی",
+      "unit": "عدد",
+      "unitPrice": 120000.0,
+      "qtyPerFitting": 1,
+      "isActive": true
+    },
+    {
+      "code": "FITTING-20",
+      "name": "پایه 10 سانتی",
+      "unit": "عدد",
+      "unitPrice": 100000.0,
+      "qtyPerFitting": 1,
+      "isActive": true
+    },
+    {
+      "code": "FITTING-21",
+      "name": "پایه 7 سانتی",
+      "unit": "عدد",
+      "unitPrice": 80000.0,
+      "qtyPerFitting": 1,
+      "isActive": true
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+Length - raw,Width - raw,Quantity,Edge Length 1,Edge Length 2,Edge Width 1,Edge Width 2,Material name,Designation,Instance names,Area - final,Description
+60.0,20.0,3,PVC,PVC,,,ام دی اف,Component#1,CNC-Drill,0.12 m²,Cabinet Door
+80.0,30.0,2,ABS,ABS,ABS,ABS,ملامین,Component#2,CNC-Route,0.24 m²,Drawer Front
+50.0,40.0,4,PVC,,PVC,,نئوپان,Component#3,,0.20 m²,Shelf
+100.0,50.0,1,PVC,PVC,PVC,PVC,تخته,Component#4,CNC-Complex,0.50 m²,Top Panel
+120.0,60.0,2,,,,,ام دی اف,Component#5,,0.72 m²,Side Panel

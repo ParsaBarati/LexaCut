@@ -1,0 +1,163 @@
+╔══════════════════════════════════════════════════════════════════════════╗
+║          HOT RELOAD vs FULL RESTART - When to Use Which                  ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+⚠️  IMPORTANT: JavaScript changes CANNOT be hot-reloaded!
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                        RUBY CHANGES ONLY                                 │
+│                     ✅ HOT RELOAD WORKS (10 sec)                         │
+└─────────────────────────────────────────────────────────────────────────┘
+
+If you changed ONLY Ruby files (.rb):
+  1. Ruby Console: 
+     $LOADED_FEATURES.delete_if{|f|f.include?('ladb_lexacut')}; Object.send(:remove_const,:Ladb) rescue nil; load('/Volumes/Work/Code/Startups/OpenCutList/src/lexacut.rb'); puts "✅ Reloaded!"
+  
+  2. Reopen plugin: Extensions → LexaCut → LexaCut
+  
+  ✅ Changes take effect immediately!
+
+Examples:
+  • src/ladb_lexacut/ruby/controller/*.rb
+  • src/ladb_lexacut/ruby/worker/*.rb
+  • src/lexacut.rb
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                  JAVASCRIPT/CSS/TWIG CHANGES                             │
+│             ❌ HOT RELOAD DOESN'T WORK - MUST RESTART (2 min)           │
+└─────────────────────────────────────────────────────────────────────────┘
+
+If you changed JavaScript, CSS, or Twig files:
+
+  Step 1: Build
+  ─────────────
+  cd /Volumes/Work/Code/Startups/OpenCutList/build
+  gulp
+
+  Step 2: Deploy
+  ───────────────
+  cd /Volumes/Work/Code/Startups/OpenCutList
+  ./deploy-plugin.sh
+
+  Step 3: Restart SketchUp
+  ────────────────────────
+  1. Close SketchUp COMPLETELY (Quit)
+  2. Reopen SketchUp
+  3. Open plugin: Extensions → LexaCut → LexaCut
+  
+  ✅ Changes now take effect!
+
+Examples:
+  • src/ladb_lexacut/js/plugins/tabs/*.js  ← YOUR CURRENT CHANGE
+  • src/ladb_lexacut/less/*.less
+  • src/ladb_lexacut/twig/**/*.twig
+  • src/ladb_lexacut/yaml/i18n/*.yml       ← YOUR CURRENT CHANGE
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                         WHY THIS HAPPENS                                 │
+└─────────────────────────────────────────────────────────────────────────┘
+
+Ruby files:
+  ✅ Loaded directly from src/ directory
+  ✅ Can be reloaded with Ruby Console
+  ✅ Hot reload works!
+
+JavaScript/CSS/Twig/i18n files:
+  ❌ Not loaded from src/ directory
+  ✅ Compiled/minified by gulp build system
+  ✅ Bundled into HTML dialogs
+  ❌ Can't be hot-reloaded
+  ⚠️  MUST restart SketchUp to reload HTML dialogs
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                    YOUR CURRENT SITUATION                                │
+└─────────────────────────────────────────────────────────────────────────┘
+
+You changed:
+  ✏️  jquery.ladb.tab-costanalysis.js (JavaScript)
+  ✏️  en.yml (translations)
+  ✏️  jquery.ladb.tab-cutlist.js (JavaScript)
+
+These are ALL JavaScript/i18n files!
+
+What you did:
+  ❌ Hot reload (doesn't work for JS)
+  
+What you need to do:
+  ✅ Deploy plugin: ./deploy-plugin.sh
+  ✅ Restart SketchUp
+
+Current status:
+  ✅ Plugin deployed to SketchUp plugins directory
+  ⚠️  NOW RESTART SKETCHUP!
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                        QUICK REFERENCE                                   │
+└─────────────────────────────────────────────────────────────────────────┘
+
+CHANGED RUBY?
+  → Hot reload in Ruby Console ✅ (10 sec)
+
+CHANGED JAVASCRIPT/CSS/TWIG/i18n?
+  → Build → Deploy → Restart SketchUp ⚠️ (2 min)
+
+NOT SURE?
+  → If in doubt, restart SketchUp (always works)
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                    AUTOMATED WORKFLOW                                    │
+└─────────────────────────────────────────────────────────────────────────┘
+
+Future workflow for JS/CSS changes:
+
+1. Make your changes
+2. Run one command:
+   cd /Volumes/Work/Code/Startups/OpenCutList
+   build/node_modules/.bin/gulp && ./deploy-plugin.sh
+   
+3. Restart SketchUp
+
+That's it! The script will:
+  ✅ Compile LESS → CSS
+  ✅ Minify JavaScript
+  ✅ Compile Twig templates
+  ✅ Compile translations
+  ✅ Create .rbz package
+  ✅ Deploy to SketchUp plugins folder
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                    TESTING BACKEND ONLY                                  │
+└─────────────────────────────────────────────────────────────────────────┘
+
+For backend/API testing (NO SKETCHUP NEEDED!):
+  
+  cd api && npm test           ← Test all calculations (2 sec)
+  ./test-cost-api.sh          ← Test API endpoint (5 sec)
+  
+This tests the Ruby backend WITHOUT SketchUp!
+Perfect for testing cost calculation logic.
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║                          CURRENT ACTION NEEDED                            ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+  ✅ Build complete
+  ✅ Plugin deployed to SketchUp
+
+  ⚠️  NOW DO THIS:
+  
+      1. QUIT SKETCHUP (not just close the plugin)
+      2. Reopen SketchUp
+      3. Open: Extensions → LexaCut → LexaCut
+      4. Test the Cost Analysis feature
+  
+  After restart, the error will be gone! 🎉
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║                               SUMMARY                                     ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+Ruby changes:     Hot reload ✅
+JS/CSS changes:   Restart required ❌
+Backend testing:  No SketchUp needed ✅
+

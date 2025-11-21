@@ -136,7 +136,7 @@ core:
   savepanel:
     export_to_file: "Exporter vers un fichier {{ file_format }}"
   dialog:
-    title: OpenCutList by L'Air du Bois
+    title: OpenCutList by Lexaplus & Renzo Group
   leftbar:
     more: Plus
     more_docs: Docs
@@ -2009,7 +2009,7 @@ tab:
       - Zoltán Nagy, Roland Kovács (*hongrois*)
       - Milan Divovic (*serbe*)
     credits_description: |
-      Le développement de cette extension s'inscrit dans le projet de plateforme de partage [L'Air du Bois](https://www.lairdubois.fr).
+      Le développement de cette extension s'inscrit dans le projet de plateforme de partage [Lexaplus & Renzo Group](https://www.lairdubois.fr).
       Et à ce titre, il est également *Open Source* et disponible sous licence [GNU GPLv3](https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension/blob/master/LICENSE) sur son [dépôt GitHub](https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension).
     credits_runtime: Exécution
     credits_development: Développement

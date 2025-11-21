@@ -47,106 +47,71 @@
           "align": "right"
         }
       ],
-      "1": [ /* EXPORT_OPTION_SOURCE_CUTLIST */
+      "1": [ /* EXPORT_OPTION_SOURCE_CUTLIST - Optimized for Cost Analysis Backend */
         {
           "name": "number",
-          "align": "center"
+          "align": "center",
+          "title": "Number"
         },
         {
           "name": "name",
-          "align": "left"
+          "align": "left",
+          "title": "Name"
         },
         {
           "name": "count",
-          "align": "center"
+          "align": "center",
+          "title": "Count"
         },
         {
           "name": "cutting_length",
-          "align": "right"
+          "align": "right",
+          "title": "Cutting length"
         },
         {
           "name": "cutting_width",
-          "align": "right"
+          "align": "right",
+          "title": "Cutting width"
         },
         {
           "name": "cutting_thickness",
-          "align": "right"
-        },
-        {
-          "name": "bbox_length",
-          "align": "right"
-        },
-        {
-          "name": "bbox_width",
-          "align": "right"
-        },
-        {
-          "name": "bbox_thickness",
-          "align": "right"
-        },
-        {
-          "name": "final_area",
-          "align": "right"
-        },
-        {
-          "name": "material_type",
-          "align": "left"
+          "align": "right",
+          "title": "Cutting thickness"
         },
         {
           "name": "material_name",
-          "align": "left"
-        },
-        {
-          "name": "material_description",
-          "align": "left"
-        },
-        {
-          "name": "material_url",
-          "align": "left"
+          "align": "left",
+          "title": "Material name"
         },
         {
           "name": "entity_names",
-          "align": "left"
-        },
-        {
-          "name": "description",
-          "align": "left"
-        },
-        {
-          "name": "url",
-          "align": "left"
-        },
-        {
-          "name": "tags",
-          "align": "left"
+          "align": "left",
+          "title": "Entity names"
         },
         {
           "name": "edge_ymin",
-          "align": "center"
+          "align": "center",
+          "title": "Edge ymin"
         },
         {
           "name": "edge_ymax",
-          "align": "center"
+          "align": "center",
+          "title": "Edge ymax"
         },
         {
           "name": "edge_xmin",
-          "align": "center"
+          "align": "center",
+          "title": "Edge xmin"
         },
         {
           "name": "edge_xmax",
-          "align": "center"
+          "align": "center",
+          "title": "Edge xmax"
         },
         {
-          "name": "face_zmax",
-          "align": "center"
-        },
-        {
-          "name": "face_zmin",
-          "align": "center"
-        },
-        {
-          "name": "layers",
-          "align": "left"
+          "name": "final_area",
+          "align": "right",
+          "title": "Final area"
         }
       ],
       "2": [ /* EXPORT_OPTION_SOURCE_INSTANCES_LIST */

@@ -52,6 +52,7 @@
         this.$headerExtra = $('.ladb-header-extra', this.$header);
         this.$btnGenerate = $('#ladb_btn_generate', this.$header);
         this.$btnPrint = $('#ladb_btn_print', this.$header);
+        this.$btnCostAnalysis = $('#ladb_btn_cost_analysis', this.$header);
         this.$btnExport = $('#ladb_btn_export', this.$header);
         this.$btnLayout = $('#ladb_btn_layout', this.$header);
         this.$btnEstimate = $('#ladb_btn_estimate', this.$header);
@@ -177,6 +178,7 @@
                 // Update buttons and items state
                 that.$btnPrint.prop('disabled', groups.length === 0);
                 that.$btnExport.prop('disabled', groups.length === 0);
+                that.$btnCostAnalysis.prop('disabled', groups.length === 0);
                 that.$btnLayout.prop('disabled', groups.length === 0);
                 that.$btnEstimate.prop('disabled', solidWoodMaterialCount + sheetGoodMaterialCount + dimensionalMaterialCount + edgeMaterialCount + hardwareMaterialCount === 0);
                 that.$itemHighlightAllParts.parents('li').toggleClass('disabled', groups.length === 0);
@@ -807,6 +809,7 @@
 
                 // Restore button state
                 that.$btnGenerate.prop('disabled', false);
+                that.$btnCostAnalysis.prop('disabled', false);
 
                 // Stick header
                 that.stickSlideHeader(that.$rootSlide);
@@ -6544,6 +6547,10 @@
             that.generateCutlist();
             this.blur();
         });
+        this.$btnCostAnalysis.on('click', function () {
+            that.goToCostAnalysis();
+            this.blur();
+        });
         this.$btnPrint.on('click', function () {
             this.blur();
             that.print(that.cutlistTitle + ' - ' + i18next.t('tab.cutlist.title'));
@@ -6686,6 +6693,11 @@
             LadbAbstractTab.prototype.processInitializedCallback.call(that, initializedCallback);
         });
 
+    };
+
+    LadbTabCutlist.prototype.goToCostAnalysis = function () {
+        // Navigate to the Cost Analysis tab in the dialog
+        this.dialog.selectTab('costanalysis');
     };
 
 

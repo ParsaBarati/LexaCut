@@ -1,0 +1,4 @@
+Length - raw,Width - raw,Quantity,Edge Length 1,Edge Length 2,Edge Width 1,Edge Width 2,Material name,Designation,Instance names,Area - final,Description
+60.0,20.0,3,,,,,ام دی اف,Component#1,CNC-Drill,0.12 m²,CNC Drilled Panel
+80.0,30.0,2,PVC,PVC,,,ملامین,Component#2,CNC-Route,0.24 m²,CNC Routed Panel
+50.0,40.0,1,,,,,ام دی اف,Component#3,,0.20 m²,Regular Panel

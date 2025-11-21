@@ -1,0 +1,16 @@
+# Quick one-liner reload for LexaCut
+# Paste this directly into SketchUp Ruby Console
+#
+# USAGE:
+#   Just copy-paste the entire line below into Ruby Console:
+#
+#   $LOADED_FEATURES.delete_if{|f|f.include?('ladb_lexacut')||f.include?('lexacut')}; Object.send(:remove_const,:Ladb) rescue nil; load('/Volumes/Work/Code/Startups/OpenCutList/src/lexacut.rb'); puts "✅ Reloaded!"
+#
+# This does:
+# 1. Clears cached files
+# 2. Removes the Ladb constant
+# 3. Reloads the plugin
+# 4. Prints success message
+#
+# After running this, go to: Extensions → LexaCut → LexaCut
+

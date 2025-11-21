@@ -323,10 +323,13 @@ gulp.task('lexacut_i18n_compile', function () {
         languageDisabledMsgs[language] = disabledMsg;
         languageReloadMsgs[language] = reloadMsg;
 
-        return gulp.src(file)
+        gulp.src(file)
             .pipe(ladb_i18n_compile('../src/ladb_lexacut/yaml/i18n', '../src/ladb_lexacut/js/i18n'))
             .pipe(gulp.dest('../src/ladb_lexacut/js/i18n'));
     }
+
+    // Return a promise to properly complete the task
+    return Promise.resolve();
 
 });
 
@@ -363,7 +366,7 @@ gulp.task('lexacut_rbz_create', function () {
         blob.push('!src/ladb_lexacut/yaml/i18n/zz*.yml');
     }
     return gulp.src(blob, { cwd: '../', base: '../src'})
-        .pipe(zip('lexacut-v8.0.12.rbz'))
+        .pipe(zip('lexacut-v8.0.15.rbz'))
         .pipe(gulp.dest('../dist'));
 });
 

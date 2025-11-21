@@ -1,0 +1,29 @@
+{
+  "name": "opencutlist",
+  "version": "8.0.15",
+  "description": "11# 🚀 LexaCut",
+  "main": "test-runner.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ParsaBarati/LexaCut.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ParsaBarati/LexaCut/issues"
+  },
+  "homepage": "https://github.com/ParsaBarati/LexaCut#readme",
+  "dependencies": {
+    "form-data": "^4.0.5",
+    "node-fetch": "^2.7.0"
+  }
+}

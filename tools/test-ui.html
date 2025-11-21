@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LexaCut Cost Calculator - Test UI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .upload-section {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 2px dashed #667eea;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+            font-size: 1.1em;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="number"] {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .file-input-wrapper {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .file-input-wrapper input[type=file] {
+            position: absolute;
+            left: -9999px;
+        }
+
+        .file-input-label {
+            display: block;
+            padding: 20px;
+            background: white;
+            border: 3px dashed #667eea;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1.1em;
+        }
+
+        .file-input-label:hover {
+            background: #f0f4ff;
+            border-color: #764ba2;
+        }
+
+        .file-input-label.has-file {
+            background: #e7f3ff;
+            border-color: #4CAF50;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2em;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .loading.show {
+            display: block;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .results {
+            display: none;
+            margin-top: 30px;
+        }
+
+        .results.show {
+            display: block;
+        }
+
+        .result-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 5px solid #667eea;
+        }
+
+        .result-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .result-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .result-row:last-child {
+            border-bottom: none;
+        }
+
+        .result-label {
+            font-weight: 600;
+            color: #555;
+        }
+
+        .result-value {
+            font-weight: 700;
+            color: #333;
+        }
+
+        .final-price {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .final-price h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .final-price .price {
+            font-size: 3em;
+            font-weight: 900;
+        }
+
+        .error {
+            background: #fff3f3;
+            border: 2px solid #ff5252;
+            border-radius: 10px;
+            padding: 20px;
+            color: #d32f2f;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .error.show {
+            display: block;
+        }
+
+        .cost-breakdown {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .cost-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cost-item h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .cost-item .amount {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .json-view {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            margin-top: 20px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            max-height: 500px;
+            overflow-y: auto;
+        }
+
+        .toggle-json {
+            background: #f0f0f0;
+            color: #333;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 1em;
+        }
+
+        .toggle-json:hover {
+            background: #e0e0e0;
+        }
+
+        /* Formulas Section Styles */
+        .formulas-section {
+            margin-top: 30px;
+        }
+
+        .formulas-header {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s;
+        }
+
+        .formulas-header:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+        }
+
+        .formulas-header h3 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .toggle-icon {
+            font-size: 1.5em;
+            transition: transform 0.3s;
+        }
+
+        .toggle-icon.expanded {
+            transform: rotate(180deg);
+        }
+
+        .formulas-content {
+            display: none;
+            background: #f8f9fa;
+            border-radius: 0 0 10px 10px;
+            padding: 25px;
+            margin-top: -10px;
+        }
+
+        .formulas-content.show {
+            display: block;
+        }
+
+        .formula-category {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .formula-category h4 {
+            color: #4CAF50;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+
+        .formula-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #4CAF50;
+        }
+
+        .formula-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .formula-label {
+            font-weight: 700;
+            color: #333;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+
+        .formula-expression {
+            font-family: 'Courier New', monospace;
+            color: #666;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+
+        .formula-calculation {
+            font-family: 'Courier New', monospace;
+            color: #2196F3;
+            margin-bottom: 8px;
+            font-size: 1em;
+            padding: 8px;
+            background: #e3f2fd;
+            border-radius: 5px;
+        }
+
+        .formula-result {
+            font-family: 'Courier New', monospace;
+            color: #4CAF50;
+            font-weight: 700;
+            font-size: 1.1em;
+        }
+
+        .formula-reference {
+            font-size: 0.85em;
+            color: #999;
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        .formula-value {
+            color: #2196F3;
+            font-weight: 600;
+        }
+
+        .formula-operator {
+            color: #999;
+            padding: 0 5px;
+        }
+
+        .formula-result-value {
+            color: #4CAF50;
+            font-weight: 700;
+        }
+
+        .copy-formula {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.85em;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+
+        .copy-formula:hover {
+            background: #45a049;
+        }
+
+        .copy-formula.copied {
+            background: #2196F3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 LexaCut Cost Calculator</h1>
+            <p>Upload your CSV file and get instant cost calculations</p>
+        </div>
+
+        <div class="content">
+            <div class="upload-section">
+                <form id="calculationForm">
+                    <div class="form-group">
+                        <label>📁 CSV File (333 format)</label>
+                        <div class="file-input-wrapper">
+                            <input type="file" id="csvFile" accept=".csv,.xlsx" required>
+                            <label for="csvFile" class="file-input-label" id="fileLabel">
+                                📤 Click to select CSV file or drag and drop
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>📋 Project Name</label>
+                        <input type="text" id="projectName" placeholder="e.g., Kitchen Cabinet Project" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>👤 Client Name</label>
+                        <input type="text" id="clientName" placeholder="e.g., John Doe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>📅 Contract Date</label>
+                        <input type="text" id="contractDate" placeholder="2024-01-15" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>📊 Waste Percentage (e.g., 0.15 for 15%)</label>
+                        <input type="number" id="wastePercentage" step="0.01" min="0" max="1" value="0.15" required>
+                    </div>
+
+                    <button type="submit" class="btn" id="submitBtn">
+                        💰 Calculate Cost
+                    </button>
+                </form>
+            </div>
+
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Processing your request... Please wait</p>
+            </div>
+
+            <div class="error" id="error"></div>
+
+            <div class="results" id="results">
+                <div class="result-card">
+                    <h3>📋 Project Information</h3>
+                    <div class="result-row">
+                        <span class="result-label">Project Name:</span>
+                        <span class="result-value" id="resProjectName"></span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Client:</span>
+                        <span class="result-value" id="resClientName"></span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Date:</span>
+                        <span class="result-value" id="resDate"></span>
+                    </div>
+                </div>
+
+                <div class="result-card">
+                    <h3>💵 Cost Breakdown</h3>
+                    <div class="cost-breakdown" id="costBreakdown"></div>
+                </div>
+
+                <div class="result-card">
+                    <h3>📊 Financial Summary</h3>
+                    <div class="result-row">
+                        <span class="result-label">Subtotal:</span>
+                        <span class="result-value" id="resSubtotal"></span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Overhead 1 (25%):</span>
+                        <span class="result-value" id="resOverhead1"></span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Overhead 2 (4%):</span>
+                        <span class="result-value" id="resOverhead2"></span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Overhead 3 (2%):</span>
+                        <span class="result-value" id="resOverhead3"></span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Overhead 4 (2%):</span>
+                        <span class="result-value" id="resOverhead4"></span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Contingency (2.5%):</span>
+                        <span class="result-value" id="resContingency"></span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Total Overheads:</span>
+                        <span class="result-value" id="resTotalOverheads"></span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Total with Overheads:</span>
+                        <span class="result-value" id="resTotalWithOverheads"></span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Profit (22%):</span>
+                        <span class="result-value" id="resProfitAmount"></span>
+                    </div>
+                </div>
+
+                <div class="formulas-section" id="formulasSection">
+                    <div class="formulas-header" id="formulasHeader">
+                        <h3>📐 Calculation Formulas & Debug Info</h3>
+                        <span class="toggle-icon" id="toggleIcon">▼</span>
+                    </div>
+                    <div class="formulas-content" id="formulasContent">
+                        <!-- Formulas will be dynamically inserted here -->
+                    </div>
+                </div>
+
+                <div class="final-price">
+                    <h2>💰 Final Price</h2>
+                    <div class="price" id="resFinalPrice"></div>
+                </div>
+
+                <button class="toggle-json" id="toggleJson">📄 Show Full JSON Response</button>
+                <div class="json-view" id="jsonView" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = 'http://localhost:4492';
+
+        // File input handling
+        const fileInput = document.getElementById('csvFile');
+        const fileLabel = document.getElementById('fileLabel');
+
+        fileInput.addEventListener('change', function(e) {
+            if (this.files && this.files[0]) {
+                fileLabel.textContent = `✅ ${this.files[0].name}`;
+                fileLabel.classList.add('has-file');
+            }
+        });
+
+        // Drag and drop
+        fileLabel.addEventListener('dragover', function(e) {
+            e.preventDefault();
+            this.style.background = '#f0f4ff';
+        });
+
+        fileLabel.addEventListener('dragleave', function(e) {
+            e.preventDefault();
+            this.style.background = 'white';
+        });
+
+        fileLabel.addEventListener('drop', function(e) {
+            e.preventDefault();
+            this.style.background = 'white';
+            if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+                fileInput.files = e.dataTransfer.files;
+                fileLabel.textContent = `✅ ${e.dataTransfer.files[0].name}`;
+                fileLabel.classList.add('has-file');
+            }
+        });
+
+        // Form submission
+        document.getElementById('calculationForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            // Hide previous results and errors
+            document.getElementById('results').classList.remove('show');
+            document.getElementById('error').classList.remove('show');
+            document.getElementById('loading').classList.add('show');
+
+            // Get form data
+            const file = fileInput.files[0];
+            const projectData = {
+                projectName: document.getElementById('projectName').value,
+                clientName: document.getElementById('clientName').value,
+                contractDate: document.getElementById('contractDate').value,
+                wastePercentage: parseFloat(document.getElementById('wastePercentage').value)
+            };
+
+            // Create FormData
+            const formData = new FormData();
+            formData.append('file', file);
+            formData.append('projectData', JSON.stringify(projectData));
+
+            try {
+                const response = await fetch(`${API_URL}/api/v1/calculate/csv`, {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const data = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(data.message || 'Calculation failed');
+                }
+
+                displayResults(data);
+            } catch (error) {
+                showError(error.message);
+            } finally {
+                document.getElementById('loading').classList.remove('show');
+            }
+        });
+
+        function displayResults(data) {
+            // Project info
+            document.getElementById('resProjectName').textContent = data.project.name;
+            document.getElementById('resClientName').textContent = data.project.client;
+            document.getElementById('resDate').textContent = data.project.date;
+
+            // Cost breakdown
+            const costBreakdown = document.getElementById('costBreakdown');
+            costBreakdown.innerHTML = '';
+            
+            const categories = {
+                'Material': data.costs.material.totalCost,
+                'BoreshKari': data.costs.boreshKari.totalCost,
+                'CNC': data.costs.cnc.totalCost,
+                'NavarShiar': data.costs.navarShiar.totalCost,
+                'Fittings': data.costs.fittings.totalCost,
+                'Painting': data.costs.painting.totalCost,
+                'Plate': data.costs.plate.totalCost,
+                'WoodTools': data.costs.woodTools.totalCost
+            };
+
+            for (const [name, amount] of Object.entries(categories)) {
+                const costItem = document.createElement('div');
+                costItem.className = 'cost-item';
+                costItem.innerHTML = `
+                    <h4>${name}</h4>
+                    <div class="amount">${formatCurrency(amount)}</div>
+                `;
+                costBreakdown.appendChild(costItem);
+            }
+
+            // Financial summary
+            const fs = data.financialSummary;
+            document.getElementById('resSubtotal').textContent = formatCurrency(fs.subtotal);
+            document.getElementById('resOverhead1').textContent = formatCurrency(fs.overheads.overhead1);
+            document.getElementById('resOverhead2').textContent = formatCurrency(fs.overheads.overhead2);
+            document.getElementById('resOverhead3').textContent = formatCurrency(fs.overheads.overhead3);
+            document.getElementById('resOverhead4').textContent = formatCurrency(fs.overheads.overhead4);
+            document.getElementById('resContingency').textContent = formatCurrency(fs.overheads.contingency);
+            document.getElementById('resTotalOverheads').textContent = formatCurrency(fs.overheads.totalOverheads);
+            document.getElementById('resTotalWithOverheads').textContent = formatCurrency(fs.totalWithOverheads);
+            document.getElementById('resProfitAmount').textContent = formatCurrency(fs.profitAmount);
+
+            // Final price
+            document.getElementById('resFinalPrice').textContent = formatCurrency(fs.finalPrice);
+
+            // Generate and display formulas
+            displayFormulas(data);
+
+            // JSON view
+            document.getElementById('jsonView').textContent = JSON.stringify(data, null, 2);
+
+            // Show results
+            document.getElementById('results').classList.add('show');
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function extractFormulas(data) {
+            const formulas = [];
+            const costs = data.costs;
+            const fs = data.financialSummary;
+            const breakdown = fs.breakdown;
+
+            // Material Cost Formulas
+            if (costs.material.items && costs.material.items.length > 0) {
+                costs.material.items.forEach((item, index) => {
+                    formulas.push({
+                        category: '📦 هزینه مواد (Material Costs)',
+                        label: `${item.description} - ${item.code}`,
+                        expression: 'مساحت × قیمت واحد (Area × Unit Price)',
+                        calculation: `${item.quantity.toFixed(2)} m² × ${formatNumber(item.cost / item.quantity)} Rials/m²`,
+                        result: formatNumber(item.cost) + ' ریال',
+                        reference: 'Material!A' + (7 + index),
+                        value: item.cost
+                    });
+                });
+
+                formulas.push({
+                    category: '📦 هزینه مواد (Material Costs)',
+                    label: 'مجموع هزینه مواد (Total Material Cost)',
+                    expression: 'SUM(All Material Items)',
+                    calculation: costs.material.items.map(i => formatNumber(i.cost)).join(' + '),
+                    result: formatNumber(costs.material.totalCost) + ' ریال',
+                    reference: 'Material!A31 = SUM(A7:A30)',
+                    value: costs.material.totalCost,
+                    highlight: true
+                });
+            }
+
+            // Category Totals
+            formulas.push({
+                category: '💰 دسته‌بندی هزینه‌ها (Cost Categories)',
+                label: 'مواد اولیه (Material)',
+                expression: 'از برگه Material',
+                calculation: formatNumber(breakdown.material) + ' ریال',
+                result: formatNumber(breakdown.material) + ' ریال',
+                reference: 'Material!A31 → روکش مالی!A7',
+                value: breakdown.material
+            });
+
+            formulas.push({
+                category: '💰 دسته‌بندی هزینه‌ها (Cost Categories)',
+                label: 'برش کاری (BoreshKari - Cutting)',
+                expression: 'از برگه BoreshKari',
+                calculation: formatNumber(breakdown.boreshKari) + ' ریال',
+                result: formatNumber(breakdown.boreshKari) + ' ریال',
+                reference: 'BoreshKari!A31 → روکش مالی!A8',
+                value: breakdown.boreshKari
+            });
+
+            formulas.push({
+                category: '💰 دسته‌بندی هزینه‌ها (Cost Categories)',
+                label: 'نوار شیار (NavarShiar - Edge Banding)',
+                expression: 'از برگه NavarShiarFarsi',
+                calculation: formatNumber(breakdown.navarShiar) + ' ریال',
+                result: formatNumber(breakdown.navarShiar) + ' ریال',
+                reference: 'NavarShiarFarsi!A31 → روکش مالی!A9',
+                value: breakdown.navarShiar
+            });
+
+            formulas.push({
+                category: '💰 دسته‌بندی هزینه‌ها (Cost Categories)',
+                label: 'سی ان سی (CNC)',
+                expression: 'از برگه CNC',
+                calculation: formatNumber(breakdown.cnc) + ' ریال',
+                result: formatNumber(breakdown.cnc) + ' ریال',
+                reference: 'CNC!A31 → روکش مالی!A10',
+                value: breakdown.cnc
+            });
+
+            formulas.push({
+                category: '💰 دسته‌بندی هزینه‌ها (Cost Categories)',
+                label: 'یراق آلات (Fittings)',
+                expression: 'از برگه Fittings',
+                calculation: formatNumber(breakdown.fittings) + ' ریال',
+                result: formatNumber(breakdown.fittings) + ' ریال',
+                reference: 'Fittings!A31 → روکش مالی!A11',
+                value: breakdown.fittings
+            });
+
+            formulas.push({
+                category: '💰 دسته‌بندی هزینه‌ها (Cost Categories)',
+                label: 'رنگ (Painting)',
+                expression: 'از برگه Painting',
+                calculation: formatNumber(breakdown.painting) + ' ریال',
+                result: formatNumber(breakdown.painting) + ' ریال',
+                reference: 'Painting!A31 → روکش مالی!A12',
+                value: breakdown.painting
+            });
+
+            formulas.push({
+                category: '💰 دسته‌بندی هزینه‌ها (Cost Categories)',
+                label: 'ابزار چوبی (WoodTools)',
+                expression: 'از برگه WoodTools',
+                calculation: formatNumber(breakdown.woodTools) + ' ریال',
+                result: formatNumber(breakdown.woodTools) + ' ریال',
+                reference: 'WoodTools!A28 → روکش مالی!A13',
+                value: breakdown.woodTools
+            });
+
+            formulas.push({
+                category: '💰 دسته‌بندی هزینه‌ها (Cost Categories)',
+                label: 'صفحه (Plate)',
+                expression: 'از برگه Plate',
+                calculation: formatNumber(breakdown.plate) + ' ریال',
+                result: formatNumber(breakdown.plate) + ' ریال',
+                reference: 'Plate!A31 → روکش مالی!A14',
+                value: breakdown.plate
+            });
+
+            // Subtotal
+            formulas.push({
+                category: '📊 خلاصه مالی (Financial Summary)',
+                label: 'جمع کل هزینه‌ها (Subtotal)',
+                expression: 'Material + BoreshKari + NavarShiar + CNC + Fittings + Painting + WoodTools + Plate',
+                calculation: [
+                    formatNumber(breakdown.material),
+                    formatNumber(breakdown.boreshKari),
+                    formatNumber(breakdown.navarShiar),
+                    formatNumber(breakdown.cnc),
+                    formatNumber(breakdown.fittings),
+                    formatNumber(breakdown.painting),
+                    formatNumber(breakdown.woodTools),
+                    formatNumber(breakdown.plate)
+                ].join(' + '),
+                result: formatNumber(fs.subtotal) + ' ریال',
+                reference: 'روکش مالی!A26 = SUM(A7:A25)',
+                value: fs.subtotal,
+                highlight: true
+            });
+
+            // Overheads
+            formulas.push({
+                category: '💸 سربار و اضافات (Overhead Calculations)',
+                label: 'سربار ۱ (۲۵٪) - Overhead 1',
+                expression: 'جمع کل × ۰.۲۵ (Subtotal × 0.25)',
+                calculation: `${formatNumber(fs.subtotal)} × 0.25`,
+                result: formatNumber(fs.overheads.overhead1) + ' ریال',
+                reference: 'روکش مالی!A27 = A26 × 0.25',
+                value: fs.overheads.overhead1
+            });
+
+            formulas.push({
+                category: '💸 سربار و اضافات (Overhead Calculations)',
+                label: 'سربار ۲ (۴٪) - Overhead 2',
+                expression: 'جمع کل × ۰.۰۴ (Subtotal × 0.04)',
+                calculation: `${formatNumber(fs.subtotal)} × 0.04`,
+                result: formatNumber(fs.overheads.overhead2) + ' ریال',
+                reference: 'روکش مالی!A28 = A26 × 0.04',
+                value: fs.overheads.overhead2
+            });
+
+            formulas.push({
+                category: '💸 سربار و اضافات (Overhead Calculations)',
+                label: 'سربار ۳ (۲٪) - Overhead 3',
+                expression: 'جمع کل × ۰.۰۲ (Subtotal × 0.02)',
+                calculation: `${formatNumber(fs.subtotal)} × 0.02`,
+                result: formatNumber(fs.overheads.overhead3) + ' ریال',
+                reference: 'روکش مالی!A29 = A26 × 0.02',
+                value: fs.overheads.overhead3
+            });
+
+            formulas.push({
+                category: '💸 سربار و اضافات (Overhead Calculations)',
+                label: 'سربار ۴ (۲٪) - Overhead 4',
+                expression: 'جمع کل × ۰.۰۲ (Subtotal × 0.02)',
+                calculation: `${formatNumber(fs.subtotal)} × 0.02`,
+                result: formatNumber(fs.overheads.overhead4) + ' ریال',
+                reference: 'روکش مالی!A30 = A26 × 0.02',
+                value: fs.overheads.overhead4
+            });
+
+            formulas.push({
+                category: '💸 سربار و اضافات (Overhead Calculations)',
+                label: 'پیش‌بینی نشده (۲.۵٪) - Contingency',
+                expression: 'جمع کل × ۰.۰۲۵ (Subtotal × 0.025)',
+                calculation: `${formatNumber(fs.subtotal)} × 0.025`,
+                result: formatNumber(fs.overheads.contingency) + ' ریال',
+                reference: 'روکش مالی!A31 = A26 × 0.025',
+                value: fs.overheads.contingency
+            });
+
+            formulas.push({
+                category: '💸 سربار و اضافات (Overhead Calculations)',
+                label: 'مجموع سربارها (Total Overheads)',
+                expression: 'جمع همه سربارها (Sum of all overheads)',
+                calculation: [
+                    formatNumber(fs.overheads.overhead1),
+                    formatNumber(fs.overheads.overhead2),
+                    formatNumber(fs.overheads.overhead3),
+                    formatNumber(fs.overheads.overhead4),
+                    formatNumber(fs.overheads.contingency)
+                ].join(' + '),
+                result: formatNumber(fs.overheads.totalOverheads) + ' ریال',
+                reference: 'روکش مالی!SUM(A27:A31)',
+                value: fs.overheads.totalOverheads,
+                highlight: true
+            });
+
+            // Total with Overheads
+            formulas.push({
+                category: '💵 قیمت نهایی (Final Price Calculation)',
+                label: 'جمع با سربارها (Total with Overheads)',
+                expression: 'جمع کل + مجموع سربارها (Subtotal + Total Overheads)',
+                calculation: `${formatNumber(fs.subtotal)} + ${formatNumber(fs.overheads.totalOverheads)}`,
+                result: formatNumber(fs.totalWithOverheads) + ' ریال',
+                reference: 'روکش مالی!A32 = A26 + SUM(A27:A31)',
+                value: fs.totalWithOverheads,
+                highlight: true
+            });
+
+            // Profit
+            formulas.push({
+                category: '💵 قیمت نهایی (Final Price Calculation)',
+                label: 'سود (۲۲٪) - Profit',
+                expression: 'جمع با سربارها × ۰.۲۲ (Total with Overheads × 0.22)',
+                calculation: `${formatNumber(fs.totalWithOverheads)} × 0.22`,
+                result: formatNumber(fs.profitAmount) + ' ریال',
+                reference: 'روکش مالی!A32 × 0.22',
+                value: fs.profitAmount
+            });
+
+            // Final Price
+            formulas.push({
+                category: '💵 قیمت نهایی (Final Price Calculation)',
+                label: 'قیمت نهایی پروژه (Final Price)',
+                expression: 'جمع با سربارها + سود (Total with Overheads + Profit)',
+                calculation: `${formatNumber(fs.totalWithOverheads)} + ${formatNumber(fs.profitAmount)}`,
+                result: formatNumber(fs.finalPrice) + ' ریال',
+                reference: 'روکش مالی!A33 = A32 + (A32 × 0.22)',
+                value: fs.finalPrice,
+                highlight: true
+            });
+
+            return formulas;
+        }
+
+        function displayFormulas(data) {
+            const formulas = extractFormulas(data);
+            const formulasContent = document.getElementById('formulasContent');
+            
+            // Group formulas by category
+            const categories = {};
+            formulas.forEach(formula => {
+                if (!categories[formula.category]) {
+                    categories[formula.category] = [];
+                }
+                categories[formula.category].push(formula);
+            });
+
+            // Build HTML
+            let html = '';
+            for (const [category, items] of Object.entries(categories)) {
+                html += `<div class="formula-category">`;
+                html += `<h4>${category}</h4>`;
+                
+                items.forEach((formula, index) => {
+                    const uniqueId = category.replace(/\s+/g, '') + index;
+                    const highlightClass = formula.highlight ? ' style="border-left-color: #FF9800;"' : '';
+                    
+                    html += `<div class="formula-item"${highlightClass}>`;
+                    html += `<div class="formula-label">${formula.label}</div>`;
+                    html += `<div class="formula-expression">Formula: ${formula.expression}</div>`;
+                    html += `<div class="formula-calculation">Calculation: ${formula.calculation}</div>`;
+                    html += `<div class="formula-result">Result: = ${formula.result}</div>`;
+                    html += `<div class="formula-reference">Excel Reference: ${formula.reference}</div>`;
+                    html += `<button class="copy-formula" onclick="copyFormula('${uniqueId}', '${formula.label}: ${formula.calculation} = ${formula.result}')">📋 Copy</button>`;
+                    html += `</div>`;
+                });
+                
+                html += `</div>`;
+            }
+            
+            formulasContent.innerHTML = html;
+        }
+
+        function copyFormula(id, text) {
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = event.target;
+                const originalText = btn.textContent;
+                btn.textContent = '✅ Copied!';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+
+        function formatNumber(num) {
+            return new Intl.NumberFormat('en-US', {
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0
+            }).format(num);
+        }
+
+        function showError(message) {
+            const errorDiv = document.getElementById('error');
+            errorDiv.textContent = '❌ Error: ' + message;
+            errorDiv.classList.add('show');
+            errorDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function formatCurrency(amount) {
+            return new Intl.NumberFormat('en-US', {
+                style: 'decimal',
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0
+            }).format(amount) + ' ریال';
+        }
+
+        // Toggle JSON view
+        document.getElementById('toggleJson').addEventListener('click', function() {
+            const jsonView = document.getElementById('jsonView');
+            if (jsonView.style.display === 'none') {
+                jsonView.style.display = 'block';
+                this.textContent = '📄 Hide Full JSON Response';
+            } else {
+                jsonView.style.display = 'none';
+                this.textContent = '📄 Show Full JSON Response';
+            }
+        });
+
+        // Toggle Formulas view
+        document.getElementById('formulasHeader').addEventListener('click', function() {
+            const formulasContent = document.getElementById('formulasContent');
+            const toggleIcon = document.getElementById('toggleIcon');
+            
+            if (formulasContent.classList.contains('show')) {
+                formulasContent.classList.remove('show');
+                toggleIcon.classList.remove('expanded');
+            } else {
+                formulasContent.classList.add('show');
+                toggleIcon.classList.add('expanded');
+            }
+        });
+
+        // Set today's date as default
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('contractDate').value = today;
+    </script>
+</body>
+</html>
+

@@ -131,7 +131,7 @@ core:
   savepanel:
     export_to_file: 118 - Xuất tệp định dạng {{ file_format }}
   dialog:
-    title: 119 - LexaCut tạo bởi L'Air du Bois
+    title: 119 - LexaCut tạo bởi Lexaplus & Renzo Group
   leftbar:
     more: 120 - Nhiều hơn
     more_docs: 121 - Tài liệu.
@@ -2004,7 +2004,7 @@ tab:
       - Zoltán Nagy, Roland Kovács (*Tiếng Hungary*)
       - Milan Divovic (*Tiếng Serbia*)
     credits_description: |
-      1532 - Việc phát triển phần mở rộng này được liên kết với dự án chia sẻ [L'Air du Bois](https://www.lairdubois.fr).
+      1532 - Việc phát triển phần mở rộng này được liên kết với dự án chia sẻ [Lexaplus & Renzo Group](https://www.lairdubois.fr).
       Tiện ích mở rộng này cũng là *Nguồn mở* và có sẵn theo giấy phép [GNU GPLv3](https://github.com/lairdubois/lairdubois-lexacut-sketchup-extension/blob/master/LICENSE) giấy phép trên [GitHub](https://github.com/lairdubois/lairdubois-lexacut-sketchup-extension).
     credits_runtime: 1533 - Thời gian chạy
     credits_development: 1534 - Môi trương phát triển
